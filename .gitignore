@@ -1,0 +1,8 @@
+.DS_Store
+.svn
+log/*.log
+tmp/**
+node_modules/
+.sass-cache
+js/consortium-viewer.min.js
+npm-debug.log
