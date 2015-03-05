@@ -12,7 +12,7 @@ module.exports = function(grunt) {
                 ' * https://github.com/consortium/hybrid-publishing-research\n' +
                 ' * MIT licensed\n' +
                 ' *\n' +
-                ' * Copyright (C) 2015 Hybrid Publishing COnsortium\n' +
+                ' * Copyright (C) 2015 Hybrid Publishing Consortium\n' +
                 ' */'
         },
 
@@ -24,9 +24,10 @@ module.exports = function(grunt) {
             options: {
                 banner: '<%= meta.banner %>\n'
             },
-            build: {
-                src: 'js/consortium-viewer.js',
-                dest: 'js/consortium-viewer.min.js'
+            myTarget: {
+                files: {
+                    'js/all.min.js': ['js/bower.js','js/consortium-viewer.js']
+                }
             }
         },
 
@@ -49,7 +50,8 @@ module.exports = function(grunt) {
                     console: false,
                     unescape: false,
                     define: false,
-                    exports: false
+                    exports: false,
+                    angular: true
                 }
             },
             files: [ 'Gruntfile.js', 'js/consortium-viewer.js' ]
@@ -113,6 +115,26 @@ module.exports = function(grunt) {
             }
         },
 
+        validation: {
+            options: {
+                //reset: grunt.option('reset') || false,
+                //stoponerror: false,
+            },
+            files: {
+                src: ['docs/**/*.html', '!docs/_template*/*.html']
+            }
+        },
+
+        bower_concat: {
+          all: {
+            dest: 'js/bower.js',
+            cssDest: 'css/bower.css',
+            bowerOptions: {
+              relative: false
+            }
+          }
+        },
+
         bower: {
             dev: {
                 dest: 'lib/',
@@ -144,17 +166,19 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks( 'grunt-html-sitemap');
     grunt.loadNpmTasks( 'grunt-fileindex' );
     grunt.loadNpmTasks( 'grunt-bower' );
+    grunt.loadNpmTasks( 'grunt-html-validation' );
+    grunt.loadNpmTasks( 'grunt-bower-concat' );
 
     // Default task
     grunt.registerTask( 'default', [ 'js' ] );
     // JS task
-    grunt.registerTask( 'js', [ 'bower', 'jshint', 'uglify', 'qunit' ] );
+    grunt.registerTask( 'js', [ 'bower', 'bower_concat', 'jshint', 'uglify', 'qunit' ] );
 
     // Serve presentation locally
-    grunt.registerTask( 'serve', [ 'fileindex', 'html_sitemap', 'connect', 'watch'] );
+    grunt.registerTask( 'serve', [ 'fileindex', 'html_sitemap', 'bower_concat', 'connect', 'watch'] );
     grunt.registerTask( 'index', [ 'fileindex', 'html_sitemap' ] );
 
     // Run tests
-    grunt.registerTask( 'test', [ 'jshint', 'qunit' ] );
+    grunt.registerTask( 'test', [ 'jshint', 'qunit', 'validation' ] );
 
 };
