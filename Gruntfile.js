@@ -12,7 +12,11 @@ module.exports = function(grunt) {
                 ' * https://github.com/consortium/hybrid-publishing-research\n' +
                 ' * MIT licensed\n' +
                 ' *\n' +
-                ' * Copyright (C) 2015 Hybrid Publishing Consortium\n' +
+                ' * Copyright (c) 2015 Hybrid Publishing Consortium\n' +
+                ' * Libraries used: \n' +
+                ' * Copyright (c) 2010-2015 Google, Inc. http://angularjs.org\n' +
+                ' * Copyright (c) 2011-2015 Twitter, Inc. http://getbootstrap.com\n' +
+                ' * Copyright 2014 jQuery Foundation,  http://jquery.com/\n' +
                 ' */'
         },
 
@@ -47,7 +51,7 @@ module.exports = function(grunt) {
                 globals: {
                     head: false,
                     module: false,
-                    console: false,
+                    console: true,
                     unescape: false,
                     define: false,
                     exports: false,
@@ -134,7 +138,21 @@ module.exports = function(grunt) {
             }
           }
         },
-
+        
+        execute: {
+                options: {
+                    // execute node with additional arguments 
+                    args: ['docs/**/*.html', '!docs/_template*/*.html']
+                },
+                target: {
+                    src: ['createindex.js']
+                }
+        },
+        
+        metaparser: {
+            'index.json': ['docs/**/*.html', '!docs/_template*/*.html']
+        },
+        
         bower: {
             dev: {
                 dest: 'lib/',
@@ -168,6 +186,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks( 'grunt-bower' );
     grunt.loadNpmTasks( 'grunt-html-validation' );
     grunt.loadNpmTasks( 'grunt-bower-concat' );
+    grunt.loadNpmTasks( 'grunt-execute' );
+    grunt.loadNpmTasks( 'grunt-metaparser' );
 
     // Default task
     grunt.registerTask( 'default', [ 'js' ] );
@@ -176,7 +196,7 @@ module.exports = function(grunt) {
 
     // Serve presentation locally
     grunt.registerTask( 'serve', [ 'fileindex', 'html_sitemap', 'bower_concat', 'connect', 'watch'] );
-    grunt.registerTask( 'index', [ 'fileindex', 'html_sitemap' ] );
+    grunt.registerTask( 'index', [ 'fileindex', 'html_sitemap', 'metaparser' ] );
 
     // Run tests
     grunt.registerTask( 'test', [ 'jshint', 'qunit', 'validation' ] );

@@ -2,32 +2,41 @@
 
 About
 -----
-This repository is the consortium.io document celloction. Its complied in a redistributable way.
-We're hosting this on docs.consortium.io. If you just wan't to download the papers use the
+This repository is the consortium.io document collection. Its complied in a redistributable way.
+We're hosting this on docs.consortium.io. If you just want to download the papers use the
 folder stable/
+
+Features
+--------
+ 	WebService
+ 	Validation
+ 		html5
+ 		Javascript
 
 Installation
 ------------
 This repository comes with a node.js setup to serve the documents locally.
 
-1. Install [https://www.npmjs.com/](npm) via your package manager.
-2. Clone the repository
+Install [https://www.npmjs.com/](npm) for your operating system via your package manager.
+
+
+Clone the repository
 	
-	 git clone https://github.com/consortium/hybrid-publishing-research.git
+	git clone https://github.com/consortium/hybrid-publishing-research.git
 
-2. Open a terminal and change directory to hybrid-publishing-research
+Open a terminal and change directory to hybrid-publishing-research
 
-	  cd hybrid-publishing-research
+	cd hybrid-publishing-research/
 
-3. Install npm dependancies
+Install npm dependencies
 
-	  npm install
+	npm install
 
-4. Use grunt to handle all tasks
+Use grunt to handle all tasks
 
 	  grunt 
 
-if this doesn't fail use
+If everything went ok use grunt to start a node.js server type:
 
 	  grunt serve
 
@@ -35,43 +44,97 @@ Your Browser will open and you can visit the sites on [http://localhost:8000](ht
 
 Edit or add Content
 -------------------
-This repository comes with a node.js setup to serve the documents locally.
 
-1. Install [https://www.npmjs.com/](npm) via your package manager.
-2. Clone the repository
-	
-	 git clone https://github.com/consortium/hybrid-publishing-research.git
+This repository comes with a node.js setup to serve the documents locally. 
+This is not a necessary, but helps develop clean html with, the integrated 
+validator.
 
-2. Open a terminal and change directory to hybrid-publishing-research
-
-	  cd hybrid-publishing-research
-
-3. Install npm dependancies
-
-4. Use grunt to handle all tasks
-
-	grunt 
-
-5. Create a git branch 
+Install the package. Once you have it installed the best way is to create
+a new git branch with
 
 	git checkout mybranch
 
-6. Edit the files with the your favorite text editor. (We recommend sublimetext).
-You can copy the docs/_template folder as a starter for your new dossier.
+After this feel free to edit the files with the your favorite text editor. You 
+can use the template folder as a starter for your new dossier.
 
-7. TODO *Once your done you can generate new stable pdfs with
+	cp docs/_template docs/mydossier
+
+
+<TODO>
+Once your done you can generate new stable pdfs with
 
 	grunt createstablepdf
+</TODO>
 
-8. Add, Commit and push your files to the Branch
+If everything is in place start a validation round to see if your new added
+content holds up.
 
-9. Create a new pull request
+	grunt validation
 
+If something turns red see the command line output to debug your dossier.
 
-
-
+After successful debugging commit everything to our repository and file a pull request
+so we can add the new dossier to the master branch and the consortium website. Please
+use meaningful commit notes. If your unsure see this resource for a quick description:
 	
+	git add docs/mydossier*
 
+	git commit -m 'Added a cool index on microbreweries - This is still a draft - looking 
+	for people who want to help me collect'
+
+	git push origin mybranch
+
+Go to [https://github.com/consortium/hybrid-publishing-research.git](github) and file a pull request.
+
+Todo
+----
+	Metatag validation (Dublin Core)
+	Copyright notice validation
+	Licensing notice validation
+	Folder structure test
+	Error on invalid files
+	Git log display in Browser
+	Readme.md display in Browser
+	Output target via grunt
 
 Licence
 -------
+
+	Dossiers:
+
+		If not mentioned otherwise in the document the text is licensed
+		under the Creative Commons CC-BY-DE 3.0 License.
+
+		Copyright holder of text and images are by there authors and owners
+
+	Viewer Logic:
+
+		The MIT License (MIT)
+	 	
+	 	Copyright (c) 2015 Hybrid Publishing Consortium
+ 			Johannes Amorosa <amorosa@posteo.de>
+ 			Christina Kral
+ 			Loraine Furter
+ 			Simon Worthington
+
+		Permission is hereby granted, free of charge, to any person obtaining a copy
+		of this software and associated documentation files (the "Software"), to deal
+		in the Software without restriction, including without limitation the rights
+		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+		copies of the Software, and to permit persons to whom the Software is
+		furnished to do so, subject to the following conditions:
+
+		The above copyright notice and this permission notice shall be included in
+		all copies or substantial portions of the Software.
+
+		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+		THE SOFTWARE.
+
+	Software used:
+ 	
+ 		Angularjs Bootstrap jquery bower grunt node underscore express mustache socket.io assemble grunt grunt-autoprefixer grunt-contrib-connect grunt-contrib-cssmin grunt-contrib-jshint grunt-contrib-qunit grunt-contrib-uglify grunt-contrib-watch grunt-fileindex grunt-html-sitemap grunt-bower-concat grunt-html-validation grunt-bower grunt-sass grunt-zip node-sass

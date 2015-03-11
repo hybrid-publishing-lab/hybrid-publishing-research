@@ -2,24 +2,80 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" ng-app="App" >
 
-	<head>
-	  <meta charset="utf-8" />
-	  <meta name="generator" content="a-machine" />
-	  <title>Consortium Viewer</title>
-	  <link rel="stylesheet" type="text/css" href="css/all.css">
+    <head>
+        <!-- Metatags -->
+        <meta charset="utf-8" />
+        <meta name="generator" content="a-machine" />
+        <meta name="keywords" content="book, book liberation, education, freedom, knowledge, learning, library, OA, OER, open access, open education resources, open IPR, open learning, property, publishing, repositories, skills, technology">
+        <meta name="description" content="This is a viewing app for the Hybrid Publishing Consortium Research Papers. For more information on the Hybrid Publishing Consortium see http://consortium.io/">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Dublin Core -->
+        <meta name="DC.title" content="Hybrid Publish Consortium Viewer">
+        <meta name="DC.creator" content="Johannes Amorosa">
+        <meta name="DC.subject" content="archives, book, book liberation, copyleft, copyright, education, freedom, knowledge, learning, library, manifesto, OA, OER, open access, open education resources, open IPR, open learning, property, publishing, repositories, skills, technology">
+        <meta name="DC.date" content="2015-03-13">
+        <meta name="DC.type" content="inbook">
+        <meta name="DC.format" content="text/html">
+        <meta name="DC.language" content="eng">
+        <meta name="DC.identifier.URL" content="http://consortium.io">
+        <meta name="DC.rights" content="http://www.consortium.io/copyright">
+        <link rel="SCHEMA.DC" href="http://purl.org/dc/elements/1.1/">
 
-	</head>
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/all.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
 
-	<body ng-controller="MainCtrl">
+        <!-- Title -->
+        <title>Hybrid Publishing Consortium Research Viewer</title>
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <link rel="icon" href="/favicon.ico">
+    </head>
 
-	  <ul>
-	    <li ng-show="validationstatus" ng-repeat="(key, data) in filterValid(validationstatus)">
-	      <div class="alert alert-danger" role="alert"><em>{{key}}</em> HTML Validation Failed</div>
-	    </li>
-	  </ul>
+    <body ng-controller="SpaceCtrl">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Consortium Research Viewer</h1>
+                    <p>This repository is the consortium.io document collection. Its complied in a redistributable way. We're hosting this on <a href="https://research.consortium.io">https://research.consortium.io</a>. Get the dossiers and the code on <a href="https://github.com/consortium/hybrid-publishing-research.git">https://github.com/consortium/hybrid-publishing-research.git</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="list-group">
+                        <div ng-repeat="(key, data) in indexlist">
+                            <a href="{{key}}" class="list-group-item">
+                                <h3 ng-hide="{{!data.title[0].length}}">{{data.title[0]}}</h3><p ng-hide="{{!data.title[1].length}}">{{data.title[1]}}</p>
+                                <h3 ng-show="{{!data.title[0].length}}">N/A</h3><p ng-show="{{!data.title[1].length}}">N/A</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
 
-		<script src="js/all.min.js"></script>
-	</body>
+        <div class="row" ng-show="validationstatus">
+            <div class="container">
+                <div ng-repeat="(key, data) in filterValid(validationstatus)">
+                    <div class="alert alert-danger" role="alert">
+                      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                      <span class="sr-only">Error:</span>
+                      HTML Validation Failed on <em>{{key}}</em>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        
+        <script src="js/bower.js"></script>
+        <script src="js/consortium-viewer.js"></script>
+    </body>
 
 </html>
 

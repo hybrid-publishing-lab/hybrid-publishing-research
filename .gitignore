@@ -9,6 +9,8 @@ npm-debug.log
 lin/*
 validation-report.json
 validation-status.json
+index.json
 bower_components/
 js/*.min.js*
 lib/**
+
