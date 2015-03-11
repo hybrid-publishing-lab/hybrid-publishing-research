@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <META NAME="keywords" CONTENT="documentation">
-<META NAME="description" CONTENT="On our way to a documentation system for the Hybrid Publishing Consortium and beyond">
+<META NAME="description" CONTENT="On our way to a documentation/publishing system for the Hybrid Publishing Consortium and beyond">
 <META NAME="DC.title" CONTENT="Documentation system for the Hybrid Publishing Consortium and beyond">
 <META NAME="DC.creator" CONTENT="Loraine Furter">
 <META NAME="DC.subject" CONTENT="documentation">
@@ -15,17 +15,23 @@
 <META NAME="DC.identifier.URL" CONTENT="http://consortium.io">
 <META NAME="DC.rights" CONTENT="http://www.consortium.io/copyright">
 <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
-<title>Documentation system for the Hybrid Publishing Consortium and beyond</title>
+<title>Documentation/publishing system for the Hybrid Publishing Consortium and beyond</title>
 </head>
 <body>
 	<section>
-		<h1>Documentation system for the Hybrid Publishing Consortium and beyond</h1>
-		<img src="assets/img/documentation.png" style="width: 100%">
-		<p>Coming soon!</p>
+		<h1>Documentation/publishing system<br>for the Hybrid Publishing Consortium and beyond</h1>
+	</section>
+		<img src="assets/img/documentation.png" style="max-width: 1300px; margin: 30px;">
+	<section>
 		<p>The Hybrid Publishing Consortium’s Dossiers are composed of a selection and arrangement of 500-2000 words working papers/reports, with an introduction explaining the composition. The reports can be commissioned texts as well as pre-existing ones, they are multi-format: lists, essays, notes, slide shows, etc.</p>
 		<p>In order to be able to publish a report in several Dossiers, the system for editing/organizing/archiving the reports need to be flexible.</p>
 		<p>The reports will be stored in a <a href="https://github.com/consortium/hybrid-publishing-research">GitHub repository</a>, each one in a folder composed of the content in an html file, a folder for images and other documents, and a css file (when neccessary).</p>
-		<p>…</p>
+		<h2>Single source, yet medium specific</h2>
+		<p>To tune specific parts of the reports, add a specific class name (convention needed for that) that will then be displayed or not on specific formats.</p>
+		<h2>HTML style guide</h2>
+		<p>If we want ePub-ready files, we should write in a compatible way (ePub is XHTML). A solution for that is <a href="http://dev.w3.org/html5/html-polyglot/">Polyglot Markup</a>. We can also run a validator (with <a href="https://github.com/svenkreiss/html5validator">HTML5 Validator</a>, that can be run with <a href="https://travis-ci.org/">Travis CI</a>), which validates the code that is pushed on GitHub.</p>
+		<p>And ask Gerrit if their are automatic solutions to convert HTML5 to XHTML.</p>
+		<h2>More coming soon!</h2>
 	</section>
 </body>
 </html>
