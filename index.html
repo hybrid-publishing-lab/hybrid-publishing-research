@@ -53,14 +53,13 @@
                             <a href="{{key}}" class="list-group-item">
                                 <h3 ng-hide="{{!data.title[0].length}}">{{data.title[0]}}</h3><p ng-hide="{{!data.title[1].length}}">{{data.title[1]}}</p>
                                 <h3 ng-show="{{!data.title[0].length}}">N/A</h3><p ng-show="{{!data.title[1].length}}">N/A</p>
-                                </div>
                             </a>
                         </div>
                     </div>
-                </div>    
-            </div>
+                </div>
+            </div>    
         </div>
-
+        
         <div class="row" ng-show="validationstatus">
             <div class="container">
                 <div ng-repeat="(key, data) in filterValid(validationstatus)">
@@ -72,7 +71,7 @@
                 </div>    
             </div>
         </div>
-        
+
         <script src="js/bower.js"></script>
         <script src="js/consortium-viewer.js"></script>
     </body>

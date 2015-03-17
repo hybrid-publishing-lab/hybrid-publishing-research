@@ -12,5 +12,7 @@ validation-status.json
 index.json
 bower_components/
 js/*.min.js*
+js/bower.js
 lib/**
-
+css/all.css
+css/bower.css
