@@ -36,7 +36,7 @@ Use grunt to handle all tasks
 
 	  grunt 
 
-If everything went ok use grunt to start a node.js server type:
+If everything went ok, use grunt to start a node.js server type:
 
 	  grunt serve
 
@@ -54,7 +54,7 @@ a new git branch with
 
 	git checkout mybranch
 
-After this feel free to edit the files with the your favorite text editor. You 
+After this feel free to edit the files with the your favourite text editor. You 
 can use the template folder as a starter for your new dossier.
 
 	cp docs/_template docs/mydossier
@@ -97,7 +97,7 @@ Todo
 	Readme.md display in Browser
 	Output target via grunt
 
-Licence
+License
 -------
 
 	Dossiers:
