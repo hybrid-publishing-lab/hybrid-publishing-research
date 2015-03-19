@@ -121,6 +121,9 @@ module.exports = function(grunt) {
 
         validation: {
             options: {
+                relaxerror: [
+                    'Bad value X-UA-Compatible for attribute http-equiv on element meta.', 
+                    'Bad value SCHEMA.DC for attribute rel on element link: The string schema.dc is not a registered keyword.']
                 //reset: grunt.option('reset') || false,
                 //stoponerror: false,
             },
@@ -142,7 +145,8 @@ module.exports = function(grunt) {
         execute: {
                 options: {
                     // execute node with additional arguments 
-                    args: ['docs/**/*.html', '!docs/_template*/*.html']
+                    //args: ['docs/**/*.html', '!docs/_template*/*.html']
+                    args:['metadata.json','validation-report.json']
                 },
                 target: {
                     src: ['createindex.js']
@@ -150,7 +154,7 @@ module.exports = function(grunt) {
         },
         
         metaparser: {
-            'index.json': ['docs/**/*.html', '!docs/_template*/*.html']
+            'metadata.json': ['docs/**/*.html', '!docs/_template*/*.html']
         },
         
         bower: {
@@ -195,8 +199,8 @@ module.exports = function(grunt) {
     grunt.registerTask( 'js', [ 'bower', 'bower_concat', 'jshint', 'uglify', 'qunit' ] );
 
     // Serve presentation locally
-    grunt.registerTask( 'serve', [ 'fileindex', 'html_sitemap', 'bower_concat', 'connect', 'watch'] );
-    grunt.registerTask( 'index', [ 'fileindex', 'html_sitemap', 'metaparser' ] );
+    grunt.registerTask( 'serve', [ 'bower_concat', 'connect', 'watch'] );
+    grunt.registerTask( 'index', [ 'fileindex', 'html_sitemap', 'validation', 'metaparser', 'execute' ] );
 
     // Run tests
     grunt.registerTask( 'test', [ 'jshint', 'qunit', 'validation' ] );

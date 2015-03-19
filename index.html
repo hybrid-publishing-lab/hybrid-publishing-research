@@ -40,7 +40,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h1>Consortium Research Viewer</h1>
-                    <p>This repository is the consortium.io document collection. Its complied in a redistributable way. We're hosting this on <a href="https://research.consortium.io">https://research.consortium.io</a>. Get the dossiers and the code on <a href="https://github.com/consortium/hybrid-publishing-research.git">https://github.com/consortium/hybrid-publishing-research.git</a></p>
+                    <p>This repository is the consortium.io document collection. Its complied in a redistributable way. We're hosting this on <a href="https://research.consortium.io">https://research.consortium.io</a>. Get the dossiers and the code on <a href="https://github.com/consortium/hybrid-publishing-research.git">https://github.com/consortium/hybrid-publishing-research.git.</a> This displayed version has the SHA: <a ng-href="https://github.com/consortium/hybrid-publishing-research/commit/{{gitinfo.sha}}">{{gitinfo.sha}}</a> on branch: <a ng-href="https://github.com/consortium/hybrid-publishing-research/commits/{{gitinfo.branch}}">{{gitinfo.branch}}</a>.</p>
                 </div>
             </div>
         </div>
@@ -49,17 +49,27 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="list-group">
-                        <div ng-repeat="(key, data) in indexlist">
-                            <a href="{{key}}" class="list-group-item">
-                                <h3 ng-hide="{{!data.title[0].length}}">{{data.title[0]}}</h3><p ng-hide="{{!data.title[1].length}}">{{data.title[1]}}</p>
-                                <h3 ng-show="{{!data.title[0].length}}">N/A</h3><p ng-show="{{!data.title[1].length}}">N/A</p>
+                        <div ng-repeat="item in indexlist">
+                            <a href="{{item.filename}}" class="list-group-item">
+                                <h3 ng-hide="{{!item.data.title[0].length}}">{{item.data.title[0]}}</h3>
+                                <p ng-hide="{{!item.data.title[1].length}}">{{item.data.title[1]}}</p>
+                                <h3 ng-show="{{!item.data.title[0].length}}">Metadata not available</h3>
+                                <p ng-show="{{!item.data.title[1].length}}">Metadata not available</p>
+                                
+                                <div ng-show="{{item.error.length}}" class="alert alert-danger" role="alert">
+                                    <span class="sr-only">Error:</span>
+                                     Not html5 conform
+                                </div>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>    
         </div>
-        
+         <div ng-view>
+             
+         </div>
+        <!--
         <div class="row" ng-show="validationstatus">
             <div class="container">
                 <div ng-repeat="(key, data) in filterValid(validationstatus)">
@@ -71,6 +81,7 @@
                 </div>    
             </div>
         </div>
+        -->
 
         <script src="js/bower.js"></script>
         <script src="js/consortium-viewer.js"></script>
