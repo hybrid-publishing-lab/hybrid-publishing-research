@@ -41,7 +41,7 @@ mergeData = _.compact(_.flatten(mergeData, true));
 var printableJson = JSON.stringify(mergeData, null, 2);
 
 // Write index.json file
-fs.writeFile("index.json", printableJson, function(err) {
+fs.writeFile("dist/index.json", printableJson, function(err) {
       if (err) throw('File save error: '+ err);
       console.log('Index file saved');
 });
@@ -52,7 +52,7 @@ var info = getRepoInfo();
 var gitInfos =  '{"branch" : "' + info.branch + '", "sha" : "' + info.sha + '", "abbreviatedSha" :"' + info.abbreviatedSha + '", "tag" :"' + info.tag + '"}'
 
 // Write gitinfo.json file
-fs.writeFile("gitinfo.json", gitInfos, function(err) {
+fs.writeFile("dist/gitinfo.json", gitInfos, function(err) {
       if (err) throw('File save error: '+ err);
       console.log('gitinfo file saved');
 });

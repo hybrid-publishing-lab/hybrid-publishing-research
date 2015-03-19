@@ -16,3 +16,6 @@ lib/**
 css/all.css
 css/bower.css
 css/all-min.css
+dist/css/*
+dist/js/*
+

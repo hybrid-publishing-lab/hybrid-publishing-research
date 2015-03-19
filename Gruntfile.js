@@ -26,11 +26,12 @@ module.exports = function(grunt) {
         
         uglify: {
             options: {
-                banner: '<%= meta.banner %>\n'
+                banner: '<%= meta.banner %>\n',
+                compress: true
             },
             myTarget: {
                 files: {
-                    'js/all.min.js': ['js/bower.js','js/consortium-viewer.js']
+                    'dist/js/all.min.js': ['js/bower.js','js/consortium-viewer.js']
                 }
             }
         },
@@ -41,7 +42,7 @@ module.exports = function(grunt) {
             },
             target: {
                 files: {
-                    'css/all-min.css': ['css/bower.css', 'css/main.css']
+                    'dist/css/all-min.css': ['css/bower.css', 'css/main.css']
                 }
             }
         },
@@ -75,7 +76,7 @@ module.exports = function(grunt) {
             server: {
                 options: {
                     port: port,
-                    base: '.',
+                    base: './dist',
                     livereload: true,
                     open: true
                 }
@@ -91,7 +92,7 @@ module.exports = function(grunt) {
                 tasks: 'js'
             },
             html: {
-                files: [ 'index.html']
+                files: [ 'dist/index.html']
             },
             css: {
                 files: [ 'css/main.css' ],
@@ -108,7 +109,7 @@ module.exports = function(grunt) {
                 //stoponerror: false,
             },
             files: {
-                src: ['docs/**/*.html', '!docs/_template*/*.html']
+                src: ['dist/docs/**/*.html', '!dist/docs/_template*/*.html']
             }
         },
 
@@ -123,18 +124,18 @@ module.exports = function(grunt) {
         },
         
         execute: {
-                options: {
-                    // execute node with additional arguments 
-                    //args: ['docs/**/*.html', '!docs/_template*/*.html']
-                    args:['metadata.json','validation-report.json']
-                },
-                target: {
-                    src: ['createindex.js']
-                }
+            options: {
+                // execute node with additional arguments 
+                //args: ['docs/**/*.html', '!docs/_template*/*.html']
+                args:['metadata.json','validation-report.json']
+            },
+            target: {
+                src: ['createindex.js']
+            }
         },
         
         metaparser: {
-            'metadata.json': ['docs/**/*.html', '!docs/_template*/*.html']
+            'metadata.json': ['dist/docs/**/*.html', '!dist/docs/_template*/*.html']
         },
         
         bower: {
