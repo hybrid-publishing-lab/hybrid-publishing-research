@@ -57,7 +57,7 @@ If everything went ok, use grunt to start a node instance to serve your files:
 
 	  grunt serve
 
-Your Browser will open and you can visit the sites on [http://localhost:8000](http://localhost:8000)
+Your Browser will open and you can visit the sites on [http://localhost:8080](http://localhost:8080)
 
 Edit or add Content
 -------------------

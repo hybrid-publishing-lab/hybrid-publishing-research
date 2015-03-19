@@ -1,7 +1,7 @@
 /* global module:false */
 module.exports = function(grunt) {
 
-    var port = grunt.option('port') || 8000;
+    var port = grunt.option('port') || 8080;
     // Project configuration
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
