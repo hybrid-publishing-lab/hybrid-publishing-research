@@ -34,7 +34,17 @@ module.exports = function(grunt) {
                 }
             }
         },
-
+        cssmin: {
+            options: {
+                shorthandCompacting: false,
+                roundingPrecision: -1
+            },
+            target: {
+                files: {
+                    'css/all-min.css': ['css/bower.css', 'css/main.css']
+                }
+            }
+        },
         jshint: {
             options: {
                 curly: false,
@@ -72,29 +82,6 @@ module.exports = function(grunt) {
             }
         },
         
-        html_sitemap: {
-            options: {
-                searchPath: 'docs/',
-                template: 'template.html'
-            },
-            files: {
-                'index.html': ['docs/**/*.html']
-            }
-        },
-
-        fileindex: {
-            list: {
-                options: {
-                    format: 'json_flat',
-                    pretty: true
-                },
-                files: [
-                    {dest: 'list.json', src: ['docs/**/*.html']}
-                ]
-            },
-        
-        },
-        
         watch: {
             options: {
                 livereload: true
@@ -103,19 +90,12 @@ module.exports = function(grunt) {
                 files: [ 'Gruntfile.js', 'js/consortium-viewer.js' ],
                 tasks: 'js'
             },
-            fileindex: {
-                files: [ 'docs/**/*.html' ],
-                tasks: 'fileindex'
-            },
-            html_sitemap: {
-                files: [ 'docs/**/*.html' ],
-                options: {
-                    searchPath: 'docs/',
-                    template: 'template.html'
-                }
-            },
             html: {
                 files: [ 'index.html']
+            },
+            css: {
+                files: [ 'css/main.css' ],
+                tasks: 'cssmin'
             }
         },
 
@@ -185,8 +165,6 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks( 'grunt-contrib-connect' );
     grunt.loadNpmTasks( 'grunt-autoprefixer' );
-    grunt.loadNpmTasks( 'grunt-html-sitemap');
-    grunt.loadNpmTasks( 'grunt-fileindex' );
     grunt.loadNpmTasks( 'grunt-bower' );
     grunt.loadNpmTasks( 'grunt-html-validation' );
     grunt.loadNpmTasks( 'grunt-bower-concat' );
@@ -196,11 +174,11 @@ module.exports = function(grunt) {
     // Default task
     grunt.registerTask( 'default', [ 'js' ] );
     // JS task
-    grunt.registerTask( 'js', [ 'bower', 'bower_concat', 'jshint', 'uglify', 'qunit' ] );
+    grunt.registerTask( 'js', [ 'bower', 'bower_concat', 'jshint', 'uglify','cssmin', 'qunit' ] );
 
     // Serve presentation locally
-    grunt.registerTask( 'serve', [ 'bower_concat', 'connect', 'watch'] );
-    grunt.registerTask( 'index', [ 'fileindex', 'html_sitemap', 'validation', 'metaparser', 'execute' ] );
+    grunt.registerTask( 'serve', [ 'bower_concat', 'cssmin', 'connect', 'watch'] );
+    grunt.registerTask( 'index', [ 'validation', 'metaparser', 'execute' ] );
 
     // Run tests
     grunt.registerTask( 'test', [ 'jshint', 'qunit', 'validation' ] );

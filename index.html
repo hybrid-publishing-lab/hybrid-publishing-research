@@ -24,8 +24,7 @@
         <link rel="SCHEMA.DC" href="http://purl.org/dc/elements/1.1/">
 
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="css/all.css">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/all-min.css">
 
         <!-- Title -->
         <title>Hybrid Publishing Consortium Research Viewer</title>
@@ -39,8 +38,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Consortium Research Viewer</h1>
-                    <p>This repository is the consortium.io document collection. Its complied in a redistributable way. We're hosting this on <a href="https://research.consortium.io">https://research.consortium.io</a>. Get the dossiers and the code on <a href="https://github.com/consortium/hybrid-publishing-research.git">https://github.com/consortium/hybrid-publishing-research.git.</a> This displayed version has the SHA: <a ng-href="https://github.com/consortium/hybrid-publishing-research/commit/{{gitinfo.sha}}">{{gitinfo.sha}}</a> on branch: <a ng-href="https://github.com/consortium/hybrid-publishing-research/commits/{{gitinfo.branch}}">{{gitinfo.branch}}</a>.</p>
+                    <img class="logo img-responsive" src="/static/hpc-logoxx.png" alt="hpc-logo">
+                    <h1>Research Viewer</h1>
+                    <p>This repository is the <a href="https://consortium.io">Hybrid Publishing Consortium</a> document collection. Its compiled in a redistributable way.</p>
+
+                    <p> We're hosting this on <a href="https://research.consortium.io">https://research.consortium.io</a>. Get the dossiers and the code on <a href="https://github.com/consortium/hybrid-publishing-research.git">https://github.com/consortium/hybrid-publishing-research.git.</a></p>
+
+                    </p>This site has the git hash: <a ng-href="https://github.com/consortium/hybrid-publishing-research/commit/{{gitinfo.sha}}">{{gitinfo.sha}}</a> on branch: <a ng-href="https://github.com/consortium/hybrid-publishing-research/commits/{{gitinfo.branch}}">{{gitinfo.branch}}</a>.</p>
                 </div>
             </div>
         </div>
@@ -49,7 +53,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="list-group">
-                        <div ng-repeat="item in indexlist">
+                        <div ng-show="indexlist" ng-repeat="item in indexlist">
                             <a href="{{item.filename}}" class="list-group-item">
                                 <h3 ng-hide="{{!item.data.title[0].length}}">{{item.data.title[0]}}</h3>
                                 <p ng-hide="{{!item.data.title[1].length}}">{{item.data.title[1]}}</p>
