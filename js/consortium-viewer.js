@@ -1,5 +1,5 @@
 var App = angular.module('App', [
-    'ngRoute'
+
     ]);
 
 App.controller('SpaceCtrl', function($scope, $http) {
@@ -28,20 +28,4 @@ App.controller('SpaceCtrl', function($scope, $http) {
 
 
 
-});
-
-App.config(function($routeProvider, $locationProvider) {
-  $routeProvider
-   .when('/w3c-validation/:filename', {
-    templateUrl: 'template_w3c.html',
-    controller: 'BookController',
-    resolve: {
-      // I will cause a 1 second delay
-      delay: function($q, $timeout) {
-        var delay = $q.defer();
-        $timeout(delay.resolve, 1000);
-        return delay.promise;
-      }
-    }
-  });
 });

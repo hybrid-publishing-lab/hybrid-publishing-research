@@ -27,7 +27,9 @@ module.exports = function(grunt) {
         uglify: {
             options: {
                 banner: '<%= meta.banner %>\n',
-                compress: true
+                compress: true,
+                sourceMap: true,
+                mangle: false
             },
             myTarget: {
                 files: {
@@ -42,7 +44,7 @@ module.exports = function(grunt) {
             },
             target: {
                 files: {
-                    'dist/css/all-min.css': ['css/bower.css', 'css/main.css']
+                    'dist/css/all.min.css': ['css/bower.css', 'css/main.css']
                 }
             }
         },
@@ -113,6 +115,26 @@ module.exports = function(grunt) {
             }
         },
 
+        "bower-install-simple": {
+            prod: {
+                options: {
+                    production: true
+                }
+            }
+        },
+
+        bower: {
+            dev: {
+                dest: 'lib/',
+                js_dest: 'lib/js/',
+                css_dest: 'lib/css/',
+                fonts_dest: 'lib/font/',  
+                options: {
+                    expand: true
+                }
+            }
+        },
+
         bower_concat: {
           all: {
             dest: 'js/bower.js',
@@ -136,19 +158,7 @@ module.exports = function(grunt) {
         
         metaparser: {
             'metadata.json': ['dist/docs/**/*.html', '!dist/docs/_template*/*.html']
-        },
-        
-        bower: {
-            dev: {
-                dest: 'lib/',
-                js_dest: 'lib/js/',
-                css_dest: 'lib/css/',
-            fonts_dest: 'lib/font/',  
-            options: {
-                expand: true
         }
-  }
-}
 
     });
 
@@ -163,6 +173,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
     grunt.loadNpmTasks( 'grunt-contrib-uglify' );
     grunt.loadNpmTasks( 'grunt-contrib-watch' );
+    grunt.loadNpmTasks( 'grunt-bower-install-simple' );
 
     grunt.loadNpmTasks( 'grunt-contrib-connect' );
     grunt.loadNpmTasks( 'grunt-autoprefixer' );
@@ -173,15 +184,21 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks( 'grunt-metaparser' );
 
     // Default task
-    grunt.registerTask( 'default', [ 'js' ] );
-    // JS task
-    grunt.registerTask( 'js', [ 'bower', 'bower_concat', 'jshint', 'uglify','cssmin', 'qunit' ] );
+    grunt.registerTask( 'default', [ 'build', 'index' ] );
+    
+    // Building bricks
+    grunt.registerTask( 'js', [ 'jshint', 'uglify', 'qunit' ] );
+    grunt.registerTask( 'depbuild', [ 'bower-install-simple', 'bower', 'bower_concat', 'cssmin' ] );
 
-    // Serve presentation locally
-    grunt.registerTask( 'serve', [ 'bower_concat', 'cssmin', 'connect', 'watch'] );
+    // Build
+    grunt.registerTask( 'build', [ 'depbuild', 'js' ] );
+
+    // Indexing
     grunt.registerTask( 'index', [ 'validation', 'metaparser', 'execute' ] );
 
     // Run tests
     grunt.registerTask( 'test', [ 'jshint', 'qunit', 'validation' ] );
 
+    // Serve presentation locally
+    grunt.registerTask( 'serve', [ 'connect', 'watch'] );
 };

@@ -43,6 +43,7 @@
     "grunt-bower": "^0.17.0",
     "grunt-sass": "~0.14.0",
     "grunt-zip": "~0.7.0",
+    "grunt-bower-install-simple": "~1.1.0",
     "node-sass": "~0.9.3",
     "html-metadata": "~0.1.0",
     "grunt-execute": "~0.2.2",
