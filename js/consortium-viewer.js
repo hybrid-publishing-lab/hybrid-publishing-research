@@ -43,5 +43,5 @@ App.config(function($routeProvider, $locationProvider) {
         return delay.promise;
       }
     }
-  })
+  });
 });
