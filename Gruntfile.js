@@ -75,7 +75,7 @@ module.exports = function(grunt) {
         },
         
         gitfetch: {
-            your_target: {
+            task: {
               options: {
                 all: true
               }
@@ -211,7 +211,7 @@ module.exports = function(grunt) {
     grunt.registerTask( 'depbuild', [ 'bower-install-simple', 'bower', 'bower_concat', 'cssmin' ] );
 
     // git fetch and rebase
-    grunt.registerTask( 'upgrade', [ 'gitfetch', 'gitreset', 'build' ] );
+    grunt.registerTask( 'upgrade', [ 'gitfetch', 'gitreset', 'build', 'index' ] );
 
     // Build
     grunt.registerTask( 'build', [ 'depbuild', 'js' ] );
