@@ -73,6 +73,23 @@ module.exports = function(grunt) {
             },
             files: [ 'Gruntfile.js', 'js/consortium-viewer.js' ]
         },
+        
+        gitfetch: {
+            your_target: {
+              options: {
+                all: true
+              }
+            }
+        },
+
+        gitreset: {
+            task: {
+                options: {
+                    mode: 'hard',
+                    commit: 'origin/master'
+                }
+            }
+        },
 
         connect: {
             server: {
@@ -106,12 +123,14 @@ module.exports = function(grunt) {
             options: {
                 relaxerror: [
                     'Bad value X-UA-Compatible for attribute http-equiv on element meta.', 
-                    'Bad value SCHEMA.DC for attribute rel on element link: The string schema.dc is not a registered keyword.']
+                    'Bad value SCHEMA.DC for attribute rel on element link: The string schema.dc is not a registered keyword.'],
+                doctype: 'HTML5',
+                reset: true
                 //reset: grunt.option('reset') || false,
                 //stoponerror: false,
             },
             files: {
-                src: ['dist/docs/**/*.html', '!dist/docs/_template*/*.html']
+                src: [ 'dist/docs/**/*.html', '!dist/docs/_**/*.html']
             }
         },
 
@@ -182,6 +201,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks( 'grunt-bower-concat' );
     grunt.loadNpmTasks( 'grunt-execute' );
     grunt.loadNpmTasks( 'grunt-metaparser' );
+    grunt.loadNpmTasks( 'grunt-git' );
 
     // Default task
     grunt.registerTask( 'default', [ 'build', 'index' ] );
@@ -189,6 +209,9 @@ module.exports = function(grunt) {
     // Building bricks
     grunt.registerTask( 'js', [ 'jshint', 'uglify', 'qunit' ] );
     grunt.registerTask( 'depbuild', [ 'bower-install-simple', 'bower', 'bower_concat', 'cssmin' ] );
+
+    // git fetch and rebase
+    grunt.registerTask( 'upgrade', [ 'gitfetch', 'gitreset' ] );
 
     // Build
     grunt.registerTask( 'build', [ 'depbuild', 'js' ] );
