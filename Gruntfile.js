@@ -211,7 +211,7 @@ module.exports = function(grunt) {
     grunt.registerTask( 'depbuild', [ 'bower-install-simple', 'bower', 'bower_concat', 'cssmin' ] );
 
     // git fetch and rebase
-    grunt.registerTask( 'upgrade', [ 'gitfetch', 'gitreset' ] );
+    grunt.registerTask( 'upgrade', [ 'gitfetch', 'gitreset', 'build' ] );
 
     // Build
     grunt.registerTask( 'build', [ 'depbuild', 'js' ] );
