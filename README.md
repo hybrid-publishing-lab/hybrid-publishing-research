@@ -25,7 +25,7 @@ Install Node [https://www.npmjs.com/](npm) for your operating system. On Debian/
 its probably best not to use the (outdated) node version from your default repository.
 We use [https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories](nodesource).
 
-For Mac OS download and installthe latest NPM Install Package from [https://nodejs.org/download/](nodejs.org)
+For Mac OS download and install the latest NPM Install Package from [https://nodejs.org/download/](nodejs.org)
 
 Install git for cloning the documents. On Ubuntu/Debian type:
 
@@ -77,12 +77,6 @@ can use the template folder as a starter for your new dossier.
 	cp docs/_template docs/mydossier
 
 
-<TODO>
-Once your done you can generate new stable pdfs with
-
-	grunt createstablepdf
-</TODO>
-
 If everything is in place start a validation round to see if your new added
 content holds up.
 
@@ -92,9 +86,9 @@ If something turns red see the command line output to debug your dossier.
 
 After successful debugging commit everything to our repository and file a pull request
 so we can add the new dossier to the master branch and the consortium website. Please
-use meaningful commit notes. If your unsure see this resource for a quick description:
+use meaningful commit notes.
 	
-	git add docs/mydossier*
+	git add dist/docs/mydossier*
 
 	git commit -m 'Added a cool index on microbreweries - This is still a draft - looking 
 	for people who want to help me collect'
@@ -103,16 +97,43 @@ use meaningful commit notes. If your unsure see this resource for a quick descri
 
 Go to [https://github.com/consortium/hybrid-publishing-research](https://github.com/consortium/hybrid-publishing-research) and file a pull request.
 
+Testing
+-------
+
+	N/A yet
+
+
+Grunt commands
+-------
+
+	grunt  -  (default) executes building, validation and indexing
+    grunt serve  -  start webservice
+
+
+Commands normally not needed:
+
+    grunt index  -  meta command build an index out of all resources
+    grunt build  -  meta command do all building tasks
+    grunt validation  -  html validation
+    grunt bower-install-simple  -  install bower dependencies
+    grunt bower  -  extract all files from bower_components and copy to /lib
+    grunt bower_concat  -  concat js and css files
+    grunt cssmin  -  css minification
+    grunt js  -  meta command do all js related tasks
+    grunt jshint  -  hint js files
+    grunt uglify  -  minify js
+    grunt qunit  -  do unit testing 
+   	grunt metaparser  -  create an index based on metadata
+   	grunt execute    
+   	grunt gitfetch  -  does git fetch
+   	grunt gitreset  -  resets git to latest commit origin/master 
+   	grunt upgrade   -  meta command upgrade all to latest commit (deleting local changes!)
+
+
+
 Todo
 ----
-	Metatag validation (Dublin Core)
-	Copyright notice validation
-	Licensing notice validation
-	Folder structure test
-	Error on invalid files
-	Git log display in Browser
-	Readme.md display in Browser
-	Output target via grunt
+	see github issues
 
 License
 -------
