@@ -26,6 +26,9 @@ App.controller('SpaceCtrl', function($scope, $http) {
         return result;
     };*/
 
-
+    $scope.stripdist = function(path) {
+        path = path.replace(/(dist\/)+/, '');
+        return path;
+    };
 
 });

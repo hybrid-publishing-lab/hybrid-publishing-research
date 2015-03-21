@@ -54,7 +54,7 @@
                 <div class="col-md-3">
                     <div class="list-group">
                         <div ng-show="indexlist" ng-repeat="item in indexlist">
-                            <a href="{{item.filename}}" class="list-group-item">
+                            <a href="{{ stripdist(item.filename) }}" class="list-group-item">
                                 <h3 ng-hide="{{!item.data.title[0].length}}">{{item.data.title[0]}}</h3>
                                 <p ng-hide="{{!item.data.title[1].length}}">{{item.data.title[1]}}</p>
                                 <h3 ng-show="{{!item.data.title[0].length}}">Metadata not available</h3>
