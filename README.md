@@ -101,7 +101,7 @@ use meaningful commit notes. If your unsure see this resource for a quick descri
 
 	git push origin mybranch
 
-Go to [https://github.com/consortium/hybrid-publishing-research.git](github) and file a pull request.
+Go to [https://github.com/consortium/hybrid-publishing-research](github) and file a pull request.
 
 Todo
 ----
