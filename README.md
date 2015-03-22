@@ -4,7 +4,7 @@ About
 -----
 This repository is the consortium.io document collection. Its complied in a redistributable way.
 We're hosting this on docs.consortium.io. If you just want to download the papers use the
-folder stable/
+folder dist/docs
 
 Features
 --------

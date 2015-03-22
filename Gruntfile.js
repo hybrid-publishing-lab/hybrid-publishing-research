@@ -168,7 +168,7 @@ module.exports = function(grunt) {
             options: {
                 // execute node with additional arguments 
                 //args: ['docs/**/*.html', '!docs/_template*/*.html']
-                args:['metadata.json','validation-report.json']
+                args:['metadata.json','validation-report.json', '!**/assets/**']
             },
             target: {
                 src: ['createindex.js']
@@ -176,7 +176,7 @@ module.exports = function(grunt) {
         },
         
         metaparser: {
-            'metadata.json': ['dist/docs/**/*.html', '!dist/docs/_template*/*.html']
+            'metadata.json': ['dist/docs/**/*.html', '!dist/docs/_template*/*.html', '!**/assets/**']
         }
 
     });
