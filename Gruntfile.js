@@ -130,7 +130,7 @@ module.exports = function(grunt) {
                 //stoponerror: false,
             },
             files: {
-                src: [ 'dist/docs/**/*.html', '!dist/docs/_**/*.html']
+                src: [ 'dist/docs/**/*.html', '!dist/docs/_**/*.html', '!**/assets/**']
             }
         },
 
@@ -168,7 +168,7 @@ module.exports = function(grunt) {
             options: {
                 // execute node with additional arguments 
                 //args: ['docs/**/*.html', '!docs/_template*/*.html']
-                args:['metadata.json','validation-report.json', '!**/assets/**']
+                args:['metadata.json','validation-report.json']
             },
             target: {
                 src: ['createindex.js']
