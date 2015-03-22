@@ -48,8 +48,7 @@
     "grunt-git": "~0.3.4",
     "html-metadata": "~0.1.0",
     "grunt-execute": "~0.2.2",
-    "bower": "~1.3.12",
-    "git-repo-info": "~1.0.4"
+    "bower": "~1.3.12"
   },
   "licenses": [
     {

@@ -40,7 +40,7 @@ Right now it does:
 
 var fs 			= require('fs')
 var _ 			= require('underscore')
-var getRepoInfo = require('git-repo-info');
+var spawn       = require('child_process').spawn;
 
 var pathlist 	= process.argv.slice(2)
 var metadataObj = require("./" + pathlist[0]);
@@ -88,11 +88,14 @@ fs.writeFile("dist/index.json", printableJson, function(err) {
 
 
 // We need some git infos to display in the browser
-var info = getRepoInfo();
-var gitInfos =  '{"branch" : "' + info.branch + '", "sha" : "' + info.sha + '", "abbreviatedSha" :"' + info.abbreviatedSha + '", "tag" :"' + info.tag + '"}'
+var child = spawn('git', ['log', '-1', '--pretty=format:{%n  "abbr" : "%h", %n  "commit": "%H",%n  "author":     "%an",%n  "author_email": "%ae",%n  "date": "%ad",%n  "message": "%f"%n}']);
 
-// Write gitinfo.json file
-fs.writeFile("dist/gitinfo.json", gitInfos, function(err) {
-      if (err) throw('File save error: '+ err);
-      console.log('gitinfo file saved');
+child.stdout.on('data', function(chunk) {
+
+    gitinfo = chunk.toString("utf-8");
+    // Write gitinfo.json file
+    fs.writeFile("dist/gitinfo.json", gitinfo, function(err) {
+          if (err) throw('File save error: '+ err);
+          console.log('gitinfo file saved');
+    });
 });
