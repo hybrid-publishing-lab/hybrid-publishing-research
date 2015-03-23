@@ -116,6 +116,9 @@ module.exports = function(grunt) {
             css: {
                 files: [ 'css/main.css' ],
                 tasks: 'cssmin'
+            },
+            json: {
+                files: [ 'dist/index.json' ]
             }
         },
 

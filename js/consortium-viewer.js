@@ -5,8 +5,8 @@ var App = angular.module('App', [
 App.controller('SpaceCtrl', function($scope, $http) {
 
     $http.get('index.json')
-        .then(function(res){
-            $scope.indexlist = res.data;
+        .success(function(data, status, headers, config) {
+          $scope.indexlist = data;
         });
     
     $http.get('gitinfo.json')
