@@ -62,9 +62,9 @@
                                 <h3 ng-cloak ng-hide="{{!item.data.title[0].length}}">{{item.data.title[0]}}</h3>
                                 <p ng-cloak ng-hide="{{!item.data.title[1].length}}">{{item.data.title[1]}}</p>
                                 <h3 ng-cloak ng-show="{{!item.data.title[0].length}}">Metadata not available</h3>
-                                <p  ng-cloak ng-show="{{!item.data.title[1].length}}">Metadata not available</p>
+                                <p ng-cloak ng-show="{{!item.data.title[1].length}}">Metadata not available</p>
                                 
-                                <div ng-cloak ng-show="{{item.error.length}}" class="alert alert-danger" role="alert">
+                                <div ng-cloak ng-show="{{item.htmlerror.length}}" class="alert alert-danger" role="alert">
                                     <span class="sr-only">Error:</span>
                                      Not html5 conform
                                 </div>

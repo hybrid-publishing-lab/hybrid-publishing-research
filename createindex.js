@@ -32,7 +32,6 @@ Right now it does:
     Everything is hard coded and ugly this will be addressed :D
     
     2. gets some git information and creates a json file
-
     All these files are read by the angular script for the frontend.
     This file gets executed with grunt and won't work like this.
 */
@@ -78,8 +77,9 @@ var merge = function() {
 // Merge the different JSON files by key
 var mergeData = merge(metadataObj,reportObj)
 mergeData = _.compact(_.flatten(mergeData, true));
+;
 var printableJson = JSON.stringify(mergeData, null, 2);
-
+printableJson = printableJson.replace(/"error":/g, '"htmlerror":')
 // Write index.json file
 fs.writeFile("dist/index.json", printableJson, function(err) {
       if (err) throw('File save error: '+ err);
