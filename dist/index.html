@@ -64,9 +64,23 @@
                                 <h3 ng-cloak ng-show="{{!item.data.title[0].length}}">Metadata not available</h3>
                                 <p ng-cloak ng-show="{{!item.data.title[1].length}}">Metadata not available</p>
                                 
-                                <div ng-cloak ng-show="{{item.htmlerror.length}}" class="alert alert-danger" role="alert">
+                                <div ng-cloak ng-show="{{!item.htmlerror[0]}}" class="alert alert-success" role="success">
+                                    <span class="sr-only">Success:</span>
+                                    html5 valid
+                                </div>
+
+                                <div ng-cloak ng-show="{{item.htmlerror[0]}}" class="alert alert-danger" role="danger">
                                     <span class="sr-only">Error:</span>
-                                     Not html5 conform
+                                     Not html5 valid
+                                </div>
+
+                                <div ng-cloak ng-show="{{item.dcerrors[0].length}}" class="alert alert-danger" role="alert">
+                                    <span class="sr-only">Error:</span>
+                                     Not Dublin Core valid
+                                </div>
+                                <div ng-cloak ng-show="{{!item.dcerrors[0].length}}" class="alert alert-success" role="success">
+                                    <span class="sr-only">Success:</span>
+                                     Dublin Core valid
                                 </div>
                             </a>
                         </div>
