@@ -44,7 +44,7 @@
 
                     <p> We're hosting this on <a href="https://research.consortium.io">https://research.consortium.io</a>. Get the dossiers and the code on <a href="https://github.com/consortium/hybrid-publishing-research.git">https://github.com/consortium/hybrid-publishing-research.git.</a></p>
 
-                    </p>{{gitinfo.date}}, git hash: <a ng-href="https://github.com/consortium/hybrid-publishing-research/commit/{{gitinfo.commit}}">{{gitinfo.commit}}</a>.</p>
+                    </p ng-cloak >{{gitinfo.date}}, git hash: <a ng-href="https://github.com/consortium/hybrid-publishing-research/commit/{{gitinfo.commit}}">{{gitinfo.abbr}}</a>.</p>
                 </div>
             </div>
         </div>
@@ -54,13 +54,13 @@
                 <div class="col-md-3">
                     <div class="list-group">
                         <div ng-show="indexlist" ng-repeat="item in indexlist">
-                            <a href="{{ stripdist(item.filename) }}" class="list-group-item">
-                                <h3 ng-hide="{{!item.data.title[0].length}}">{{item.data.title[0]}}</h3>
-                                <p ng-hide="{{!item.data.title[1].length}}">{{item.data.title[1]}}</p>
-                                <h3 ng-show="{{!item.data.title[0].length}}">Metadata not available</h3>
-                                <p ng-show="{{!item.data.title[1].length}}">Metadata not available</p>
+                            <a href="{{ stripdist(item.filename) }}" ng-cloak class="list-group-item">
+                                <h3 ng-cloak ng-hide="{{!item.data.title[0].length}}">{{item.data.title[0]}}</h3>
+                                <p ng-cloak ng-hide="{{!item.data.title[1].length}}">{{item.data.title[1]}}</p>
+                                <h3 ng-cloak ng-show="{{!item.data.title[0].length}}">Metadata not available</h3>
+                                <p  ng-cloak ng-show="{{!item.data.title[1].length}}">Metadata not available</p>
                                 
-                                <div ng-show="{{item.error.length}}" class="alert alert-danger" role="alert">
+                                <div ng-cloak ng-show="{{item.error.length}}" class="alert alert-danger" role="alert">
                                     <span class="sr-only">Error:</span>
                                      Not html5 conform
                                 </div>

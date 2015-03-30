@@ -179,7 +179,23 @@ module.exports = function(grunt) {
         },
         
         metaparser: {
-            'metadata.json': ['dist/docs/**/*.html', '!dist/docs/_template*/*.html', '!**/assets/**']
+            'metadata.json': ['dist/docs/**/*.html', '!dist/docs/_template*/*.html', '!**/assets/**'],
+            options: {
+                required: [
+                    // We omit "DC" and categories in metatags. Of course they have to exist in the document i.e. "DC.title" or "DC.identifier.URL"
+                    // Beware this is case sensitive. 
+                    'title', 
+                    'creator',
+                    'subject',
+                    'abstract',
+                    'date',
+                    'type',
+                    'format',
+                    'language',
+                    'uRL',
+                    'rights'
+                ]
+            }
         }
 
     });
