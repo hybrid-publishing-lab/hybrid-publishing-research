@@ -103,17 +103,37 @@ can use the template folder as a starter for your new dossier.
 If everything is in place start a validation round to see if your new added
 content holds up.
 
-	grunt validation
+	grunt index
 
+For every document that is in the dist/docs folder you get two validation runs.
 
+The first one describes the w3c validity. If something turns red see the command line output to debug your dossier:
+	
 	Validation started for.. dist/docs/mydossier/x-html-example.html
-	>> Validation successful..
-	Validation report generated: validation-report.json
+	Running "validation:files" (validation) task
 
-If something turns red see the command line output to debug your dossier.
+	1=> "& did not start a character reference. (& probably should have been escaped as &amp;.)" Line no: 33
+	2=> "Consider using the h1 element as a top-level heading only (all h1 elements are treated as top-level headings by many screen readers and other tools)." Line no: 47
+	3=> "Saw < when expecting an attribute name. Probable cause: Missing > immediately before." Line no: 65
+	4=> "A slash was not immediately followed by >." Line no: 65
+	5=> "End tag had attributes." Line no: 65
 
-After successful debugging commit everything to our repository and file a pull request
-so we can add the new dossier to the master branch and the consortium website. Please
+
+The second run describes the Dublin core metatag validation. Output could look something like this:
+
+	Checking x-html-example.html for required metadata: 
+	>> title
+	>> creator
+	>> subject
+	>> abstract
+	>> missing entry: date
+	>> type
+	>> format
+	>> language
+	>> uRL
+	>> rights
+
+After you have successful debugged your newly added document, commit everything to our repository and file a pull request so we can add the new dossier to the master branch and the consortium website. Please
 use meaningful commit notes.
 	
 	git add dist/docs/mydossier*
