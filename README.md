@@ -3,19 +3,18 @@
 About
 -----
 This repository is the consortium.io document collection. Its complied in a redistributable way.
-We're hosting this on [https://research.consortium.io](research.consortium.io). If you just want to download the papers use the
-folder dist/docs.
+We're hosting this on [https://research.consortium.io](https://research.consortium.io). If you just want to download the papers use the folder dist/docs.
 
 Features
 --------
     
-    - WebService
-    - Validation
+    - Dynamic WebService for viewing documents
+    - Dynamic Validation
         - html5
         - Javascript
         - css
-    - Index generation
-    - Live Reload on file change
+        - dublin core 
+    - Dynamic Index generation
 
 Requirements for local development or viewing
 ---------------------------------------------
@@ -29,12 +28,11 @@ Requirements for local development or viewing
     - grunt (tested with grunt 0.4.5)
     - bower 
 
-
 Installation
 ------------
-This repository comes with a nodejs setup to serve the documents locally. This is needed if you want to change or add documents, serve them in your local network or develop the display code.
+This repository comes with a nodejs setup to serve the documents locally. If you want to change or add documents, serve them in your local network or develop the display code you need to follow this installation instruction.
 
-Install Node [https://www.npmjs.com/](npm) for your operating system. On Debian/Ubuntu 
+Install Node [npm][https://www.npmjs.com/] for your operating system. On Debian/Ubuntu 
 its probably best not to use the (outdated) node version from your default repository.
 We use [https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories](nodesource).
 
@@ -44,7 +42,8 @@ Install git for cloning the documents. On Ubuntu/Debian type:
 
     sudo apt-get install git
 
-On Mac OS follow installation instruction provided on [http://git-scm.com/downloads](here)
+On Mac OS follow installation instruction provided on [here][http://git-scm.com/downloads].
+
 
 After git installation yo need to clone the repository, we use the commandline but you could use a git frontend as well.
     
@@ -83,7 +82,7 @@ To stop the webserver type ctrl-C in the terminal.
 If you have any issues, don't hesitate to file an issue on github or send us an email
 
 
-Edit or add Content
+Edit or add content
 -------------------
 
 This repository comes with a node.js setup to serve the documents locally. 
