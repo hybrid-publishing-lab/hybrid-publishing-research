@@ -1,86 +1,77 @@
 About
 -----
-This repository is the consortium.io document collection. Its complied in a redistributable way.
-We're hosting this on [https://research.consortium.io](https://research.consortium.io). If you just want to download the papers use the folder dist/docs.
+This repository is the document collection of the consortium.io. It's compiled in a redistributable way.
+We're hosting this on [https://research.consortium.io](https://research.consortium.io). If you just wish to download the documents, then find the files in the folder dist/docs.
 
-This is an experimental publishing format developed by the hybrid publishing consortium. Beware this is work in progress we are adding new features over time. See our Roadmap. If you reuse this code please file a pull request so we can all benefit.
+This is an experimental publishing format developed by the hybrid publishing consortium. please keep in mind that this is work in progress and that we are continuously adding new features. Check our roadmap and our github issue tracker. If you reuse this code, then please commit and file a pull request so we can all benefit from your development.
 
 Features
 --------
     
-    - Dynamic WebService for viewing documents
-    - Dynamic Validation
+    - Dynamic webService for viewing documents
+    - Dynamic validation for
         - html5
-        - Javascript
+        - javascript
         - css
         - dublin core 
-    - Dynamic Index generation
+    - Dynamic index generation
 
-Requirements for local development or viewing
+Requirements for local development or local viewing
 ---------------------------------------------
 
-    - Mac OS or Linux (tested on Ubuntu precise,trusty, Mac OS 10.9)
+    - tested with Ubuntu, Mac OS
     - git
-    - terminal knowledge
+    - commandline knowhow
     - a text editor (i.e. sublimetext)
     - a browser
-    - node (tested with 0.10.37)
+    - nodejs (tested with 0.10.37)
     - grunt (tested with grunt 0.4.5)
     - bower 
 
 Installation
 ------------
 
-This repository comes with a nodejs setup to serve the documents locally. If you want to change or add documents, serve them in your local network or develop the display code you need to follow this installation instruction.
+This repository is equipped with a nodejs setup, so that you can work with the documents locally on your computer. If you want to change or add documents, serve them in your local network or develop the display code, you need to apply the following installation instruction:
 
-Install [NPM](https://www.npmjs.com/) for your operating system. On Debian/Ubuntu 
-its probably best *not* to use the (outdated) node version from your default repository.
-We use [nodesource](https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories).
+Install [NPM](https://www.npmjs.com/) for your operating system. We suggest that you *not* use the (outdated) node version from your default apt repository on Debian/Ubuntu. We use [nodesource](https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories) to install the latest version of npm and nodejs. If you're using Mac OS, then download and install the NPM Install Package from [nodejs.org](https://nodejs.org/download/).
 
-For Mac OS download and install the latest NPM Install Package from [nodejs.org](https://nodejs.org/download/)
-
-Install git for cloning the documents. On Ubuntu/Debian type:
+For cloning documents you need to install git. If you're using Ubuntu/Debian then type the follwing command:
 
     sudo apt-get install git
 
-On Mac OS follow installation instruction provided on [here](http://git-scm.com/downloads).
+I you're using Mac OS than follow the installation instruction provided [here](http://git-scm.com/downloads).
 
-After git installation yo need to clone the repository, we use the commandline but you could use a git frontend as well.
+After completing git installation, you need to clone the repository. We use the following command line but you can use a graphical git front-end as well:
     
     git clone https://github.com/consortium/hybrid-publishing-research.git
 
-Once the documents and the viewing and validation code is installed in your local directory we need to install all dependencies, so the system works. This is quite easy you just need to copy paste all the command in your terminal.
+Once you have installed the documents and the viewing- and validation code in your local directory, you will need to install all required dependencies in order for the system to work. This is quite easy: all you need is to copy&paste the following commands in your terminal.
 
 Open a terminal and change directory to hybrid-publishing-research:
 
     cd hybrid-publishing-research/
 
-Install grunt globally (you need admin access to install npm packages globally)
+Install grunt globally (you need administrative access to install npm packages globally):
 
     sudo npm install -g grunt-cli
 
-Install all other node dependencies via npm:
+Install all other node dependencies non-globally via npm:
 
     npm install
 
-All packages will be installed in node_modules. Now node is installed - we still need to 
-get all the frontend libraries that are used in the browser.  
-
-Back in the hybrid-publishing-research folder use grunt to load all libraries and generate all needed files. Type:
+All packages will automatically be installed in the folder /node_modules. With all the node packages installed, all you need now is to install all the front-end libraries that are used in the browser. In order to do this use grunt to load all libraries and generate all needed files. Type the following command:
 
       grunt 
 
-If everything went ok, use grunt to start a node instance to serve your files:
+If this works, use grunt to start a node instance to serve the files via http:
 
       grunt serve
 
-Your Browser will open and you can visit the sites on [http://localhost:8080](http://localhost:8080)
+Your browser will now open and you can visit the documents on [http://localhost:8080](http://localhost:8080)
 
-To stop the webserver type ctrl-c in the terminal.
+To exit the webserver type ctrl-c in the terminal.
 
-
-If you have any issues, don't hesitate to file an issue on github or send us an email.
-
+If you have any problems, don't hesitate to report an issue on github or send us an email.
 
 Edit or add content
 -------------------
