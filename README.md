@@ -180,20 +180,19 @@ Commands normally not needed:
 
 Filestructure
 -------------
-.
-├── bower_components                          ==> frontend source libraries, managed by bower
-├── css                                       ==> source css
-├── dist  									    ==> docroot
-│   ├── css                                       ==> minified css *ALL* 
-│   ├── docs                                      ==> docs
-│   ├── js                                        ==> minified js *ALL*
-│   └── static                                    ==> static assets
-├── extra                                     ==> extra things like upstrat startscript etc.
-├── js                                        ==> source js
-├── lib                                       ==> precompiled frontend source libraries
-├── node_modules							  ==> node modules managed by npm
-└── test                                      ==> testing scripts
-
+    .
+	├── bower_components                          ==> frontend source libraries, managed by bower
+	├── css                                       ==> source css
+	├── dist  									    ==> docroot
+	│   ├── css                                       ==> minified css *ALL* 
+	│   ├── docs                                      ==> docs
+	│   ├── js                                        ==> minified js *ALL*
+	│   └── static                                    ==> static assets
+	├── extra                                     ==> extra things like upstrat startscript etc.
+	├── js                                        ==> source js
+	├── lib                                       ==> precompiled frontend source libraries
+	├── node_modules							  ==> node modules managed by npm
+	└── test                                      ==> testing scripts
 
 
 Todo
