@@ -32,3 +32,16 @@ App.controller('SpaceCtrl', function($scope, $http) {
     };
 
 });
+
+
+$( ".contact" ).click(function() {
+    $( "#footer_slide" ).slideToggle( "slow");
+    $('html, body').animate({
+        scrollTop: $("#footer_slide").offset().top + $('window').height()
+    }, 2000);
+    $( this ).toggleClass( "slide_up" );
+});
+$( ".more" ).click(function() {
+    $( "#header_slide" ).slideToggle( "slow");
+    $( this ).toggleClass( "slide_up" );
+});

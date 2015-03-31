@@ -47,7 +47,7 @@
                         <p>The research repository of the Hybrid Publishing Consortium (HPC) supporting Open Source software infrastructures publishing–design, single source, dynamic publishing &amp; Open Access.</p>
                         <p>This Research Viewer is an example Open Source tool the HPC has made for research distribution.</p>
                         <p>Source: Publication and software source code on <a href="https://github.com/consortium/hybrid-publishing-research.git">GitHub</a></p>
-                        <p>ID: Publications version: Mon Mar 23 07:57:31 2015 +0100, git hash: 9795c7d97fb0f363a02e22e93d0415cf2b2dc3da.</p>
+                        <p ng-cloak >ID: Publications version: {{gitinfo.date}}, git hash: <a ng-href="https://github.com/consortium/hybrid-publishing-research/commit/{{gitinfo.commit}}">{{gitinfo.abbr}}</a>.</p>
                      </div>
                  </section>
             </div>
@@ -119,20 +119,6 @@
         -->
 
         <script src="js/all.min.js"></script>
-        <script src="js/jquery-1.11.2.min.js"></script>
-        <script>
-        $( ".contact" ).click(function() {
-            $( "#footer_slide" ).slideToggle( "slow");
-            $('html, body').animate({
-                scrollTop: $("#footer_slide").offset().top + $('window').height()
-            }, 2000);
-            $( this ).toggleClass( "slide_up" );
-        });
-        $( ".more" ).click(function() {
-            $( "#header_slide" ).slideToggle( "slow");
-            $( this ).toggleClass( "slide_up" );
-        });
-        </script>
     </body>
 
 </html>
