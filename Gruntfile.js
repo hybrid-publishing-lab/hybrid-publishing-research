@@ -68,7 +68,8 @@ module.exports = function(grunt) {
                     unescape: false,
                     define: false,
                     exports: false,
-                    angular: true
+                    angular: true,
+                    $: false
                 }
             },
             files: [ 'Gruntfile.js', 'js/consortium-viewer.js' ]
