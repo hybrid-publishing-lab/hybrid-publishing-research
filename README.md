@@ -3,8 +3,8 @@
 About
 -----
 This repository is the consortium.io document collection. Its complied in a redistributable way.
-We're hosting this on docs.consortium.io. If you just want to download the papers use the
-folder dist/docs
+We're hosting this on [https://research.consortium.io](research.consortium.io). If you just want to download the papers use the
+folder dist/docs.
 
 Features
 --------
