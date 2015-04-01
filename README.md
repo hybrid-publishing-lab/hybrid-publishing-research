@@ -226,7 +226,8 @@ To do
 Coding style
 ------------
 
-Indentation: 4 characters, no tabs use spaces
+    Indentation: 4 characters, no tabs use spaces.
+
 Recommended style guides: [https://code.google.com/p/google-styleguide/](https://code.google.com/p/google-styleguide/)
 
 License
