@@ -11,8 +11,6 @@ a, a:hover {
     color: black;
     text-decoration: none;
 }
-
-
 .cover-dossier {
   width: 250px;
   float: left;
@@ -43,7 +41,6 @@ footer {
 #footer_slide {
   display: none;
 }
-
 
 li {
 	list-style: none;
@@ -100,15 +97,13 @@ a.list-group-item:focus, a.list-group-item:hover {
     background-color: white;
 }
 
-
-
 .serif-font {
     font-family: "Bagnard", "Times New Roman", Times, serif;
 }
 .monospaced-font {
     font-family: "NotCourier", "Courier New", monospace;
 }
-// Inline and block code styles
+/* Inline and block code styles */
 code,
 kbd,
 pre,
