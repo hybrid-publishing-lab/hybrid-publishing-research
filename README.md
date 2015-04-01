@@ -5,7 +5,7 @@ We're hosting this on [https://research.consortium.io](https://research.consorti
 
 This is an experimental publishing format developed by the hybrid publishing consortium. Please keep in mind that this is work in progress and that we are continuously adding new features. Check our roadmap and our github issue tracker. If you reuse this code, then please commit and file a pull request so we can all benefit from your development.
 
-For further information on our efforts to create open source software for public infrastructures in publishing see the consortium website [consortium.io](http://www.consortium.io/about).
+For further information on our efforts to create open source software for public infrastructures within publishing, visit the consortium website [consortium.io](http://www.consortium.io/about).
 
 Features
 --------
@@ -78,30 +78,25 @@ If you have any problems, don't hesitate to report an issue on github or send us
 Edit or add content
 -------------------
 
-This repository comes with a node.js setup to serve the documents locally. 
-This is not a necessary, but helps develop clean html with, the integrated 
-validator.
+This repository is equipped with a node.js setup, so that you can serve the documents in your local network. Integrated in node.js is a code validator, which checks your edited or newly added html documents for errors and inconsistencies.
 
-Install the package. Once you have it installed the best way is to create
-a new git branch with
+You need to install this setup described above in the installation section. Once you have done this, create a new git branch with the following command:
 
     git checkout -b mybranch
 
-After this feel free to edit the files with the your favourite text editor. You 
-can use the template folder as a starter for your new dossier.
+Having done this edit the files with the your favourite text editor. You can copy the template folder as a starting point for your new document. Use:
 
-    cp -r dist/docs/_template dist/docs/mydossier
+    cp -r dist/docs/_template dist/docs/mynewdoc
 
-If everything is in place start a validation round to see if your new added
-content holds up.
+Once you have written your new document (or edited an old one), then start a validation round to check if your new added content is valid. Type:
 
     grunt index
 
-For every document that is in the dist/docs folder you get two validation runs.
+Every html document that is in the dist/docs folder (ommitting _template), will be checked by the validator in two steps.
 
-The first one describes the w3c validity. If something turns red see the command line output to debug your dossier:
+Step one checks the html5 validity described by the [w3c](http://validator.w3.org/). This step will show you if your document has unvalid code according to the html5 standard. This will be signalled to you in red in the command line output. See following example:
     
-    Validation started for.. dist/docs/mydossier/x-html-example.html
+    Validation started for.. dist/docs/mynewdoc/x-html-example.html
     Running "validation:files" (validation) task
 
     1=> "& did not start a character reference. (& probably should have been escaped as &amp;.)" Line no: 33
@@ -110,8 +105,7 @@ The first one describes the w3c validity. If something turns red see the command
     4=> "A slash was not immediately followed by >." Line no: 65
     5=> "End tag had attributes." Line no: 65
 
-
-The second run describes the Dublin core meta data validation. Output could look something like this:
+The second step validates the content according to the Dublin Core meta data standard. The output could look like this:
 
     Checking x-html-example.html for required meta data: 
     >> title
@@ -126,10 +120,9 @@ The second run describes the Dublin core meta data validation. Output could look
     >> rights
     >> No of errors: 1
 
-After you have successful debugged your newly added document, commit everything to our repository and file a pull request so we can add the new dossier to the master branch and the consortium website. Please
-use meaningful commit notes.
+After you have successfully debugged your newly added content, commit your branch to the repository and file a pull request. This way we can add the new document to the master branch and the consortium website. Please make sure to descriptive commit notes. The following commands might help you do this:
     
-    git add dist/docs/mydossier*
+    git add dist/docs/mynewdoc*
 
     git commit -m 'Added a cool index on microbreweries - This is still a draft - looking 
     for people who want to help me collect'
@@ -137,6 +130,8 @@ use meaningful commit notes.
     git push origin mybranch
 
 Go to [https://github.com/consortium/hybrid-publishing-research](https://github.com/consortium/hybrid-publishing-research) and file a pull request.
+
+If you need help using git commands see the git reference on [https://git-scm.herokuapp.com/](https://git-scm.herokuapp.com/) or contact us.
 
 Testing
 -------
@@ -146,10 +141,12 @@ Testing
 Grunt commands
 -------
 
+These are most commonly used commands:
+
     grunt (default)         -  executes building, validation and indexing
     grunt serve             -  start webservice
 
-Commands normally not needed:
+Other grunt task which you will normally not need:
 
     grunt index                 -  meta command build an index out of all resources
     grunt build                 -  meta command do all building tasks
@@ -168,8 +165,11 @@ Commands normally not needed:
     grunt gitreset              -  resets git to latest commit origin/master 
     grunt upgrade               -  meta command upgrade all to latest commit (deleting local changes!)
 
-Filestructure
+File structure
 -------------
+
+This is a descriptive view of the file structure:
+
     .
     ├── bower_components                ==> frontend source libraries, managed by bower
     │   ├── angular                         source frontend library
@@ -217,7 +217,7 @@ Roadmap
 -------
     
     0.4 Integrate export module for various targets
-    0.5 Integrate more sophisticated meta data and dublin core validation
+    0.5 Integrate more sophisticated meta data and Dublin Core validation
 
 To do
 -----
