@@ -213,8 +213,9 @@ Filestructure
 
 Roadmap
 -------
-
-    N/A yet
+    
+    0.4 Integrate export module for varios targets
+    0.5 Integrate more sophisticated metadata and dublin core validation
 
 Todo
 ----
