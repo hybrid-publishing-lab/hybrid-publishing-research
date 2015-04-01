@@ -56,36 +56,32 @@
         
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
-                    <div class="list-group">
-                        <div ng-show="indexlist" ng-repeat="item in indexlist">
-                            <a href="{{ stripdist(item.filename) }}" ng-cloak class="list-group-item">
-                                <h3 ng-cloak ng-hide="{{!item.data.title[0].length}}">{{item.data.title[0]}}</h3>
-                                <p ng-cloak ng-hide="{{!item.data.title[1].length}}">{{item.data.title[1]}}</p>
-                                <h3 ng-cloak ng-show="{{!item.data.title[0].length}}">Metadata not available</h3>
-                                <p ng-cloak ng-show="{{!item.data.title[1].length}}">Metadata not available</p>
-                                
-                                <div ng-cloak ng-show="{{!item.htmlerror[0]}}" class="alert alert-success" role="success">
-                                    <span class="sr-only">Success:</span>
-                                    html5 valid
-                                </div>
-
-                                <div ng-cloak ng-show="{{item.htmlerror[0]}}" class="alert alert-danger" role="danger">
-                                    <span class="sr-only">Error:</span>
-                                     Not html5 valid
-                                </div>
-
-                                <div ng-cloak ng-show="{{item.dcerrors[0].length}}" class="alert alert-danger" role="alert">
-                                    <span class="sr-only">Error:</span>
-                                     Not Dublin Core valid
-                                </div>
-                                <div ng-cloak ng-show="{{!item.dcerrors[0].length}}" class="alert alert-success" role="success">
-                                    <span class="sr-only">Success:</span>
-                                     Dublin Core valid
-                                </div>
-                            </a>
+                <div ng-show="indexlist" ng-repeat="item in indexlist" class="cover-dossier">
+                    <a href="{{ stripdist(item.filename) }}" ng-cloak class="list-group-item">
+                        <h3 ng-cloak ng-hide="{{!item.data.title[0].length}}">{{item.data.title[0]}}</h3>
+                        <p ng-cloak ng-hide="{{!item.data.title[1].length}}">{{item.data.title[1]}}</p>
+                        <h3 ng-cloak ng-show="{{!item.data.title[0].length}}">Metadata not available</h3>
+                        <p ng-cloak ng-show="{{!item.data.title[1].length}}">Metadata not available</p>
+                        
+                        <div ng-cloak ng-show="{{!item.htmlerror[0]}}" class="alert alert-success" role="success">
+                            <span class="sr-only">Success:</span>
+                            html5 valid
                         </div>
-                    </div>
+
+                        <div ng-cloak ng-show="{{item.htmlerror[0]}}" class="alert alert-danger" role="danger">
+                            <span class="sr-only">Error:</span>
+                             Not html5 valid
+                        </div>
+
+                        <div ng-cloak ng-show="{{item.dcerrors[0].length}}" class="alert alert-danger" role="alert">
+                            <span class="sr-only">Error:</span>
+                             Not Dublin Core valid
+                        </div>
+                        <div ng-cloak ng-show="{{!item.dcerrors[0].length}}" class="alert alert-success" role="success">
+                            <span class="sr-only">Success:</span>
+                             Dublin Core valid
+                        </div>
+                    </a>
                 </div>
             </div>    
         </div>
