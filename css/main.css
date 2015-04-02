@@ -18,7 +18,11 @@ a, a:hover {
 footer {
   padding-top: 30px;
 }
-
+p {
+  color: black;
+  font-family: "Cotham", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
 .logo {
   width: 130px;
   padding: 10px;
@@ -93,11 +97,16 @@ a.list-group-item:focus, a.list-group-item:hover {
   background-color: white;
 }
 
-.alert {
+.alert-danger {
   border: 2px solid red;
+  color: red;
   background-color: white;
 }
-
+.alert-success {
+  border: 2px solid blue;
+  color: blue;
+  background-color: white;
+}
 .serif-font {
   font-family: "Bagnard", "Times New Roman", Times, serif;
 }
