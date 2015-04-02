@@ -82,6 +82,11 @@ header {
     padding: 10px;
     position: relative;
 }
+.cover-img {
+    display:block;
+    width: 70%;
+    margin: auto;
+}
 
 /* MAIN */
 
