@@ -208,6 +208,9 @@ a.list-group-item:focus, a.list-group-item:hover {
     .alert {
         display: none;
     }
+    h1, .h1 { 
+       page-break-after: always;
+    }
 }
 @media screen {
     .print-only {
