@@ -31,8 +31,21 @@ App.controller('SpaceCtrl', function($scope, $http) {
         return path;
     };
 
+    $scope.firstelement = function(title) {
+        if ( _.size(title) > 2 ) {
+            return title;
+        } 
+            return _.first(title);
+    };
 });
 
+App.filter('capitalize', function() {
+    return function(input, scope) {
+        if (input!=null)
+        input = input.toLowerCase();
+        return input.substring(0,1).toUpperCase()+input.substring(1);
+    };
+});
 
 $( ".contact" ).click(function() {
     $( "#footer_slide" ).slideToggle( "slow");
@@ -45,3 +58,8 @@ $( ".more" ).click(function() {
     $( "#header_slide" ).slideToggle( "slow");
     $( this ).toggleClass( "slide_up" );
 });
+/*
+Date                DC.date
+Publication type        DC.type
+Author(s) or editor(s)        DC.contributor
+*/

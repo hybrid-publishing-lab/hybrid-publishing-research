@@ -58,10 +58,14 @@
                 <div class="row">
                     <div ng-show="indexlist" ng-repeat="item in indexlist" class="cover-dossier">
                         <a href="{{ stripdist(item.filename) }}" ng-cloak class="list-group-item">
-                            <h3 ng-cloak ng-hide="{{!item.data.title[0].length}}">{{item.data.title[0]}}</h3>
-                            <p ng-cloak ng-hide="{{!item.data.title[1].length}}">{{item.data.title[1]}}</p>
-                            <h3 ng-cloak ng-show="{{!item.data.title[0].length}}">Metadata not available</h3>
-                            <p ng-cloak ng-show="{{!item.data.title[1].length}}">Metadata not available</p>
+                            <h3 ng-cloak ng-hide="{{!item.data.title.length}}">{{ firstelement(item.data.title) }}</h3>
+                            <p>
+                                <span ng-cloak ng-hide="{{!item.data.type.length}}">{{ item.data.type | capitalize}}</span>
+                                <span ng-cloak ng-hide="{{!item.data.creator.length}}">by {{ item.data.creator }}</span>
+                            </p>
+                            <p>
+                                <span ng-cloak ng-hide="{{!item.data.date.length}}">{{ item.data.date }}</span>
+                            </p>
                             
                             <div ng-cloak ng-show="{{!item.htmlerror[0]}}" class="alert alert-success" role="success">
                                 <span class="sr-only">Success:</span>
