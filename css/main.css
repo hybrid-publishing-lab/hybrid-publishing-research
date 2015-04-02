@@ -9,62 +9,23 @@ a, a:hover {
     text-decoration: none;
 }
 
-.cover-dossier {
-    width: 250px;
-    float: left;
-    margin: 30px;
-}
-
-footer {
-    padding-top: 30px;
-}
 p {
     color: black;
     font-family: "Cotham", Helvetica, Arial, sans-serif;
     font-size: 18px;
-}
-.logo {
-    width: 130px;
-    padding: 10px;
-}
-
-.logo-footer {
-    height: 70px;
-    padding: 10px;
-    float: right;
-}
-
-.more {
-    text-align: center;
-}
-
-.contact {
-    text-align: center;
-}
-
-#header_slide {
-    display: none;
-}
-
-#footer_slide {
-    display: none;
 }
 
 li {
     list-style: none;
 }
 
-.logo {
-    width: 130px;
-    padding: 10px;
-    float: right;
-}
 
 [ng\:cloak], [ng-cloak], .ng-cloak {
     display: none !important;
 }
 
-/* HEADINGS */
+/* TYPE */
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "REGLO";
@@ -81,35 +42,7 @@ h3, .h3 {
     font-size: @font-size-h3;
     text-align: center;
 }
-/* NAVBAR */
-.navbar-header {
-    width: 100%;
-}
-/* FOOTER */
-footer {
-    padding-top: 30px;
-    border-top: 2px solid black;
-}
 
-.list-group-item {
-    border: 2px solid black;
-    background-color: white;
-}
-
-a.list-group-item:focus, a.list-group-item:hover {
-    background-color: white;
-}
-
-.alert-danger {
-    border: 2px solid red;
-    color: red;
-    background-color: white;
-}
-.alert-success {
-    border: 2px solid blue;
-    color: blue;
-    background-color: white;
-}
 .serif-font {
     font-family: "Bagnard", "Times New Roman", Times, serif;
 }
@@ -121,4 +54,91 @@ a.list-group-item:focus, a.list-group-item:hover {
 /* Inline and block code styles */
 code, kbd, pre, samp {
     font-family: "NotCourier", "Courier New", monospace;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+}
+.logo {
+    width: 110px;
+    padding: 10px;
+    position: relative;
+}
+
+/* PAGE TITLE + INFO */
+.page-title {
+    width: 100%;
+}
+
+.more {
+    text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+    padding-top: 30px;
+    border-top: 2px solid black;
+}
+
+.contact {
+    text-align: center;
+}
+
+
+.logo-footer {
+    height: 70px;
+    padding: 10px;
+    float: right;
+}
+
+/* MAIN PAGE: TABLE OF CONTENT */ 
+
+.cover-dossier {
+    width: 250px;
+    float: left;
+    margin: 30px;
+}
+
+.list-group-item {
+    border: 2px solid black;
+    background-color: white;
+}
+
+a.list-group-item:focus, a.list-group-item:hover {
+    background-color: white;
+}
+
+/* ALERTS */
+
+.alert-danger {
+    border: 2px solid red;
+    color: red;
+    background-color: white;
+}
+.alert-success {
+    border: 2px solid blue;
+    color: blue;
+    background-color: white;
+}
+
+/* ACTIONS */
+
+#header_slide {
+    display: none;
+}
+
+#footer_slide {
+    display: none;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width:768px) and (max-width:992px) {
+    h1, .h1 { 
+        font-size: 80px; 
+        text-align: center;
+    }
 }
