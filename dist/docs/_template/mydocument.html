@@ -22,10 +22,58 @@
 <title></title>
 </head>
 <body>
-	<section>
-		<h1></h1>
-		<p><figure><img src="assets/img/sample.jpg" alt="A sample picture to be discarded" />
-<figcaption>Figure: A sample picture to be discarded</figcaption></figure></p>
-	</section>
+	<header>
+        <img class="logo img-responsive" src="static/hpc-logoxx.png" alt="hpc-logo">
+    </header>
+    
+    <div id="main">
+        <div class="page-title">
+            <div class="more slide_up">
+                <!-- PAGE TITLE (only one h1 on the page: here) -->
+                <h1>TITLE</h1>
+                <p>MORE</p>
+            </div>
+            <section id="header_slide">
+                <!-- hidden “more information” on the page (toggle) -->
+                <div class="strapline">
+                    <p></p>
+                 </div>
+             </section>
+        </div> <!-- end div page-title -->
+        
+        <!-- W3C's HTML5: "A section is a thematic grouping of content" -->
+        <!-- STYLE: space on top and bottom -->
+        <!-- Sections can be repeated -->
+        <section>
+            <!-- title of the section (not obligatory) -->
+            <h2></h2>
+            <!-- paragraphs: no space on top/bottom, unless it is the first/last of a section-->
+            <!-- STYLE: first one in a section without indent, next ones with indent -->
+            <!-- STYLE: space on top and bottom -->
+            <p></p>
+            <!-- images with captions -->
+            <figure>
+                <img>
+                <figcaption>Fig1.</figcaption>
+            </figure> 
+        </section>
+        
+    </div> <!-- end div main -->
+    
+    <footer>
+        <div class="contact slide_up">
+            <p></p> 
+            <div class="footer-logos">
+                <img> <img> <img>
+            </div>
+        </div>
+        <section id="footer_slide"><p></p>
+            <p></p>
+        </section>
+    </footer>
+    
+    <!-- CALLS THE JS -->
+    <script src="../../js/all.min.js"></script>
+    
 </body>
 </html>
