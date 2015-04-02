@@ -103,6 +103,11 @@ header {
     text-align: center;
 }
 
+/* IMAGES */
+img {
+    width: 100%
+}
+
 /* FOOTER */
 
 footer {
