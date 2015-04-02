@@ -74,10 +74,26 @@ var merge = function() {
 };
 
 
+// Fix for broken w3c validator showing two times same stuff .. gnarf
+var arrUnique = function (arr) {
+    var cleaned = [];
+    arr.forEach(function(itm) {
+        var unique = true;
+        cleaned.forEach(function(itm2) {
+            if (_.isEqual(itm, itm2)) unique = false;
+        });
+        if (unique)  cleaned.push(itm);
+    });
+    return cleaned;
+}
+
+var reportObj = arrUnique(reportObj);
+
 // Merge the different JSON files by key
 var mergeData = merge(metadataObj,reportObj)
+
 mergeData = _.compact(_.flatten(mergeData, true));
-;
+
 var printableJson = JSON.stringify(mergeData, null, 2);
 printableJson = printableJson.replace(/"error":/g, '"htmlerror":')
 // Write index.json file
