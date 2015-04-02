@@ -35,10 +35,10 @@
     </head>
 
     <body ng-controller="SpaceCtrl">
-        <div class="container">
-            <div class="header">
-                <img class="logo img-responsive" src="static/hpc-logoxx.png" alt="hpc-logo">
-            </div>
+        <header>
+            <img class="logo img-responsive" src="static/hpc-logoxx.png" alt="hpc-logo">
+        </header>
+        <div id="main">
             <div class="page-title">
                 <div class="more slide_up">
                     <h1>Research<br>Viewer</h1>
@@ -52,70 +52,53 @@
                         <p ng-cloak >ID: Publications version: {{gitinfo.date}}, git hash: <a ng-href="https://github.com/consortium/hybrid-publishing-research/commit/{{gitinfo.commit}}">{{gitinfo.abbr}}</a>.</p>
                      </div>
                  </section>
-            </div>
-        </div>
-        
-        <div class="container">
-            <div class="row">
-                <div ng-show="indexlist" ng-repeat="item in indexlist" class="cover-dossier">
-                    <a href="{{ stripdist(item.filename) }}" ng-cloak class="list-group-item">
-                        <h3 ng-cloak ng-hide="{{!item.data.title[0].length}}">{{item.data.title[0]}}</h3>
-                        <p ng-cloak ng-hide="{{!item.data.title[1].length}}">{{item.data.title[1]}}</p>
-                        <h3 ng-cloak ng-show="{{!item.data.title[0].length}}">Metadata not available</h3>
-                        <p ng-cloak ng-show="{{!item.data.title[1].length}}">Metadata not available</p>
-                        
-                        <div ng-cloak ng-show="{{!item.htmlerror[0]}}" class="alert alert-success" role="success">
-                            <span class="sr-only">Success:</span>
-                            html5 valid
-                        </div>
-
-                        <div ng-cloak ng-show="{{item.htmlerror[0]}}" class="alert alert-danger" role="danger">
-                            <span class="sr-only">Error:</span>
-                             Not html5 valid
-                        </div>
-
-                        <div ng-cloak ng-show="{{item.dcerrors[0].length}}" class="alert alert-danger" role="alert">
-                            <span class="sr-only">Error:</span>
-                             Not Dublin Core valid
-                        </div>
-                        <div ng-cloak ng-show="{{!item.dcerrors[0].length}}" class="alert alert-success" role="success">
-                            <span class="sr-only">Success:</span>
-                             Dublin Core valid
-                        </div>
-                    </a>
-                </div>
-            </div>    
-        </div>
-        <div class="container">
-             <footer>
-                <div class="contact slide_up">
-                     <p>INFO</p> 
-                     <div class="footer-logos"><img src="static/EFRE-logo.png"> <img src="static/EuropafoerdertNds_farbig.png"> <img src="static/logo_leuphana-2.png"></div>
-                 </div>
-                 <section id="footer_slide">
-                     <p>Contact: mail AT consortium.io</p>
-                     <p><a href="http://www.leuphana.de/en/site-notice-leuphana.html">Imprint</a></p>
-                     <p>© The authors | <a href="https://creativecommons.org/licenses/by/3.0/de/">CC BY 3.0 DE</a></p>
-                     <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.</p>
-                 </section>
-              </footer>
-        </div>
-        <div ng-view>
-        
-        </div>
-        <!--
-        <div class="row" ng-show="validationstatus">
+            </div> <!-- end div page-title -->
+            
             <div class="container">
-                <div ng-repeat="(key, data) in filterValid(validationstatus)">
-                    <div class="alert alert-danger" role="alert">
-                      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                      <span class="sr-only">Error:</span>
-                      HTML Validation Failed on <em>{{key}}</em>
+                <div class="row">
+                    <div ng-show="indexlist" ng-repeat="item in indexlist" class="cover-dossier">
+                        <a href="{{ stripdist(item.filename) }}" ng-cloak class="list-group-item">
+                            <h3 ng-cloak ng-hide="{{!item.data.title[0].length}}">{{item.data.title[0]}}</h3>
+                            <p ng-cloak ng-hide="{{!item.data.title[1].length}}">{{item.data.title[1]}}</p>
+                            <h3 ng-cloak ng-show="{{!item.data.title[0].length}}">Metadata not available</h3>
+                            <p ng-cloak ng-show="{{!item.data.title[1].length}}">Metadata not available</p>
+                            
+                            <div ng-cloak ng-show="{{!item.htmlerror[0]}}" class="alert alert-success" role="success">
+                                <span class="sr-only">Success:</span>
+                                html5 valid
+                            </div>
+    
+                            <div ng-cloak ng-show="{{item.htmlerror[0]}}" class="alert alert-danger" role="danger">
+                                <span class="sr-only">Error:</span>
+                                 Not html5 valid
+                            </div>
+    
+                            <div ng-cloak ng-show="{{item.dcerrors[0].length}}" class="alert alert-danger" role="alert">
+                                <span class="sr-only">Error:</span>
+                                 Not Dublin Core valid
+                            </div>
+                            <div ng-cloak ng-show="{{!item.dcerrors[0].length}}" class="alert alert-success" role="success">
+                                <span class="sr-only">Success:</span>
+                                 Dublin Core valid
+                            </div>
+                        </a>
                     </div>
-                </div>    
+                </div> <!-- end div row -->
+            </div> <!-- end div container -->
+        </div> <!-- end div main -->
+        <footer>
+            <div class="contact slide_up">
+                <p>INFO</p> 
+                <div class="footer-logos"><img src="static/EFRE-logo.png"> <img src="static/EuropafoerdertNds_farbig.png"> <img src="static/logo_leuphana-2.png"></div>
             </div>
-        </div>
-        -->
+            <section id="footer_slide">
+                <p>Contact: mail AT consortium.io</p>
+                <p><a href="http://www.leuphana.de/en/site-notice-leuphana.html">Imprint</a></p>
+                <p>© The authors | <a href="https://creativecommons.org/licenses/by/3.0/de/">CC BY 3.0 DE</a></p>
+                <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.</p>
+            </section>
+        </footer>
+        
 
         <script src="js/all.min.js"></script>
     </body>
