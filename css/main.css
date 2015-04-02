@@ -47,6 +47,7 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1 { 
     font-size: 8vw; 
     text-align: center;
+    margin-bottom: 40px;
 }
 h2, .h2 {
     font-size: 4vw;
@@ -109,10 +110,17 @@ header {
 /* PAGE TITLE + INFO */
 .page-title {
     width: 100%;
+    margin-bottom: 30px;
 }
 
 .more {
     text-align: center;
+}
+
+/* SECTION */
+section p + p {
+    text-indent: 6%;
+    margin-top: 0;
 }
 
 /* IMAGES */
@@ -200,7 +208,7 @@ a.list-group-item:focus, a.list-group-item:hover {
        width: 100%;
     }
     .main-research-page-title {
-        font-size: 8vw;
+        font-size: 20vw;
     }
 }
 
