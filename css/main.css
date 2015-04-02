@@ -87,11 +87,15 @@ footer {
 }
 
 
-.logo-footer {
+.footer-logos {
+    float: right;
+}
+.footer-logos img {
     height: 70px;
     padding: 10px;
     float: right;
 }
+
 
 /* MAIN PAGE: TABLE OF CONTENT */ 
 
@@ -140,5 +144,8 @@ a.list-group-item:focus, a.list-group-item:hover {
     h1, .h1 { 
         font-size: 80px; 
         text-align: center;
+    }
+    .footer-logos {
+        width: 100%;
     }
 }
