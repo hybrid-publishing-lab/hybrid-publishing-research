@@ -92,6 +92,11 @@ header {
     margin-left: auto;
     width: 970px;
 }
+#main img {
+    display:block;
+    width: 70%;
+    margin: auto;
+}
 
 
 /* PAGE TITLE + INFO */
@@ -110,11 +115,6 @@ figure {
 figcaption {
     margin-top: 20px;
     text-align: center;
-}
-img {
-    display:block;
-    width: 70%;
-    margin: auto;
 }
 
 /* FOOTER */
