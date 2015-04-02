@@ -2,6 +2,7 @@ body {
     color: black;
     font-family: "Cotham", Helvetica, Arial, sans-serif;
     font-size: 18px;
+    padding: 20px;
 }
 
 a, a:hover {
@@ -51,12 +52,12 @@ h3, .h3 {
     font-family: "NotCourier", "Courier New", monospace;
 }
 
-/* Inline and block code styles */
 code, kbd, pre, samp {
     font-family: "NotCourier", "Courier New", monospace;
 }
 
 /* HEADER */
+
 header {
     width: 100%;
 }
@@ -65,6 +66,17 @@ header {
     padding: 10px;
     position: relative;
 }
+
+/* MAIN */
+
+#main {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 970px;
+}
+
 
 /* PAGE TITLE + INFO */
 .page-title {
@@ -147,5 +159,8 @@ a.list-group-item:focus, a.list-group-item:hover {
     }
     .footer-logos {
         width: 100%;
+    }
+    #main {
+       width: 100%;
     }
 }
