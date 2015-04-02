@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 { 
-    font-size: 144px; 
+    font-size: 8vw; 
     text-align: center;
 }
 
@@ -169,10 +169,6 @@ a.list-group-item:focus, a.list-group-item:hover {
 /* RESPONSIVE */
 
 @media (max-width:768px) and (max-width:992px) {
-    h1, .h1 { 
-        font-size: 80px; 
-        text-align: center;
-    }
     .footer-logos {
         width: 100%;
     }
