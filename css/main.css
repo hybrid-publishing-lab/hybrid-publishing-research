@@ -11,9 +11,19 @@ a, a:hover {
 }
 
 p {
-    color: black;
-    font-family: "Cotham", Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    margin: 0 0 0 0px;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+section {
+    margin: 10px 0 10px 0;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
 }
 
 li {
@@ -42,6 +52,12 @@ h1, .h1 {
 h3, .h3 { 
     font-size: @font-size-h3;
     text-align: center;
+}
+
+p {
+    color: black;
+    font-family: "Cotham", Helvetica, Arial, sans-serif;
+    font-size: 18px;
 }
 
 .serif-font {
