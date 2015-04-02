@@ -180,3 +180,22 @@ a.list-group-item:focus, a.list-group-item:hover {
        width: 100%;
     }
 }
+
+/* PRINT STYLESHEET */
+
+@media print {
+    .screen-only {
+        display: none;
+    }
+    footer {
+        display: none;
+    }
+    .alert {
+        display: none;
+    }
+}
+@media screen {
+    .print-only {
+        display: none;
+    }
+}
