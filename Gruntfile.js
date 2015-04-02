@@ -193,8 +193,12 @@ module.exports = function(grunt) {
                     'type',
                     'format',
                     'language',
-                    'uRL',
-                    'rights'
+                    'URL',
+                    'rights',
+                    'contributor',
+                    'bibliographicCitation',
+                    'publisher',
+                    'identifier'
                 ]
             }
         }
