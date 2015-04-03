@@ -196,7 +196,7 @@ code, pre {
     color: black;
     word-break: break-all;
     word-wrap: break-word;
-    background-color: "transparent";
+    background-color: transparent;
     border: 0px;
     border-radius: 0px;
     overflow: "initial";
