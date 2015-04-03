@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/consortium/hybrid-publishing-research.svg?branch=master)](https://travis-ci.org/consortium/hybrid-publishing-research)
-
+Hybrid Publishing Research [![Build Status](https://travis-ci.org/consortium/hybrid-publishing-research.svg?branch=master)](https://travis-ci.org/consortium/hybrid-publishing-research)
+==========================
 About
 -----
 This repository is the document collection of the consortium.io. It's compiled in a redistributable way.
