@@ -5,7 +5,7 @@ We're hosting this on [https://research.consortium.io](https://research.consorti
 
 This is an experimental publishing format developed by the hybrid publishing consortium. Please keep in mind that this is work in progress and that we are continuously adding new features. Check our roadmap and our github issue tracker. If you reuse this code, then please commit and file a pull request so we can all benefit from your development.
 
-For further information on our efforts to create open source software for public infrastructures within publishing, visit the consortium website [https://consortium.io](http://www.consortium.io/about).
+For further information on our efforts to create open source software for public infrastructures within publishing, visit the consortium website [https://consortium.io/about](http://www.consortium.io/about).
 
 Features
 --------
@@ -41,7 +41,7 @@ For cloning documents you need to install git. If you're using Ubuntu/Debian the
 
     sudo apt-get install git
 
-I you're using Mac OS than follow the installation instruction provided [here](http://git-scm.com/downloads).
+I you're using Mac OS than follow the installation instruction provided [here](https://git-scm.com/downloads).
 
 After completing git installation, you need to clone the repository. We use the following command line but you can use a graphical git front-end as well:
     
