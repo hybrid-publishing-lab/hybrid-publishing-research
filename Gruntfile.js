@@ -130,7 +130,8 @@ module.exports = function(grunt) {
                     'Bad value X-UA-Compatible for attribute http-equiv on element meta.', 
                     'Bad value SCHEMA.DC for attribute rel on element link: The string schema.dc is not a registered keyword.'],
                 doctype: 'HTML5',
-                reset: true
+                reset: true,
+		failHard: true
                 //reset: grunt.option('reset') || false,
                 //stoponerror: false,
             },
