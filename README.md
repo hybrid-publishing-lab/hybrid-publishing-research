@@ -5,7 +5,7 @@ We're hosting this on [https://research.consortium.io](https://research.consorti
 
 This is an experimental publishing format developed by the hybrid publishing consortium. Please keep in mind that this is work in progress and that we are continuously adding new features. Check our roadmap and our github issue tracker. If you reuse this code, then please commit and file a pull request so we can all benefit from your development.
 
-For further information on our efforts to create open source software for public infrastructures within publishing, visit the consortium website [consortium.io](http://www.consortium.io/about).
+For further information on our efforts to create open source software for public infrastructures within publishing, visit the consortium website [https://consortium.io](http://www.consortium.io/about).
 
 Features
 --------
@@ -26,7 +26,7 @@ Requirements for local development or local viewing
     - commandline knowhow
     - a text editor (i.e. sublimetext)
     - a browser
-    - node.js (tested with 0.10.37)
+    - node.js (tested with node.js 0.10.37)
     - grunt (tested with grunt 0.4.5)
     - bower 
 
@@ -78,7 +78,7 @@ If you have any problems, don't hesitate to report an issue on github or send us
 Edit or add content
 -------------------
 
-This repository is equipped with a node.js setup, so that you can serve the documents in your local network. Integrated in node.js is a code validator, which checks your edited or newly added html documents for errors and inconsistencies.
+This repository is equipped with a node.js setup, so that you can serve the documents in your local network. Integrated in node.js is a code validator, which checks your edited or newly added html documents for errors and inconsistencies. We are using [grunt](http://gruntjs.com/) and several plugins to trigger building, validation and delivering tasks.
 
 You need to install this setup described above in the installation section. Once you have done this, create a new git branch with the following command:
 
@@ -88,7 +88,7 @@ Having done this edit the files with the your favourite text editor. You can cop
 
     cp -r dist/docs/_template dist/docs/mynewdoc
 
-Once you have written your new document (or edited an old one), then start a validation round to check if your new added content is valid. Type:
+Remember only one html document is allowed per folder. All other assets should be placed in sub folders of assets. Once you have written your new document (or edited an old one), then start a validation round to check if your new added content is valid. Type:
 
     grunt index
 
@@ -104,6 +104,8 @@ Step one checks the html5 validity described by the [w3c](http://validator.w3.or
     3=> "Saw < when expecting an attribute name. Probable cause: Missing > immediately before." Line no: 65
     4=> "A slash was not immediately followed by >." Line no: 65
     5=> "End tag had attributes." Line no: 65
+
+If it is really needed, it is possible to override validation errors globally. Read the "relaxerror"-directive for (grunt-html-validation)[https://www.npmjs.com/package/grunt-html-validation] and edit the Gruntfile accordingly. We are using this to override errors on Dublin Core metadata, because there not w3c html5 valid (sigh).
 
 The second step validates the content according to the Dublin Core meta data standard. The output could look like this:
 
