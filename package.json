@@ -4,8 +4,8 @@
   "description": "The consortium document viewer",
   "homepage": "https://consortium.io",
   "scripts": {
-    "test": "grunt test",
-    "start": ""
+    "postinstall": "grunt",
+    "test": "grunt test"
   },
   "author": {
     "name": "Johannes Amorosa",
