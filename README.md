@@ -105,7 +105,7 @@ Step one checks the html5 validity described by the [w3c](http://validator.w3.or
     4=> "A slash was not immediately followed by >." Line no: 65
     5=> "End tag had attributes." Line no: 65
 
-If it is really needed, it is possible to override validation errors globally. Read the "relaxerror"-directive for (grunt-html-validation)[https://www.npmjs.com/package/grunt-html-validation] and edit the Gruntfile accordingly. We are using this to override errors on Dublin Core metadata, because there not w3c html5 valid (sigh).
+If necessary you can override validation directives globally. Read the manual (relaxerror) for [grunt-html-validation](https://www.npmjs.com/package/grunt-html-validation) and edit the Gruntfile accordingly. We are using this to override errors on Dublin Core metadata.
 
 The second step validates the content according to the Dublin Core meta data standard. The output could look like this:
 
