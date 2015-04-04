@@ -139,7 +139,9 @@ If you need help using git commands see the git reference on [https://git-scm.he
 Testing
 -------
 
-    N/A yet
+We're testing html validity on all documents as a part of the publishing pipeline. Right now we are checking rather simply for meta data described by the [dublin core standard](http://purl.org/dc/elements/1.1/). Both test are part of the build process. This building is tested on command line before index is generated and fails hard if the documents are not valid. In future we maybe add a switch. Additionally on every git commit we build the master branch on [travis-ci](https://travis-ci.org/consortium/hybrid-publishing-research).
+
+On the roadmap is unit test on the code as well. This will also be part of the publishing pipeline. See additional documentation in dist/docs/documentation for more information or better help improving existing ones.
 
 Grunt commands
 -------
