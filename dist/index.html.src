@@ -6,31 +6,31 @@
         <!-- Metatags -->
         <meta charset="utf-8" />
         <meta name="generator" content="a-machine" />
-        <meta name="keywords" content="book, book liberation, education, freedom, knowledge, learning, library, OA, OER, open access, open education resources, open IPR, open learning, property, publishing, repositories, skills, technology">
-        <meta name="description" content="This is a viewing app for the Hybrid Publishing Consortium Research publications. For more information on the Hybrid Publishing Consortium see http://consortium.io/">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="book, book liberation, education, freedom, knowledge, learning, library, OA, OER, open access, open education resources, open IPR, open learning, property, publishing, repositories, skills, technology"/>
+        <meta name="description" content="This is a viewing app for the Hybrid Publishing Consortium Research publications. For more information on the Hybrid Publishing Consortium see http://consortium.io/"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         
         <!-- Dublin Core -->
-        <meta name="DC.title" content="Hybrid Publish Consortium Research Viewer">
-        <meta name="DC.creator" content="Hybrid Publish Consortium">
+        <meta name="DC.title" content="Hybrid Publish Consortium Research Viewer"/>
+        <meta name="DC.creator" content="Hybrid Publish Consortium" />
         <meta name="DC.subject" content="archives, book, book liberation, copyleft, copyright, education, freedom, knowledge, learning, library, manifesto, OA, OER, open access, open education resources, open IPR, open learning, property, publishing, repositories, skills, technology">
-        <META NAME="DC.description.abstract" CONTENT="">
-        <meta name="DC.date" content="2015-03-13">
-        <meta name="DC.type" content="collection">
-        <meta name="DC.format" content="text/html">
-        <meta name="DC.language" content="en">
-        <meta name="DC.identifier.URL" content="http://consortium.io">
-        <meta name="DC.rights" content="http://www.consortium.io/copyright">
-        <META NAME="DC.identifier" CONTENT="">
-        <META NAME="DC.contributor" CONTENT="">
-        <META NAME="DC.publisher" CONTENT="Hybrid Publishing Consortium">
-        <META NAME="DC.bibliographicCitation" CONTENT="">
-        <link rel="SCHEMA.DC" href="http://purl.org/dc/elements/1.1/">
+        <meta name="DC.description.abstract" content=""/>
+        <meta name="DC.date" content="2015-03-13"/>
+        <meta name="DC.type" content="collection"/>
+        <meta name="DC.format" content="text/html"/>
+        <meta name="DC.language" content="en"/>
+        <meta name="DC.identifier.URL" content="http://consortium.io"/>
+        <meta name="DC.rights" content="http://www.consortium.io/copyright"/>
+        <meta name="DC.identifier" content=""/>
+        <meta name="DC.contributor" content=""/>
+        <meta name="DC.publisher" content="Hybrid Publishing Consortium"/>
+        <meta name="DC.bibliographicCitation" content=""/>
+        <link rel="SCHEMA.DC" href="http://purl.org/dc/elements/1.1/"/>
 
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="css/all.min.css">
-        <link rel="stylesheet" type="text/css" href="fonts.css">
+        <link rel="stylesheet" type="text/css" href="css/all.min.css"/>
+        <link rel="stylesheet" type="text/css" href="fonts.css"/>
 
         <!-- Title -->
         <title>Hybrid Publishing Consortium Research Viewer</title>

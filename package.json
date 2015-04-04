@@ -36,6 +36,7 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-metaparser": "^0.3.5",
     "grunt-bower-concat": "~0.4.0",
+    "grunt-angular-htmlify": "~2.1.1",
     "grunt-html-validation": "~0.1.18",
     "grunt-bower": "^0.18.0",
     "grunt-sass": "~0.18.1",

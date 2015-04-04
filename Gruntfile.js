@@ -113,7 +113,8 @@ module.exports = function(grunt) {
                 tasks: 'js'
             },
             html: {
-                files: [ 'dist/index.html']
+                files: [ 'dist/index.html.src'],
+                tasks: 'angularHtmlify'
             },
             css: {
                 files: [ 'css/main.css' ],
@@ -131,7 +132,7 @@ module.exports = function(grunt) {
                     'Bad value SCHEMA.DC for attribute rel on element link: The string schema.dc is not a registered keyword.'],
                 doctype: 'HTML5',
                 reset: true,
-		failHard: true
+                failHard: true
                 //reset: grunt.option('reset') || false,
                 //stoponerror: false,
             },
@@ -181,6 +182,14 @@ module.exports = function(grunt) {
             }
         },
         
+        angularHtmlify: {
+            dist: {
+                files: {
+                    'dist/index.html': 'dist/index.html.src'
+                }
+            }
+        },
+
         metaparser: {
             'metadata.json': ['dist/docs/**/*.html', '!dist/docs/_template*/*.html', '!**/assets/**'],
             options: {
@@ -219,6 +228,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks( 'grunt-contrib-uglify' );
     grunt.loadNpmTasks( 'grunt-contrib-watch' );
     grunt.loadNpmTasks( 'grunt-bower-install-simple' );
+    grunt.loadNpmTasks( 'grunt-angular-htmlify' );
 
     grunt.loadNpmTasks( 'grunt-contrib-connect' );
     grunt.loadNpmTasks( 'grunt-autoprefixer' );
@@ -230,7 +240,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks( 'grunt-git' );
 
     // Default task
-    grunt.registerTask( 'default', [ 'build', 'index' ] );
+    grunt.registerTask( 'default', [ 'build', 'index', 'angularHtmlify'] );
     
     // Building bricks
     grunt.registerTask( 'js', [ 'jshint', 'uglify', 'qunit' ] );
@@ -238,7 +248,8 @@ module.exports = function(grunt) {
 
     // git fetch and rebase
     grunt.registerTask( 'upgrade', [ 'gitfetch', 'gitreset', 'build', 'index' ] );
-
+    
+    
     // Build
     grunt.registerTask( 'build', [ 'depbuild', 'js' ] );
 

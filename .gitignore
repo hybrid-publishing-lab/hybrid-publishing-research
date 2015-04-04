@@ -9,6 +9,7 @@ npm-debug.log
 lin/*
 *.json
 index.json
+index.html
 bower_components/
 js/*.min.js*
 js/bower.js
