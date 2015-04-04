@@ -71,7 +71,7 @@ p {
     font-family: "NotCourier", "Courier New", monospace;
 }
 
-code, kbd, pre, samp, xmp {
+code, kbd, pre, samp {
     font-family: "NotCourier", "Courier New", monospace;
 }
 
@@ -185,6 +185,21 @@ a.list-group-item:focus, a.list-group-item:hover {
     border: 2px solid blue;
     color: blue;
     background-color: white;
+}
+
+/* CODE */
+code, pre {
+    display: block;
+    padding: 0px;
+    margin: 0 0 0px;
+    font-size: 16px;
+    color: black;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: transparent;
+    border: 0px;
+    border-radius: 0px;
+    overflow: "initial";
 }
 
 /* ACTIONS */
