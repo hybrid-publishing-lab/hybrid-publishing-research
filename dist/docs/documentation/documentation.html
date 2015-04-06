@@ -23,22 +23,40 @@
 <title>Documentation &amp; publishing system for the Hybrid Publishing Consortium and beyond</title>
 </head>
 <body>
+    <!-- HPC DOSSIERS HEADER -->
     <header>
         <img class="logo img-responsive" src="../../static/hpc-logoxx.png" alt="hpc-logo">
+        <p class="logo-dossiers">DOSSIERS</p>
     </header>
-    <div id="main">
-        <div class="page-title">
-            <div class="more slide_up">
-                <h1>Documentation &amp; publishing system<br>for the Hybrid Publishing Consortium and beyond</h1>
-                <p>MORE</p>
-            </div>
-            <div id="header_slide">
-                <div class="strapline">
-                    <p>A clever and innovative documentation &amp; publishing system developed by the Hybrid Publishing Consortium.</p>
-                </div>
-            </div>
-        </div> <!-- end div page-title -->
-        
+    <!-- MAIN HEADING: title -->
+    <div id="report-title">
+        <h1>Documentation &amp; publishing system<br>for the Hybrid Publishing Consortium and beyond</h1>
+    </div>
+    <!-- SIDE INFORMATION ON THE REPORT-->
+    <div id="report-info">
+        <!-- abstract -->
+        <div id="report-abstract">
+            <p>A clever and innovative documentation &amp; publishing system developed by the Hybrid Publishing Consortium.</p>
+        </div>
+        <!-- date and author info -->
+        <div id="report-date-author">
+            <p>2015</p>
+            <p>Loraine Furter</p>
+        </div>
+    </div>
+    <!-- REPORT MENU -->
+    <aside>
+        <h3>CONTENTS</h3>
+        <ul>
+            <li><a href="#intro">Dossiers</a></li>
+            <li><a href="#single-source-medium-specific">Single source, yet medium specific</a></li>
+            <li><a href="#html-style">HTML style guide</a></li>
+            <li><a href="#layout-rules">Layout rules</a></li>
+            <li><a href="#structure-code">Structure of the body of the html file</a></li>
+        </ul>
+    </aside>
+    <!-- REPORT -->
+    <article>
         <section>
             <h2>Diagram</h2>
             <figure>
@@ -48,23 +66,25 @@
         </section>
         
         <section>
-            <h2>Dossiers</h2>
+            <h2 id="intro">Dossiers</h2>
             <p>The Hybrid Publishing Consortium’s Dossiers are composed of a selection and arrangement of 500-2000 words working papers/reports, plus an introduction explaining the composition of the dossier and the articulation between its different parts (reports). The reports can be commissioned texts as well as pre-existing ones, they are multi-format: lists, essays, notes, slide shows, etc.</p>
             <p>In order to be able to publish a report in several Dossiers, the system for editing/organizing/archiving the reports need to be flexible.</p>
             <p>The reports will be stored in a <a href="https://github.com/consortium/hybrid-publishing-research">GitHub repository</a>, each one in a folder composed of the content in an html file, a folder for images and other documents, and a css file (when neccessary).</p>
         </section>
+        
         <section>
-            <h2>Single source, yet medium specific</h2>
+            <h2 id="single-source-medium-specific">Single source, yet medium specific</h2>
             <p>To tune parts of the reports in relation with a specific medium (for instance only for print), we can use specific class names (convention needed for that) that will then be displayed or not depending on the format.</p>
         </section>
+        
         <section>
-            <h2>HTML style guide</h2>
+            <h2 id="html-style">HTML style guide</h2>
             <p>If we want ePub-ready files, we should write in a compatible way (ePub is XHTML). A solution for that is <a href="http://dev.w3.org/html5/html-polyglot/">Polyglot Markup</a>. We could also run a validator (with <a href="https://github.com/svenkreiss/html5validator">HTML5 Validator</a>, that can be run with <a href="https://travis-ci.org/">Travis CI</a>), which validates the code that is pushed on GitHub.</p>
             <p>And use transpect to convert HTML5 to XHTML.</p>
         </section>
         
         <section>
-            <h2>Layout rules</h2>
+            <h2 id="layout-rules">Layout rules</h2>
             <figure>
                 <img src="assets/img/LAYOUT-rules.png" alt="hpc-logo" style="max-width: 1000px;">
                 <figcaption>Caption: Hybrid and multi-format layout rules!</figcaption>
@@ -73,7 +93,7 @@
         </section>
         
         <section>
-            <h2>Structure of the body of the html file</h2>
+            <h2 id="structure-code">Structure of the body of the html file</h2>
             <pre><code>
 &lt;header&gt;
     &lt;img class=&quot;logo img-responsive&quot; src=&quot;static/hpc-logoxx.png&quot; alt=&quot;hpc-logo&quot;&gt;
@@ -123,8 +143,24 @@
             <p>Inteface for the dossiers with remixing options. (for now only the reports are displayed)</p> 
             <p>Integration of slide shows.</p>  
         </section>
-        
-    </div> <!-- end div main -->
+    </article>
+    <!-- HPC DOSSIERS FOOTER -->
+    <footer>
+        <div class="contact slide_up">
+                <p>INFO</p> 
+                <div class="footer-logos">
+                    <img src="static/EFRE-logo.png" alt="Europa">
+                    <img src="static/EuropafoerdertNds_farbig.png" alt="Niedersachsen">
+                    <img src="static/logo_leuphana-2.png" alt="Leuphana">
+                </div>
+            </div>
+            <div id="footer_slide">
+                <p>Contact: mail AT consortium.io</p>
+                <p><a href="http://www.leuphana.de/en/site-notice-leuphana.html">Imprint</a></p>
+                <p>© The authors | <a href="https://creativecommons.org/licenses/by/3.0/de/">CC BY 3.0 DE</a></p>
+                <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.</p>
+            </div>
+    </footer>
     
     <script src="../../js/all.min.js"></script>
 </body>
