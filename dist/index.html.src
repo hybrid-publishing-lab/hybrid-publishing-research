@@ -40,7 +40,7 @@
     </head>
 
     <body ng-controller="SpaceCtrl">
-        <header>
+        <header style="width: 100%; border-top: 0px;">
             <img class="logo img-responsive" src="static/hybrid-publishing-consortium-logo.png" alt="Hybrid Publishing Consortium logo">
         </header>
         <div id="main">
