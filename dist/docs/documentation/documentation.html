@@ -44,106 +44,111 @@
             <p>Loraine Furter</p>
         </div>
     </div>
-    <!-- REPORT MENU -->
-    <aside>
-        <h3>CONTENTS</h3>
-        <ul>
-            <li><a href="#intro">Dossiers</a></li>
-            <li><a href="#single-source-medium-specific">Single source, yet medium specific</a></li>
-            <li><a href="#html-style">HTML style guide</a></li>
-            <li><a href="#layout-rules">Layout rules</a></li>
-            <li><a href="#structure-code">Structure of the body of the html file</a></li>
-        </ul>
-    </aside>
-    <!-- REPORT -->
-    <article>
-        <section>
-            <h2>Diagram</h2>
-            <figure>
-                <img src="assets/img/documentation.png" style="max-width: 1300px;">
-                <figcaption>Caption: The whole universe</figcaption>
-            </figure> 
-        </section>
+    <div class="report-content">
+        <!-- REPORT MENU -->
+        <aside>
+            <h3>CONTENTS</h3>
+            <ul>
+                <li><a href="#intro">Dossiers</a></li>
+                <li><a href="#single-source-medium-specific">Single source, yet medium specific</a></li>
+                <li><a href="#html-style">HTML style guide</a></li>
+                <li><a href="#layout-rules">Layout rules</a></li>
+                <li><a href="#structure-code">Structure of the body of the html file</a></li>
+            </ul>
+        </aside>
         
-        <section>
-            <h2 id="intro">Dossiers</h2>
-            <p>The Hybrid Publishing Consortium’s Dossiers are composed of a selection and arrangement of 500-2000 words working papers/reports, plus an introduction explaining the composition of the dossier and the articulation between its different parts (reports). The reports can be commissioned texts as well as pre-existing ones, they are multi-format: lists, essays, notes, slide shows, etc.</p>
-            <p>In order to be able to publish a report in several Dossiers, the system for editing/organizing/archiving the reports need to be flexible.</p>
-            <p>The reports will be stored in a <a href="https://github.com/consortium/hybrid-publishing-research">GitHub repository</a>, each one in a folder composed of the content in an html file, a folder for images and other documents, and a css file (when neccessary).</p>
-        </section>
-        
-        <section>
-            <h2 id="single-source-medium-specific">Single source, yet medium specific</h2>
-            <p>To tune parts of the reports in relation with a specific medium (for instance only for print), we can use specific class names (convention needed for that) that will then be displayed or not depending on the format.</p>
-        </section>
-        
-        <section>
-            <h2 id="html-style">HTML style guide</h2>
-            <p>If we want ePub-ready files, we should write in a compatible way (ePub is XHTML). A solution for that is <a href="http://dev.w3.org/html5/html-polyglot/">Polyglot Markup</a>. We could also run a validator (with <a href="https://github.com/svenkreiss/html5validator">HTML5 Validator</a>, that can be run with <a href="https://travis-ci.org/">Travis CI</a>), which validates the code that is pushed on GitHub.</p>
-            <p>And use transpect to convert HTML5 to XHTML.</p>
-        </section>
-        
-        <section>
-            <h2 id="layout-rules">Layout rules</h2>
-            <figure>
-                <img src="assets/img/LAYOUT-rules.png" alt="hpc-logo" style="max-width: 1000px;">
-                <figcaption>Caption: Hybrid and multi-format layout rules!</figcaption>
-            </figure>
-            <p>Two columns with slideshows and poster-like documents need to be integrated.</p>
-        </section>
-        
-        <section>
-            <h2 id="structure-code">Structure of the body of the html file</h2>
-            <pre><code>
-&lt;header&gt;
-    &lt;img class=&quot;logo img-responsive&quot; src=&quot;static/hpc-logoxx.png&quot; alt=&quot;hpc-logo&quot;&gt;
-&lt;/header&gt;
-
-&lt;div id=&quot;main&quot;&gt;
-    &lt;div class=&quot;page-title&quot;&gt;
-        &lt;div class=&quot;more slide_up&quot;&gt;
-            &lt;h1&gt;TITLE&lt;/h1&gt;
-            &lt;p&gt;MORE&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;section id=&quot;header_slide&quot;&gt;
-            &lt;div class=&quot;strapline&quot;&gt;
-                &lt;p&gt;&lt;/p&gt;
-             &lt;/div&gt;
-         &lt;/section&gt;
-    &lt;/div&gt; &lt;!-- end div page-title --&gt;
+        <!-- REPORT -->
+        <article>
+            <section>
+                <h2>Diagram</h2>
+                <figure>
+                    <img src="assets/img/documentation.png" style="max-width: 1300px;">
+                    <figcaption>Caption: The whole universe</figcaption>
+                </figure> 
+            </section>
+            
+            <section>
+                <h2 id="intro">Dossiers</h2>
+                <p>The Hybrid Publishing Consortium’s Dossiers are composed of a selection and arrangement of 500-2000 words working papers/reports, plus an introduction explaining the composition of the dossier and the articulation between its different parts (reports). The reports can be commissioned texts as well as pre-existing ones, they are multi-format: lists, essays, notes, slide shows, etc.</p>
+                <p>In order to be able to publish a report in several Dossiers, the system for editing/organizing/archiving the reports need to be flexible.</p>
+                <p>The reports will be stored in a <a href="https://github.com/consortium/hybrid-publishing-research">GitHub repository</a>, each one in a folder composed of the content in an html file, a folder for images and other documents, and a css file (when neccessary).</p>
+            </section>
+            
+            <section>
+                <h2 id="single-source-medium-specific">Single source, yet medium specific</h2>
+                <p>To tune parts of the reports in relation with a specific medium (for instance only for print), we can use specific class names (convention needed for that) that will then be displayed or not depending on the format.</p>
+            </section>
+            
+            <section>
+                <h2 id="html-style">HTML style guide</h2>
+                <p>If we want ePub-ready files, we should write in a compatible way (ePub is XHTML). A solution for that is <a href="http://dev.w3.org/html5/html-polyglot/">Polyglot Markup</a>. We could also run a validator (with <a href="https://github.com/svenkreiss/html5validator">HTML5 Validator</a>, that can be run with <a href="https://travis-ci.org/">Travis CI</a>), which validates the code that is pushed on GitHub.</p>
+                <p>And use transpect to convert HTML5 to XHTML.</p>
+            </section>
+            
+            <section>
+                <h2 id="layout-rules">Layout rules</h2>
+                <figure>
+                    <img src="assets/img/LAYOUT-rules.png" alt="hpc-logo" style="max-width: 1000px;">
+                    <figcaption>Caption: Hybrid and multi-format layout rules!</figcaption>
+                </figure>
+                <p>Two columns with slideshows and poster-like documents need to be integrated.</p>
+            </section>
+            
+            <section>
+                <h2 id="structure-code">Structure of the body of the html file</h2>
+                <pre><code>
+    &lt;header&gt;
+        &lt;img class=&quot;logo img-responsive&quot; src=&quot;static/hpc-logoxx.png&quot; alt=&quot;hpc-logo&quot;&gt;
+    &lt;/header&gt;
     
-    &lt;section&gt;
-        &lt;h2&gt;&lt;/h2&gt;
-        &lt;p&gt;&lt;/p&gt;  
-        &lt;figure&gt;
-            &lt;img&gt;
-            &lt;figcaption&gt;Fig1.&lt;/figcaption&gt;
-        &lt;/figure&gt; 
-    &lt;/section&gt;
-    
-&lt;/div&gt; &lt;!-- end div main --&gt;
-
-&lt;footer&gt;
-    &lt;div class=&quot;contact slide_up&quot;&gt;
-        &lt;p&gt;&lt;/p&gt; 
-        &lt;div class=&quot;footer-logos&quot;&gt;
-            &lt;img&gt; &lt;img&gt; &lt;img&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;section id=&quot;footer_slide&quot;&gt;&lt;p&gt;&lt;/p&gt;
-        &lt;p&gt;&lt;/p&gt;
-    &lt;/section&gt;
-&lt;/footer&gt;
-            </code></pre>
-            <!-- END OF THE XMP CODE -->
-        </section>
+    &lt;div id=&quot;main&quot;&gt;
+        &lt;div class=&quot;page-title&quot;&gt;
+            &lt;div class=&quot;more slide_up&quot;&gt;
+                &lt;h1&gt;TITLE&lt;/h1&gt;
+                &lt;p&gt;MORE&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;section id=&quot;header_slide&quot;&gt;
+                &lt;div class=&quot;strapline&quot;&gt;
+                    &lt;p&gt;&lt;/p&gt;
+                 &lt;/div&gt;
+             &lt;/section&gt;
+        &lt;/div&gt; &lt;!-- end div page-title --&gt;
         
-        <section>
-            <h2>TO DO</h2>
-            <p>Inteface for the dossiers with remixing options. (for now only the reports are displayed)</p> 
-            <p>Integration of slide shows.</p>  
-        </section>
-    </article>
+        &lt;section&gt;
+            &lt;h2&gt;&lt;/h2&gt;
+            &lt;p&gt;&lt;/p&gt;  
+            &lt;figure&gt;
+                &lt;img&gt;
+                &lt;figcaption&gt;Fig1.&lt;/figcaption&gt;
+            &lt;/figure&gt; 
+        &lt;/section&gt;
+        
+    &lt;/div&gt; &lt;!-- end div main --&gt;
+    
+    &lt;footer&gt;
+        &lt;div class=&quot;contact slide_up&quot;&gt;
+            &lt;p&gt;&lt;/p&gt; 
+            &lt;div class=&quot;footer-logos&quot;&gt;
+                &lt;img&gt; &lt;img&gt; &lt;img&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;section id=&quot;footer_slide&quot;&gt;&lt;p&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/footer&gt;
+                </code></pre>
+                <!-- END OF THE XMP CODE -->
+            </section>
+            
+            <section>
+                <h2>TO DO</h2>
+                <p>Inteface for the dossiers with remixing options. (for now only the reports are displayed)</p> 
+                <p>Integration of slide shows.</p>  
+            </section>
+        </article><!-- END REPORT -->
+    
+    </div><!-- end div report-content -->
+    
     <!-- HPC DOSSIERS FOOTER -->
     <footer>
         <div class="contact slide_up">
