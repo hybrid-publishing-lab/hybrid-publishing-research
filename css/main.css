@@ -107,8 +107,8 @@ code, kbd, pre, samp {
 /*//////// REPORT PAGES ////////*/
 
 /* BORDER */
-header, #report-title, #report-info, aside, article {
-    border-top: 3px solid blue;
+header, #report-title, #report-info, #report-date-author, aside, article {
+    border-top: 1px solid black;
 }
 
 /* HEADER */
@@ -150,6 +150,10 @@ header {
 #report-info p {
     font-size: 16px;
 }
+#report-date-author {
+    margin-top: 30px;
+    padding-top: 20px;
+}
 
 /* REPORT CONTENT */
 .report-content {
@@ -174,7 +178,7 @@ article {
 }
 article img {
     display:block;
-    width: 70%;
+    width: 100%;
     margin: auto;
 }
 
@@ -196,13 +200,17 @@ figcaption {
 /* IMAGES */
 #footnotes {
     padding-left: 6%;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid black;
+    width: 520px;
 }
 
 /* FOOTER */
 
 footer {
     padding-top: 30px;
-    border-top: 2px solid black;
+    border-top: 1px solid black;
     position: relative;
     float: left;
     width: 1060px;
