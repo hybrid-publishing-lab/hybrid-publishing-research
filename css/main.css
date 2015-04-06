@@ -3,9 +3,11 @@ body {
     font-family: "Cotham", Helvetica, Arial, sans-serif;
     font-size: 18px;
     padding: 20px;
+    width: 1100px;
+    margin: auto;
 }
 
-a, a:hover {
+a, a:hover, a:visited {
     color: black;
     text-decoration: none;
 }
@@ -26,6 +28,9 @@ section {
     -webkit-margin-end: 0px;
 }
 
+ul {
+    padding-left: 0px;
+}
 li {
     list-style: none;
 }
@@ -45,16 +50,17 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 { 
-    font-size: 8vw; 
+    font-size: 70px; 
     text-align: center;
     margin-bottom: 40px;
 }
 h2, .h2 {
-    font-size: 4vw;
+    font-size: 35px;
+    text-align: left;
 }
 h3, .h3 { 
     font-size: 35px;
-    text-align: center;
+    text-align: left;
 }
 
 p {
@@ -75,24 +81,7 @@ code, kbd, pre, samp {
     font-family: "NotCourier", "Courier New", monospace;
 }
 
-/* HEADER */
-
-header {
-    width: 100%;
-}
-.logo {
-    width: 110px;
-    padding: 10px;
-    position: relative;
-}
-.cover-img {
-    display:block;
-    width: 70%;
-    margin: auto;
-}
-
-/* MAIN */
-
+/* MAIN PAGE */
 #main {
     padding-right: 15px;
     padding-left: 15px;
@@ -106,15 +95,87 @@ header {
     margin: auto;
 }
 
-
 /* PAGE TITLE + INFO */
 .page-title {
     width: 100%;
     margin-bottom: 30px;
 }
-
 .more {
     text-align: center;
+}
+
+/*//////// REPORT PAGES ////////*/
+
+/* BORDER */
+header, #report-title, #report-info, aside, article {
+    border-top: 3px solid blue;
+}
+
+/* HEADER */
+header {
+    width: 250px;
+    float: left;
+}
+.logo {
+    width: 110px;
+    padding: 10px;
+    position: relative;
+}
+.cover-img {
+    display:block;
+    width: 70%;
+    margin: auto;
+}
+.logo-dossiers {
+    font-family: Reglo;
+    padding-left: 10px;
+    margin-top: -11px;
+    font-size: 23px;
+}
+
+/* REPORT TITLE */
+#report-title {
+    width: 520px;
+    float: left;
+    margin-left: 20px;
+}
+
+/* REPORT INFO */
+#report-info {
+    padding-top: 20px;
+    width: 250px;
+    float: left;
+    margin-left: 20px;
+}
+#report-info p {
+    font-size: 16px;
+}
+
+/* REPORT CONTENT */
+.report-content {
+    clear: both;
+    display: block;
+}
+
+/* ASIDE MENU */
+aside {
+    width: 250px;
+    float: left;
+    display:block;
+}
+
+/* REPORT */
+article {
+    width: 790px;
+    margin-left: 20px;
+    float: left;
+    display: block;
+    margin-bottom: 40px;
+}
+article img {
+    display:block;
+    width: 70%;
+    margin: auto;
 }
 
 /* SECTION */
@@ -132,20 +193,28 @@ figcaption {
     text-align: center;
 }
 
+/* IMAGES */
+#footnotes {
+    padding-left: 6%;
+}
+
 /* FOOTER */
 
 footer {
     padding-top: 30px;
     border-top: 2px solid black;
+    position: relative;
+    float: left;
+    width: 1060px;
+    margin-bottom: 30px;
 }
 
 .contact {
     text-align: center;
 }
-
-
 .footer-logos {
     float: right;
+    width: 
 }
 .footer-logos img {
     height: 70px;
