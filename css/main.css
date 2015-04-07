@@ -126,9 +126,11 @@ code, kbd, pre, samp {
 }
 .main-research-page-title {
     font-size: 144px;
+    text-align: center;
 }
 a.list-group-item:focus, a.list-group-item:hover {
     background-color: white;
+    text-decoration: none;
 }
 
 /*//////// REPORT PAGES ////////*/
@@ -258,7 +260,7 @@ section p + p {
 }
 
 
-/* REPORT’S FOOTNOTES */
+/* REPORTâS FOOTNOTES */
 #footnotes {
     padding-left: 6%;
     margin-top: 30px;
@@ -339,9 +341,7 @@ code, pre {
     #main {
        width: 100%;
     }
-    .main-research-page-title {
-        font-size: 20vw;
-    }
+    
     body {
         padding: 20px;
         width: 840px;
@@ -386,7 +386,7 @@ code, pre {
        width: 100%;
     }
     .main-research-page-title {
-        font-size: 20vw;
+        font-size: 100px;
     }
     body {
         padding: 20px;
@@ -423,6 +423,12 @@ code, pre {
     }
     .main-research-page-title {
         font-size: 20vw;
+    }
+    .cover-dossier {
+        float: left;
+        margin: auto;
+        margin-bottom: 20px;
+        width: 250px;
     }
     body {
         padding: 20px;
