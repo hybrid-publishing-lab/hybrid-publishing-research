@@ -301,7 +301,7 @@ header {
 #report-info p {
     font-size: 16px;
 }
-#report-info h2, .h2, h3, .h3 {
+#report-info h2, #report-info .h2, #report-info h3, #report-info .h3 {
     font-family: "Cotham";
     font-size: 18px;
     margin-top: 30px;
@@ -375,7 +375,7 @@ article video {
     width: 95%;
 }
 /* SECTIONS */
-article section h2, .h2, h3, .h3 {
+article section h2, article section .h2, article section h3, article section .h3 {
     font-family: "Cotham";
     font-size: 18px;
     margin-top: 30px;
