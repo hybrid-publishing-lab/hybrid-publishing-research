@@ -1,3 +1,32 @@
+/*  STRUCTURE PAGE                                                       
++---------------------------------------------------------+
+| +-<header>--+ +---------DIV ID----------+ |--DIV ID---| |
+| |           | |     "report-title"      | "report-info" |
+| | LOGO HPC  | |                         | +--DIV-ID---+ |
+| |           | |                         | "report     | |
+| |           | |        T I T L E        | | -abstract"| |
+| +-----------+ |       R E P O R T       | |           | |
+|               |                         | +--DIV ID---+ |
+|               |                         | "report-date| |
+|               |                         | |   -author"| |
+|               |                         | |           | |
+|               +-------------------------+ +-----------+ |
+|                                                         |
+| |--------------DIV class="report-content"-------------| |
+| +--<aside>--+ +------------<article>------------------+ |
+| | CONTENTS  | | REPORT CONTENT                        | |
+| |           | |                                       | |
+| | <ul>      | |  <section>                            | |
+| |     <li>  | |       <p>                             | |
+| |     ...   | |       ...                             | |
+| |           | |                                       | |
+| |           | |                                       | |
+| +-----------+ |                                       | |
+|               +---------------------------------------+ |
++---------------------------------------------------------+
+/*                                                         
+
+
 /* GENERAL */
 
 body {
@@ -177,6 +206,10 @@ code, pre {
     width: 100%;
     margin-bottom: 30px;
 }
+.main-research-page-title {
+    font-size: 144px;
+    text-align: center;
+}
 .more {
     text-align: center;
 }
@@ -189,10 +222,6 @@ code, pre {
 .list-group-item {
     border: 2px solid black;
     background-color: white;
-}
-.main-research-page-title {
-    font-size: 144px;
-    text-align: center;
 }
 a.list-group-item:focus, a.list-group-item:hover {
     background-color: white;
@@ -290,7 +319,7 @@ header {
     color: rgb(126, 213, 215);
 }
 
-/* REPORT CONTENT */
+/* REPORT CONTENT (INCL. MENU) */
 .report-content {
     clear: both;
     display: block;
