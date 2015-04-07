@@ -67,7 +67,7 @@
             <section>
                 <h2 id="intro">Dossiers</h2>
                 <p>The Hybrid Publishing Consortium’s Dossiers are composed of a selection and arrangement of 500-2000 words working papers/reports, plus an introduction explaining the composition of the dossier and the articulation between its different parts (reports). The reports can be commissioned texts as well as pre-existing ones, they are multi-format: lists, essays, notes, slide shows, etc.</p>
-                <p>In order to be able to publish a report in several Dossiers, the system for editing/organizing/archiving the reports need to be flexible.</p>
+                <p>In order to be able to publish a report in several Dossiers, the system for editing/organizing/archiving the reports needs to be flexible.</p>
                 <p>The reports will be stored in a <a href="https://github.com/consortium/hybrid-publishing-research">GitHub repository</a>, each one in a folder composed of the content in an html file, a folder for images and other documents, and a css file (when necessary).</p>
             </section>
             
@@ -106,45 +106,120 @@
             <section>
                 <h2 id="structure-code">Structure of the body of the html file</h2>
                 <pre><code>
+    &lt;body&gt;
+    &lt;!-- HPC DOSSIERS HEADER (LOGO) --&gt;
     &lt;header&gt;
-        &lt;img class=&quot;logo img-responsive&quot; src=&quot;static/hpc-logoxx.png&quot; alt=&quot;hpc-logo&quot;&gt;
+        &lt;a href="/"&gt;
+            &lt;img src="static/hybrid-publishing-consortium-logo.png" alt="hpc-logo"&gt;
+            &lt;p class="logo-dossiers"&gt;DOSSIERS&lt;/p&gt;
+        &lt;/a&gt;
     &lt;/header&gt;
-    
-    &lt;div id=&quot;main&quot;&gt;
-        &lt;div class=&quot;page-title&quot;&gt;
-            &lt;div class=&quot;more slide_up&quot;&gt;
-                &lt;h1&gt;TITLE&lt;/h1&gt;
-                &lt;p&gt;MORE&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;section id=&quot;header_slide&quot;&gt;
-                &lt;div class=&quot;strapline&quot;&gt;
-                    &lt;p&gt;&lt;/p&gt;
-                 &lt;/div&gt;
-             &lt;/section&gt;
-        &lt;/div&gt; &lt;!-- end div page-title --&gt;
-        
-        &lt;section&gt;
-            &lt;h2&gt;&lt;/h2&gt;
-            &lt;p&gt;&lt;/p&gt;  
-            &lt;figure&gt;
-                &lt;img&gt;
-                &lt;figcaption&gt;Fig1.&lt;/figcaption&gt;
-            &lt;/figure&gt; 
-        &lt;/section&gt;
-        
-    &lt;/div&gt; &lt;!-- end div main --&gt;
-    
-    &lt;footer&gt;
-        &lt;div class=&quot;contact slide_up&quot;&gt;
-            &lt;p&gt;&lt;/p&gt; 
-            &lt;div class=&quot;footer-logos&quot;&gt;
-                &lt;img&gt; &lt;img&gt; &lt;img&gt;
-            &lt;/div&gt;
+    &lt;!-- MAIN HEADING: PAGE TITLE --&gt;
+    &lt;!-- (only one h1 on the page: here) --&gt;
+    &lt;div id="report-title"&gt;
+        &lt;h1&gt;TITLE&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;!-- SIDE INFORMATION ON THE REPORT--&gt;
+    &lt;div id="report-info"&gt;
+        &lt;!-- abstract --&gt;
+        &lt;div id="report-abstract"&gt;
+            &lt;p&gt;The abstract&lt;/p&gt;
         &lt;/div&gt;
-        &lt;section id=&quot;footer_slide&quot;&gt;&lt;p&gt;&lt;/p&gt;
-            &lt;p&gt;&lt;/p&gt;
-        &lt;/section&gt;
+        &lt;!-- date and author info --&gt;
+        &lt;div id="report-date-author"&gt;
+            &lt;p id="report-date"&gt;2015&lt;/p&gt;
+            &lt;p id="report-authors"&gt;&lt;!-- use commas if several authors --&gt;The Authors&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="report-content"&gt;
+        &lt;!-- REPORT MENU --&gt;
+        &lt;aside&gt;
+            &lt;h3&gt;Contents&lt;/h3&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#1"&gt;First subheading&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#2"&gt;Second subheading&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#3"&gt;Third subheading&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/aside&gt;
+        
+        &lt;!-- REPORT --&gt;
+        &lt;article&gt;
+            &lt;!-- W3C's HTML5: "A section is a thematic grouping of content" --&gt;
+            &lt;!-- Sections can be repeated --&gt;
+            &lt;section&gt;
+                &lt;h2 id="1"&gt;First subheading&lt;/h2&gt;
+                &lt;p&gt;Content of the paragraph. The first paragraph of a section has no indent. A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a group of sentences with one topic. It is also a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of more than one sentence. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose. (Wikipedia)&lt;/p&gt;
+                &lt;p&gt;Content of the paragraph: the paragraphs following the first paragraph of a section have an indent.&lt;/p&gt;
+            &lt;/section&gt;
+            
+            &lt;section&gt;
+                &lt;h2 id="3"&gt;Second subheading&lt;/h2&gt;
+                &lt;!-- A FOOTNOTE! --&gt;
+                &lt;p&gt;Here we show an image&lt;sup&gt;&lt;a href="#fn1" id="r1"&gt;[1]&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+                &lt;figure&gt;
+                    &lt;img src="static/hybrid-publishing-consortium-logo.png" alt="hpc-logo"&gt;
+                    &lt;figcaption&gt;Caption of the image&lt;/figcaption&gt;
+                &lt;/figure&gt; 
+            &lt;/section&gt;
+            
+            &lt;section&gt;
+                &lt;h2 id="3"&gt;Third subheading&lt;/h2&gt;
+                &lt;p&gt;Small images (three in the text width on big screens) next to each other&lt;/p&gt;
+                &lt;div class="clear one-column"&gt;
+                    &lt;figure&gt;
+                        &lt;img src="static/hybrid-publishing-consortium-logo.png" alt="hpc-logo"&gt;
+                        &lt;figcaption&gt;Caption of the image&lt;/figcaption&gt;
+                    &lt;/figure&gt; 
+                    &lt;figure&gt;
+                        &lt;img src="static/hybrid-publishing-consortium-logo.png" alt="hpc-logo"&gt;
+                        &lt;figcaption&gt;Caption of the image&lt;/figcaption&gt;
+                    &lt;/figure&gt;
+                    &lt;figure&gt;
+                        &lt;img src="static/hybrid-publishing-consortium-logo.png" alt="hpc-logo"&gt;
+                        &lt;figcaption&gt;Caption of the image&lt;/figcaption&gt;
+                    &lt;/figure&gt;
+                &lt;/div&gt;
+                &lt;p&gt;Small images, height of 100px, on top of each other, aligned on the left.&lt;/p&gt;
+                &lt;div class="height100 img-left"&gt;
+                    &lt;figure&gt;
+                        &lt;img src="static/hybrid-publishing-consortium-logo.png" alt="hpc-logo"&gt;
+                        &lt;figcaption&gt;Caption of the image&lt;/figcaption&gt;
+                    &lt;/figure&gt; 
+                    &lt;figure&gt;
+                        &lt;img src="static/hybrid-publishing-consortium-logo.png" alt="hpc-logo"&gt;
+                        &lt;figcaption&gt;Caption of the image&lt;/figcaption&gt;
+                    &lt;/figure&gt; 
+                &lt;/div&gt;
+            &lt;/section&gt;
+            
+            &lt;section id="footnotes"&gt;
+                &lt;h2&gt;Notes:&lt;/h2&gt;
+                &lt;p id="fn1"&gt;&lt;a href="#r1"&gt;[1]&lt;/a&gt; How awsome is that?&lt;/p&gt;
+            &lt;/section&gt;
+        &lt;/article&gt;&lt;!-- END REPORT --&gt;
+    
+    &lt;/div&gt;&lt;!-- end div report-content --&gt;
+    
+    &lt;!-- HPC DOSSIERS FOOTER --&gt;
+    &lt;footer&gt;
+        &lt;div class="contact slide_up"&gt;
+                &lt;p&gt;INFO&lt;/p&gt; 
+                &lt;div class="footer-logos"&gt;
+                    &lt;img src="../../static/EFRE-logo.png" alt="Europa"&gt;
+                    &lt;img src="../../static/EuropafoerdertNds_farbig.png" alt="Niedersachsen"&gt;
+                    &lt;img src="../../static/logo_leuphana-2.png" alt="Leuphana"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id="footer_slide"&gt;
+                &lt;p&gt;Contact: mail AT consortium.io&lt;/p&gt;
+                &lt;p&gt;&lt;a href="http://www.leuphana.de/en/site-notice-leuphana.html"&gt;Imprint&lt;/a&gt;&lt;/p&gt;
+                &lt;p&gt;© The authors | &lt;a href="https://creativecommons.org/licenses/by/3.0/de/"&gt;CC BY 3.0 DE&lt;/a&gt;&lt;/p&gt;
+                &lt;p&gt;The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.&lt;/p&gt;
+            &lt;/div&gt;
     &lt;/footer&gt;
+    
+    &lt;script src="../../js/all.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
                 </code></pre>
                 <!-- END OF THE XMP CODE -->
             </section>
