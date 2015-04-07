@@ -7,7 +7,7 @@ body {
     margin: auto;
 }
 
-a, a:hover, a:visited {
+a, a:hover, a:visited, a:active; a:focus {
     color: black;
     text-decoration: none;
 }
@@ -46,42 +46,54 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "REGLO";
     color: black;
-    text-align: center;
 }
 
 h1, .h1 { 
     font-size: 70px; 
-    text-align: center;
+    text-align: left;
     margin-bottom: 40px;
+    letter-spacing: -0.2px;
 }
 h2, .h2 {
+    font-family: "REGLO";
     font-size: 35px;
-    text-align: left;
 }
 h3, .h3 { 
     font-size: 35px;
     text-align: left;
 }
-
 p {
     color: black;
     font-family: "Cotham", Helvetica, Arial, sans-serif;
     font-size: 18px;
 }
-
 .serif-font {
-    font-family: "Bagnard", "Times New Roman", Times, serif;
+    font-family: "Charter", "Times New Roman", Times, serif;
 }
-
 .monospaced-font {
     font-family: "NotCourier", "Courier New", monospace;
 }
-
 code, kbd, pre, samp {
     font-family: "NotCourier", "Courier New", monospace;
+    font-size: 15px;
+}
+.font-title-lato {
+    font-family: "LatoMedium";
+}
+.font-title-reglo {
+    font-family: "REGLO";
+}
+.font-title-lato {
+    font-family: "Bagnard";
+}
+.font-text-charter {
+    font-family: "Charter";
+}
+.font-text-worker {
+    font-family: "Worker";
 }
 
-/* MAIN PAGE */
+/* MAIN RESEARCH PAGE: TABLE OF CONTENTS */ 
 #main {
     padding-right: 15px;
     padding-left: 15px;
@@ -94,7 +106,6 @@ code, kbd, pre, samp {
     width: 70%;
     margin: auto;
 }
-
 /* PAGE TITLE + INFO */
 .page-title {
     width: 100%;
@@ -103,22 +114,40 @@ code, kbd, pre, samp {
 .more {
     text-align: center;
 }
+/* REPORTS */
+.cover-dossier {
+    width: 250px;
+    float: left;
+    margin: 30px;
+}
+.list-group-item {
+    border: 2px solid black;
+    background-color: white;
+}
+.main-research-page-title {
+    font-size: 144px;
+}
+a.list-group-item:focus, a.list-group-item:hover {
+    background-color: white;
+}
 
 /*//////// REPORT PAGES ////////*/
 
-/* BORDER */
-header, #report-title, #report-info, #report-date-author, aside, article {
-    border-top: 1px solid black;
+/* BORDER-TOP */
+#report-title, #report-info, #report-date-author, aside, article, #footnotes {
+    border-top: 2px solid rgb(126, 213, 215);
 }
 
 /* HEADER */
 header {
     width: 250px;
     float: left;
+    padding-bottom: 30px;
+    border-top: 0px solid black;
 }
 .logo {
     width: 110px;
-    padding: 10px;
+    padding: 10px 0px;
     position: relative;
 }
 .cover-img {
@@ -128,8 +157,8 @@ header {
 }
 .logo-dossiers {
     font-family: Reglo;
-    padding-left: 10px;
-    margin-top: -11px;
+    padding-left: 0px;
+    margin-top: -10px;
     font-size: 23px;
 }
 
@@ -150,9 +179,22 @@ header {
 #report-info p {
     font-size: 16px;
 }
+#report-abstract {
+    padding-bottom: 30px;
+}
 #report-date-author {
-    margin-top: 30px;
     padding-top: 20px;
+    padding-bottom: 30px;
+}
+#report-date:before {
+    content: "Date:";
+    margin-right: 7px;
+    color: rgb(126, 213, 215);
+}
+#report-authors:before {
+    content: "By:";
+    margin-right: 7px;
+    color: rgb(126, 213, 215);
 }
 
 /* REPORT CONTENT */
@@ -165,7 +207,17 @@ header {
 aside {
     width: 250px;
     float: left;
-    display:block;
+    display: block;
+    padding-bottom: 30px;
+}
+aside h3 {
+    font-family: "Cotham";
+    font-size: 16px;
+    border-bottom: 1px solid black;
+    display: inline-block;
+}
+aside li {
+    font-size: 16px;
 }
 
 /* REPORT */
@@ -176,18 +228,6 @@ article {
     display: block;
     margin-bottom: 40px;
 }
-article img {
-    display:block;
-    width: 100%;
-    margin: auto;
-}
-
-/* SECTION */
-section p + p {
-    text-indent: 6%;
-    margin-top: 0;
-}
-
 /* IMAGES */
 figure {
     margin: 30px 0 30px 0;
@@ -196,33 +236,50 @@ figcaption {
     margin-top: 20px;
     text-align: center;
 }
+article img {
+    display:block;
+    width: 95%;
+    margin: auto;
+}
+article video {
+    width: 95%;
+}
+/* SECTIONS */
+article section h2, .h2 {
+    font-family: "Cotham";
+    font-size: 18px;
+    margin-top: 30px;
+    border-bottom: 1px solid black;
+    display: inline-block;
+}
+section p + p {
+    text-indent: 6%;
+    margin-top: 0;
+}
 
-/* IMAGES */
+
+/* REPORT’S FOOTNOTES */
 #footnotes {
     padding-left: 6%;
     margin-top: 30px;
     padding-top: 20px;
-    border-top: 1px solid black;
     width: 520px;
 }
 
 /* FOOTER */
-
 footer {
     padding-top: 30px;
-    border-top: 1px solid black;
+    border-top: 2px solid rgb(126, 213, 215);
     position: relative;
     float: left;
     width: 1060px;
     margin-bottom: 30px;
 }
-
-.contact {
+.contact p {
     text-align: center;
 }
 .footer-logos {
     float: right;
-    width: 
 }
 .footer-logos img {
     height: 70px;
@@ -230,26 +287,6 @@ footer {
     float: right;
 }
 
-
-/* MAIN RESEARCH PAGE: TABLE OF CONTENTS */ 
-
-.cover-dossier {
-    width: 250px;
-    float: left;
-    margin: 30px;
-}
-
-.list-group-item {
-    border: 2px solid black;
-    background-color: white;
-}
-.main-research-page-title {
-    font-size: 144px;
-}
-
-a.list-group-item:focus, a.list-group-item:hover {
-    background-color: white;
-}
 
 /* ALERTS */
 
@@ -269,7 +306,6 @@ code, pre {
     display: block;
     padding: 0px;
     margin: 0 0 0px;
-    font-size: 16px;
     color: black;
     word-break: break-all;
     word-wrap: break-word;
@@ -279,12 +315,10 @@ code, pre {
     overflow: "initial";
 }
 
-/* ACTIONS */
-
+/* SLIDES */
 #header_slide {
     display: none;
 }
-
 #footer_slide {
     display: none;
 }
@@ -292,7 +326,13 @@ code, pre {
 
 /* RESPONSIVE */
 
-@media (max-width:768px) and (max-width:992px) {
+@media (min-width:1100px) {
+    aside h3 {
+        font-size: 18px;
+        margin-top: 40px;
+    }
+}
+@media (min-width:800px) and (max-width:1100px) {
     .footer-logos {
         width: 100%;
     }
@@ -302,7 +342,120 @@ code, pre {
     .main-research-page-title {
         font-size: 20vw;
     }
+    body {
+        padding: 20px;
+        width: 840px;
+        margin: auto;
+    }
+    #report-info {
+        margin-left: 0px;
+        width: 520px;
+        border-top: 0px;
+        padding-top: 0px;
+    }
+    #report-abstract {
+        float: left;
+        width: 248px;
+        border-top: 2px solid rgb(126, 213, 215);
+        padding-top: 20px;
+    }
+    #report-date-author {
+        float: left;
+        width: 248px;
+        margin-left: 18px;
+        margin-top: 0px;
+    }
+    .report-content {
+        clear: none;
+    }
+    aside {
+        margin-left: 20px;
+    }
+    article {
+        margin-left: 0px;
+    }
+    footer {
+        width: 790px;
+    }
 }
+@media (min-width:540px) and (max-width:800px) {
+    .footer-logos {
+        width: 100%;
+    }
+    #main {
+       width: 100%;
+    }
+    .main-research-page-title {
+        font-size: 20vw;
+    }
+    body {
+        padding: 20px;
+        width: 560px;
+        margin: auto;
+    }
+    #report-title {
+        margin-left: 0px;
+    }
+    #report-info {
+        margin-left: 0px;
+    }
+    .report-content {
+        clear: none;
+    }
+    aside {
+        margin-left: 20px;
+        float: left;
+    }
+    article {
+        margin-left: 0px;
+        width: 520px;
+    }
+    footer {
+        width: 520px;
+    }
+}
+@media (min-width:250px) and (max-width:540px) {
+    .footer-logos {
+        width: 100%;
+    }
+    #main {
+       width: 100%;
+    }
+    .main-research-page-title {
+        font-size: 20vw;
+    }
+    body {
+        padding: 20px;
+        width: 90%;
+        margin: auto;
+    }
+    h1, .h1 {
+    font-size: 11vw;
+    }
+    section p + p {
+        text-indent: 15%;
+    }
+    #report-title {
+        margin-left: 0px;
+        width: 250px;
+        width: 100%;
+    }
+    #report-info {
+        margin-left: 0px;
+        width: 100%;
+    }
+    aside, #footnotes, footer {
+        width: 100%;
+    }
+    .report-content {
+        width: 100%;
+    }
+    article {
+        margin-left: 0px;
+        width: 100%;
+    }
+}
+
 
 /* PRINT STYLESHEET */
 
@@ -310,14 +463,30 @@ code, pre {
     .screen-only {
         display: none;
     }
-    footer {
-        display: none;
-    }
     .alert {
         display: none;
     }
     h1, .h1 { 
-       page-break-after: always;
+        page-break-after: always;
+        letter-spacing: -0.5px;
+    }
+    figure {
+        page-break-inside: avoid;
+    }
+    header {
+        display: none;
+    }
+    #report-title, #report-info, #report-date-author, aside, article {
+        border-top: 0px solid black;
+    }
+    aside {
+        margin-left: 0px;
+    }
+    aside, footer, .page-break-after {
+        page-break-after: always;
+    }
+    #footer_slide {
+        display: initial;
     }
 }
 @media screen {
