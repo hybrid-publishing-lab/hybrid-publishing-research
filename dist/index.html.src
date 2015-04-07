@@ -71,9 +71,9 @@
                             <p>
                                 <span ng-cloak ng-hide="{{!item.data.date.length}}">{{ item.data.date }}</span>
                             </p>
-                            
-                            <p class="validation-show">validation</p>
                         </a>
+                        
+                        <p class="validation-show">validation</p>
                         <div id="alerts_slide">
                             
                             <div ng-cloak ng-show="{{!item.htmlerror[0]}}" class="alert alert-success" role="success">
