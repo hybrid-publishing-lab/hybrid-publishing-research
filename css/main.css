@@ -64,6 +64,14 @@ li {
     height: 100px;
     width: unset;
 }
+.height150 figure img {
+    height: 150px;
+    width: unset;
+}
+.img-left figure img, .img-left figure figcaption {
+    margin-left: 0px;
+    text-align: left;
+}
 
 
 /* TYPE */
