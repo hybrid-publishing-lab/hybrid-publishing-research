@@ -161,7 +161,7 @@ a.list-group-item:focus, a.list-group-item:hover {
 #footer_slide {
     display: none;
 }
-#alerts_slide {
+.alert {
     display: none;
 }
 .validation-show {

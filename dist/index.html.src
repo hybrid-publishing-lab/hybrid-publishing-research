@@ -71,11 +71,8 @@
                             <p>
                                 <span ng-cloak ng-hide="{{!item.data.date.length}}">{{ item.data.date }}</span>
                             </p>
-                        </a>
-                        
-                        <p class="validation-show">validation</p>
-                        <div id="alerts_slide">
-                            
+                            <p class="validation-show">validation</p>
+
                             <div ng-cloak ng-show="{{!item.htmlerror[0]}}" class="alert alert-success" role="success">
                                 <span class="sr-only">Success:</span>
                                 html5 valid
@@ -94,8 +91,7 @@
                                 <span class="sr-only">Success:</span>
                                  Dublin Core valid
                             </div>
-                            
-                        </div> <!-- end div alerts slide -->
+                        </a>
                     </div>
                 </div> <!-- end div row -->
             </div> <!-- end div container -->

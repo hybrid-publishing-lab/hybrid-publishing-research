@@ -59,7 +59,7 @@ $( ".more" ).click(function() {
     $( this ).toggleClass( "slide_up" );
 });
 $( ".validation-show" ).click(function() {
-    $( "#alerts_slide" ).slideToggle( "slow");
+    $( ".alert" ).slideToggle( "slow");
     $( this ).toggleClass( "slide_up" );
 });
 /*
