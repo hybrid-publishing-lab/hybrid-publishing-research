@@ -77,19 +77,25 @@ code, kbd, pre, samp {
     font-family: "NotCourier", "Courier New", monospace;
     font-size: 15px;
 }
-.font-title-lato {
+.font-lato {
     font-family: "LatoMedium";
 }
-.font-title-reglo {
+.font-reglo {
     font-family: "REGLO";
 }
-.font-title-lato {
+.font-montserrat {
+    font-family: "Montserrat";
+}
+.font-bagnard {
     font-family: "Bagnard";
 }
-.font-text-charter {
+.font-charter {
     font-family: "Charter";
 }
-.font-text-worker {
+.font-notcourier {
+    font-family: "NotCourier";
+}
+.font-worker {
     font-family: "Worker";
 }
 
@@ -301,7 +307,7 @@ section p + p {
 }
 
 
-/* REPORT'S FOOTNOTES */
+/* REPORT'ÃÂS FOOTNOTES */
 #footnotes {
     padding-left: 6%;
     margin-top: 30px;
