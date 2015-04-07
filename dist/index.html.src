@@ -62,15 +62,18 @@
             <div class="container">
                 <div class="row">
                     <div ng-show="indexlist" ng-repeat="item in indexlist" class="cover-dossier">
-                        <a href="{{ stripdist(item.filename) }}" ng-cloak class="list-group-item">
-                            <h3 ng-cloak ng-hide="{{!item.data.title.length}}">{{ firstelement(item.data.title) }}</h3>
-                            <p>
-                                <span ng-cloak ng-hide="{{!item.data.type.length}}">{{ item.data.type | capitalize}}</span>
-                                <span ng-cloak ng-hide="{{!item.data.creator.length}}">by {{ item.data.creator }}</span>
-                            </p>
-                            <p>
-                                <span ng-cloak ng-hide="{{!item.data.date.length}}">{{ item.data.date }}</span>
-                            </p>
+                        <div ng-cloak class="list-group-item">
+                            <a href="{{ stripdist(item.filename) }}">
+                                <h3 ng-cloak ng-hide="{{!item.data.title.length}}">{{ firstelement(item.data.title) }}</h3>
+                                <p>
+                                    <span ng-cloak ng-hide="{{!item.data.type.length}}">{{ item.data.type | capitalize}}</span>
+                                    <span ng-cloak ng-hide="{{!item.data.creator.length}}">by {{ item.data.creator }}</span>
+                                </p>
+                                <p>
+                                    <span ng-cloak ng-hide="{{!item.data.date.length}}">{{ item.data.date }}</span>
+                                </p>
+                            </a>
+                            
                             <p class="validation-show">validation</p>
 
                             <div ng-cloak ng-show="{{!item.htmlerror[0]}}" class="alert alert-success" role="success">
@@ -91,7 +94,7 @@
                                 <span class="sr-only">Success:</span>
                                  Dublin Core valid
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div> <!-- end div row -->
             </div> <!-- end div container -->
