@@ -57,6 +57,13 @@ li {
     margin-right: 20px;
     float: left;
 }
+.size1-1 figure img {
+    width: initial;
+}
+.height100 figure img {
+    height: 100px;
+    width: unset;
+}
 
 
 /* TYPE */
