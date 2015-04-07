@@ -36,7 +36,7 @@
 }
 
 @font-face {
-    font-family: 'Worker';
+    font-family: 'Work';
     src: url('fonts/worker/woff2/WorkSans-Bold.woff2') format('woff2'),
          url('fonts/worker/woff/WorkSans-Bold.woff') format('woff'),
          url('fonts/worker/ttf/WorkSans-Bold.ttf') format('truetype');
@@ -44,7 +44,7 @@
     font-style: normal;
 }
 @font-face {
-    font-family: 'Worker';
+    font-family: 'Work';
     src: url('fonts/worker/woff2/WorkSans-Regular.woff2') format('woff2'),
          url('fonts/worker/woff/WorkSans-Regular.woff') format('woff'),
          url('fonts/worker/ttf/WorkSans-Regular.ttf') format('truetype');
@@ -53,7 +53,7 @@
 }
 
 @font-face {
-    font-family: 'Worker';
+    font-family: 'Work';
     src: url('fonts/worker/woff2/WorkSans-thin.woff2') format('woff2'),
          url('fonts/worker/woff/WorkSans-thin.woff') format('woff'),
          url('fonts/worker/ttf/WorkSans-thin.ttf') format('truetype');

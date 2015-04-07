@@ -95,8 +95,8 @@ code, kbd, pre, samp {
 .font-notcourier {
     font-family: "NotCourier";
 }
-.font-worker {
-    font-family: "Worker";
+.font-work {
+    font-family: "Work";
 }
 
 /* CODE */
@@ -307,7 +307,7 @@ section p + p {
 }
 
 
-/* REPORT'ÃÂS FOOTNOTES */
+/* REPORT S FOOTNOTES */
 #footnotes {
     padding-left: 6%;
     margin-top: 30px;
