@@ -30,18 +30,18 @@
     </header>
     <!-- MAIN HEADING: title -->
     <div id="report-title">
-        <h1>Documentation &amp; publishing system<br>for the Hybrid Publishing Consortium and beyond</h1>
+        <h1>Documentation &amp;&nbsp;publishing system<br>for the Hybrid Publishing Consortium and beyond</h1>
     </div>
     <!-- SIDE INFORMATION ON THE REPORT-->
     <div id="report-info">
         <!-- abstract -->
         <div id="report-abstract">
-            <p>A clever and innovative documentation &amp; publishing system developed by the Hybrid Publishing Consortium.</p>
+            <p>Unfolding the clever and innovative documentation &amp; publishing system developed by the Hybrid Publishing Consortium.</p>
         </div>
         <!-- date and author info -->
         <div id="report-date-author">
-            <p>2015</p>
-            <p>Loraine Furter</p>
+            <p id="report-date">2015</p>
+            <p id="report-authors"><!-- use commas if several authors -->Loraine Furter</p>
         </div>
     </div>
     <div class="report-content">
@@ -52,6 +52,7 @@
                 <li><a href="#intro">Dossiers</a></li>
                 <li><a href="#single-source-medium-specific">Single source, yet medium specific</a></li>
                 <li><a href="#html-style">HTML style guide</a></li>
+                <li><a href="#hybrid-design">Hybrid design</a></li>
                 <li><a href="#layout-rules">Layout rules</a></li>
                 <li><a href="#structure-code">Structure of the body of the html file</a></li>
                 <li><a href="#footnotes">Notes</a></li>
@@ -60,13 +61,6 @@
         
         <!-- REPORT -->
         <article>
-            <section>
-                <h2>Diagram</h2>
-                <figure>
-                    <img src="assets/img/documentation.png" style="max-width: 1300px;">
-                    <figcaption>Caption: The whole universe</figcaption>
-                </figure> 
-            </section>
             
             <section>
                 <h2 id="intro">Dossiers</h2>
@@ -76,23 +70,35 @@
             </section>
             
             <section>
+                <h2>Diagram</h2>
+                <figure>
+                    <img src="assets/img/documentation.png" style="max-width: 1300px;">
+                    <figcaption>Caption: The whole universe</figcaption>
+                </figure> 
+            </section>
+            
+            <section>
                 <h2 id="single-source-medium-specific">Single source, yet medium specific</h2>
                 <p>To tune parts of the reports in relation with a specific medium (for instance only for print), we can use specific class names (convention needed for that) that will then be displayed or not depending on the format.</p>
             </section>
             
             <section>
                 <h2 id="html-style">HTML style guide</h2>
-                <p>If we want ePub-ready files, we should write in a compatible way (ePub is XHTML). A solution for that is <a href="http://dev.w3.org/html5/html-polyglot/">Polyglot Markup</a>. We could also run a validator (with <a href="https://github.com/svenkreiss/html5validator">HTML5 Validator</a>, that can be run with <a href="https://travis-ci.org/">Travis CI</a>), which validates the code that is pushed on GitHub.</p>
-                <p>And use transpect to convert HTML5 to XHTML.</p>
+                <p>If we want ePub-ready files, we should write in a compatible way (ePub is XHTML). A solution for that is <a href="http://dev.w3.org/html5/html-polyglot/">Polyglot Markup</a>. We could also run a validator (with <a href="https://github.com/svenkreiss/html5validator">HTML5 Validator</a>, that can be run with <a href="https://travis-ci.org/">Travis CI</a>), which validates the code that is pushed on GitHub. And use transpect to convert HTML5 to XHTML.</p>
+            </section>
+            
+            <section>
+                <h2 id="hybrid-design">Hybrid design</h2>
+                <p>The HPC documentation and publications’ design is inspired by the following notions: multi-format, hybridity, flexibility, multiplicity, transformation. It consists of a design system, a series of guidelines, responsive and media-specific CSS styles, and a set of Free and Open source materials and tools, that can be modified to fit with specific uses. In a Free and Open Source spirit, it promotes a wide, free and shared distribution of knowledge. It is thus taking into account both accessible and high-costs formats, big and small screens, PDFs for A4 personal printer as well as Offset-ready files…</p>
             </section>
             
             <section>
                 <h2 id="layout-rules">Layout rules</h2>
                 <figure>
                     <img src="assets/img/LAYOUT-rules.png" alt="hpc-logo" style="max-width: 1000px;">
-                    <figcaption>Caption: Hybrid and multi-format layout rules!</figcaption>
+                    <figcaption>Hybrid and multi-format layout rules!</figcaption>
                 </figure>
-                <p>Two columns with slideshows and poster-like documents need to be integrated.</p>
+                <p>Two more columns with slideshows and poster-like documents need to be integrated.</p>
             </section>
             
             <section>
@@ -142,9 +148,22 @@
             </section>
             
             <section>
+                <h2>Free and Open Source fonts</h2>
+                <p><span class="font-title-reglo">REGLO</span>, a font by OSP (designed by Sebastien Sanfilippo) to be streched. OFL</p>
+                <p><span class="font-title-bagnard">Bagnard</span>, also designed by Sebastien Sanfilippo, quite hype, works for print as well (but no italics… for the moment). OFL</p>
+                <p><span class="font-title-montserrat">Montserrat</span>, a font by Julieta Ulanovsky, created to keep a trace of old posters and signs in the traditional neighborhood of Buenos Aires called Montserrat. OFL</p>
+                <p><span class="font-title-notcourier">NotCourier Sans</span>, monospace chopped by OSP. OFL</p>
+                <p><span class="font-title-charter">Charter</span>, a serif typeface designed by Matthew Carter for Bitstream, donated in 1992 to another Consortium, the X Consortium, under an Open Source license. The font is based on 18th century characters designed by Pierre-Simon Fournier, and was optimized for printing on low-resolution laser printers of the 1980s. The encounter between the very fine design inspired by Fournier’s characters and the low resolution of the personal printing technologies makes it a real multi-format font that is very legible on both low and high-tech screen and print.</p>
+                <p><span class="font-title-worker">Worker Sans</span> is a “superfamily” of fonts based on early Grotesques, generated with Metapolator. Some of its 10 weights were optimised for screen medium-sized text usage (14px-48px), the thinner and heavier for display use, and they also look fine on paper. But the superfamily doesn’t have italics… yet!</p>
+                <p><span class="font-title-worker">Lato</span> is a more complete family of fonts with many weights and italics, designed by Łukasz Dziedzic. It is described as “Male and female, serious but friendly. With the feeling of the Summer”…</p>
+            </section>
+            
+            <section>
                 <h2>TO DO</h2>
-                <p>Interface for the dossiers with remixing options. (for now only the reports are displayed)</p> 
-                <p>Integration of slide shows.</p>  
+                <ul>
+                    <li>Interface for the dossiers with remixing options. (for now only the reports are displayed)</li>
+                    <li>Integration of slide shows.</li>
+                </ul> 
             </section>
             <section id="footnotes">
                 Notes:
