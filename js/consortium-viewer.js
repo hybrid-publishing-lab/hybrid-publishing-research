@@ -58,6 +58,10 @@ $( ".more" ).click(function() {
     $( "#header_slide" ).slideToggle( "slow");
     $( this ).toggleClass( "slide_up" );
 });
+$( ".validation-show" ).click(function() {
+    $( "#alerts_slide" ).slideToggle( "slow");
+    $( this ).toggleClass( "slide_up" );
+});
 /*
 Date                DC.date
 Publication type        DC.type

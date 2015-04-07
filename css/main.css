@@ -93,7 +93,23 @@ code, kbd, pre, samp {
     font-family: "Worker";
 }
 
-/* MAIN RESEARCH PAGE: TABLE OF CONTENTS */ 
+/* CODE */
+code, pre {
+    display: block;
+    padding: 0px;
+    margin: 0 0 0px;
+    color: black;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: transparent;
+    border: 0px;
+    border-radius: 0px;
+    overflow: "initial";
+}
+
+
+/*//////// MAIN RESEARCH PAGE: TABLE OF CONTENTS ///////*/ 
+
 #main {
     padding-right: 15px;
     padding-left: 15px;
@@ -114,7 +130,7 @@ code, kbd, pre, samp {
 .more {
     text-align: center;
 }
-/* REPORTS */
+/* MAIN PAGE > REPORTS */
 .cover-dossier {
     width: 250px;
     float: left;
@@ -131,6 +147,27 @@ code, kbd, pre, samp {
 a.list-group-item:focus, a.list-group-item:hover {
     background-color: white;
     text-decoration: none;
+}
+/* SLIDES */
+#header_slide {
+    display: none;
+}
+#footer_slide {
+    display: none;
+}
+#alerts_slide {
+    display: none;
+}
+/* ALERTS */
+.alert-danger {
+    border: 2px solid red;
+    color: red;
+    background-color: white;
+}
+.alert-success {
+    border: 2px solid blue;
+    color: blue;
+    background-color: white;
 }
 
 /*//////// REPORT PAGES ////////*/
@@ -287,42 +324,6 @@ footer {
     height: 70px;
     padding: 10px;
     float: right;
-}
-
-
-/* ALERTS */
-
-.alert-danger {
-    border: 2px solid red;
-    color: red;
-    background-color: white;
-}
-.alert-success {
-    border: 2px solid blue;
-    color: blue;
-    background-color: white;
-}
-
-/* CODE */
-code, pre {
-    display: block;
-    padding: 0px;
-    margin: 0 0 0px;
-    color: black;
-    word-break: break-all;
-    word-wrap: break-word;
-    background-color: transparent;
-    border: 0px;
-    border-radius: 0px;
-    overflow: "initial";
-}
-
-/* SLIDES */
-#header_slide {
-    display: none;
-}
-#footer_slide {
-    display: none;
 }
 
 
