@@ -1,3 +1,5 @@
+/* GENERAL */
+
 body {
     color: black;
     font-family: "Cotham", Helvetica, Arial, sans-serif;
@@ -35,10 +37,27 @@ li {
     list-style: none;
 }
 
-
 [ng\:cloak], [ng-cloak], .ng-cloak {
     display: none !important;
 }
+
+
+/* COLUMNS WIDTH ETC */
+.clear {
+    clear: both;
+    display: inline-block;
+}
+.one-column figure {
+    width: 240px;
+    margin-right: 20px;
+    float: left;
+}
+.two-columns figure {
+    width: 280px;
+    margin-right: 20px;
+    float: left;
+}
+
 
 /* TYPE */
 
@@ -217,7 +236,7 @@ header {
 .logo-dossiers {
     font-family: Reglo;
     padding-left: 0px;
-    margin-top: -10px;
+    margin-top: 0px;
     font-size: 23px;
 }
 
@@ -295,6 +314,7 @@ figcaption {
     margin-top: 20px;
     text-align: center;
 }
+
 article img {
     display:block;
     width: 95%;
