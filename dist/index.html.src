@@ -73,30 +73,29 @@
                             </p>
                             
                             <p class="validation-show">validation</p>
-                            
-                            <div id="alerts_slide">
-                                
-                                <div ng-cloak ng-show="{{!item.htmlerror[0]}}" class="alert alert-success" role="success">
-                                    <span class="sr-only">Success:</span>
-                                    html5 valid
-                                </div>
-        
-                                <div ng-cloak ng-show="{{item.htmlerror[0]}}" class="alert alert-danger" role="danger">
-                                    <span class="sr-only">Error:</span>
-                                     Not html5 valid
-                                </div>
-        
-                                <div ng-cloak ng-show="{{item.dcerrors[0].length}}" class="alert alert-danger" role="alert">
-                                    <span class="sr-only">Error:</span>
-                                     Not Dublin Core valid
-                                </div>
-                                <div ng-cloak ng-show="{{!item.dcerrors[0].length}}" class="alert alert-success" role="success">
-                                    <span class="sr-only">Success:</span>
-                                     Dublin Core valid
-                                </div>
-                                
-                            </div> <!-- end div alerts slide -->
                         </a>
+                        <div id="alerts_slide">
+                            
+                            <div ng-cloak ng-show="{{!item.htmlerror[0]}}" class="alert alert-success" role="success">
+                                <span class="sr-only">Success:</span>
+                                html5 valid
+                            </div>
+    
+                            <div ng-cloak ng-show="{{item.htmlerror[0]}}" class="alert alert-danger" role="danger">
+                                <span class="sr-only">Error:</span>
+                                 Not html5 valid
+                            </div>
+    
+                            <div ng-cloak ng-show="{{item.dcerrors[0].length}}" class="alert alert-danger" role="alert">
+                                <span class="sr-only">Error:</span>
+                                 Not Dublin Core valid
+                            </div>
+                            <div ng-cloak ng-show="{{!item.dcerrors[0].length}}" class="alert alert-success" role="success">
+                                <span class="sr-only">Success:</span>
+                                 Dublin Core valid
+                            </div>
+                            
+                        </div> <!-- end div alerts slide -->
                     </div>
                 </div> <!-- end div row -->
             </div> <!-- end div container -->

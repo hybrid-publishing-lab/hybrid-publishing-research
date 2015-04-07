@@ -158,6 +158,10 @@ a.list-group-item:focus, a.list-group-item:hover {
 #alerts_slide {
     display: none;
 }
+.validation-show {
+    color: rgb(126, 213, 215);
+    text-transform: uppercase;
+}
 /* ALERTS */
 .alert-danger {
     border: 2px solid red;
