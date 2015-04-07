@@ -23,65 +23,118 @@
 </head>
 <body>
 <<<<<<< HEAD
-	<header>
-        <img class="logo img-responsive" src="static/hybrid-publishing-consortium-logo.png" alt="Hybrid Publishing Consortium logo">
+	<!-- HPC DOSSIERS HEADER (LOGO) -->
+    <header>
+        <a href="/">
+            <img src="static/hybrid-publishing-consortium-logo.png" alt="hpc-logo">
+            <p class="logo-dossiers">DOSSIERS</p>
+        </a>
     </header>
-    
-    <div id="main">
-        <div class="page-title">
-            <div class="more slide_up">
-                <!-- PAGE TITLE (only one h1 on the page: here) -->
-                <h1>TITLE</h1>
-                <p>MORE</p>
-            </div>
-            <section id="header_slide">
-            <h2></h2>
-                <!-- hidden “more information” on the page (toggle) -->
-                <div class="strapline">
-                    <p></p>
-                 </div>
-             </section>
-        </div> <!-- end div page-title -->
+    <!-- MAIN HEADING: PAGE TITLE -->
+    <!-- (only one h1 on the page: here) -->
+    <div id="report-title">
+        <h1>TITLE</h1>
+    </div>
+    <!-- SIDE INFORMATION ON THE REPORT-->
+    <div id="report-info">
+        <!-- abstract -->
+        <div id="report-abstract">
+            <p>The abstract</p>
+        </div>
+        <!-- date and author info -->
+        <div id="report-date-author">
+            <p id="report-date">2015</p>
+            <p id="report-authors"><!-- use commas if several authors -->The Authors</p>
+        </div>
+    </div>
+    <div class="report-content">
+        <!-- REPORT MENU -->
+        <aside>
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#1">First subheading</a></li>
+                <li><a href="#2">Second subheading</a></li>
+                <li><a href="#3">Third subheading</a></li>
+            </ul>
+        </aside>
         
-        <!-- W3C's HTML5: "A section is a thematic grouping of content" -->
-        <!-- STYLE: space on top and bottom -->
-        <!-- Sections can be repeated -->
-        <section>
-            <!-- title of the section (not obligatory) -->
-            <h2></h2>
-            <!-- paragraphs: no space on top/bottom, unless it is the first/last of a section-->
-            <!-- STYLE: first one in a section without indent, next ones with indent -->
-            <!-- STYLE: space on top and bottom -->
-            <p></p>
-            <!-- images with captions -->
-            <figure>
-                <img>
-                <figcaption>Fig1.</figcaption>
-            </figure> 
-        </section>
-        
-    </div> <!-- end div main -->
+        <!-- REPORT -->
+        <article>
+            <!-- W3C's HTML5: "A section is a thematic grouping of content" -->
+            <!-- Sections can be repeated -->
+            <section>
+                <h2 id="1">First subheading</h2>
+                <p>Content of the paragraph. The first paragraph of a section has no indent. A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a group of sentences with one topic. It is also a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of more than one sentence. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose. (Wikipedia)</p>
+                <p>Content of the paragraph: the paragraphs following the first paragraph of a section have an indent.</p>
+            </section>
+            
+            <section>
+                <h2 id="3">Second subheading</h2>
+                <!-- A FOOTNOTE! -->
+                <p>Here we show an image<sup><a href="#fn1" id="r1">[1]</a></sup>:</p>
+                <figure>
+                    <img src="static/hybrid-publishing-consortium-logo.png" alt="hpc-logo">
+                    <figcaption>Caption of the image</figcaption>
+                </figure> 
+            </section>
+            
+            <section>
+                <h2 id="3">Third subheading</h2>
+                <p>Small images (three in the text width on big screens) next to each other</p>
+                <div class="clear one-column">
+                    <figure>
+                        <img src="static/hybrid-publishing-consortium-logo.png" alt="hpc-logo">
+                        <figcaption>Caption of the image</figcaption>
+                    </figure> 
+                    <figure>
+                        <img src="static/hybrid-publishing-consortium-logo.png" alt="hpc-logo">
+                        <figcaption>Caption of the image</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="static/hybrid-publishing-consortium-logo.png" alt="hpc-logo">
+                        <figcaption>Caption of the image</figcaption>
+                    </figure>
+                </div>
+                <p>Small images, height of 100px, on top of each other, aligned on the left.</p>
+                <div class="height100 img-left">
+                    <figure>
+                        <img src="static/hybrid-publishing-consortium-logo.png" alt="hpc-logo">
+                        <figcaption>Caption of the image</figcaption>
+                    </figure> 
+                    <figure>
+                        <img src="static/hybrid-publishing-consortium-logo.png" alt="hpc-logo">
+                        <figcaption>Caption of the image</figcaption>
+                    </figure> 
+                </div>
+            </section>
+            
+            <section id="footnotes">
+                <h2>Notes:</h2>
+                <p id="fn1"><a href="#r1">[1]</a> How awsome is that?</p>
+            </section>
+        </article><!-- END REPORT -->
     
+    </div><!-- end div report-content -->
+    
+    <!-- HPC DOSSIERS FOOTER -->
     <footer>
         <div class="contact slide_up">
-            <p></p> 
-            <div class="footer-logos">
-                <img src="" alt=""> <img src="" alt=""> <img src="" alt="">
+                <p>INFO</p> 
+                <div class="footer-logos">
+                    <img src="../../static/EFRE-logo.png" alt="Europa">
+                    <img src="../../static/EuropafoerdertNds_farbig.png" alt="Niedersachsen">
+                    <img src="../../static/logo_leuphana-2.png" alt="Leuphana">
+                </div>
             </div>
-        </div>
-        <section id="footer_slide"><p></p>
-            <p></p>
-        </section>
+            <div id="footer_slide">
+                <p>Contact: mail AT consortium.io</p>
+                <p><a href="http://www.leuphana.de/en/site-notice-leuphana.html">Imprint</a></p>
+                <p>© The authors | <a href="https://creativecommons.org/licenses/by/3.0/de/">CC BY 3.0 DE</a></p>
+                <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.</p>
+            </div>
     </footer>
     
-    <!-- CALLS THE JS -->
     <script src="../../js/all.min.js"></script>
-    
-=======
-	<section>
-		<h1></h1>
-		<p></p>
-	</section>
 >>>>>>> origin/master
 </body>
 </html>
