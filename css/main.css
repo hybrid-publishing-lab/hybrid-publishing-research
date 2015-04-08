@@ -70,6 +70,12 @@ li {
     display: none !important;
 }
 
+.frame {
+    padding: 20px;
+    border: 2px solid black;
+    margin: 0px;
+}
+
 
 /* COLUMNS WIDTH ETC */
 .clear {
