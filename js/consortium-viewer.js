@@ -62,6 +62,15 @@ $( ".validation-show" ).click(function() {
     $( ".alert" ).slideToggle( "slow");
     $( this ).toggleClass( "slide_up" );
 });
+
+// Rainbow animation
+(function animate() {
+    var block = $('.animated-color');
+    block.animate({
+        backgroundColor: $.Color(block.css('backgroundColor')).hue('+=179')
+    }, 3000, animate);
+})();
+
 /*
 Date                DC.date
 Publication type        DC.type
