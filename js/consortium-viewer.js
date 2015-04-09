@@ -64,7 +64,7 @@ $( ".validation-show" ).click(function() {
 });
 
 // Rainbow animation
-(function animate() {
+$(function animate() {
     var block = $('.animated-color');
     block.animate({
         backgroundColor: $.Color(block.css('backgroundColor')).hue('+=179')
