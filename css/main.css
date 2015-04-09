@@ -63,7 +63,8 @@ ul {
     padding-left: 0px;
 }
 li {
-    list-style: none;
+    list-style-type: disc;
+    list-style-position: inside;
 }
 
 [ng\:cloak], [ng-cloak], .ng-cloak {
@@ -181,6 +182,14 @@ code, kbd, pre, samp {
     -moz-transform:scale(9,1); 
     -ms-transform:scale(9,1); 
     -o-transform:scale(9,1);
+}
+.dropped-initial::first-letter {
+    font-family: Bagnard;
+    font-size: 88px;
+    padding-top: 5px;
+    padding-right: 8px;
+    float:left;
+    color:black;
 }
 
 /* CODE */
@@ -300,6 +309,10 @@ header {
     width: 520px;
     float: left;
     margin-left: 20px;
+    padding-left: 20px;
+}
+#report-title:hover {
+    background-color: rgb(126, 213, 215);
 }
 
 /* REPORT INFO */
@@ -368,6 +381,9 @@ article {
     display: block;
     margin-bottom: 40px;
 }
+article a {
+    border-bottom: 2px solid rgb(126, 213, 215);
+}
 /* IMAGES */
 figure {
     margin: 30px 0 30px 0;
@@ -393,6 +409,14 @@ article section h2, article section .h2, article section h3, article section .h3
     margin-top: 30px;
     border-bottom: 1px solid black;
     display: inline-block;
+}
+article section .chapter-number {
+    font-family: "Bagnard";
+    font-size: 50px;
+    margin: 60px 0px;
+    border-bottom: 0px;
+    display: block;
+    text-align: center;
 }
 section p + p {
     text-indent: 6%;
