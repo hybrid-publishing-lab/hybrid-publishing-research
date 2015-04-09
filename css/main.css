@@ -636,6 +636,9 @@ footer {
 /* PRINT STYLESHEET */
 
 @media print {
+    a {
+        border-bottom: 0px;
+    }
     .screen-only {
         display: none;
     }
