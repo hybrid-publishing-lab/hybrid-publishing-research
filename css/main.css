@@ -156,10 +156,6 @@ p {
 code, kbd, pre, samp {
     font-family: "NotCourier", "Courier New", monospace;
     font-size: 15px;
-    word-break: keep-all;
-}
-pre code {
-    word-break: keep-all;
 }
 .font-lato {
     font-family: "LatoMedium";
@@ -207,12 +203,15 @@ code, pre {
     padding: 0px;
     margin: 0 0 0px;
     color: black;
-    word-break: break-all;
+    word-break: keep-all;
     word-wrap: break-word;
     background-color: transparent;
     border: 0px;
     border-radius: 0px;
     overflow: "initial";
+}
+pre code {
+    word-break: keep-all;
 }
 
 
