@@ -640,7 +640,7 @@ footer {
 /* PRINT STYLESHEET */
 
 @media print {
-    a {
+    a, a:visited, a:active, a:focus, article a {
         border-bottom: 0px;
     }
     .screen-only {
