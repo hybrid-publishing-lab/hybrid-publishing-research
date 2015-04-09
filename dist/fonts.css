@@ -54,9 +54,9 @@
 
 @font-face {
     font-family: 'Work';
-    src: url('fonts/worker/woff2/WorkSans-thin.woff2') format('woff2'),
-         url('fonts/worker/woff/WorkSans-thin.woff') format('woff'),
-         url('fonts/worker/ttf/WorkSans-thin.ttf') format('truetype');
+    src: url('fonts/worker/woff2/WorkSans-Thin.woff2') format('woff2'),
+         url('fonts/worker/woff/WorkSans-Thin.woff') format('woff'),
+         url('fonts/worker/ttf/WorkSans-Thin.ttf') format('truetype');
     font-weight: lighter;
     font-style: normal;
 }
