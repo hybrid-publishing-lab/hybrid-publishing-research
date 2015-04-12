@@ -63,13 +63,14 @@ $( ".validation-show" ).click(function() {
     $( this ).toggleClass( "slide_up" );
 });
 
+
 // Rainbow animation
-$(function animate() {
+var animate = function() {
     var block = $('.animated-color');
-    block.animate({
-        backgroundColor: $.Color(block.css('backgroundColor')).hue('+=179')
-    }, 3000, animate);
-})();
+    block.animate({backgroundColor: $.Color(block.css('backgroundColor')).hue('+=179')}, 3000, animate);
+};
+
+animate();
 
 /*
 Date                DC.date
