@@ -254,6 +254,7 @@ License
             Christina Kral
             Loraine Furter
             Simon Worthington
+            
 
         Permission is hereby granted, free of charge, to any person obtaining a copy
         of this software and associated documentation files (the "Software"), to deal
@@ -272,6 +273,13 @@ License
         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         THE SOFTWARE.
+
+    Fonts: (SIL Open Font License, 1.1)
+        Bagnard, Cotham, Reglo by Sebastien Sanfilippo
+        NotCourierSans by OSP Foundry
+        Charter by Matthew Carter
+        Lato by Łukasz Dziedzic
+        Montserrat by Julieta Ulanovsky
 
     Software used:
     
