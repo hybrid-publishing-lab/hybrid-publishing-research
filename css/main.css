@@ -218,6 +218,9 @@ pre code {
     word-break: keep-all;
 }
 
+.no-indent {
+    text-indent: 0;
+}
 
 /*//////// MAIN RESEARCH PAGE: TABLE OF CONTENTS ///////*/ 
 
@@ -434,7 +437,6 @@ section p + p {
     text-indent: 6%;
     margin-top: 0;
 }
-
 
 /* REPORT S FOOTNOTES */
 #footnotes {
