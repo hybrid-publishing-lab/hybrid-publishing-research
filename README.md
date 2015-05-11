@@ -243,7 +243,7 @@ License
         If not mentioned otherwise in the document the text is licensed
         under the Creative Commons CC-BY-DE 3.0 License.
 
-        Copyright holder of text and images are by there authors and owners
+        Copyright holder of text and images are by their authors and owners
 
     Viewer Logic:
 
