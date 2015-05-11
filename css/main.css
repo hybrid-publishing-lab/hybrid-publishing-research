@@ -62,9 +62,13 @@ section {
 ul {
     padding-left: 0px;
 }
-li {
+ul li {
     list-style-type: disc;
     list-style-position: inside;
+}
+ol li {
+    list-style-type: decimal;
+    color: black;
 }
 
 [ng\:cloak], [ng-cloak], .ng-cloak {
