@@ -277,9 +277,6 @@ a.list-group-item:focus, a.list-group-item:hover {
 .collapse, .collapsing {
     padding: 15px;
 }
-#footer_slide {
-    display: none;
-}
 .validation-show {
     border-top: 2px solid grey;
     padding-top: 10px;
