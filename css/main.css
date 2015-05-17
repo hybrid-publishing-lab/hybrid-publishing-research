@@ -223,6 +223,10 @@ pre code {
     text-indent: 0;
 }
 
+.logo-HPC-main {
+    position: absolute;
+}
+
 /*//////// MAIN RESEARCH PAGE: TABLE OF CONTENTS ///////*/ 
 
 #main {
@@ -547,6 +551,9 @@ footer {
     }
 }
 @media (min-width:540px) and (max-width:800px) {
+    .logo-HPC-main {
+        position: relative;
+    }
     .footer-logos {
         width: 100%;
     }
@@ -593,6 +600,9 @@ footer {
     }
 }
 @media (min-width:250px) and (max-width:540px) {
+    .logo-HPC-main {
+        position: relative;
+    }
     .footer-logos {
         width: 100%;
     }

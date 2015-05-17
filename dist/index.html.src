@@ -40,8 +40,8 @@
     </head>
 
     <body ng-controller="SpaceCtrl">
-        <header style="width: 100%; border-top: 0px;">
-            <img class="logo img-responsive" src="static/hybrid-publishing-consortium-logo.png" alt="Hybrid Publishing Consortium logo">
+        <header class="logo-HPC-main">
+            <img src="../../static/animated-logo3-small.gif" alt="Hybrid Publishing Consortium logo">
         </header>
         <div id="main">
             <div class="page-title">
