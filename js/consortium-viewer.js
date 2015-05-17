@@ -47,23 +47,6 @@ App.filter('capitalize', function() {
     };
 });
 
-$( ".contact" ).click(function() {
-    $( "#footer_slide" ).slideToggle( "slow");
-    $('html, body').animate({
-        scrollTop: $("#footer_slide").offset().top + $('window').height()
-    }, 2000);
-    $( this ).toggleClass( "slide_up" );
-});
-$( ".more" ).click(function() {
-    $( "#header_slide" ).slideToggle( "slow");
-    $( this ).toggleClass( "slide_up" );
-});
-$( ".validation-show" ).click(function() {
-    $( ".alert" ).slideToggle( "slow");
-    $( this ).toggleClass( "slide_up" );
-});
-
-
 // Rainbow animation
 var animate = function() {
     var block = $('.animated-color');
