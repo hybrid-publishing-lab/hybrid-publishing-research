@@ -45,21 +45,23 @@
         </header>
         <div id="main">
             <div class="page-title">
-                <div class="more slide_up">
+                <div class="">
                     <h1 class="main-research-page-title">Research<br>Viewer</h1>
-                    <p>ABOUT</p>
                 </div>
-                <div id="header_slide">
-                    <div class="strapline">
-                        <p>Welcome to the research repository of the Hybrid Publishing Consortium (HPC) supporting Open Source software infrastructures for publishing&mdash;design, single source, dynamic publishing &amp; Open Access.</p>
-                        <p>The Research Viewer is an Open Source tool that HPC has made for research distribution.</p>
-                        <p>Source: Publication and software source code can be found on <a href="https://github.com/consortium/hybrid-publishing-research.git">GitHub</a>.</p>
-                        <p ng-cloak>Publication ID version: {{gitinfo.date}} git hash: <a ng-href="https://github.com/consortium/hybrid-publishing-research/commit/{{gitinfo.commit}}">{{gitinfo.abbr}}</a>.</p>
-                     </div>
-                 </div>
             </div> <!-- end div page-title -->
             
             <div class="container">
+                
+                <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                  <p class="more">ABOUT</p>
+                </a>
+                <div class="collapse" id="collapseExample">
+                    <p>Welcome to the research repository of the Hybrid Publishing Consortium (HPC) supporting Open Source software infrastructures for publishing&mdash;design, single source, dynamic publishing &amp; Open Access.</p>
+                    <p>The Research Viewer is an Open Source tool that HPC has made for research distribution.</p>
+                    <p>Source: Publication and software source code can be found on <a href="https://github.com/consortium/hybrid-publishing-research.git">GitHub</a>.</p>
+                    <p ng-cloak>Publication ID version: {{gitinfo.date}} git hash: <a ng-href="https://github.com/consortium/hybrid-publishing-research/commit/{{gitinfo.commit}}">{{gitinfo.abbr}}</a>.</p>
+                </div>
+                
                 <div class="row">
                     <div ng-show="indexlist" ng-repeat="item in indexlist" class="cover-dossier">
                         <div ng-cloak class="list-group-item">
@@ -74,7 +76,7 @@
                                 </p>
                             </a>
                             
-                            <p class="validation-show">validation</p>
+                            <p class="validation-show">Standards validation:</p>
 
                             <div ng-cloak ng-show="{{!item.htmlerror[0]}}" class="alert alert-success" role="success">
                                 <span class="sr-only">Success:</span>
@@ -100,20 +102,22 @@
             </div> <!-- end div container -->
         </div> <!-- end div main -->
         <footer>
-            <div class="contact slide_up">
-                <p>INFO</p> 
-                <div class="footer-logos">
-                    <img src="static/EFRE-logo.png" alt="Europa">
-                    <img src="static/EuropafoerdertNds_farbig.png" alt="Niedersachsen">
-                    <img src="static/logo_leuphana-2.png" alt="Leuphana">
-                </div>
+            
+            <a data-toggle="collapse" href="#footer-hidden" aria-expanded="false" aria-controls="collapseExample">
+              <p class="more">INFO</p>
+            </a>
+            <div class="footer-logos">
+                <img src="static/EFRE-logo.png" alt="Europa">
+                <img src="static/EuropafoerdertNds_farbig.png" alt="Niedersachsen">
+                <img src="static/logo_leuphana-2.png" alt="Leuphana">
             </div>
-            <div id="footer_slide">
+            <div class="collapse" id="footer-hidden">
                 <p>Contact: mail AT consortium.io</p>
                 <p><a href="http://www.leuphana.de/en/site-notice-leuphana.html">Imprint</a></p>
                 <p>© The authors | <a href="https://creativecommons.org/licenses/by/3.0/de/">CC BY 3.0 DE</a></p>
                 <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.</p>
             </div>
+                
         </footer>
         
 

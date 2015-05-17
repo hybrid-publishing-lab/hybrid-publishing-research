@@ -245,9 +245,6 @@ pre code {
     font-size: 144px;
     text-align: center;
 }
-.more {
-    text-align: center;
-}
 /* MAIN PAGE > REPORTS */
 .cover-dossier {
     width: 250px;
@@ -263,13 +260,18 @@ a.list-group-item:focus, a.list-group-item:hover {
     text-decoration: none;
 }
 /* SLIDES */
-#header_slide {
-    display: none;
+.more {
+    text-align: center;
 }
-#footer_slide {
-    display: none;
+.collapsed:active, .collapsed:focus {
+    outline: none;
+    text-decoration: none;
 }
 .alert {
+.collapse, .collapsing {
+    padding: 15px;
+}
+#footer_slide {
     display: none;
 }
 .validation-show {
