@@ -277,16 +277,19 @@ a.list-group-item:focus, a.list-group-item:hover {
 .collapse, .collapsing {
     padding: 15px;
 }
+
+/* VALIDATION */
 .validation-show {
+    font-size: 14px;
     border-top: 2px solid grey;
     padding-top: 10px;
     margin-top: 20px;
     color: grey;
     text-transform: none;
 }
-
 /* ALERTS */
 .alert {
+    font-size: 14px;
     display: visible;
     padding: 0px;
 }
