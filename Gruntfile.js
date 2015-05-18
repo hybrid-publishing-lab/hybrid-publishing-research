@@ -129,7 +129,10 @@ module.exports = function(grunt) {
             options: {
                 relaxerror: [
                     'Bad value X-UA-Compatible for attribute http-equiv on element meta.', 
-                    'Bad value SCHEMA.DC for attribute rel on element link: The string schema.dc is not a registered keyword.'],
+                    'Bad value SCHEMA.DC for attribute rel on element link: The string schema.dc is not a registered keyword.',
+                    'Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.',
+                    'Article lacks heading. Consider using h2-h6 elements to add identifying headings to all articles.'
+                    ],
                 doctype: 'HTML5',
                 reset: true,
                 failHard: true
