@@ -109,10 +109,11 @@
                 <h2 id="structure-code">Structure of the body of the html file</h2>
                 <pre><code>
 &lt;body&gt;
-    &lt;!-- HPC DOSSIERS HEADER (LOGO) --&gt;
+    &lt;div class="container"&gt;
+	&lt;!-- HPC DOSSIERS HEADER (LOGO) --&gt;
     &lt;header&gt;
         &lt;a href="/"&gt;
-            &lt;img src="static/hybrid-publishing-consortium-logo.png" alt="hpc-logo"&gt;
+            &lt;img src="../../static/animated-logo3-small.gif" alt="hpc-logo"&gt;
             &lt;p class="logo-dossiers"&gt;DOSSIERS&lt;/p&gt;
         &lt;/a&gt;
     &lt;/header&gt;
@@ -204,22 +205,24 @@
     
     &lt;!-- HPC DOSSIERS FOOTER --&gt;
     &lt;footer&gt;
-        &lt;div class="contact slide_up"&gt;
-                &lt;p&gt;INFO&lt;/p&gt; 
-                &lt;div class="footer-logos"&gt;
-                    &lt;img src="../../static/EFRE-logo.png" alt="Europa"&gt;
-                    &lt;img src="../../static/EuropafoerdertNds_farbig.png" alt="Niedersachsen"&gt;
-                    &lt;img src="../../static/logo_leuphana-2.png" alt="Leuphana"&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div id="footer_slide"&gt;
-                &lt;p&gt;Contact: mail AT consortium.io&lt;/p&gt;
-                &lt;p&gt;&lt;a href="http://www.leuphana.de/en/site-notice-leuphana.html"&gt;Imprint&lt;/a&gt;&lt;/p&gt;
-                &lt;p&gt;© The authors | &lt;a href="https://creativecommons.org/licenses/by/3.0/de/"&gt;CC BY 3.0 DE&lt;/a&gt;&lt;/p&gt;
-                &lt;p&gt;The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.&lt;/p&gt;
-            &lt;/div&gt;
+        &lt;a data-toggle="collapse" href="#footer-hidden" aria-expanded="false" aria-controls="collapseExample"&gt;
+          &lt;p class="more"&gt;INFO&lt;/p&gt;
+        &lt;/a&gt;
+        &lt;div class="footer-logos"&gt;
+            &lt;img src="../../static/EFRE-logo.png" alt="Europa"&gt;
+            &lt;img src="../../static/EuropafoerdertNds_farbig.png" alt="Niedersachsen"&gt;
+            &lt;img src="../../static/logo_leuphana-2.png" alt="Leuphana"&gt;
+        &lt;/div&gt;
+        &lt;div class="collapse" id="footer-hidden"&gt;
+            &lt;p&gt;Contact: mail AT consortium.io&lt;/p&gt;
+            &lt;p&gt;&lt;a href="http://www.leuphana.de/en/site-notice-leuphana.html"&gt;Imprint&lt;/a&gt;&lt;/p&gt;
+            &lt;p&gt;© The authors | &lt;a href="https://creativecommons.org/licenses/by/3.0/de/"&gt;CC BY 3.0 DE&lt;/a&gt;&lt;/p&gt;
+            &lt;p&gt;The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.&lt;/p&gt;
+        &lt;/div&gt;
     &lt;/footer&gt;
+    &lt;/div&gt;&lt;!-- end div container --&gt;
     
+    &lt;!-- CALLS THE JS --&gt;
     &lt;script src="../../js/all.min.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
                 </code></pre>
@@ -416,6 +419,7 @@
     
     </div><!-- end div container -->
     
+    <!-- CALLS THE JS -->
     <script src="../../js/all.min.js"></script>
     <script src="../../../js/jquery.color-2.0b1.min.js"></script>
 </body>
