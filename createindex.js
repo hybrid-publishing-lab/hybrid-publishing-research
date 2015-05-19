@@ -87,15 +87,50 @@ var arrUnique = function (arr) {
     return cleaned;
 }
 
+var checkForVarsAreAList = function (arr) {
+    arr.forEach(function (itm) {
+        if (itm.data) {
+            if (!_.isObject(itm.data.title)) {
+                var newobj = []
+                newobj.push(itm.data.title)
+                itm.data.title = newobj 
+            }
+           if (!_.isObject(itm.data.contributor)) {
+                var newobj = []
+                newobj.push(itm.data.contributor)
+                itm.data.contributor = newobj 
+            }
+            if (!_.isObject(itm.data.identifier)) {
+                var newobj = []
+                newobj.push(itm.data.identifier)
+                itm.data.identifier = newobj 
+            }
+             if (!_.isObject(itm.data.publisher)) {
+                var newobj = []
+                newobj.push(itm.data.publisher)
+                itm.data.publisher = newobj 
+            }
+        }
+    })
+
+    return arr;
+}
+
+metadataObj = checkForVarsAreAList(metadataObj)
+
 var reportObj = arrUnique(reportObj);
 
 // Merge the different JSON files by key
 var mergeData = merge(metadataObj,reportObj)
 
+
 mergeData = _.compact(_.flatten(mergeData, true));
 
 var printableJson = JSON.stringify(mergeData, null, 2);
 printableJson = printableJson.replace(/"error":/g, '"htmlerror":')
+
+
+
 // Write index.json file
 fs.writeFile("dist/index.json", printableJson, function(err) {
       if (err) throw('File save error: '+ err);
