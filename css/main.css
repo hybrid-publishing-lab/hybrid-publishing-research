@@ -33,9 +33,6 @@ body {
     color: black;
     font-family: "Cotham", Helvetica, Arial, sans-serif;
     font-size: 18px;
-    padding: 20px;
-    width: 1100px;
-    margin: auto;
 }
 
 a, a:link, a:hover, a:visited, a:active, a:focus {
@@ -81,6 +78,9 @@ ol li {
     margin: 0px;
 }
 
+/* MAIN TEMPLATE STRUCTURE */
+.container {
+}
 .row {
     margin-top: 20px;
 }
