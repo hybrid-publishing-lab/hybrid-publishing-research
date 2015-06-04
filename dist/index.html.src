@@ -40,18 +40,28 @@
     </head>
 
     <body ng-controller="SpaceCtrl">
-        <header class="logo-HPC-main">
-            <img src="../../static/animated-logo3-small.gif" alt="Hybrid Publishing Consortium logo">
-        </header>
             
             
             <div class="container">
+            <div class="research-wrapper">
                 
-                <div class="page-title">
-                    <div class="">
-                        <h1 class="main-research-page-title">Research<br>Viewer</h1>
-                    </div>
-                </div> <!-- end div page-title -->
+                
+                <!-- HPC DOSSIERS HEADER (LOGO) -->
+                <nav class="navbar">
+                        <div class="navbar-header">
+                            <div class="navbar-logo">
+                                <a href="/">
+                                    <div style="height: 94px; width: 179px" id="randomLogo"></div>
+                                    <p class="logo-dossiers"><span class="logo-header-shrinked">HPC </span>DOSSIERS</p>
+                                </a>
+                            </div>
+                        <!-- MAIN HEADING: PAGE TITLE -->
+                        <!-- (only one h1 on the page: here) -->
+                        <div id="report-title">
+                            <h1 class="main-research-page-title">Research Viewer</h1>
+                        </div>
+                    </div> <!-- END DIV navbar-header -->
+                </nav>
                 
                 <a data-toggle="collapse" href="#collapseExample">
                   <p class="more">ABOUT</p>
@@ -64,9 +74,29 @@
                 </div>
                 
                 <div class="row">
+                
+                    <p style="clear: both; margin: 30px 0 30px 0; font-size: 20px; letter-spacing: 2px;">HYBRID PUBLISHING CONSORTIUM DOSSIERS</p>
+                        <div class="cover-dossier">
+                            <div class="list-group-item">
+                            <h3>Dossier<br />coming soon</h3>
+                            </div>
+                        </div>
+                        <div class="cover-dossier">
+                            <div class="list-group-item">
+                            <h3>Dossier<br />coming soon</h3>
+                            </div>
+                        </div>
+                        
+                        <div class="cover-dossier">
+                            <div class="list-group-item">
+                            <h3>Dossier<br />coming soon</h3>
+                            </div>
+                        </div>
+                    
+                    <p style="clear: both; padding-top: 20px; margin: 50px 0 30px 0; font-size: 20px; letter-spacing: 2px;">HYBRID PUBLISHING CONSORTIUM REPORTS</p>
                     
                     <!-- beginning boxes template -->
-                    <div ng-show="indexlist" ng-repeat="item in indexlist" class="cover-dossier">
+                    <div ng-show="indexlist" ng-repeat="item in indexlist" class="cover-report">
                         <div ng-cloak class="list-group-item">
                             <a href="{{ stripdist(item.filename) }}">
                                 <h3 ng-cloak ng-hide="{{!item.data.title.length}}">{{ firstelement(item.data.title) }}</h3>
@@ -123,7 +153,8 @@
                     </div>
                 
                 </footer>
-                
+            
+            </div> <!-- end div research wrapper --> 
             </div> <!-- end div container -->
         <script src="js/all.min.js"></script>
     </body>
