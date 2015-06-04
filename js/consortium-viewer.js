@@ -47,6 +47,36 @@ App.filter('capitalize', function() {
     };
 });
 
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+    $('nav').addClass('fixed-top');
+  } else {
+    $('nav').removeClass('fixed-top');
+  }
+});
+
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 150) {
+    $('aside').addClass('TOC-fixed');
+    $('#empty-box-for-aside').removeClass('hidden');
+    $('.scroll-collapse-menu').removeClass('hidden');
+    $('#toc-hidden').addClass('collapse');
+    $('#toc-hidden').removeClass('uncollapsed');
+  } else {
+    $('aside').removeClass('TOC-fixed');
+    $('#empty-box-for-aside').addClass('hidden');
+    $('.scroll-collapse-menu').addClass('hidden');
+    $('#toc-hidden').removeClass('collapse');
+    $('#toc-hidden').addClass('uncollapsed');
+  }
+});
+
+var images = ['HPC1.png', 'HPC2.png', 'HPC3.png', 'HPC4.png'];
+
+$('#randomLogo').css({'background-image': 'url(../../static/' + images[Math.floor(Math.random() * images.length)] + ')'});
+
+
+/*
 // Rainbow animation
 var animate = function() {
     var block = $('.animated-color');
@@ -54,6 +84,7 @@ var animate = function() {
 };
 
 animate();
+*/
 
 /*
 Date                DC.date
