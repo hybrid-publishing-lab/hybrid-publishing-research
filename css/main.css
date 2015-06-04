@@ -409,12 +409,7 @@ nav a {
     margin-top: 0px;
     font-size: 23px;
 }
-.arrow-top {
-    display: none;
-}
-.arrow-top-return {
-    display: none;
-}
+
 /* when we scroll, it shrinks and becomes fixed at the top */
 nav.fixed-top {
     position: fixed;
@@ -684,6 +679,12 @@ footer {
 @media (min-width:250px) {
     nav.fixed-top .navbar-logo {
         display: none;
+    }
+    .arrow-top {
+        display: none;
+    }
+    .TOC-fixed .arrow-top {
+        display: block;
     }
     .arrow-top-return {
         display: none;
