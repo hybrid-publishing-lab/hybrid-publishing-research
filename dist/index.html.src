@@ -48,6 +48,8 @@
                 
                 <!-- HPC DOSSIERS HEADER (LOGO) -->
                 <nav class="navbar">
+                    <!-- arrow to the top of the page -->
+                    <a href="#"><p class="arrow-top">TOP <span class="arrow-style">￪</span></p></a>
                         <div class="navbar-header">
                             <div class="navbar-logo">
                                 <a href="/">
@@ -62,6 +64,7 @@
                         </div>
                     </div> <!-- END DIV navbar-header -->
                 </nav>
+                
                 
                 <a data-toggle="collapse" href="#collapseExample">
                   <p class="more">ABOUT</p>

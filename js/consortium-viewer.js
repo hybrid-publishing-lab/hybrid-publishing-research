@@ -50,16 +50,22 @@ App.filter('capitalize', function() {
 $('#empty-box-for-header1').addClass('hidden');
 $('#empty-box-for-header2').addClass('hidden');
 $('#empty-box-for-aside').addClass('hidden');
+$('.arrow-top').addClass('hidden');
+$('.arrow-top-return').addClass('hidden');
 
 $(window).scroll(function() {
   if ($(document).scrollTop() > 50) {
     $('nav').addClass('fixed-top');
     $('#empty-box-for-header1').removeClass('hidden');
     $('#empty-box-for-header2').removeClass('hidden');
+    $('.arrow-top').removeClass('hidden');
+    $('.arrow-top-return').removeClass('hidden');
   } else {
     $('nav').removeClass('fixed-top');
     $('#empty-box-for-header1').addClass('hidden');
     $('#empty-box-for-header2').addClass('hidden');
+    $('.arrow-top').addClass('hidden');
+    $('.arrow-top-return').addClass('hidden');
   }
 });
 
