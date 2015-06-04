@@ -28,34 +28,40 @@
 </head>
 <body>
     <div class="container">
-    <!-- HPC DOSSIERS HEADER -->
-    <header>
-        <a href="/">
-            <img src="../../static/animated-logo3-small.gif" alt="hpc-logo">
-            <p class="logo-dossiers">DOSSIERS</p>
-        </a>
-    </header>
-    <!-- MAIN HEADING: PAGE TITLE -->
-    <!-- (only one h1 on the page: here) -->
-    <div id="report-title">
-        <h1>ᙠooʞ ƚo ƚʜɘ ᖷuƚuɿɘ <i>ɒ mɒnifɘƨƚo for book libɘɿɒƚio∩</i></h1>
+        <div class="research-wrapper">
+        
+    <!-- HPC DOSSIERS HEADER (LOGO) -->
+    <nav class="navbar">
+            <div class="navbar-header">
+                <div class="navbar-logo">
+                    <a href="/">
+                        <div style="height: 94px; width: 179px" id="randomLogo"></div>
+                        <!--<img src="../../static/animated-logo3-small.gif" alt="hpc-logo">-->
+                        <p class="logo-dossiers"><span class="logo-header-shrinked">HPC </span>DOSSIERS</p>
+                    </a>
+                </div>
+            <!-- MAIN HEADING: PAGE TITLE -->
+            <!-- (only one h1 on the page: here) -->
+            <div id="report-title">
+                <h1>ᙠooʞ ƚo ƚʜɘ ᖷuƚuɿɘ <i>ɒ mɒnifɘƨƚo for book libɘɿɒƚio∩</i></h1>
+            </div>
+        </div> <!-- END DIV navbar-header -->
+    </nav>
+    
+    <!-- HACK TO MAKE IT WORK FINE :)-->
+    <div id="empty-box-for-header1">
+    </div>
+    <div id="empty-box-for-header2">
     </div>
     <!-- SIDE INFORMATION ON THE REPORT-->
     <div id="report-info">
-        <!-- abstract -->
-        <div id="report-abstract">
-            <p>The Book Liberation Manifesto is an exploration of publishing outside of current corporate constraints and beyond the confines of book piracy. We believe that knowledge should be in free circulation to benefit humankind, which means an equitable and vibrant economy to support publishing, instead of the prevailing capitalist hand-me-down system of Sisyphean economic sustainability. Readers and books have been forced into pirate libraries, while sales channels have been monopolised by the big Internet giants which exact extortionate fees from publishers. We have three proposals. First, publications should be free-at-the-point-of-reading under a variety of open intellectual property regimes. Second, they should become fully digital — in order to facilitate ready reuse, distribution, algorithmic and computational use. Finally, Open Source software for publishing should be treated as public infrastructure, with sustained research and investment. The result of such robust infrastructures will mean lower costs for manufacturing and faster publishing lifecycles, so that publishers and publics will be more readily able to afford to invent new futures.</p>
-<p>For more information on the Hybrid Publishing Consortium see <a href="http://consortium.io">http://consortium.io</a></p>
-<h2>Keywords</h2>
-<p>anti-copyright, archives, book, book liberation, copyleft, copyright, education, freedom, knowledge, learning, library, manifesto, OA, OER, open access, open education resources, open IPR, open learning, property, publishing, repositories, skills, technology</p>
-        </div>
         <!-- date and author info -->
         <div id="report-date-author">
             <p id="report-date">2015</p>
             <p id="report-authors"><!-- use commas if several authors -->Simon Worthington, Hybrid Publishing Consortium</p>
             <p><a href="http://booktothefuture.org">http://booktothefuture.org</a></p>
             <p>Buy print versions on Amazon <a href="http://www.amazon.com/Book-Future-Liberation-Publishing-Consortium/dp/1906496366/ref=sr_1_1?ie=UTF8&amp;qid=1427057856&amp;sr=8-1&amp;keywords=9781906496364">US 5USD</a> <a href="http://www.amazon.co.uk/Book-Future-Liberation-Publishing-Consortium/dp/1906496366/ref=sr_1_1?ie=UTF8&amp;qid=1427057745&amp;sr=8-1&amp;keywords=9781906496364">UK GBP5</a> <a href="http://www.amazon.de/Book-Future-Liberation-Publishing-Consortium/dp/1906496366/ref=sr_1_1?ie=UTF8&amp;qid=1427057951&amp;sr=8-1&amp;keywords=9781906496364">DE 5EURO</a></p>
-            <h2><a id="copyright_page">Copyright Page</a></h2>
+            <h2><a id="copyright_page">Copyright</a></h2>
 <p>Text (x) Anti-copyright Simon Worthington</p>
 <p>Creative Commons Attribution-ShareAlike 3.0 Germany (CC BY-SA 3.0 DE) <a href="http://creativecommons.org/licenses/by-sa/3.0/de/deed.en">http://creativecommons.org/licenses/by-sa/3.0/de/deed.en</a></p>
 <p>Legend: This deed is used in the absence of an intellectual property framework that represents the authors respective position on copyright.</p>
@@ -68,30 +74,55 @@
 <p>An example reference for this page is 53ebf37188 2</p>
 <p><a href="http://plato-dialogues.org/stephanus.htm">https://github.com/consortium/hybrid-publishing-research/blob/master/dist/docs/book_liberation_manifesto/Book_Liberation_Manifesto</a></p>
         </div>
-    </div>
+        <!-- abstract -->
+        <div id="report-abstract">
+            <p>The Book Liberation Manifesto is an exploration of publishing outside of current corporate constraints and beyond the confines of book piracy. We believe that knowledge should be in free circulation to benefit humankind, which means an equitable and vibrant economy to support publishing, instead of the prevailing capitalist hand-me-down system of Sisyphean economic sustainability. Readers and books have been forced into pirate libraries, while sales channels have been monopolised by the big Internet giants which exact extortionate fees from publishers. We have three proposals. First, publications should be free-at-the-point-of-reading under a variety of open intellectual property regimes. Second, they should become fully digital — in order to facilitate ready reuse, distribution, algorithmic and computational use. Finally, Open Source software for publishing should be treated as public infrastructure, with sustained research and investment. The result of such robust infrastructures will mean lower costs for manufacturing and faster publishing lifecycles, so that publishers and publics will be more readily able to afford to invent new futures.</p>
+<p>For more information on the Hybrid Publishing Consortium see <a href="http://consortium.io">http://consortium.io</a></p>
+<h2>Keywords</h2>
+<p>anti-copyright, archives, book, book liberation, copyleft, copyright, education, freedom, knowledge, learning, library, manifesto, OA, OER, open access, open education resources, open IPR, open learning, property, publishing, repositories, skills, technology</p>
+        </div>
+    </div><!-- end div report info -->
+    
     <div class="report-content">
+        
+        
         <!-- REPORT MENU -->
         <aside>
-            <h3>Table of Contents</h3>
-            <ul>
-                <li><a href="#cover">Cover</a></li>
-                <li><a href="#title_page">Title Page</a></li>
-                <li><a href="#copyright_page">Copyright Page</a></li>
-                <li><a href="#abstract">Abstract</a></li>
-                <li><a href="#introduction">1. Introduction</a></li>
-                <li><a href="#broken_workflows">2. Broken Workflows</a></li>
-                <li><a href="#the_poor_book">3. The Poor Book</a></li>
-                <li><a href="#the_unbound_book">4. The Unbound Book</a></li>
-                <li><a href="#designing_the_book_of_the_future">5. Designing the Book of the Future</a></li>
-                <li><a href="#infrastructure">6. Infrastructure</a></li>
-                <li><a href="#the_plan">7. The Plan</a></li>
-                <li><a href="#our_research">8. Our Research</a></li>
-                <li><a href="#conclusion">9. Conclusion</a></li>
-                <li><a href="#references">References</a></li>
-                <li><a href="#acknowledgements">Acknowledgements</a></li>
-                <li><a href="#metadata">Metadata</a></li>
-            </ul>
+            <div class="TOC-wrapper">
+                <a class="scroll-collapse-menu" data-toggle="collapse" href="#toc-hidden">
+                    <img class="toc-menu" src="../../static/menu-icon-hpc.png" alt="menu" />
+                </a>
+                <div class="collapse" id="toc-hidden">
+                    <h3 class="toc-title">Table of Contents</h3>
+                    <ul>
+                        <li><a href="#cover">Cover</a></li>
+                        <li><a href="#title_page">Title Page</a></li>
+                        <li><a href="#copyright_page">Copyright Page</a></li>
+                        <li><a href="#abstract">Abstract</a></li>
+                        <li><a href="#introduction">1. Introduction</a></li>
+                        <li><a href="#broken_workflows">2. Broken Workflows</a></li>
+                        <li><a href="#the_poor_book">3. The Poor Book</a></li>
+                        <li><a href="#the_unbound_book">4. The Unbound Book</a></li>
+                        <li><a href="#designing_the_book_of_the_future">5. Designing the Book of the Future</a></li>
+                        <li><a href="#infrastructure">6. Infrastructure</a></li>
+                        <li><a href="#the_plan">7. The Plan</a></li>
+                        <li><a href="#our_research">8. Our Research</a></li>
+                        <li><a href="#conclusion">9. Conclusion</a></li>
+                        <li><a href="#references">References</a></li>
+                        <li><a href="#acknowledgements">Acknowledgements</a></li>
+                        <li><a href="#metadata">Metadata</a></li>
+                    </ul>
+                </div>
+                <!-- arrow to the top of the page -->
+                <a href="#"><p class="arrow-top">TOP <span style="font-size: 34px;">￪</span></p></a>
+            </div>
         </aside>
+        <!-- HACK TO MAKE IT WORK FINE :)-->
+        <div id="empty-box-for-aside" class="hidden">
+        </div>
+        
+        <!-- FUTURE SCENARIO: HERE THE TEMPLATE WILL IMPORT THE DIFFERENT  -->
+        
         
         <!-- REPORT -->
         <article>
@@ -397,10 +428,17 @@ LibraryThing
             <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.</p>
         </div>
     </footer>
+    </div><!-- end div research-wrapper -->
     </div><!-- end div container -->
     
     <!-- CALLS THE JS -->
     <script src="../../js/all.min.js"></script>
+    <script src="http://imakewebthings.com/jquery-waypoints/waypoints.min.js"></script>
+    <script>
+        $('.TOC-wrapper').waypoint(function() {
+        $("body").css("background-color","white");
+    });
+    </script>
     
     
 

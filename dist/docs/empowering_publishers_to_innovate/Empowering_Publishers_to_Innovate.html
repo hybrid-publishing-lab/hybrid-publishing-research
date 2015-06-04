@@ -35,40 +35,66 @@
 
 <body>
     <div class="container">
-	<!-- HPC DOSSIERS HEADER (LOGO) -->
-    <header>
-        <a href="/">
-            <img src="../../static/animated-logo3-small.gif" alt="hpc-logo">
-            <p class="logo-dossiers">DOSSIERS</p>
-        </a>
-    </header>
-    <!-- MAIN HEADING: PAGE TITLE -->
-    <!-- (only one h1 on the page: here) -->
-    <div id="report-title">
-        <h1>Empowering Publishers to Innovate</h1>
+        <div class="research-wrapper">
+        
+    <!-- HPC DOSSIERS HEADER (LOGO) -->
+    <nav class="navbar">
+        <div class="navbar-header">
+            <div class="navbar-logo">
+                <a href="/">
+                    <div style="height: 94px; width: 179px" id="randomLogo"></div>
+                    <!--<img src="../../static/animated-logo3-small.gif" alt="hpc-logo">-->
+                    <p class="logo-dossiers"><span class="logo-header-shrinked">HPC </span>DOSSIERS</p>
+                </a>
+            </div>
+        <!-- MAIN HEADING: PAGE TITLE -->
+        <!-- (only one h1 on the page: here) -->
+        <div id="report-title">
+            <h1>Empowering Publishers to Innovate</h1>
+        </div>
+    </div> <!-- END DIV navbar-header -->
+    </nav>
+    
+    <!-- HACK TO MAKE IT WORK FINE :)-->
+    <div id="empty-box-for-header1">
     </div>
+    <div id="empty-box-for-header2">
+    </div>
+    
     <!-- SIDE INFORMATION ON THE REPORT-->
     <div id="report-info">
-        <!-- abstract -->
-        <div id="report-abstract">
-            <p>Presentation - Simon Worthington, Post Digital Scholar Conference, Lüneburg 2014</p>
-        </div>
         <!-- date and author info -->
         <div id="report-date-author">
             <p id="report-date">2014</p>
             <p id="report-authors"><!-- use commas if several authors -->The Authors</p>
         </div>
+        <!-- abstract -->
+        <div id="report-abstract">
+            <p>Presentation - Simon Worthington, Post Digital Scholar Conference, Lüneburg 2014</p>
+        </div>
     </div>
     <div class="report-content">
         <!-- REPORT MENU -->
         <aside>
-            <h3>Contents</h3>
-            <ul>
-                <li><a href="#1">Empowering Publishers to Innovateg</a></li>
-                <li><a href="#2">The Consortium</a></li>
-                <li><a href="#3">The problems we are addressing</a></li>
-            </ul>
+            <div class="TOC-wrapper">
+                <a class="scroll-collapse-menu" data-toggle="collapse" href="#toc-hidden">
+                    <img class="toc-menu" src="../../static/menu-icon-hpc.png" alt="menu" />
+                </a>
+                <div class="collapse" id="toc-hidden">
+                    <h3 class="toc-title">Contents</h3>
+                    <ul>
+                        <li><a href="#1">Empowering Publishers to Innovateg</a></li>
+                        <li><a href="#2">The Consortium</a></li>
+                        <li><a href="#3">The problems we are addressing</a></li>
+                    </ul>
+                </div>
+                <!-- arrow to the top of the page -->
+                <a href="#"><p class="arrow-top">TOP <span style="font-size: 34px;">￪</span></p></a>
+            </div>
         </aside>
+        <!-- HACK TO MAKE IT WORK FINE :)-->
+        <div id="empty-box-for-aside" class="hidden">
+        </div>
         
         <!-- REPORT -->
         <article>
@@ -123,10 +149,17 @@
             <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.</p>
         </div>
     </footer>
+    </div><!-- end div research-wrapper -->
     </div><!-- end div container -->
     
     <!-- CALLS THE JS -->
     <script src="../../js/all.min.js"></script>
+    <script src="http://imakewebthings.com/jquery-waypoints/waypoints.min.js"></script>
+    <script>
+        $('.TOC-wrapper').waypoint(function() {
+        $("body").css("background-color","white");
+    });
+    </script>
     
 
 </body>

@@ -27,24 +27,34 @@
 
 <body>
    <div class="container">
-<!-- HPC DOSSIERS HEADER (LOGO) -->
-   <header>
-       <a href="/">
-           <img src="../../static/animated-logo3-small.gif" alt="hpc-logo">
-           <p class="logo-dossiers">DOSSIERS</p>
-       </a>
-   </header>
-   <!-- MAIN HEADING: PAGE TITLE -->
-   <!-- (only one h1 on the page: here) -->
-   <div id="report-title">
-       <h1>HPC Research Plan 2013/15. Dynamic Publishing - New Platforms, New Readers!</h1>
-   </div>
+        <div class="research-wrapper">
+        
+    <!-- HPC DOSSIERS HEADER (LOGO) -->
+    <nav class="navbar">
+        <div class="navbar-header">
+            <div class="navbar-logo">
+                <a href="/">
+                    <div style="height: 94px; width: 179px" id="randomLogo"></div>
+                    <!--<img src="../../static/animated-logo3-small.gif" alt="hpc-logo">-->
+                    <p class="logo-dossiers"><span class="logo-header-shrinked">HPC </span>DOSSIERS</p>
+                </a>
+            </div>
+        <!-- MAIN HEADING: PAGE TITLE -->
+        <!-- (only one h1 on the page: here) -->
+        <div id="report-title">
+           <h1>HPC Research Plan 2013/15. Dynamic Publishing - New Platforms, New Readers!</h1>
+       </div>
+    </div> <!-- END DIV navbar-header -->
+    </nav>
+    
+    <!-- HACK TO MAKE IT WORK FINE :)-->
+    <div id="empty-box-for-header1">
+    </div>
+    <div id="empty-box-for-header2">
+    </div>
+   
    <!-- SIDE INFORMATION ON THE REPORT-->
    <div id="report-info">
-       <!-- abstract -->
-       <div id="report-abstract">
-           <p>Hybrid Publishing Consortium Research Plan.</p>
-       </div>
        <!-- date and author info -->
        <div id="report-date-author">
            <p id="report-date">First published, August 2013. Revision v.1.2, Jan 2014.</p>
@@ -60,34 +70,50 @@
            <p><a href="http://cdc.leuphana.com/structure/hybrid-publishing-lab/" rel="nofollow">http://cdc.leuphana.com/structure/hybrid-publishing-lab/</a></p>
            <p><a href="http://hybridpublishing.org/" rel="nofollow">http://hybridpublishing.org/</a></p>
        </div>
+       <!-- abstract -->
+       <div id="report-abstract">
+           <p>Hybrid Publishing Consortium Research Plan.</p>
+       </div>
    </div>
    <div class="report-content">
        <!-- REPORT MENU -->
-       <aside>
-           <h3>Contents</h3>
-           <ul>
-               <li><a href="#1">Executive summary - open infrastructures for publishing</a></li>
-               <li><a href="#2">Mission</a></li>
-               <li><a href="#2.1.">2.1. Defining hybrid publishing</a></li>
-               <li><a href="#2.2.">2.2. Making the case!</a></li>
-               <li><a href="#2.3.">2.3. Roadmap</a></li>
-               <li><a href="#3">Design Research (hacking methodologies)</a></li>
-               <li><a href="#3.1.">3.1. T-PINC - technology, power, ideology, normativity and communication</a></li>
-               <li><a href="#3.2.">3.2. Workflows and stakeholders</a></li>
-               <li><a href="#3.3.">3.3. Open research - a digital strategy</a></li>
-               <li><a href="#3.4.">3.4. Single source - system requirements</a></li>
-               <li><a href="#4">4. Technology</a></li>
-               <li><a href="#4.1.">4.1. Open infrastructures for publishing</a></li>
-               <li><a href="#4.2.">4.2. Single source and dynamic publishing</a></li>
-               <li><a href="#5">5. The Hybrid Publishing Consortium</a></li>
-               <li><a href="#5.1.">5.1. Lab and people</a></li>
-               <li><a href="#5.2.">5.2. Partners</a></li>
-               <li><a href="#5.3.">5.3. Comparators</a></li>
-               <li><a href="#6">Appendix</a></li>
-               <li><a href="#7">Glossary and Wikipedia links/edits</a></li>
-               <li>Document link</li>
-           </ul>
-       </aside>
+        <aside>
+            <div class="TOC-wrapper">
+                <a class="scroll-collapse-menu" data-toggle="collapse" href="#toc-hidden">
+                    <img class="toc-menu" src="../../static/menu-icon-hpc.png" alt="menu" />
+                </a>
+                <div class="collapse" id="toc-hidden">
+                   <h3>Contents</h3>
+                   <ul>
+                       <li><a href="#1">Executive summary - open infrastructures for publishing</a></li>
+                       <li><a href="#2">Mission</a></li>
+                       <li><a href="#2.1.">2.1. Defining hybrid publishing</a></li>
+                       <li><a href="#2.2.">2.2. Making the case!</a></li>
+                       <li><a href="#2.3.">2.3. Roadmap</a></li>
+                       <li><a href="#3">Design Research (hacking methodologies)</a></li>
+                       <li><a href="#3.1.">3.1. T-PINC - technology, power, ideology, normativity and communication</a></li>
+                       <li><a href="#3.2.">3.2. Workflows and stakeholders</a></li>
+                       <li><a href="#3.3.">3.3. Open research - a digital strategy</a></li>
+                       <li><a href="#3.4.">3.4. Single source - system requirements</a></li>
+                       <li><a href="#4">4. Technology</a></li>
+                       <li><a href="#4.1.">4.1. Open infrastructures for publishing</a></li>
+                       <li><a href="#4.2.">4.2. Single source and dynamic publishing</a></li>
+                       <li><a href="#5">5. The Hybrid Publishing Consortium</a></li>
+                       <li><a href="#5.1.">5.1. Lab and people</a></li>
+                       <li><a href="#5.2.">5.2. Partners</a></li>
+                       <li><a href="#5.3.">5.3. Comparators</a></li>
+                       <li><a href="#6">Appendix</a></li>
+                       <li><a href="#7">Glossary and Wikipedia links/edits</a></li>
+                       <li>Document link</li>
+                   </ul>
+               </div>
+               <!-- arrow to the top of the page -->
+               <a href="#"><p class="arrow-top">TOP <span style="font-size: 34px;">￪</span></p></a>
+            </div>
+        </aside>
+        <!-- HACK TO MAKE IT WORK FINE :)-->
+        <div id="empty-box-for-aside" class="hidden">
+        </div>
        
        <!-- REPORT -->
        <article>
@@ -541,10 +567,17 @@
             <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.</p>
         </div>
     </footer>
+    </div><!-- end div research-wrapper -->
     </div><!-- end div container -->
     
     <!-- CALLS THE JS -->
     <script src="../../js/all.min.js"></script>
+    <script src="http://imakewebthings.com/jquery-waypoints/waypoints.min.js"></script>
+    <script>
+        $('.TOC-wrapper').waypoint(function() {
+        $("body").css("background-color","white");
+    });
+    </script>
 
 </body>
 </html>

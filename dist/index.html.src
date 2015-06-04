@@ -57,7 +57,7 @@
                             </div>
                         <!-- MAIN HEADING: PAGE TITLE -->
                         <!-- (only one h1 on the page: here) -->
-                        <div id="report-title">
+                        <div id="report-title" style="border: none;">
                             <h1 class="main-research-page-title">Research Viewer</h1>
                         </div>
                     </div> <!-- END DIV navbar-header -->

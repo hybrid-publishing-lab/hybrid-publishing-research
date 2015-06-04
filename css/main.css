@@ -229,11 +229,12 @@ code, pre {
 pre code {
     word-break: keep-all;
 }
-
+blockquote {
+    border-left: 5px solid #73D0C3;
+}
 .logo-HPC-main {
     position: absolute;
 }
-
 
 /*************** PAGE STRUCTURE ***************/
 
@@ -420,6 +421,7 @@ nav.fixed-top {
     z-index: 1030;
     background-color: #73D0C3;
     height: 50px;
+    padding-bottom: 20px;
     overflow: hidden;
 }
 nav.fixed-top #report-title {
@@ -428,7 +430,8 @@ nav.fixed-top #report-title {
 }
 nav.fixed-top #report-title h1 {
     font-size: 23px;
-    margin-top: 13px;
+    margin-top: 0;
+    line-height: 50px;
 }
 nav.fixed-top .logo-dossiers {
     margin-top: 10px;
@@ -508,7 +511,7 @@ aside.TOC-fixed .TOC-wrapper .arrow-top {
     display: block;
     position: absolute;
     top: -5px;
-    right: 10px;
+    right: 0px;
     color: white;
     font-family: 'Cotham';
     font-size: 19px;
@@ -516,6 +519,7 @@ aside.TOC-fixed .TOC-wrapper .arrow-top {
     z-index: 1900;
     background-color: #73D0C3;
     padding-left: 5px;
+    padding-right: 10px;
 }
 .scroll-collapse-menu {
     display: none;
@@ -662,12 +666,7 @@ footer {
     }
     nav.fixed-top #report-title h1 {
         margin-left: 70px;
-    }
-    #empty-box-for-header1 {
-        display: none;
-    }
-    #empty-box-for-header2 {
-        display: none;
+        white-space: nowrap;
     }
     aside {
         width: 100%;
@@ -858,6 +857,8 @@ footer {
     }
     nav.fixed-top #report-title {
         margin-left: 270px;
+        width: 790px;
+        white-space: nowrap;
     }
     nav.fixed-top #report-title h1 {
         margin-left: 0;
@@ -940,10 +941,8 @@ footer {
         margin-left: 20px;
     }
     nav.fixed-top #report-title {
-        margin-left: 270px;
-    }
-    nav.fixed-top #report-title h1 {
-        margin-left: 0;
+        width: 790px;
+        white-space: nowrap;
     }
     #report-info {
         width: 250px;
