@@ -46,23 +46,27 @@
             <div class="research-wrapper">
                 
                 
-                <!-- HPC DOSSIERS HEADER (LOGO) -->
+                <!-- HPC DOSSIERS HEADER -->
+                <div class="navbar-header">
+                    <div class="navbar-logo">
+                        <a href="/">
+                            <div style="height: 94px; width: 179px" id="randomLogo"></div>
+                            <p class="logo-dossiers"><span class="logo-header-shrinked">HPC </span>DOSSIERS</p>
+                        </a>
+                    </div>
+                    <!-- MAIN HEADING: PAGE TITLE -->
+                    <!-- (only one h1 on the page: here) -->
+                    <div id="report-title" style="border: none;">
+                        <h1 class="main-research-page-title">Research Viewer</h1>
+                    </div>
+                </div> <!-- END DIV navbar-header -->
                 <nav class="navbar">
-                    <!-- arrow to the top of the page -->
-                    <a href="#"><p class="arrow-top">TOP <span class="arrow-style">￪</span></p></a>
-                        <div class="navbar-header">
-                            <div class="navbar-logo">
-                                <a href="/">
-                                    <div style="height: 94px; width: 179px" id="randomLogo"></div>
-                                    <p class="logo-dossiers"><span class="logo-header-shrinked">HPC </span>DOSSIERS</p>
-                                </a>
-                            </div>
-                        <!-- MAIN HEADING: PAGE TITLE -->
-                        <!-- (only one h1 on the page: here) -->
-                        <div id="report-title" style="border: none;">
+                    <div class="navbar-header">
+                        <!-- TITLE FIXED -->
+                        <div id="title-fixed" style="border: none;">
                             <h1 class="main-research-page-title">Research Viewer</h1>
                         </div>
-                    </div> <!-- END DIV navbar-header -->
+                    </div>
                 </nav>
                 
                 

@@ -246,8 +246,8 @@ blockquote {
     margin-right: auto;
 }
 .row {
-/* main page only for the moment */
-    margin: 20px 0 0 20px;
+/* main page only */
+    margin: 20px 0 20px 20px;
     clear: both;
 }
 
@@ -278,23 +278,20 @@ blockquote {
 }
 /* MAIN PAGE > REPORTS */
 .cover-report {
-    width: 230px;
+    width: 220px;
     float: left;
-    margin: 0 20px 20px 0;
-}
-.cover-report:hover {
-    background-color: #73D0C3;
-}
-.cover-report:hover .alert-success, .cover-report:hover .alert-danger, .cover-report:hover .validation-show {
-    color: white;
-}
-.cover-report:hover .validation-show {
-    border-top: 2px solid white;
+    margin: 0 30px 30px 0;
+    height: 290px;
+    overflow-y: scroll;
+    border: 3px solid black;
+    -moz-box-shadow: 8px 8px black;
+    -webkit-box-shadow: 8px 8px black;
+    box-shadow: 7px 6px black;
 }
 .list-group-item {
-    border: 6px solid #73D0C3;
-    border-bottom: 6px solid black;
-    border-right: 6px solid black;
+    border: 0;
+    border-bottom: 0;
+    border-right: 0;
     background-color: transparent;
 }
 .list-group-item:first-child, .list-group-item:last-child {
@@ -430,6 +427,27 @@ nav.fixed-top #report-title {
     padding-left: 0;
 }
 nav.fixed-top #report-title h1 {
+    font-size: 23px;
+    margin-top: 0;
+    line-height: 50px;
+}
+/* title-fixed on main page only: */
+#title-fixed {
+    display: none;
+}
+nav.fixed-top #title-fixed {
+    display: block;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1030;
+    background-color: #73D0C3;
+    height: 50px;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+nav.fixed-top #title-fixed h1 {
     font-size: 23px;
     margin-top: 0;
     line-height: 50px;
