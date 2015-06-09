@@ -804,8 +804,6 @@ footer {
     }
     .two-columns figure {
         max-width: 100%;
-        margin-right: 20px;
-        float: left;
     }
     .size1-1 figure img {
         width: initial;
@@ -880,6 +878,20 @@ footer {
     .report-content {
         clear: none;
         display: inline-block;
+    }
+    .two-columns figure {
+        width: 480px;
+    }
+    .size1-1 figure img {
+        width: initial;
+    }
+    .height100 figure img {
+        height: 100px;
+        width: unset;
+    }
+    .height150 figure img {
+        height: 100px;
+        width: unset;
     }
 }
 
