@@ -131,7 +131,8 @@ module.exports = function(grunt) {
                     'Bad value X-UA-Compatible for attribute http-equiv on element meta.', 
                     'Bad value SCHEMA.DC for attribute rel on element link: The string schema.dc is not a registered keyword.',
                     'Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.',
-                    'Article lacks heading. Consider using h2-h6 elements to add identifying headings to all articles.'
+                    'Article lacks heading. Consider using h2-h6 elements to add identifying headings to all articles.',
+                    'This interface to HTML5 document checking is deprecated.'
                 ],
                 doctype: 'HTML5',
                 reset: true,
