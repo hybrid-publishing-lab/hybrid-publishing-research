@@ -230,7 +230,7 @@ pre code {
     word-break: keep-all;
 }
 blockquote {
-    border-left: 5px solid #73D0C3;
+    border-left: 5px solid #33b5bc;
 }
 .logo-HPC-main {
     position: absolute;
@@ -308,7 +308,7 @@ a.list-group-item:focus, a.list-group-item:hover {
 }
 /* SLIDES */
 .more {
-    color: #73D0C3;
+    color: #33b5bc;
     font-size: 20px;
     letter-spacing: 2px;
     text-align: center;
@@ -348,7 +348,7 @@ a.list-group-item:focus, a.list-group-item:hover {
 }
 .alert-success {
     border: 0px;
-    color: #73D0C3;
+    color: #33b5bc;
     background-color: transparent;
 }
 
@@ -359,7 +359,7 @@ a.list-group-item:focus, a.list-group-item:hover {
 
 /* BORDER-TOP */
 #report-title, #report-info, #report-date-author, #toc-hidden, article, #footnotes {
-    border-top: 2px solid #73D0C3;
+    border-top: 2px solid #33b5bc;
 }
 
 /* REPORT TITLE */
@@ -416,7 +416,7 @@ nav.fixed-top {
     left: 0;
     top: 0;
     z-index: 1030;
-    background-color: #73D0C3;
+    background-color: #33b5bc;
     height: 50px;
     padding-bottom: 20px;
     overflow: hidden;
@@ -444,7 +444,7 @@ nav.fixed-top #title-fixed {
     left: 0;
     top: 0;
     z-index: 1030;
-    background-color: #73D0C3;
+    background-color: #33b5bc;
     height: 50px;
     padding-bottom: 20px;
     overflow: hidden;
@@ -481,7 +481,7 @@ nav.fixed-top .navbar-header .navbar-logo .logo-dossiers span.logo-header-shrink
     font-size: 15px;
     letter-spacing: 2px;
     z-index: 1900;
-    background-color: #73D0C3;
+    background-color: #33b5bc;
     padding-left: 5px;
     padding-right: 10px;
 }
@@ -496,7 +496,7 @@ nav.fixed-top .navbar-header .navbar-logo .logo-dossiers span.logo-header-shrink
     font-size: 15px;
     letter-spacing: 2px;
     z-index: 1900;
-    background-color: #73D0C3;
+    background-color: #33b5bc;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -553,7 +553,7 @@ aside.TOC-fixed {
     left: 0;
     width: 100%;
     top: 40px;
-    border-bottom: 6px solid #73D0C3;
+    border-bottom: 6px solid #33b5bc;
 }
 aside.TOC-fixed .TOC-wrapper {
     margin-left: auto;
@@ -601,12 +601,12 @@ h3.toc-title {
 #report-date:before {
     content: "Date:";
     margin-right: 7px;
-    color: #73D0C3;
+    color: #33b5bc;
 }
 #report-authors:before {
     content: "By:";
     margin-right: 7px;
-    color: #73D0C3;
+    color: #33b5bc;
 }
 
 /*//////// REPORTS ////////*/
@@ -620,7 +620,7 @@ article {
     margin-bottom: 40px;
 }
 article a {
-    border-bottom: 2px solid #73D0C3;
+    border-bottom: 2px solid #33b5bc;
 }
 /* IMAGES */
 figure {
@@ -672,7 +672,7 @@ section p + p {
 /* FOOTER */
 footer {
     padding-top: 30px;
-    border-top: 2px solid #73D0C3;
+    border-top: 2px solid #33b5bc;
     position: relative;
     float: left;
     width: 1060px;
@@ -951,7 +951,7 @@ footer {
     #report-abstract {
         float: left;
         width: 248px;
-        border-top: 2px solid #73D0C3;
+        border-top: 2px solid #33b5bc;
         padding-top: 20px;
     }
     #report-date-author {
@@ -1028,6 +1028,10 @@ footer {
         margin-left: 0px;
         width: 250px;
         float: left;
+    }
+    aside.TOC-fixed, aside.TOC-fixed .TOC-wrapper {
+        width: 100%;
+        display: block;
     }
     aside.TOC-fixed .TOC-wrapper {
         width: 1070px;
