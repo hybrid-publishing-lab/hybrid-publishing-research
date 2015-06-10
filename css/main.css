@@ -207,6 +207,10 @@ code, kbd, pre, samp {
     float:left;
     color:black;
 }
+/* LINKS */
+.link-underline a {
+    border-bottom: 2px solid #33b5bc;
+}
 
 
 /************ GENERAL TEXT LAYOUT ************/
@@ -247,8 +251,9 @@ blockquote {
 }
 .row {
 /* main page only */
-    margin: 20px 0 20px 20px;
+    margin: 10px 0 20px 20px;
     clear: both;
+    border-top: 2px solid #33b5bc;
 }
 
 /*//////// MAIN RESEARCH PAGE: TABLE OF CONTENTS ///////*/ 
@@ -958,6 +963,7 @@ footer {
         width: 248px;
         margin-left: 18px;
         margin-top: 0px;
+        border-top: 2px solid #33b5bc;
     }
     .report-content {
         clear: none;
