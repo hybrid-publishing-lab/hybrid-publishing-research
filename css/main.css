@@ -262,6 +262,9 @@ blockquote {
     font-size: 100px;
     text-align: center;
 }
+.main-page .navbar {
+    display: none;
+}
 /* MAIN PAGE > DOSSIERS */
 .cover-dossier {
     width: 230px;
@@ -278,9 +281,9 @@ blockquote {
 }
 /* MAIN PAGE > REPORTS */
 .cover-report {
-    width: 220px;
+    width: 225px;
     float: left;
-    margin: 0 30px 30px 0;
+    margin: 0 15px 30px 15px;
     height: 290px;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -358,7 +361,7 @@ a.list-group-item:focus, a.list-group-item:hover {
 /*//////// REPORT PAGES TEMPLATE ///////*/ 
 
 /* BORDER-TOP */
-#report-title, #report-info, #report-date-author, #toc-hidden, article, #footnotes {
+#report-title, #report-info, #toc-hidden, article, #footnotes {
     border-top: 2px solid #33b5bc;
 }
 
@@ -411,6 +414,7 @@ nav a {
 
 /* when we scroll, it shrinks and becomes fixed at the top */
 nav.fixed-top {
+    display: block;
     position: fixed;
     right: 0;
     left: 0;
@@ -473,30 +477,28 @@ nav.fixed-top .navbar-header .navbar-logo .logo-dossiers span.logo-header-shrink
 .arrow-top {
     display: block;
     position: absolute;
-    top: 5px;
+    top: 7px;
     right: 0px;
-    height: 40px;
+    height: 30px;
     color: white;
     font-family: 'Cotham';
     font-size: 15px;
     letter-spacing: 2px;
     z-index: 1900;
-    background-color: #33b5bc;
     padding-left: 5px;
     padding-right: 10px;
 }
 .arrow-top-return {
     display: block;
     position: absolute;
-    top: 5px;
+    top: 7px;
     left: 0px;
-    height: 40px;
+    height: 30px;
     color: white;
     font-family: 'Cotham';
     font-size: 15px;
     letter-spacing: 2px;
     z-index: 1900;
-    background-color: #33b5bc;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -938,9 +940,6 @@ footer {
         display: inline-block;
         margin-left: 20px;
     }
-    #main {
-       width: 100%;
-    }
     #report-info {
         margin-left: 0px;
         width: 520px;
@@ -1000,8 +999,12 @@ footer {
         width: 1070px;
         float: none;
     }
+    .arrow-top {
+        right: -5px;
+    }
     .arrow-top-return {
         display: block;
+        left: 75px;
     }
     #report-title {
         width: 520px;
@@ -1030,11 +1033,8 @@ footer {
         float: left;
     }
     aside.TOC-fixed, aside.TOC-fixed .TOC-wrapper {
-        width: 100%;
+        width: 250px;
         display: block;
-    }
-    aside.TOC-fixed .TOC-wrapper {
-        width: 1070px;
     }
     aside.TOC-fixed {
         border-bottom: 0px;
