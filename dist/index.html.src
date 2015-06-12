@@ -75,8 +75,10 @@
                   <p class="more">ABOUT</p>
                 </a>
                 <div class="collapse link-underline" id="collapseExample">
-                    <p>An experimental research repository of the Hybrid Publishing Consortium.</p>
-                    <p>The repository publications are build using GitHub as the central storage and are HTML and Dublin Core metadata validated. The system is self-testing, self-validating and assigns cryptographic hash function identifiers for accurate referencing. The result is that publications are automatically synchronised on your website of choice and they can then be picked up for reuse almost anywhere. Additionally the constant validation against ISO standards ensures a guarantee of long term preservation.</p>
+                    <p>An experimental research repository from the Hybrid Publishing Consortium.</p>
+                    <p>The repository publications are built using GitHub as the central storage and standards validated &mdash; HTML, CSS, Javascript and Dublin Core metadata. The system is self-testing, self-validating and assigns cryptographic hash function identifiers to publications for accurate referencing.</p> 
+                    <p>The result is that publications are automatically synchronised on your website of choice and they can then be picked up from GitHub for reuse in most platforms. Additionally,constant validation against ISO standards provides a reliable benchmark for long term preservation.</p>
+                    <p>See the <a href="https://github.com/consortium/hybrid-publishing-research/blob/master/README.md">README</a> on GitHub to clone your own version.</p>
                     <p data-ng-cloak="">Publication ID version: {{gitinfo.date}} git hash: <a data-ng-href="https://github.com/consortium/hybrid-publishing-research/commit/{{gitinfo.commit}}">{{gitinfo.abbr}}</a>.</p>
                 </div>
                 
