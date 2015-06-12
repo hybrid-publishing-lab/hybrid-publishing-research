@@ -75,10 +75,9 @@
                   <p class="more">ABOUT</p>
                 </a>
                 <div class="collapse link-underline" id="collapseExample">
-                    <p>Welcome to the research repository of the Hybrid Publishing Consortium (HPC) supporting Open Source software infrastructures for publishing&mdash;design, single source, dynamic publishing &amp; Open Access.</p>
-                    <p>The Research Viewer is an Open Source tool that HPC has made for research distribution.</p>
-                    <p>Source: Publication and software source code can be found on <a href="https://github.com/consortium/hybrid-publishing-research.git">GitHub</a>.</p>
-                    <p ng-cloak>Publication ID version: {{gitinfo.date}} git hash: <a ng-href="https://github.com/consortium/hybrid-publishing-research/commit/{{gitinfo.commit}}">{{gitinfo.abbr}}</a>.</p>
+                    <p>An experimental research repository of the Hybrid Publishing Consortium.</p>
+                    <p>The repository publications are build using GitHub as the central storage and are HTML and Dublin Core metadata validated. Published automatically synchronised on your website of choice. This means you have a self contained publications, that can then be picked up for reuse anywhere and ensure long term preservation with constant, self-testing, validation and cryptographic hash function identifiers.</p>
+                    <p data-ng-cloak="">Publication ID version: {{gitinfo.date}} git hash: <a data-ng-href="https://github.com/consortium/hybrid-publishing-research/commit/{{gitinfo.commit}}">{{gitinfo.abbr}}</a>.</p>
                 </div>
                 
                 <div class="row">
