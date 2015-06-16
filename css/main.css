@@ -335,12 +335,14 @@ a.list-group-item:focus, a.list-group-item:hover {
     margin-top: 20px;
     color: grey;
     text-transform: none;
+    display: none;
 }
 /* ALERTS */
 .alert {
     font-size: 14px;
     display: visible;
     padding: 0px;
+    display: none;
 }
 .alert, .panel {
     border: 0px;
