@@ -8,13 +8,13 @@ App.controller('SpaceCtrl', function($scope, $http) {
         .success(function(data, status, headers, config) {
           $scope.indexlist = data;
         });
-    
+
     $http.get('gitinfo.json')
         .then(function(res){
             $scope.gitinfo = res.data;
         });
 
-    // Just display failed documents 
+    // Just display failed documents
     /*$scope.filterValid = function(items) {
         var result = {};
         angular.forEach(items, function(value, key) {
@@ -34,7 +34,7 @@ App.controller('SpaceCtrl', function($scope, $http) {
     $scope.firstelement = function(title) {
         if ( _.size(title) > 2 ) {
             return title;
-        } 
+        }
             return _.first(title);
     };
 });
@@ -53,42 +53,14 @@ $('#empty-box-for-aside').addClass('hidden');
 $('.arrow-top').addClass('hidden');
 $('.arrow-top-return').addClass('hidden');
 
-$(window).scroll(function() {
-  if ($(document).scrollTop() > 50) {
-    $('nav').addClass('fixed-top');
-    $('#empty-box-for-header1').removeClass('hidden');
-    $('#empty-box-for-header2').removeClass('hidden');
-    $('.arrow-top').removeClass('hidden');
-    $('.arrow-top-return').removeClass('hidden');
-  } else {
-    $('nav').removeClass('fixed-top');
-    $('#empty-box-for-header1').addClass('hidden');
-    $('#empty-box-for-header2').addClass('hidden');
-    $('.arrow-top').addClass('hidden');
-    $('.arrow-top-return').addClass('hidden');
-  }
-});
 
-$(window).scroll(function() {
-  if ($(document).scrollTop() > 150) {
-    $('aside').addClass('TOC-fixed');
-    $('#empty-box-for-aside').removeClass('hidden');
-    $('.scroll-collapse-menu').removeClass('hidden');
-    $('#toc-hidden').addClass('collapse');
-    $('#toc-hidden').removeClass('uncollapsed');
-  } else {
-    $('aside').removeClass('TOC-fixed');
-    $('#empty-box-for-aside').addClass('hidden');
-    $('.scroll-collapse-menu').addClass('hidden');
-    $('#toc-hidden').removeClass('collapse');
-    $('#toc-hidden').addClass('uncollapsed');
-  }
-});
 
 var images = ['HPC1.png', 'HPC2.png', 'HPC3.png', 'HPC4.png'];
-
 $('#randomLogo').css({'background-image': 'url(../../static/' + images[Math.floor(Math.random() * images.length)] + ')'});
 
+var images2 = ['icon-epub-tablet-img.png', 'icon-flowing.png', 'icon-PDF-A4.png', 'icon-tablets-ePub3.png'];
+$('#randomIcon').css({'background-image': 'url(../../static/' + images2[Math.floor(Math.random() * images2.length)] + ')'});
+$('#randomIcon').css({'background-size': '70px Auto'});
 
 /*
 // Rainbow animation

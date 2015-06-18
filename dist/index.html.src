@@ -41,133 +41,114 @@
     </head>
 
     <body ng-controller="SpaceCtrl">
+        <!-- TOP BAR: HEADER LOGO (small) + TITLE (small) -->
+        <header>
+            <a href="#footer-info">
+                <div class="nav-return">
+                    <img class="small-icon" src="../../static/menu-icon-hpc.png" alt="menu" />
+                </div>
+            </a>
+            <h2>HYBRID PUBLISHING RESEARCH VIEWER</h2>
+        </header>
+        
+        <aside class="main-page">
+            <section class="about">
+                <h1>An experimental research and publication tool developed by the Hybrid Publishing Consortium.</h1>
+                <p>The repository publications are built using GitHub as the central storage and standards validated &mdash; HTML, CSS, Javascript and Dublin Core metadata. The system is self-testing, self-validating and assigns cryptographic hash function identifiers to publications for accurate referencing.</p> 
+                <p>The result is that publications are automatically synchronised on your website of choice and they can then be picked up from GitHub for reuse in most platforms. Additionally,constant validation against ISO standards provides a reliable benchmark for long term preservation.</p>
+                <p>See the <a href="https://github.com/consortium/hybrid-publishing-research/blob/master/README.md">README</a> on GitHub to clone your own version.</p>
+                <p data-ng-cloak="">VERSION: {{gitinfo.date}} git hash: <a data-ng-href="https://github.com/consortium/hybrid-publishing-research/commits/{{gitinfo.commit}}">{{gitinfo.abbr}}</a>.</p>
+                </div>
+            </section>
+        </aside>
+    
+        <!-- MAIN CONTENT -->
+        <section id="main-menu-page">
+            <section class="menu-title">
+                <h2>HYBRID PUBLISHING CONSORTIUM REPORTS</h2>
+            </section>
             
-            
-            <div class="container">
-            <div class="research-wrapper main-page">
-                
-                
-                <!-- HPC DOSSIERS HEADER -->
-                <div class="navbar-header">
-                    <div class="navbar-logo">
-                        <a href="/">
-                            <div style="height: 94px; width: 179px" id="randomLogo"></div>
-                            <p class="logo-dossiers"><span class="logo-header-shrinked">HPC </span>DOSSIERS</p>
+            <section class="menu-reports">
+                <!-- beginning boxes template -->
+                <div ng-show="indexlist" ng-repeat="item in indexlist" class="cover-report">
+                    
+                    <div ng-cloak class="list-group-item">
+                        <a href="{{ stripdist(item.filename) }}">
+                        <div style="height: 94px; background-repeat: no-repeat;" id="randomIcon"></div>
+                            <h3 ng-cloak ng-hide="{{!item.data.title.length}}">{{ firstelement(item.data.title) }}</h3>
+                            <p>
+                                <!--<span ng-cloak ng-hide="{{!item.data.type.length}}">{{ item.data.type | capitalize}}</span>-->
+                                <span ng-cloak ng-hide="{{!item.data.contributor.length}}">by {{ item.data.contributor }}</span>
+                            </p>
+                            <p>
+                                <span ng-cloak ng-hide="{{!item.data.date.length}}">{{ item.data.date }}</span>
+                            </p>
                         </a>
-                    </div>
-                    <!-- MAIN HEADING: PAGE TITLE -->
-                    <!-- (only one h1 on the page: here) -->
-                    <div id="report-title" style="border: none;">
-                        <h1 class="main-research-page-title">Research Viewer</h1>
-                    </div>
-                </div> <!-- END DIV navbar-header -->
-                <nav class="navbar">
-                    <div class="navbar-header">
-                        <!-- TITLE FIXED -->
-                        <div id="title-fixed" style="border: none;">
-                            <h1 class="main-research-page-title">Research Viewer</h1>
+                        
+                        <p class="validation-show">Standards validation:</p>
+
+                        <div ng-cloak ng-show="{{!item.htmlerror[0]}}" class="alert alert-success" role="success">
+                            <span class="sr-only">Success:</span>
+                            html5 valid
+                        </div>
+
+                        <div ng-cloak ng-show="{{item.htmlerror[0]}}" class="alert alert-danger" role="danger">
+                            <span class="sr-only">Error:</span>
+                             Not html5 valid
+                        </div>
+
+                        <div ng-cloak ng-show="{{item.dcerrors[0].length}}" class="alert alert-danger" role="alert">
+                            <span class="sr-only">Error:</span>
+                             Not Dublin Core valid
+                        </div>
+                        <div ng-cloak ng-show="{{!item.dcerrors[0].length}}" class="alert alert-success" role="success">
+                            <span class="sr-only">Success:</span>
+                             Dublin Core valid
                         </div>
                     </div>
-                </nav>
-                
-                
-                <a data-toggle="collapse" href="#collapseExample">
-                  <p class="more">ABOUT</p>
-                </a>
-                <div class="collapse link-underline" id="collapseExample">
-                    <p>An experimental research repository from the Hybrid Publishing Consortium.</p>
-                    <p>The repository publications are built using GitHub as the central storage and standards validated &mdash; HTML, CSS, Javascript and Dublin Core metadata. The system is self-testing, self-validating and assigns cryptographic hash function identifiers to publications for accurate referencing.</p> 
-                    <p>The result is that publications are automatically synchronised on your website of choice and they can then be picked up from GitHub for reuse in most platforms. Additionally,constant validation against ISO standards provides a reliable benchmark for long term preservation.</p>
-                    <p>See the <a href="https://github.com/consortium/hybrid-publishing-research/blob/master/README.md">README</a> on GitHub to clone your own version.</p>
-                    <p data-ng-cloak="">Publication ID version: {{gitinfo.date}} git hash: <a data-ng-href="https://github.com/consortium/hybrid-publishing-research/commits/{{gitinfo.commit}}">{{gitinfo.abbr}}</a>.</p>
+                </div><!-- end boxes template -->
+            </section>
+            
+            
+            <!--
+                <p style="clear: both; margin: 30px 0 30px 0; font-size: 20px; letter-spacing: 2px;">HYBRID PUBLISHING CONSORTIUM DOSSIERS</p>
+                <div class="cover-dossier">
+                    <div class="list-group-item">
+                    <h3>Dossier<br />coming soon</h3>
+                    </div>
+                </div>
+                <div class="cover-dossier">
+                    <div class="list-group-item">
+                    <h3>Dossier<br />coming soon</h3>
+                    </div>
                 </div>
                 
-                <div class="row">
-                
-                <!--
-                    <p style="clear: both; margin: 30px 0 30px 0; font-size: 20px; letter-spacing: 2px;">HYBRID PUBLISHING CONSORTIUM DOSSIERS</p>
-                        <div class="cover-dossier">
-                            <div class="list-group-item">
-                            <h3>Dossier<br />coming soon</h3>
-                            </div>
-                        </div>
-                        <div class="cover-dossier">
-                            <div class="list-group-item">
-                            <h3>Dossier<br />coming soon</h3>
-                            </div>
-                        </div>
-                        
-                        <div class="cover-dossier">
-                            <div class="list-group-item">
-                            <h3>Dossier<br />coming soon</h3>
-                            </div>
-                        </div>
-                    
-                    -->
-                    
-                    <p style="clear: both; padding-top: 20px; margin: 50px 0 30px 0; font-size: 20px; letter-spacing: 2px;">HYBRID PUBLISHING CONSORTIUM REPORTS</p>
-                    
-                    <!-- beginning boxes template -->
-                    <div ng-show="indexlist" ng-repeat="item in indexlist" class="cover-report">
-                        <div ng-cloak class="list-group-item">
-                            <a href="{{ stripdist(item.filename) }}">
-                                <h3 ng-cloak ng-hide="{{!item.data.title.length}}">{{ firstelement(item.data.title) }}</h3>
-                                <p>
-                                    <span ng-cloak ng-hide="{{!item.data.type.length}}">{{ item.data.type | capitalize}}</span>
-                                    <span ng-cloak ng-hide="{{!item.data.creator.length}}">by {{ item.data.creator }}</span>
-                                </p>
-                                <p>
-                                    <span ng-cloak ng-hide="{{!item.data.date.length}}">{{ item.data.date }}</span>
-                                </p>
-                            </a>
-                            
-                            <p class="validation-show">Standards validation:</p>
-
-                            <div ng-cloak ng-show="{{!item.htmlerror[0]}}" class="alert alert-success" role="success">
-                                <span class="sr-only">Success:</span>
-                                html5 valid
-                            </div>
-    
-                            <div ng-cloak ng-show="{{item.htmlerror[0]}}" class="alert alert-danger" role="danger">
-                                <span class="sr-only">Error:</span>
-                                 Not html5 valid
-                            </div>
-    
-                            <div ng-cloak ng-show="{{item.dcerrors[0].length}}" class="alert alert-danger" role="alert">
-                                <span class="sr-only">Error:</span>
-                                 Not Dublin Core valid
-                            </div>
-                            <div ng-cloak ng-show="{{!item.dcerrors[0].length}}" class="alert alert-success" role="success">
-                                <span class="sr-only">Success:</span>
-                                 Dublin Core valid
-                            </div>
-                        </div>
-                    </div><!-- end boxes template -->
-                    
-                    
-                </div> <!-- end div row -->
-                
-                <footer>
+                <div class="cover-dossier">
+                    <div class="list-group-item">
+                    <h3>Dossier<br />coming soon</h3>
+                    </div>
+                </div>
             
-                    <a data-toggle="collapse" href="#footer-hidden">
-                      <p class="more">INFO</p>
-                    </a>
-                    <div class="footer-logos">
+            -->
+                    
+        </section> <!-- end main-menu-page -->
+                
+        <footer class="main-menu-footer">
+            <p class="more" id="footer-info">INFO</p>
+                <div style="float: left; width: 300px;">
+                    <div style="height: 94px; margin-top: 10px; background-repeat: no-repeat;" id="randomLogo"></div>
+                    <div class="footer-logos" style="margin-bottom: 30px;">
                         <img src="static/EFRE-logo.png" alt="Europa">
                         <img src="static/EuropafoerdertNds_farbig.png" alt="Niedersachsen">
                         <img src="static/logo_leuphana-2.png" alt="Leuphana">
                     </div>
-                    <div class="collapse link-underline" id="footer-hidden">
-                        <p>Contact: mail AT consortium.io</p>
-                        <p><a href="http://www.leuphana.de/en/site-notice-leuphana.html">Imprint</a></p>
-                        <p>© The authors | <a href="https://creativecommons.org/licenses/by/3.0/de/">CC BY 3.0 DE</a></p>
-                        <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.</p>
-                    </div>
-                
-                </footer>
+                </div>
+                <p>Contact: mail AT consortium.io</p>
+                <p><a href="http://www.leuphana.de/en/site-notice-leuphana.html" target="_blank">Imprint</a></p>
+                <p>© The authors | <a href="https://creativecommons.org/licenses/by/3.0/de/" target="_blank">CC BY 3.0 DE</a></p>
+                <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.</p>
+        </footer>
             
-            </div> <!-- end div research wrapper --> 
-            </div> <!-- end div container -->
         <script src="js/all.min.js"></script>
     </body>
 
