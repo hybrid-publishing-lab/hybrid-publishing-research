@@ -26,66 +26,63 @@
 </head>
 
 <body>
-   <div class="container">
-        <div class="research-wrapper">
-        
-    <!-- HPC DOSSIERS HEADER (LOGO) -->
-    <nav class="navbar">
-        <div class="navbar-header">
-            <div class="navbar-logo">
-                <a href="/">
-                    <div style="height: 94px; width: 179px" id="randomLogo"></div>
-                    <!--<img src="../../static/animated-logo3-small.gif" alt="hpc-logo">-->
-                    <p class="logo-dossiers"><span class="logo-header-shrinked">HPC </span>DOSSIERS</p>
-                </a>
+    <!-- TOP BAR: HEADER LOGO (small) + TITLE (small) -->
+    <header>
+        <!-- RETURN arrow to the top of the page -->
+        <a href="/">
+            <div class="nav-return">
+                <img class="small-icon" src="../../static/menu-icon-hpc.png" alt="menu" />
+                <p>BACK</p>
             </div>
-            <!-- MAIN HEADING: PAGE TITLE -->
-            <!-- (only one h1 on the page: here) -->
-            <div id="report-title">
-               <h1>HPC Research Plan 2013/15. Dynamic Publishing - New Platforms, New Readers!</h1>
-           </div>
-        </div> <!-- END DIV navbar-header -->
-    </nav>
-    
-    <!-- HACK TO MAKE IT WORK FINE :)-->
-    <div id="empty-box-for-header1">
-    </div>
-    <div id="empty-box-for-header2">
-    </div>
-   
-   <!-- SIDE INFORMATION ON THE REPORT-->
-   <div id="report-info">
-       <!-- date and author info -->
-       <div id="report-date-author">
-           <p id="report-date">First published, August 2013. Revision v.1.2, Jan 2014.</p>
-           <p id="report-authors"><!-- use commas if several authors -->Simon Worthington. Contributions from Minuette Le and Christina Kral on Design Research, workflows and consultations and Agata Królikowski on TPINC and system requirements. Editing Anthony Iles, Post-Media Lab. Thanks to Pauline van Mourik Broekman.</p>
-           <h2><a id="copyright_page">Copyright Page</a></h2>
-           <p><u><a href="http://linkme2.net/tz" rel="nofollow">http://linkme2.net/tz</a></u> </p>
-           <p>Copyright the authors</p>
-           <p>Creative Commons Attribution-ShareAlike 3.0 Germany (CC BY-SA 3.0 DE) <u><a href="http://creativecommons.org/licenses/by-sa/3.0/de/deed.en" rel="nofollow">http://creativecommons.org/licenses/by-sa/3.0/de/deed.en</a></u> </p>
-           <p>Legend: This deed is used in the absence of an intellectual property framework that represents the authors respective position on copyright.</p>
-           <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the 
-           German federal state of Lower Saxony.</p>
-           <p><u>https://consortium.io</u> </p>
-           <p><a href="http://cdc.leuphana.com/structure/hybrid-publishing-lab/" rel="nofollow">http://cdc.leuphana.com/structure/hybrid-publishing-lab/</a></p>
-           <p><a href="http://hybridpublishing.org/" rel="nofollow">http://hybridpublishing.org/</a></p>
-       </div>
-       <!-- abstract -->
-       <div id="report-abstract">
-           <p>Hybrid Publishing Consortium Research Plan.</p>
-       </div>
-   </div>
-   <div class="report-content">
-       <!-- REPORT MENU -->
-        <aside>
-            <div class="TOC-wrapper">
-                <a class="scroll-collapse-menu" data-toggle="collapse" href="#toc-hidden">
-                    <img class="toc-menu" src="../../static/menu-icon-hpc.png" alt="menu" />
+        </a>
+        <h2>HPC Research Plan 2013/15. Dynamic Publishing - New Platforms, New Readers!</h2>
+    </header>
+
+    <!-- SIDE COLUMN -->
+    <aside>
+        <!-- GENERAL INFORMATION ON THE CONTENT-->
+        <div id="info">
+            <a data-toggle="collapse" href="#info-toggle">
+                <h4>INFO</h4>
+            </a>
+            <div class="collapse" id="info-toggle">
+                <!-- date and author info -->
+                <div id="info-date-authors">
+                    <div>
+                        <h5>By:</h5>
+                        <!-- use a <li></li> for each author -->
+                        <ul id="info-authors">
+                            <li>Simon Worthington. Contributions from Minuette Le and Christina Kral on Design Research, workflows and consultations and Agata Królikowski on TPINC and system requirements. Editing Anthony Iles, Post-Media Lab. Thanks to Pauline van Mourik Broekman.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Editors:</h5>
+                        <!-- use a <li></li> for each editor -->
+                        <ul id="info-editors">
+                            <li>Editor Name</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Date:</h5>
+                        <p id="info-date">First published August 2013. Revision v.1.2 Jan 2014.</p>
+                    </div>
+                </div>
+                <!-- abstract (short) -->
+                <div id="short-abstract">
+                    <p>Hybrid Publishing Consortium Research Plan.</p>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div id="toc">
+                <!-- TOC-->
+                <a data-toggle="collapse" href="#toc-toggle">
+                    <h4>CONTENTS</h4>
                 </a>
-                <div class="collapse" id="toc-hidden">
-                   <h3>Contents</h3>
-                   <ul>
-                       <li><a href="#1">Executive summary - open infrastructures for publishing</a></li>
+                <ul class="collapse" id="toc-toggle">
+                    <li><a data-toggle="collapse" href="#toc-sub-toggle">HPC Research Plan 2013/15. Dynamic Publishing - New Platforms, New Readers! <span class="screen-only" style="vertical-align: -4px;">↳</span></a>
+                        <ul class="collapse" id="toc-sub-toggle">
+                            <li><a href="#1">Executive summary - open infrastructures for publishing</a></li>
                        <li><a href="#2">Mission</a></li>
                        <li><a href="#2.1.">2.1. Defining hybrid publishing</a></li>
                        <li><a href="#2.2.">2.2. Making the case!</a></li>
@@ -105,22 +102,34 @@
                        <li><a href="#6">Appendix</a></li>
                        <li><a href="#7">Glossary and Wikipedia links/edits</a></li>
                        <li>Document link</li>
-                   </ul>
-               </div>
-               <!-- arrow to the top of the page -->
-                <a href="#"><p class="arrow-top">TOP <span class="arrow-style">￪</span></p></a>
-                <!-- RETURN arrow to the top of the page -->
-                <a href="/"><p class="arrow-top-return"><span class="arrow-style">￩</span> RETURN</p></a>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-        </aside>
-        <!-- HACK TO MAKE IT WORK FINE :)-->
-        <div id="empty-box-for-aside" class="hidden">
-        </div>
-       
-       <!-- REPORT -->
-       <article>
-           <!-- W3C's HTML5: "A section is a thematic grouping of content" -->
-           <!-- Sections can be repeated -->
+            <!-- keywords -->
+            <div class="keywords">
+                <a data-toggle="collapse" href="#keywords-toggle">
+                    <h4>KEYWORDS</h4>
+                </a>
+                <p class="collapse" id="keywords-toggle">keywords
+                </p>
+            </div>
+            <!-- arrow to the top of the page -->
+            <div class="nav-more">
+                <a href="#">
+                    <p>TOP</p>
+                </a>
+                <a href="javascript:window.print()">
+                    <p>PRINT/PDF</p>
+                </a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <section id="main-content"><!-- here we can precise what kind of document it is: text, presentation (slides), list, collection of images, etc… -->
+        <h1>HPC Research Plan 2013/15. Dynamic Publishing - New Platforms, New Readers!</h1>
+
            <section>
 
 <img src="assets/img/Image_0.png" alt="" />
@@ -547,39 +556,49 @@
 <p>Multi-format</p>
 <p>multi-channel publishing</p>
 
-</section>  
-        </article><!-- END REPORT -->
-    
-    </div><!-- end div report-content -->
-    
-    <!-- HPC DOSSIERS FOOTER -->
+</section>
+<section>
+    <h2><a id="copyright_page">Copyright Page</a></h2>
+           <p><u><a href="http://linkme2.net/tz" rel="nofollow">http://linkme2.net/tz</a></u> </p>
+           <p>Copyright the authors</p>
+           <p>Creative Commons Attribution-ShareAlike 3.0 Germany (CC BY-SA 3.0 DE) <u><a href="http://creativecommons.org/licenses/by-sa/3.0/de/deed.en" rel="nofollow">http://creativecommons.org/licenses/by-sa/3.0/de/deed.en</a></u> </p>
+           <p>Legend: This deed is used in the absence of an intellectual property framework that represents the authors respective position on copyright.</p>
+           <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the
+           German federal state of Lower Saxony.</p>
+           <p><u>https://consortium.io</u> </p>
+           <p><a href="http://cdc.leuphana.com/structure/hybrid-publishing-lab/" rel="nofollow">http://cdc.leuphana.com/structure/hybrid-publishing-lab/</a></p>
+           <p><a href="http://hybridpublishing.org/" rel="nofollow">http://hybridpublishing.org/</a></p>
+</section>
+
+    </section>
+
+    <!-- FOOTER -->
     <footer>
         <a data-toggle="collapse" href="#footer-hidden">
           <p class="more">INFO</p>
         </a>
-        <div class="footer-logos">
-            <img src="../../static/EFRE-logo.png" alt="Europa">
-            <img src="../../static/EuropafoerdertNds_farbig.png" alt="Niedersachsen">
-            <img src="../../static/logo_leuphana-2.png" alt="Leuphana">
-        </div>
+
         <div class="collapse" id="footer-hidden">
-            <p>Contact: mail AT consortium.io</p>
-            <p><a href="http://www.leuphana.de/en/site-notice-leuphana.html">Imprint</a></p>
-            <p>© The authors | <a href="https://creativecommons.org/licenses/by/3.0/de/">CC BY 3.0 DE</a></p>
-            <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.</p>
+            <p style="vertical-align: 4px; margin-top: -24px; margin-left: 52px; margin-bottom: 3px;">↘</p>
+            <div style="float: left; width: 300px;">
+                    <div style="height: 94px; margin-top: 20px; background-repeat: no-repeat;" id="randomLogo"></div>
+                    <div class="footer-logos" style="margin-bottom: 30px;">
+                        <img src="../../static/EFRE-logo.png" alt="Europa">
+                        <img src="../../static/EuropafoerdertNds_farbig.png" alt="Niedersachsen">
+                        <img src="../../static/logo_leuphana-2.png" alt="Leuphana">
+                    </div>
+                </div>
+                <p style="margin-top: 10px;">Contact: mail AT consortium.io</p>
+                <p><a href="http://www.leuphana.de/en/site-notice-leuphana.html" target="_blank">Imprint</a></p>
+                <p>© The authors | <a href="https://creativecommons.org/licenses/by/3.0/de/" target="_blank">CC BY 3.0 DE</a></p>
+                <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.</p>
+
         </div>
     </footer>
-    </div><!-- end div research-wrapper -->
-    </div><!-- end div container -->
-    
+
     <!-- CALLS THE JS -->
     <script src="../../js/all.min.js"></script>
-    <script src="http://imakewebthings.com/jquery-waypoints/waypoints.min.js"></script>
-    <script>
-        $('.TOC-wrapper').waypoint(function() {
-        $("body").css("background-color","white");
-    });
-    </script>
+
 
 </body>
 </html>

@@ -1,34 +1,52 @@
-/*  STRUCTURE PAGE REPORTS                                                     
-+---------------------------------------------------------+
-| +-<header>--+ +---------DIV ID----------+ |--DIV ID---| |
-| |           | |     "report-title"      | "report-info" |
-| | LOGO HPC  | |                         | +--DIV-ID---+ |
-| |           | |                         | "report     | |
-| |           | |        T I T L E        | | -abstract"| |
-| +-----------+ |       R E P O R T       | |           | |
-|               |                         | +--DIV ID---+ |
-|               |                         | "report-date| |
-|               |                         | |   -author"| |
-|               |                         | |           | |
-|               +-------------------------+ +-----------+ |
-|                                                         |
-| |--------------DIV class="report-content"-------------| |
-| +--<aside>--+ +------------<article>------------------+ |
-| | CONTENTS  | | REPORT CONTENT                        | |
-| |           | |                                       | |
-| | <ul>      | |  <section>                            | |
-| |     <li>  | |       <p>                             | |
-| |     ...   | |       ...                             | |
-| |           | |                                       | |
-| |           | |                                       | |
-| +-----------+ |                                       | |
-|               +---------------------------------------+ |
-+---------------------------------------------------------+
-/*                                                         
+/*  STRUCTURE PAGE REPORTS       */
+/*
++-------------------------------------------+---------+
+|HEADER    |TITLE                           |         |
++-----------------------------------------------------+
+|ASIDE     |SECTION id MAIN CONTENT         |         |
+| INFO     | h1                             |         |
+|          | SECTION                        |         |
+| CONTENTS |  h2       sub heading          |         |
+|          |  p                             |         |
+| NAV      |  SECTION  sub-sub heading      |         |
+|          |   h3                           |         |
+|          |   p                            |         |
+|          |                                |         |
+|          |                                |         |
+|          |                                |         |
+|          |                                |         |
+|          |                                |         |
+|          |                                |         |
++----------+                                |         |
+|          |                                |         |
+|          |                                |         |
++----------+--------------------------------+---------+
+|FOOTER                                               |
++-----------------------------------------------------+
+*/
 
+
+/* FIXING STUFF */
+/* Fixes the initial browser’s style */
+* {
+    margin: 0;
+    padding: 0;
+}
+div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* To secure correct behavior in older browsers */
+header, section, footer, aside, nav, main, article, figure {
+    display: block;
+}
+/* main page mystery */
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none !important;
+}
 
 /*************** GENERAL ***************/
-
 body {
     color: black;
     font-family: "Cotham", Helvetica, Arial, sans-serif;
@@ -38,6 +56,11 @@ body {
 a, a:link, a:hover, a:visited, a:active, a:focus {
     color: black;
     text-decoration: none;
+    border-bottom: 1px solid black;
+}
+/* OPTION FOR LINKS */
+.link-underline a {
+    border-bottom: 2px solid #33b5bc;
 }
 /* PARAGRAPH */
 p {
@@ -58,103 +81,64 @@ section {
 /* LISTS */
 ul {
     padding-left: 0px;
+    margin: 0;
 }
 ul li {
     list-style-type: disc;
     list-style-position: inside;
+    margin: 0;
 }
 ol li {
     list-style-type: decimal;
     color: black;
+    list-style-position: inside;
+    margin: 0;
 }
-/* main page mystery */
-[ng\:cloak], [ng-cloak], .ng-cloak {
-    display: none !important;
-}
-
-/* COLUMNS WIDTH ETC */
-.clear {
-    clear: both;
-    display: inline-block;
-}
-.one-column figure {
-    width: 240px;
-    margin-right: 20px;
-    float: left;
-}
-.two-columns figure {
-    width: 480px;
-    margin-right: 20px;
-    float: left;
-}
-
-/* OPTIONS FOR IMAGES LAYOUT */
-/* initial image size */
-.size1-1 figure img {
-    width: initial;
-}
-/* image size: 100px */
-.height100 figure img {
-    height: 100px;
-    width: unset;
-}
-/* image size: 150px */
-.height150 figure img {
-    height: 150px;
-    width: unset;
-}
-/* left-aligned image */
-.img-left figure img {
-    margin-left: 0px;
-    text-align: left;
-}
-/* left-aligned image’s caption */
-.img-left figure figcaption {
-    margin-left: 0px;
-    text-align: left;
-    padding-left: 6%;
-}
-/* right-aligned image with text around */
-.img-right-float {
-    float: right;
-    width: 250px;
-    margin: 20px 0 20px 20px;
-}
-
-/* OPTION: FRAME AROUND SOMETHING */
-.frame {
-    padding: 20px;
-    border: 2px solid black;
-    margin: 0px;
+ul li .no-bullet {
+    list-style-type: none;
 }
 
 
-/*//////////// TYPE ////////////*/
+/*//////////// TYPE SETTINGS ////////////*/
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: "REGLO";
     color: black;
+    margin: 0;
 }
 
-h1, .h1 { 
-    font-size: 70px; 
+h1, .h1 {
+    font-family: "REGLO";
+    font-size: 70px;
     text-align: left;
-    margin-bottom: 40px;
 }
 h2, .h2 {
-    font-family: "REGLO";
     font-size: 30px;
 }
-h3, .h3 { 
-    font-size: 30px;
-    text-align: left;
-    margin-top: 5px;
+h3, .h3 {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+h4, .h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+h5, .h5 {
+    font-size: 18px;
 }
 p {
     color: black;
     font-family: "Cotham", Helvetica, Arial, sans-serif;
     font-size: 18px;
+}
+b {
+    font-family: "REGLO";
+}
+sup {
+    z-index: -1000;
 }
 .serif-font {
     font-family: "Charter", "Times New Roman", Times, serif;
@@ -189,13 +173,13 @@ code, kbd, pre, samp {
 }
 /* OPTIONS FOR FONTS */
 .stretch {
-    display:inline-block; 
-    font-size: 32px; 
-    padding-left: 63px; 
-    transform:scale(9,1); 
-    -webkit-transform:scale(9,1); 
-    -moz-transform:scale(9,1); 
-    -ms-transform:scale(9,1); 
+    display:inline-block;
+    font-size: 32px;
+    padding-left: 63px;
+    transform:scale(9,1);
+    -webkit-transform:scale(9,1);
+    -moz-transform:scale(9,1);
+    -ms-transform:scale(9,1);
     -o-transform:scale(9,1);
 }
 /* dropped initial */
@@ -207,14 +191,16 @@ code, kbd, pre, samp {
     float:left;
     color:black;
 }
-/* LINKS */
-.link-underline a {
-    border-bottom: 2px solid #33b5bc;
+
+/************ GENERAL LAYOUT ************/
+/* COLUMNS WIDTH ETC */
+.clear {
+    clear: both;
+    display: inline-block;
 }
 
-
-/************ GENERAL TEXT LAYOUT ************/
-.no-indent {
+/************ TEXT OPTIONS ************/
+p.no-indent, .no-indent p {
     text-indent: 0;
 }
 /* CODE */
@@ -234,43 +220,247 @@ pre code {
     word-break: keep-all;
 }
 blockquote {
-    border-left: 5px solid #33b5bc;
+    border-left: 0;
+    padding-left: 6%;
+    text-indent: -6%;
 }
-.logo-HPC-main {
+blockquote:before {
+    content: "☞";
+    font-size: 30px;
+    margin-right: 15px;
+    vertical-align: -5px;
+    display: block;
+}
+
+
+/************  OPTIONS FOR IMAGES LAYOUT ************/
+figure {
+    margin: 15px 0;
+}
+img {
+    margin: 0 0 10px 0;
+    max-width: 550px;
+}
+.one-column figure {
+    width: 240px;
+    float: left;
+    margin-right: 15px;
+}
+.one-column figure img {
+    width: 240px;
+}
+.two-columns figure img {
+    width: 550px;
+}
+/* initial image size */
+.size1-1 figure img {
+    width: initial;
+}
+/* image size: 100px */
+.height100 figure img {
+    height: 100px;
+    width: unset;
+}
+/* image size: 150px */
+.height150 figure img {
+    height: 150px;
+    width: unset;
+}
+/* left-aligned image */
+.img-left figure img {
+    margin-left: 0px;
+    text-align: left;
+}
+/* left-aligned image’s caption */
+.img-left figure figcaption {
+    margin-left: 0px;
+    text-align: left;
+}
+/* right-aligned image with text around */
+.img-right-float {
+    float: right;
+    width: 275px;
+    margin: 20px 0 20px 20px;
+}
+
+/* OPTION: FRAME AROUND SOMETHING */
+.frame {
+    padding: 20px;
+    border: 2px solid black;
+    margin: 0px;
+}
+
+/*//////////// SPECIFIC PARTS STYLE ////////////*/
+/* PADDING BOXES */
+#info, header h2, .nav-return, #toc {
+    padding: 17px 17px 15px 17px;
+}
+/* HEADER */
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    background-color: white;
+    z-index: 100;
+}
+header h2 {
+    font-family: "REGLO";
+    font-size: 19px;
+    position: fixed;
+    left: 275px;
+    height: 50px;
+    margin: 0;
+    border-left: 1px solid black;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+.nav-return {
+    float: left;
+    height: 50px;
+    width: 275px;
+    border-bottom: 1px solid black;
+    border-right: 0;
+    white-space: nowrap;
+}
+.nav-return img {
+    display: inline-block;
+}
+.nav-return p {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: -5px;
+}
+.small-icon {
+    width: 30px;
+}
+/* ASIDE */
+aside {
+    width: 275px;
+    float: left;
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    border-bottom: 1px solid black;
+}
+#info ul li, #toc ul li {
+    list-style-type: none;
+}
+#info-date-authors, #info ul, #info ul li, #info h5, #info #info-date {
+    display: inline;
+}
+#toc {
+    border-top: 1px solid black;
+}
+#toc ul a {
+    border-bottom: 0;
+}
+#toc ul ul li {
+    margin-left: 30px;
+}
+.keywords {
+    padding: 15px;
+    border-top: 1px solid black;
+}
+aside .collapse, aside .collapsing {
+    margin-top: 8px;
+}
+aside .collapse, aside .collapsing {
+    margin-top: 8px;
+}
+.nav-more {
+    border-top: 1px solid black;
+    padding: 13px 15px 13px 15px;
+}
+.nav-more p {
+    display: inline-block;
+}
+.nav-more a:first-child {
+    margin-right: 100px;
+}
+/* SECTION */
+section {
+    margin: 0px 0;
+}
+section p + p {
+    text-indent: 6%;
+    margin-top: 0;
+}
+#main-content {
+    margin-left: 275px;
+    margin-top: 50px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 15px;
+    width: 825px;
+}
+#main-content h4 {
+    margin-top: 20px;
+}
+section h2 {
+    font-size: 18px;
+    padding-top: 60px;
+    border-bottom: 1px solid #000;
+    display: inline-block;
+}
+/* FOOTER */
+footer {
+    width: 1100px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    padding: 15px;
+}
+footer img {
+    height: 50px;
+    margin: 10px 0px;
+}
+
+
+/*//////////// MAIN MENU PAGE STYLE ////////////*/
+/* SIDE COLUMN */
+aside.main-page {
     position: absolute;
+    border-right: 1px solid black;
+    padding: 15px;
+}
+.about h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: "Cotham";
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+.about p {
+    text-indent: 0;
 }
 
-/*************** PAGE STRUCTURE ***************/
-
-.container {
-    padding-top: 30px;
+/* MAIN CENTER */
+#main-menu-page {
+    margin-top: 50px;
+    display: inline-block;
+    min-height: 870px;
+    margin-left: 275px;
 }
-.research-wrapper { 
-    margin-left: auto; 
-    margin-right: auto;
+#main-menu-page section {
+    padding: 15px;
 }
-.row {
-/* main page only */
-    margin: 10px 0 20px 20px;
-    clear: both;
-    border-top: 2px solid #33b5bc;
+#main-menu-page {
+    margin-left: 275px;
 }
-
-/*//////// MAIN RESEARCH PAGE: TABLE OF CONTENTS ///////*/ 
-
-/* PAGE TITLE + INFO */
-.page-title {
-    width: 70%;
-    margin-bottom: 30px;
+#main-menu-page h2 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding-top: 0;
 }
-.main-research-page-title {
-    font-size: 100px;
-    text-align: center;
+#main-menu-page .menu-report {
+    float: left;
 }
-.main-page .navbar {
-    display: none;
-}
-/* MAIN PAGE > DOSSIERS */
+/* MAIN PAGE > DOSSIERS COMING SOON */
 .cover-dossier {
     width: 230px;
     height: 300px;
@@ -289,20 +479,30 @@ blockquote {
     width: 225px;
     float: left;
     margin: 0 15px 30px 15px;
-    height: 290px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    border: 3px solid black;
-    -moz-box-shadow: 8px 8px black;
-    -webkit-box-shadow: 8px 8px black;
-    box-shadow: 7px 6px black;
+    height: 250px;
+    overflow: hidden;
+    z-index: 0;
+    padding-right: 50px;
 }
 .list-group-item {
     border: 0;
     border-bottom: 0;
     border-right: 0;
+    padding: 10px 0;
     background-color: transparent;
     overflow: hidden;
+    z-index: 10;
+}
+.list-group-item p, .list-group-item p + p {
+    font-size: 18px;
+    line-height: 22px;
+    text-indent: 0;
+}
+.list-group-item h3 {
+    font-size: 18px;
+    line-height: 22px;
+    font-family: "REGLO";
+    text-align: left;
 }
 .list-group-item:first-child, .list-group-item:last-child {
     border-top-left-radius: 0px;
@@ -314,19 +514,6 @@ a.list-group-item:focus, a.list-group-item:hover {
     background-color: transparent;
     text-decoration: none;
 }
-/* SLIDES */
-.more {
-    color: #33b5bc;
-    font-size: 20px;
-    letter-spacing: 2px;
-    text-align: center;
-    clear: both;
-}
-.collapsed:active, .collapsed:focus {
-    outline: none;
-    text-decoration: none;
-}
-
 /* VALIDATION */
 .validation-show {
     font-size: 14px;
@@ -361,723 +548,139 @@ a.list-group-item:focus, a.list-group-item:hover {
     color: #33b5bc;
     background-color: transparent;
 }
-
-/*//////// REPORT PAGES ////////*/
-
-
-/*//////// REPORT PAGES TEMPLATE ///////*/ 
-
-/* BORDER-TOP */
-#report-title, #report-info, #toc-hidden, article, #footnotes {
-    border-top: 2px solid #33b5bc;
-}
-
-/* REPORT TITLE */
-#report-title {
-    float: left;
-    padding-left: 20px;
-}
-
-/* NAVBAR HEADER */
-.navbar {
-    position: absolute;
-    border: 0;
-    border-radius: 0;
-}
-nav a {
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
-    font-size: 18px;
-}
-.navbar-header {
-    margin-left: auto;
-    margin-right: auto;
-}
-.navbar-logo {
-    width: 250px;
-    float: left;
-    padding-bottom: 30px;
-    border-top: 0px solid black;
-}
-.logo-header-shrinked {
-    display: none;
-}
-.logo {
-    width: 110px;
-    padding: 10px 0px;
-    position: relative;
-}
-.cover-img {
-    display:block;
-    width: 70%;
-    margin: auto;
-}
-.logo-dossiers {
-    font-family: Reglo;
-    padding-left: 0px;
-    margin-top: 0px;
-    font-size: 23px;
-}
-
-/* when we scroll, it shrinks and becomes fixed at the top */
-nav.fixed-top {
-    display: block;
-    position: fixed;
-    right: 0;
-    left: 0;
-    top: 0;
-    z-index: 1030;
-    background-color: #33b5bc;
-    height: 50px;
-    padding-bottom: 20px;
-    overflow: hidden;
-}
-nav.fixed-top #report-title .main-research-page-title {
-    text-align: left;
-}
-nav.fixed-top #report-title {
-    border-top: 0;
-    padding-left: 0;
-}
-nav.fixed-top #report-title h1 {
-    font-size: 23px;
-    margin-top: 0;
-    line-height: 50px;
-}
-/* title-fixed on main page only: */
-#title-fixed {
-    display: none;
-}
-nav.fixed-top #title-fixed {
-    display: block;
-    position: fixed;
-    right: 0;
-    left: 0;
-    top: 0;
-    z-index: 1030;
-    background-color: #33b5bc;
-    height: 50px;
-    padding-bottom: 20px;
-    overflow: hidden;
-}
-nav.fixed-top #title-fixed h1 {
-    font-size: 23px;
-    margin-top: 0;
-    line-height: 50px;
-}
-nav.fixed-top .logo-dossiers {
-    margin-top: 10px;
-}
-nav.fixed-top .navbar-header img {
-    display: none;
-}
-nav.fixed-top .navbar-header .navbar-logo .logo-dossiers span.logo-header-shrinked {
-    display: inline-block;
-    color: white;
-    letter-spacing: 2px;
-    font-family: 'montserrat';
-}
-.arrow-style {
-    font-size: 20px;
-    vertical-align: 1px;
-}
-.arrow-top {
-    display: block;
-    position: absolute;
-    top: 7px;
-    right: 0px;
-    height: 30px;
-    color: white;
-    font-family: 'Cotham';
-    font-size: 15px;
-    letter-spacing: 2px;
-    z-index: 1900;
-    padding-left: 5px;
-    padding-right: 10px;
-}
-.arrow-top-return {
-    display: block;
-    position: absolute;
-    top: 7px;
-    left: 0px;
-    height: 30px;
-    color: white;
-    font-family: 'Cotham';
-    font-size: 15px;
-    letter-spacing: 2px;
-    z-index: 1900;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-#empty-box-for-header1 {
-    width: 250px;
-    height: 100px;
-    float: left;
-    padding-bottom: 30px;
-    border-top: 0 solid #000;
-}
-#empty-box-for-header2 {
-    width: 520px;
-    height: 100px;
-    float: left;
-    margin-left: 20px;
-    padding-left: 20px;
-    border-top: 0 solid #000;
-}
-
-/* REPORT CONTENT (INCL. MENU) */
-.report-content {
-    clear: both;
-    display: inline-block;
-}
-
-/* ASIDE MENU */
-aside {
-    width: 250px;
-    float: left;
-    padding-right: 30px;
-}
-#toc-hidden {
-    width: 250px;
-}
-aside h3 {
-    font-family: "Cotham";
-    font-size: 16px;
-    border-bottom: 1px solid black;
-    display: inline-block;
-    margin-top: 40px;
-}
-aside li {
-    font-size: 16px;
-}
-#empty-box-for-aside {
-    float: left;
-    width: 250px;
-    height: 100px;
-    border-top: 0 solid #000;
-}
-aside.TOC-fixed {
-    position: fixed;
-    right: 0;
-    left: 0;
+/* FOOTER MENU */
+footer.main-menu-footer {
     width: 100%;
-    top: 40px;
-    border-bottom: 6px solid #33b5bc;
-}
-aside.TOC-fixed .TOC-wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 0px;
-}
-.TOC-wrapper {
-    padding-bottom: 10px;
-}
-.scroll-collapse-menu {
-    display: none;
-}
-aside.TOC-fixed .scroll-collapse-menu {
-    display: block;
-}
-h3.toc-title {
-    margin-top: 20px;
+    border-right: 0;
 }
 
 
-/* REPORT INFO */
-#report-info {
-    padding-top: 20px;
-    width: 250px;
-    float: left;
-    margin-left: 20px;
-}
-#report-info p {
-    font-size: 16px;
-}
-#report-info h2, #report-info .h2, #report-info h3, #report-info .h3 {
-    font-family: "Cotham";
-    font-size: 18px;
-    margin-top: 30px;
-    border-bottom: 1px solid black;
-    display: inline-block;
-}
-#report-abstract {
-    padding-bottom: 30px;
-}
-#report-date-author {
-    padding-top: 20px;
-    padding-bottom: 30px;
-}
-#report-date:before {
-    content: "Date:";
-    margin-right: 7px;
-    color: #33b5bc;
-}
-#report-authors:before {
-    content: "By:";
-    margin-right: 7px;
-    color: #33b5bc;
-}
+/* RESPONSIVE STYLESHEET */
 
-/*//////// REPORTS ////////*/
-
-/* REPORT */
-article {
-    width: 790px;
-    margin-left: 20px;
-    float: left;
-    display: block;
-    margin-bottom: 40px;
-}
-article a {
-    border-bottom: 2px solid #33b5bc;
-}
-/* IMAGES */
-figure {
-    margin: 30px 0 30px 0;
-}
-figcaption {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 16px;
-}
-
-article img {
-    display:block;
-    width: 95%;
-    margin: auto;
-}
-article video {
-    width: 95%;
-}
-/* SECTIONS */
-article section h2, article section .h2, article section h3, article section .h3 {
-    font-family: "Cotham";
-    font-size: 18px;
-    margin-top: 30px;
-    border-bottom: 1px solid black;
-    display: inline-block;
-}
-article section .chapter-number {
-    font-family: "Bagnard";
-    font-size: 50px;
-    margin: 60px 0px;
-    border-bottom: 0px;
-    display: block;
-    text-align: center;
-}
-section p + p {
-    text-indent: 6%;
-    margin-top: 0;
-}
-
-/* REPORT S FOOTNOTES */
-#footnotes {
-    padding-left: 6%;
-    margin-top: 30px;
-    padding-top: 20px;
-    width: 520px;
-}
-
-/* FOOTER */
-footer {
-    padding-top: 30px;
-    border-top: 2px solid #33b5bc;
-    position: relative;
-    float: left;
-    width: 1060px;
-    margin-bottom: 30px;
-}
-.contact p {
-    text-align: center;
-}
-.footer-logos {
-    float: right;
-}
-.footer-logos img {
-    height: 70px;
-    padding: 10px;
-    float: right;
-}
-
-
-
-
-/* NEEDS TO BE REPLACED BY WHAT IS UP THERE: */
-
-
-@media (min-width:250px) {
-    nav.fixed-top .navbar-logo {
-        display: none;
+@media only screen and (max-width: 1100px) {
+    header {
+        width: 825px;
+        border-right: 1px solid black;
     }
-    .arrow-top {
-        display: none;
+    header h2 {
+        border-left: 0;
     }
-    .TOC-fixed .arrow-top {
-        display: block;
-    }
-    .arrow-top-return {
-        display: none;
-    }
-    .navbar {
-        position: relative;
-    }
-    nav.fixed-top .navbar-header {
-        padding: 0 15px;
-    }
-    nav.fixed-top #report-title h1 {
-        margin-left: 70px;
-        white-space: nowrap;
+    .nav-return {
+        border-right: 1px solid black;
     }
     aside {
-        width: 100%;
-        float: none;
-        display: inline-block;
-    }
-    aside.TOC-fixed {
-        width: 100%;
-        top: 5px;
-        left: 0px;
-        z-index: 1060;
-    }
-    aside.TOC-fixed .toc-menu {
-        width: 40px;
-        margin-top: 8px;
-        margin-left: 20px;
-    }
-    aside.TOC-fixed h3 {
-        margin-top: 8px;
-    }
-    .toc-hidden {
-        display: inline-block;
-    }
-    .uncollapsed#toc-hidden {
-        width: 100%;
-        display: inline-block;
-    }
-    .collapsing, .collapse {
-        margin-top: 10px;
-        padding: 5px 0 1px 20px;
-        background-color: white;
-    }
-    .collapsing#toc-hidden, .collapse#toc-hidden {
-        width: 580px;
-        border: 0;
-    }
-    /* transform it into a hamburger menu at the left of the TITLE */
-    .footer-logos {
-        width: 100%;
-    }
-    #main {
-        width: 100%;
-    }
-    .main-research-page-title {
-        font-size: 20vw;
-    }
-    .stretch {
-        display:inline-block; 
-        font-size: 32px; 
-        padding-left: 44px; 
-        transform:scale(3.8,1); 
-        -webkit-transform:scale(3.8,1); 
-        -moz-transform:scale(3.8,1); 
-        -ms-transform:scale(3.8,1); 
-        -o-transform:scale(3.8,1);
-    }
-    h1, .h1 {
-    font-size: 11vw;
-    }
-    section p + p {
-        text-indent: 15%;
-    }
-    .img-left figure figcaption {
-        padding-left: 15%;
-    }
-    #report-title {
-        margin-left: 0;
-        padding-left: 0;
-        width: 100%;
-    }
-    #report-info {
-        margin-left: 0px;
-        width: 100%;
-    }
-    aside, #footnotes, footer {
-        width: 100%;
-    }
-    .report-content {
-        width: 100%;
-    }
-    article {
-        margin-left: 0px;
-        width: 100%;
-    }
-    .two-columns figure {
-        max-width: 100%;
-    }
-    .size1-1 figure img {
-        width: initial;
-        max-width: 100%;
-    }
-    .height100 figure img {
-        height: initial;
-        width: unset;
-        max-width: 100%;
-    }
-    .height150 figure img {
-        height: initial;
-        width: unset;
-        max-width: 100%;
-    }
-}
-
-
-@media (min-width:580px) {
-    .research-wrapper {
-        width: 560px;
-    }
-    .navbar-header {
-        width: 560px;
-    }
-    nav.fixed-top .navbar-header {
-        width: 560px;
-        padding: 0px 0px;
-    }
-    aside.TOC-fixed {
-        padding-left: 0px;
-    }
-    aside.TOC-fixed .TOC-wrapper {
-        width: 580px;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-    aside.TOC-fixed .toc-menu {
-        width: 60px;
-        margin-left: 0px;
-        padding-left: 20px;
-    }
-    .collapse, .collapsing {
-        padding-left: 20px;
-    }
-    h1 {
-        font-size: 70px;
-    }
-    .logo-HPC-main {
-        position: relative;
-    }
-    .footer-logos {
-        width: 100%;
-    }
-    .main-research-page-title {
-        font-size: 100px;
-    }
-    .stretch {
-        display:inline-block; 
-        font-size: 32px; 
-        padding-left: 57px; 
-        transform:scale(6,1); 
-        -webkit-transform:scale(6,1); 
-        -moz-transform:scale(6,1); 
-        -ms-transform:scale(6,1); 
-        -o-transform:scale(6,1);
-    }
-    #report-info {
-        margin-left: 0px;
-    }
-    .report-content {
-        clear: none;
-        display: inline-block;
-    }
-    .two-columns figure {
-        width: 480px;
-    }
-    .size1-1 figure img {
-        width: initial;
-    }
-    .height100 figure img {
-        height: 100px;
-        width: unset;
-    }
-    .height150 figure img {
-        height: 100px;
-        width: unset;
-    }
-}
-
-/* RESPONSIVE */
-
-/* HERE ARE THE NEW (BOOTSTRAPPY) VALUES: */
-
-
-@media (min-width: 768px) {
-    .container {
-        width: 100%;
-    }
-    .navbar-header {
-        float: none;
-    }
-}
-
-@media (min-width: 800px) {
-    .research-wrapper, .navbar-header {
-        width: 790px;
-    }
-    nav.fixed-top .navbar-header {
-        width: 790px;
-    }
-    #report-title {
-        width: 520px;
-    }
-    nav.fixed-top #report-title {
-        margin-left: 70px;
-        width: 790px;
-        white-space: nowrap;
-    }
-    nav.fixed-top #report-title h1 {
-        margin-left: 0;
-    }
-    aside {
-        width: 250px;
-        float: left;
-    }
-    aside.TOC-fixed .TOC-wrapper {
-        width: 820px;
-    }
-    .uncollapsed#toc-hidden {
-        display: inline-block;
-        margin-left: 20px;
-    }
-    #report-info {
-        margin-left: 0px;
-        width: 520px;
-        border-top: 0px;
-        padding-top: 0px;
-        float: none;
-    }
-    #report-abstract {
-        float: left;
-        width: 248px;
-        border-top: 2px solid #33b5bc;
-        padding-top: 20px;
-    }
-    #report-date-author {
-        float: left;
-        width: 248px;
-        margin-left: 18px;
-        margin-top: 0px;
-        border-top: 2px solid #33b5bc;
-    }
-    .report-content {
-        clear: none;
-        display: block;
-    }
-    article {
-        margin-left: 0px;
-    }
-    footer {
-        width: 790px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        width: 100%;
-        display: block;
-    }
-}
-@media (min-width: 1100px) {
-    .research-wrapper, .navbar-header {
-        width: 1070px;
-    }
-    nav.fixed-top .navbar-header {
-        width: 1070px;
-    }
-    .navbar {
-        width: 790px;
-        float: left;
-    }
-    .navbar.fixed-top {
-        width: 100%;
-    }
-    .navbar-header {
-        width: 1060px;
-        float: left;
-    }
-    .fixed-top .navbar-header {
-        width: 1070px;
-        float: none;
-    }
-    .arrow-top {
-        right: -5px;
-    }
-    .arrow-top-return {
-        display: block;
-        left: 75px;
-    }
-    #report-title {
-        width: 520px;
-        margin-left: 20px;
-    }
-    nav.fixed-top #report-title {
-        margin-left: 270px;
-        width: 790px;
-        white-space: nowrap;
-    }
-    #report-info {
-        width: 250px;
-        margin-left: 20px;
-        float: left;
-    }
-    #report-date-author {
-        margin-left: 0px;
-    }
-    .report-content {
-        clear: both;
-        display: inline-block;
-    }
-    aside {
-        margin-left: 0px;
-        width: 250px;
-        float: left;
-    }
-    aside.TOC-fixed, aside.TOC-fixed .TOC-wrapper {
-        width: 250px;
-        display: block;
-    }
-    aside.TOC-fixed {
-        border-bottom: 0px;
-    }
-    aside.TOC-fixed .collapse {
-        display: inline-block;
+        width: 825px;
         background-color: transparent;
+        border-bottom: 0;
     }
-    aside.TOC-fixed .collapsing {
-        display: none;
-    }
-    aside.TOC-fixed .collapse.in {
-        display: none;
-    }
-    aside.TOC-fixed .collapse#toc-hidden {
-        background-color: white;
-        width: 250px;
-        padding-right: 30px;
-    }
-    .uncollapsed#toc-hidden {
-        margin-left: 0;
-    }
-    article {
-        margin-left: 20px;
-        width: 780px;
+    #info, #toc {
+        width: 275px;
         float: left;
+        border-right: 1px solid black;
+        border-top: 0;
+        background-color: white;
+        border-bottom: 1px solid black;
+    }
+    .keywords {
+        display: none;
+    }
+    .nav-more {
+        width: 275px;
+        float: left;
+        border-top: 0;
+        background-color: white;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+        white-space: nowrap;
+        overflow-x: hidden;
+    }
+    .nav {
+        border-top: 0;
+    }
+    #main-content {
+        margin-left: 0;
+        margin-top: 100px;
+    }
+    aside.main-page {
+        position: relative;
+        border-right: 0;
+        padding: 15px;
+    }
+    #main-menu-page {
+        margin-left: 0px;
+        min-height: 0px;
     }
     footer {
-        width: 1060px;
+        width: 825px;
     }
 }
-
-@media (min-width: 1200px) {
-    .container {
+@media only screen and (max-width: 830px) {
+    #main-content {
         width: 100%;
+    }
+    header, aside {
+        width: 100%;
+    }
+    header h2 {
+        left: 33.33%;
+    }
+    .nav-return {
+        width: 33.33%;
+    }
+    #info, #toc, .nav-more {
+        width: 33.33%;
+    }
+    .nav-more a:first-child {
+        margin-right: 10%;
+    }
+    footer {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 450px) {
+    header, aside {
+        position: relative;
+        width: 100%;
+    }
+    .nav-return {
+        width: 60px;
+        overflow: hidden;
+        border-right: 0;
+        border-left: 1px solid black;
+    }
+    .nav-return p {
+        display: none;
+    }
+    header h2 {
+        left: 60px;
+        background-color: white;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+        border-right: 0;
+        border-top: 0;
+        z-index: 1000;
+        position: relative;
+    }
+    #main-content h1 {
+        font-size: 50px;
+    }
+    aside {
+        top: 0px;
+        border-right: 0;
+    }
+    #info, #toc {
+        width: 100%;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+    .nav {
+        border-top: 0;
+    }
+    .nav-more {
+        display: none;
+    }
+    img {
+        max-width: 95%;
     }
 }
 
@@ -1085,38 +688,45 @@ footer {
 /* PRINT STYLESHEET */
 
 @media print {
-    a, a:visited, a:active, a:focus, article a {
-        border-bottom: 0px;
-    }
     .screen-only {
         display: none;
     }
-    .alert {
+    header, footer, .nav-more, #info h4, #toc h4 {
         display: none;
     }
-    h1, .h1 { 
-        page-break-after: always;
-        letter-spacing: -0.5px;
-    }
-    figure {
-        page-break-inside: avoid;
-    }
-    header {
-        display: none;
-    }
-    #report-title, #report-info, #report-date-author, aside, article {
-        border-top: 0px solid black;
+    .nav, #info, #toc, #main-content, aside {
+        border: 0;
     }
     aside {
-        margin-left: 0px;
+        position: relative;
+        width: 550px;
+        margin: 0;
+        top: 0;
+        padding-top: 0;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
     }
-    aside, footer, .page-break-after {
-        page-break-after: always;
+    #info, #toc {
+        width: 275px;
+        float: left;
+        padding-bottom: 30px;
+        border-top: 1px solid black;
     }
-    #footer_slide {
-        display: initial;
+    .keywords {
+        display: none;
+    }
+    #main-content {
+        margin-left: 0;
+        margin-top: 0;
+    }
+    #main-content h1 {
+        width: 550px;
+    }
+    blockquote {
+        border: 0;
     }
 }
+
 @media screen {
     .print-only {
         display: none;

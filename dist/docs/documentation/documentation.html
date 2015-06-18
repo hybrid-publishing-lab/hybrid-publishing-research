@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <META NAME="keywords" CONTENT="documentation">
 <META NAME="description" CONTENT="On our way to a documentation/publishing system for the Hybrid Publishing Consortium and beyond">
-<META NAME="DC.title" CONTENT="Documentation system for the Hybrid Publishing Consortium and beyond">
+<META NAME="DC.title" CONTENT="Research documentation &amp;&nbsp;publishing system">
 <META NAME="DC.creator" CONTENT="Loraine Furter">
 <META NAME="DC.subject" CONTENT="documentation">
 <META NAME="DC.description.abstract" CONTENT="">
@@ -21,129 +21,150 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="../../css/all.min.css">
 <link rel="stylesheet" type="text/css" href="../../fonts.css">
-<title>Documentation &amp;publishing system for the Hybrid Publishing Consortium and beyond</title>
+<title>Research documentation &amp;&nbsp;publishing system</title>
 </head>
 <body>
-    <div class="container">
-        <div class="research-wrapper">
-        
-    <!-- HPC DOSSIERS HEADER (LOGO) -->
-    <nav class="navbar">
-        <div class="navbar-header">
-            <div class="navbar-logo">
-                <a href="/">
-                    <div style="height: 94px; width: 179px" id="randomLogo"></div>
-                    <!--<img src="../../static/animated-logo3-small.gif" alt="hpc-logo">-->
-                    <p class="logo-dossiers"><span class="logo-header-shrinked">HPC </span>DOSSIERS</p>
-                </a>
+
+    <!-- TOP BAR: HEADER LOGO (small) + TITLE (small) -->
+    <header>
+        <!-- RETURN arrow to the top of the page -->
+        <a href="/">
+            <div class="nav-return">
+                <img class="small-icon" src="../../static/menu-icon-hpc.png" alt="menu" />
+                <p>BACK</p>
             </div>
-            <!-- MAIN HEADING: PAGE TITLE -->
-            <!-- (only one h1 on the page: here) -->
-            <div id="report-title">
-                <h1>Documentation &amp;&nbsp;publishing system for the Hybrid Publishing Consortium and beyond</h1>
+        </a>
+        <h2>Research documentation &amp;&nbsp;publishing system</h2>
+    </header>
+
+    <!-- SIDE COLUMN -->
+    <aside>
+        <!-- GENERAL INFORMATION ON THE CONTENT-->
+        <div id="info">
+            <a data-toggle="collapse" href="#info-toggle">
+                <h4>INFO</h4>
+            </a>
+            <div class="collapse" id="info-toggle">
+                <!-- date and author info -->
+                <div id="info-date-authors">
+                    <div>
+                        <h5>By:</h5>
+                        <!-- use a <li></li> for each author -->
+                        <ul id="info-authors">
+                            <li>Loraine Furter</li>
+                        </ul>
+                    </div>
+                    <!--
+                    <div>
+                        <h5>Editors:</h5>
+                        <ul id="info-editors">
+                            <li>Editor Name</li>
+                        </ul>
+                    </div>-->
+                    <div>
+                        <h5>Date:</h5>
+                        <p id="info-date">2015</p>
+                    </div>
+                </div>
+                <!-- abstract (short) -->
+                <div id="short-abstract">
+                    <p>Unfolding the clever and innovative documentation &amp;publishing system developed by the Hybrid Publishing Consortium.</p>
+                </div>
             </div>
-        </div> <!-- END DIV navbar-header -->
-    </nav>
-    
-    <!-- HACK TO MAKE IT WORK FINE :)-->
-    <div id="empty-box-for-header1">
-    </div>
-    <div id="empty-box-for-header2">
-    </div>
-    
-    <!-- SIDE INFORMATION ON THE REPORT-->
-    <div id="report-info">
-        <!-- date and author info -->
-        <div id="report-date-author">
-            <p id="report-date">2015</p>
-            <p id="report-authors"><!-- use commas if several authors -->Loraine Furter</p>
         </div>
-        <!-- abstract -->
-        <div id="report-abstract">
-            <p>Unfolding the clever and innovative documentation &amp;publishing system developed by the Hybrid Publishing Consortium.</p>
-        </div>
-    </div>
-    <div class="report-content">
-        <!-- REPORT MENU -->
-        <aside>
-            <div class="TOC-wrapper">
-                <a class="scroll-collapse-menu" data-toggle="collapse" href="#toc-hidden">
-                    <img class="toc-menu" src="../../static/menu-icon-hpc.png" alt="menu" />
+        <nav>
+            <div id="toc">
+                <!-- TOC-->
+                <a data-toggle="collapse" href="#toc-toggle">
+                    <h4>CONTENTS</h4>
                 </a>
-                <div class="collapse" id="toc-hidden">
-                    <h3 class="toc-title">Contents</h3>
-                    <ul>
-                        <li><a href="#intro">Dossiers</a></li>
+                <ul class="collapse" id="toc-toggle">
+                    <li><a data-toggle="collapse" href="#toc-sub-toggle">Research documentation &amp;&nbsp;publishing system <span class="screen-only" style="vertical-align: -4px;">↳</span></a>
+                        <ul class="collapse" id="toc-sub-toggle">
+                            <li><a href="#intro">Dossiers</a></li>
                         <li><a href="#single-source-medium-specific">Single source, yet medium specific</a></li>
                         <li><a href="#html-style">HTML style guide</a></li>
                         <li><a href="#hybrid-design">Hybrid design</a></li>
                         <li><a href="#layout-rules">Layout rules</a></li>
                         <li><a href="#structure-code">Structure of the body of the html file</a></li>
                         <li><a href="#footnotes">Notes</a></li>
-                    </ul>
-                </div>
-                <!-- arrow to the top of the page -->
-                <a href="#"><p class="arrow-top">TOP <span class="arrow-style">￪</span></p></a>
-                <!-- RETURN arrow to the top of the page -->
-                <a href="/"><p class="arrow-top-return"><span class="arrow-style">￩</span> RETURN</p></a>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-        </aside>
-        <!-- HACK TO MAKE IT WORK FINE :)-->
-        <div id="empty-box-for-aside" class="hidden">
-        </div>
-        
-        <!-- REPORT -->
-        <article>
-            
+            <!-- keywords -->
+            <div class="keywords">
+                <a data-toggle="collapse" href="#keywords-toggle">
+                    <h4>KEYWORDS</h4>
+                </a>
+                <p class="collapse" id="keywords-toggle">keywords
+                </p>
+            </div>
+            <!-- arrow to the top of the page -->
+            <div class="nav-more">
+                <a href="#">
+                    <p>TOP</p>
+                </a>
+                <a href="javascript:window.print()">
+                    <p>PRINT/PDF</p>
+                </a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <section id="main-content"><!-- here we can precise what kind of document it is: text, presentation (slides), list, collection of images, etc… -->
+        <h1>Research documentation &amp;&nbsp;publishing system</h1>
+
             <section>
                 <h2 id="intro">Dossiers</h2>
                 <p>The Hybrid Publishing Consortium’s Dossiers are composed of a selection and arrangement of 500-2000 words working papers/reports, plus an introduction explaining the composition of the dossier and the articulation between its different parts (reports). The reports can be commissioned texts as well as pre-existing ones, they are multi-format: lists, essays, notes, slide shows, etc.</p>
                 <p>In order to be able to publish a report in several Dossiers, the system for editing/organizing/archiving the reports needs to be flexible.</p>
                 <p>The reports will be stored in a <a href="https://github.com/consortium/hybrid-publishing-research">GitHub repository</a>, each one in a folder composed of the content in an html file, a folder for images and other documents, and a css file (when necessary).</p>
             </section>
-            
+
             <section>
                 <h2>Diagram</h2>
                 <figure>
-                    <img src="assets/img/documentation.png" style="max-width: 1300px;">
+                    <img src="assets/img/documentation.png">
                     <figcaption>Caption: The whole universe</figcaption>
-                </figure> 
+                </figure>
             </section>
-            
+
             <section>
                 <h2 id="single-source-medium-specific">Single source, yet medium specific</h2>
                 <p>To tune parts of the reports in relation with a specific medium (for instance only for print), we can use specific class names (convention needed for that) that will then be displayed or not depending on the format.</p>
             </section>
-            
+
             <section>
                 <h2 id="html-style">HTML style guide</h2>
                 <p>If we want ePub-ready files, we should write in a compatible way (ePub is XHTML). A solution for that is <a href="http://dev.w3.org/html5/html-polyglot/">Polyglot Markup</a>. We could also run a validator (with <a href="https://github.com/svenkreiss/html5validator">HTML5 Validator</a>, that can be run with <a href="https://travis-ci.org/">Travis CI</a>), which validates the code that is pushed on GitHub. And use transpect to convert HTML5 to XHTML.</p>
             </section>
-            
+
             <section>
                 <h2 id="hybrid-design">Hybrid design</h2>
                 <p>The HPC documentation and publications’ design is inspired by the following notions: multi-format, hybridity, flexibility, multiplicity, transformation. It consists of a design system, a series of guidelines, responsive and media-specific CSS styles, and a set of Free and Open source materials and tools, that can be modified to fit with specific uses. In a Free and Open Source spirit, it promotes a wide, free and shared distribution of knowledge. It is thus taking into account both accessible and high-costs formats, big and small screens, PDFs for A4 personal printer as well as Offset-ready files…</p>
             </section>
-            
+
             <section>
                 <h2 id="layout-rules">Layout rules</h2>
                 <figure>
-                    <img src="assets/img/LAYOUT-rules.png" alt="hpc-logo" style="max-width: 1000px;" class="frame">
+                    <img src="assets/img/LAYOUT-rules.png" alt="hpc-logo" class="frame">
                     <figcaption>Hybrid and multi-format layout rules!</figcaption>
                 </figure>
                 <p>Two more columns with slideshows and poster-like documents need to be integrated.</p>
             </section>
-            
+
             <section>
                 <h2 id="structure-code">Structure of the body of the html file</h2>
                 <pre><code>
 &lt;body&gt;
     &lt;!-- FUTURE SCENARIO: THIS WILL BE PART OF THE TEMPLATE: --&gt;
     &lt;!-- FUTURE SCENARIO: it will automatically get the right infos from the dossiers json file(s) --&gt;
-    
+
     &lt;div class="container"&gt;
         &lt;div class="research-wrapper"&gt;
-        
+
     &lt;!-- HPC DOSSIERS HEADER (LOGO) --&gt;
     &lt;nav class="navbar"&gt;
         &lt;div class="navbar-header"&gt;
@@ -161,13 +182,13 @@
             &lt;/div&gt;
         &lt;/div&gt; &lt;!-- END DIV navbar-header --&gt;
     &lt;/nav&gt;
-    
+
     &lt;!-- HACK TO MAKE IT WORK FINE :)--&gt;
     &lt;div id="empty-box-for-header1"&gt;
     &lt;/div&gt;
     &lt;div id="empty-box-for-header2"&gt;
     &lt;/div&gt;
-    
+
     &lt;!-- SIDE INFORMATION ON THE REPORT--&gt;
     &lt;div id="report-info"&gt;
         &lt;!-- date and author info --&gt;
@@ -204,9 +225,9 @@
         &lt;!-- HACK TO MAKE IT WORK FINE :)--&gt;
         &lt;div id="empty-box-for-aside" class="hidden"&gt;
         &lt;/div&gt;
-        
+
         &lt;!-- FUTURE SCENARIO: HERE THE TEMPLATE WILL IMPORT THE DIFFERENT  --&gt;
-        
+
         &lt;!-- REPORT --&gt;
         &lt;article&gt;
             &lt;!-- W3C's HTML5: "A section is a thematic grouping of content" --&gt;
@@ -216,7 +237,7 @@
                 &lt;p&gt;Content of the paragraph. The first paragraph of a section has no indent. A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a group of sentences with one topic. It is also a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of more than one sentence. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose. (Wikipedia)&lt;/p&gt;
                 &lt;p&gt;Content of the paragraph: the paragraphs following the first paragraph of a section have an indent.&lt;/p&gt;
             &lt;/section&gt;
-            
+
             &lt;section&gt;
                 &lt;h2 id="2"&gt;Second subheading&lt;/h2&gt;
                 &lt;!-- A FOOTNOTE! --&gt;
@@ -224,9 +245,9 @@
                 &lt;figure&gt;
                     &lt;img src="../../static/hybrid-publishing-consortium-logo.png" alt="hpc-logo"&gt;
                     &lt;figcaption&gt;Caption of the image&lt;/figcaption&gt;
-                &lt;/figure&gt; 
+                &lt;/figure&gt;
             &lt;/section&gt;
-            
+
             &lt;section&gt;
                 &lt;h2 id="3"&gt;Third subheading&lt;/h2&gt;
                 &lt;p&gt;Small images (three in the text width on big screens) next to each other&lt;/p&gt;
@@ -234,7 +255,7 @@
                     &lt;figure&gt;
                         &lt;img src="../../static/hybrid-publishing-consortium-logo.png" alt="hpc-logo"&gt;
                         &lt;figcaption&gt;Caption of the image&lt;/figcaption&gt;
-                    &lt;/figure&gt; 
+                    &lt;/figure&gt;
                     &lt;figure&gt;
                         &lt;img src="../../static/hybrid-publishing-consortium-logo.png" alt="hpc-logo"&gt;
                         &lt;figcaption&gt;Caption of the image&lt;/figcaption&gt;
@@ -249,22 +270,22 @@
                     &lt;figure&gt;
                         &lt;img src="../../static/hybrid-publishing-consortium-logo.png" alt="hpc-logo"&gt;
                         &lt;figcaption&gt;Caption of the image&lt;/figcaption&gt;
-                    &lt;/figure&gt; 
+                    &lt;/figure&gt;
                     &lt;figure&gt;
                         &lt;img src="../../static/hybrid-publishing-consortium-logo.png" alt="hpc-logo"&gt;
                         &lt;figcaption&gt;Caption of the image&lt;/figcaption&gt;
-                    &lt;/figure&gt; 
+                    &lt;/figure&gt;
                 &lt;/div&gt;
             &lt;/section&gt;
-            
+
             &lt;section id="footnotes"&gt;
                 &lt;h2&gt;Notes:&lt;/h2&gt;
                 &lt;p id="fn1"&gt;&lt;a href="#r1"&gt;[1]&lt;/a&gt; How awsome is that?&lt;/p&gt;
             &lt;/section&gt;
         &lt;/article&gt;&lt;!-- END REPORT --&gt;
-    
+
     &lt;/div&gt;&lt;!-- end div report-content --&gt;
-    
+
     &lt;!-- HPC DOSSIERS FOOTER --&gt;
     &lt;footer&gt;
         &lt;a data-toggle="collapse" href="#footer-hidden"&gt;
@@ -284,14 +305,14 @@
     &lt;/footer&gt;
     &lt;/div&gt;&lt;!-- end div research-wrapper --&gt;
     &lt;/div&gt;&lt;!-- end div container --&gt;
-    
+
     &lt;!-- CALLS THE JS --&gt;
     &lt;script src="../../js/all.min.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
                 </code></pre>
                 <!-- END OF THE XMP CODE -->
             </section>
-            
+
             <section>
                 <h2>Free and Open Source fonts</h2>
                 <ul>
@@ -306,14 +327,14 @@
                     <li class="font-lato">Lato is a more complete family of fonts with many weights and italics, designed by Łukasz Dziedzic. It is described as “Male and female, serious but friendly. With the feeling of the Summer”… <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi%26id=OFL" target="_blank">OFL</a></li>
                 </ul>
             </section>
-            
+
             <section>
                 <h2>Icons for the research</h2>
                 <div class="clear one-column height100">
                     <figure>
                         <img src="assets/img/output-PDF-A4.png" alt="output PDF A4">
                         <figcaption>output-PDF-A4.png</figcaption>
-                    </figure> 
+                    </figure>
                     <figure>
                         <img src="assets/img/output-website.png" alt="output website">
                         <figcaption>output-website.png</figcaption>
@@ -321,7 +342,7 @@
                     <figure>
                         <img src="assets/img/output-tablets-ePub3.png" alt="output ePub3">
                         <figcaption>output-tablets-ePub3.png</figcaption>
-                    </figure> 
+                    </figure>
                     <figure>
                         <img src="assets/img/output-web-app.png" alt="output ePub3">
                         <figcaption>output-tablets-ePub3.png</figcaption>
@@ -337,11 +358,11 @@
                     <figure>
                         <img src="assets/img/source-images.png" alt="source images">
                         <figcaption>source-images.png</figcaption>
-                    </figure> 
+                    </figure>
                     <figure>
                         <img src="assets/img/source-text.png" alt="source text">
                         <figcaption>source-text.png</figcaption>
-                    </figure> 
+                    </figure>
                     <figure>
                         <img src="assets/img/source-video.png" alt="source video">
                         <figcaption>source-video.png</figcaption>
@@ -349,18 +370,18 @@
                     <figure>
                         <img src="assets/img/tools-edit-CMS.png" alt="tools CMS">
                         <figcaption>tools-edit-CMS.png</figcaption>
-                    </figure> 
+                    </figure>
                     <figure>
                         <img src="assets/img/tools-edit-html.png" alt="tools HTML">
                         <figcaption>tools-edit-html.png</figcaption>
-                    </figure> 
+                    </figure>
                     <figure>
                         <img src="assets/img/tools-page-by-page-layout.png" alt="tools page-by-page layout">
                         <figcaption>tools-page-by-page-layout.png</figcaption>
-                    </figure> 
+                    </figure>
                 </div>
             </section>
-            
+
             <section>
                 <h2>Icons for the distribution (download buttons)</h2>
                 <p>When several formats are released in an open context (download button on a web page for instance VS through proprietary software that limit the possibility of formats and reading devices), confusion often happens: on which tablet goes which format?</p>
@@ -393,7 +414,7 @@
                 </div>
                 <p></p>
                 <div class="img-left">
-                    
+
                     <figure>
                         <img class="frame" src="assets/img/output-download.png" alt="research icons">
                         <figcaption>research of icons with file names for the different file formats</figcaption>
@@ -404,7 +425,7 @@
                     </figure>
                 </div>
             </section>
-            
+
             <section>
                 <h2>HYBRID LOGOS</h2>
                 <p>A tweak of the HPC logo with different fonts, presented here as an animated GIF, but it could be fixed and generated randomly every time the page is refreshed.</p>
@@ -429,7 +450,7 @@
                     </figure>
                 </div>
             </section>
-            
+
             <section>
                 <h2>Special features</h2>
                 <p>The style library will include many features for various uses and types of reports.</p>
@@ -450,45 +471,42 @@
                     </ul>
                 <p>And many more features to come!</p>
             </section>
-            
+
             <section>
                 <h2>TO DO</h2>
                 <ul>
                     <li>Interface for the dossiers with remixing options. (for now only the reports are displayed)</li>
                     <li>Integration of slide shows.</li>
-                </ul> 
+                </ul>
             </section>
-        </article><!-- END REPORT -->
-    
-    </div><!-- end div report-content -->
-    
-    <!-- HPC DOSSIERS FOOTER -->
+        </section>
+
+    <!-- FOOTER -->
     <footer>
         <a data-toggle="collapse" href="#footer-hidden">
           <p class="more">INFO</p>
         </a>
-        <div class="footer-logos">
-            <img src="../../static/EFRE-logo.png" alt="Europa">
-            <img src="../../static/EuropafoerdertNds_farbig.png" alt="Niedersachsen">
-            <img src="../../static/logo_leuphana-2.png" alt="Leuphana">
-        </div>
+
         <div class="collapse" id="footer-hidden">
-            <p>Contact: mail AT consortium.io</p>
-            <p><a href="http://www.leuphana.de/en/site-notice-leuphana.html">Imprint</a></p>
-            <p>© The authors | <a href="https://creativecommons.org/licenses/by/3.0/de/">CC BY 3.0 DE</a></p>
-            <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.</p>
+            <p style="vertical-align: 4px; margin-top: -24px; margin-left: 52px; margin-bottom: 3px;">↘</p>
+            <div style="float: left; width: 300px;">
+                    <div style="height: 94px; margin-top: 20px; background-repeat: no-repeat;" id="randomLogo"></div>
+                    <div class="footer-logos" style="margin-bottom: 30px;">
+                        <img src="../../static/EFRE-logo.png" alt="Europa">
+                        <img src="../../static/EuropafoerdertNds_farbig.png" alt="Niedersachsen">
+                        <img src="../../static/logo_leuphana-2.png" alt="Leuphana">
+                    </div>
+                </div>
+                <p style="margin-top: 10px;">Contact: mail AT consortium.io</p>
+                <p><a href="http://www.leuphana.de/en/site-notice-leuphana.html" target="_blank">Imprint</a></p>
+                <p>© The authors | <a href="https://creativecommons.org/licenses/by/3.0/de/" target="_blank">CC BY 3.0 DE</a></p>
+                <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.</p>
+
         </div>
     </footer>
-    </div><!-- end div research-wrapper -->
-    </div><!-- end div container -->
-    
+
     <!-- CALLS THE JS -->
     <script src="../../js/all.min.js"></script>
-    <script src="http://imakewebthings.com/jquery-waypoints/waypoints.min.js"></script>
-    <script>
-        $('.TOC-wrapper').waypoint(function() {
-        $("body").css("background-color","white");
-    });
-    </script>
+
 </body>
 </html>

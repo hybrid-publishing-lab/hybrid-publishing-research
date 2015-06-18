@@ -32,159 +32,162 @@
     <link rel="shortcut icon" href="../../favicon.ico" />
 </head>
 <body>
-    
-    
-    <div class="container">
-        <div class="research-wrapper">
-        
-    <!-- HPC DOSSIERS HEADER (LOGO) -->
-    <nav class="navbar">
-        <div class="navbar-header">
-            <div class="navbar-logo">
-                <a href="/">
-                    <div style="height: 94px; width: 179px" id="randomLogo"></div>
-                    <!--<img src="../../static/animated-logo3-small.gif" alt="hpc-logo">-->
-                    <p class="logo-dossiers"><span class="logo-header-shrinked">HPC </span>DOSSIERS</p>
-                </a>
+    <!-- TOP BAR: HEADER LOGO (small) + TITLE (small) -->
+    <header>
+        <!-- RETURN arrow to the top of the page -->
+        <a href="/">
+            <div class="nav-return">
+                <img class="small-icon" src="../../static/menu-icon-hpc.png" alt="menu" />
+                <p>BACK</p>
             </div>
-            <!-- MAIN HEADING: PAGE TITLE -->
-            <!-- (only one h1 on the page: here) -->
-            <div id="report-title">
-                <h1>A Publication Taxonomy</h1>
-            </div>
-        </div> <!-- END DIV navbar-header -->
-    </nav>
-    
-    <!-- HACK TO MAKE IT WORK FINE :)-->
-    <div id="empty-box-for-header1">
-    </div>
-    <div id="empty-box-for-header2">
-    </div>
-    
-    <!-- SIDE INFORMATION ON THE REPORT-->
-    <div id="report-info">
-        <!-- abstract -->
-        <div id="report-abstract">
-            <p>The abstract</p>
-        </div>
-        <!-- date and author info -->
-        <div id="report-date-author">
-            <p id="report-date">2015</p>
-            <p id="report-authors"><!-- use commas if several authors -->The Authors</p>
-        </div>
-    </div>
-    <div class="report-content">
-        <!-- REPORT MENU -->
-        <aside>
-            <div class="TOC-wrapper">
-                <a class="scroll-collapse-menu" data-toggle="collapse" href="#toc-hidden">
-                    <img class="toc-menu" src="../../static/menu-icon-hpc.png" alt="menu" />
-                </a>
-                <div class="collapse" id="toc-hidden">
-                    <h3 class="toc-title">Contents</h3>
-                    <ul>
-                        <li><a href="#1">First subheading</a></li>
-                        <li><a href="#2">Second subheading</a></li>
-                        <li><a href="#3">Third subheading</a></li>
-                    </ul>
+        </a>
+        <h2>A Publication Taxonomy</h2>
+    </header>
+
+    <!-- SIDE COLUMN -->
+    <aside>
+        <!-- GENERAL INFORMATION ON THE CONTENT-->
+        <div id="info">
+            <a data-toggle="collapse" href="#info-toggle">
+                <h4>INFO</h4>
+            </a>
+            <div class="collapse" id="info-toggle">
+                <!-- date and author info -->
+                <div id="info-date-authors">
+                    <div>
+                        <h5>By:</h5>
+                        <!-- use a <li></li> for each author -->
+                        <ul id="info-authors">
+                            <li>Author Name</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Editors:</h5>
+                        <!-- use a <li></li> for each editor -->
+                        <ul id="info-editors">
+                            <li>Editor Name</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Date:</h5>
+                        <p id="info-date">2015</p>
+                    </div>
                 </div>
-                <!-- arrow to the top of the page -->
-                <a href="#"><p class="arrow-top">TOP <span class="arrow-style">￪</span></p></a>
-                <!-- RETURN arrow to the top of the page -->
-                <a href="/"><p class="arrow-top-return"><span class="arrow-style">￩</span> RETURN</p></a>
+                <!-- abstract (short) -->
+                <div id="short-abstract">
+                    <p>Short abstract</p>
+                </div>
             </div>
-        </aside>
-        <!-- HACK TO MAKE IT WORK FINE :)-->
-        <div id="empty-box-for-aside" class="hidden">
         </div>
-        
-        <!-- FUTURE SCENARIO: HERE THE TEMPLATE WILL IMPORT THE DIFFERENT  -->
-        
-        <!-- REPORT -->
-        <article>
-            <!-- W3C's HTML5: "A section is a thematic grouping of content" -->
-            <!-- Sections can be repeated -->
+        <nav>
+            <div id="toc">
+                <!-- TOC-->
+                <a data-toggle="collapse" href="#toc-toggle">
+                    <h4>CONTENTS</h4>
+                </a>
+                <ul class="collapse" id="toc-toggle">
+                    <li><a data-toggle="collapse" href="#toc-sub-toggle">A Publication Taxonomy <span class="screen-only" style="vertical-align: -4px;">↳</span></a>
+                        <ul class="collapse" id="toc-sub-toggle">
+                            <li><a href="#first-subheading">First subheading</a></li>
+                            <li><a href="#second-subheading">Second subheading</a></li>
+                            <li><a href="#third-subheading">Third subheading</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- arrow to the top of the page -->
+            <div class="nav-more">
+                <a href="#">
+                    <p>TOP</p>
+                </a>
+                <a href="javascript:window.print()">
+                    <p>PRINT/PDF</p>
+                </a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <section id="main-content"><!-- here we can precise what kind of document it is: text, presentation (slides), list, collection of images, etc… -->
+        <h1>A Publication Taxonomy</h1>
             <section>
-                <h2 id="1">First subheading</h2>
+                <!-- SUBHEADING -->
+                <h2 id="first-subheading">First subheading</h2>
                 <p>Content of the paragraph. The first paragraph of a section has no indent. A paragraph (from the Ancient Greek παράγραφος paragraphos, "to write beside" or "written beside") is a group of sentences with one topic. It is also a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of more than one sentence. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose. (Wikipedia)</p>
                 <p>Content of the paragraph: the paragraphs following the first paragraph of a section have an indent.</p>
             </section>
-            
+
             <section>
-                <h2 id="2">Second subheading</h2>
-                <!-- A FOOTNOTE! -->
-                <p>Here we show an image<sup><a href="#fn1" id="r1">[1]</a></sup>:</p>
+                <h2 id="second-subheading">Second subheading</h2>
+                <p>Here we show an image <!-- A FOOTNOTE! --><sup><a href="#fn1" id="r1">[1]</a></sup>:</p>
                 <figure>
-                    <img src="../../static/hybrid-publishing-consortium-logo.png" alt="hpc-logo">
+                    <img src="../../static/hybrid-publishing-consortium-logo.png" alt="hpc-logo" />
                     <figcaption>Caption of the image</figcaption>
-                </figure> 
+                </figure>
             </section>
-            
+
             <section>
-                <h2 id="3">Third subheading</h2>
+                <h2 id="third-subheading">Third subheading</h2>
                 <p>Small images (three in the text width on big screens) next to each other</p>
                 <div class="clear one-column">
                     <figure>
-                        <img src="../../static/hybrid-publishing-consortium-logo.png" alt="hpc-logo">
-                        <figcaption>Caption of the image</figcaption>
-                    </figure> 
-                    <figure>
-                        <img src="../../static/hybrid-publishing-consortium-logo.png" alt="hpc-logo">
+                        <img src="../../static/hybrid-publishing-consortium-logo.png" alt="hpc-logo" />
                         <figcaption>Caption of the image</figcaption>
                     </figure>
                     <figure>
-                        <img src="../../static/hybrid-publishing-consortium-logo.png" alt="hpc-logo">
+                        <img src="../../static/hybrid-publishing-consortium-logo.png" alt="hpc-logo" />
+                        <figcaption>Caption of the image</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../../static/hybrid-publishing-consortium-logo.png" alt="hpc-logo" />
                         <figcaption>Caption of the image</figcaption>
                     </figure>
                 </div>
                 <p>Small images, height of 100px, on top of each other, aligned on the left.</p>
                 <div class="height100 img-left">
                     <figure>
-                        <img src="../../static/hybrid-publishing-consortium-logo.png" alt="hpc-logo">
+                        <img src="../../static/hybrid-publishing-consortium-logo.png" alt="hpc-logo" />
                         <figcaption>Caption of the image</figcaption>
-                    </figure> 
+                    </figure>
                     <figure>
-                        <img src="../../static/hybrid-publishing-consortium-logo.png" alt="hpc-logo">
+                        <img src="../../static/hybrid-publishing-consortium-logo.png" alt="hpc-logo" />
                         <figcaption>Caption of the image</figcaption>
-                    </figure> 
+                    </figure>
                 </div>
             </section>
-            
+
             <section id="footnotes">
                 <h2>Notes:</h2>
                 <p id="fn1"><a href="#r1">[1]</a> How awsome is that?</p>
             </section>
-        </article><!-- END REPORT -->
-    
-    </div><!-- end div report-content -->
-    
-    <!-- HPC DOSSIERS FOOTER -->
+    </section>
+
+    <!-- FOOTER -->
     <footer>
         <a data-toggle="collapse" href="#footer-hidden">
           <p class="more">INFO</p>
         </a>
-        <div class="footer-logos">
-            <img src="../../static/EFRE-logo.png" alt="Europa">
-            <img src="../../static/EuropafoerdertNds_farbig.png" alt="Niedersachsen">
-            <img src="../../static/logo_leuphana-2.png" alt="Leuphana">
-        </div>
+
         <div class="collapse" id="footer-hidden">
-            <p>Contact: mail AT consortium.io</p>
-            <p><a href="http://www.leuphana.de/en/site-notice-leuphana.html">Imprint</a></p>
-            <p>© The authors | <a href="https://creativecommons.org/licenses/by/3.0/de/">CC BY 3.0 DE</a></p>
-            <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.</p>
+            <p style="vertical-align: 4px; margin-top: -24px; margin-left: 52px; margin-bottom: 3px;">↘</p>
+            <div style="float: left; width: 300px;">
+                    <div style="height: 94px; margin-top: 20px; background-repeat: no-repeat;" id="randomLogo"></div>
+                    <div class="footer-logos" style="margin-bottom: 30px;">
+                        <img src="../../static/EFRE-logo.png" alt="Europa">
+                        <img src="../../static/EuropafoerdertNds_farbig.png" alt="Niedersachsen">
+                        <img src="../../static/logo_leuphana-2.png" alt="Leuphana">
+                    </div>
+                </div>
+                <p style="margin-top: 10px;">Contact: mail AT consortium.io</p>
+                <p><a href="http://www.leuphana.de/en/site-notice-leuphana.html" target="_blank">Imprint</a></p>
+                <p>© The authors | <a href="https://creativecommons.org/licenses/by/3.0/de/" target="_blank">CC BY 3.0 DE</a></p>
+                <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.</p>
+
         </div>
     </footer>
-    </div><!-- end div research-wrapper -->
-    </div><!-- end div container -->
-    
+
     <!-- CALLS THE JS -->
     <script src="../../js/all.min.js"></script>
-    <script src="http://imakewebthings.com/jquery-waypoints/waypoints.min.js"></script>
-    <script>
-    $('.TOC-wrapper').waypoint(function() {
-    $("body").css("background-color","white");
-});
-</script>
+
 </body>
 </html>
