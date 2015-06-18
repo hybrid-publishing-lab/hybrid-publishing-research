@@ -232,6 +232,38 @@ blockquote:before {
     display: block;
 }
 
+.two-columns {
+    clear: both;
+}
+.two-columns .one-column {
+    width: 350px;
+    float: left;
+    margin-right: 50px;
+}
+.two-columns .one-column:last-child {
+    margin-right: 0px;
+}
+.two-columns .one-column ul {
+    padding-left: 30px;
+}
+.three-columns {
+    clear: both;
+}
+.three-columns p, .three-columns section h3, .three-columns section h4 {
+    text-indent: 0;
+    margin-left: 0!important;
+}
+.three-columns section h5 {
+    text-indent: 0;
+    margin-left: 20px!important;
+    margin-top: 2px!important;
+}
+.three-columns .one-column, .three-columns section {
+    width: 240px;
+    float: left;
+    margin: 9px;
+    overflow: hidden;
+}
 
 /************  OPTIONS FOR IMAGES LAYOUT ************/
 figure {
@@ -241,15 +273,15 @@ img {
     margin: 0 0 10px 0;
     max-width: 550px;
 }
-.one-column figure {
+.img-three-columns figure {
     width: 240px;
     float: left;
     margin-right: 15px;
 }
-.one-column figure img {
+.img-three-columns figure img {
     width: 240px;
 }
-.two-columns figure img {
+.img-two-columns figure img {
     width: 550px;
 }
 /* initial image size */
@@ -397,14 +429,29 @@ section p + p {
     padding: 15px;
     width: 825px;
 }
-#main-content h4 {
-    margin-top: 20px;
-}
-section h2 {
-    font-size: 18px;
+#main-content h2 {
+    font-size: 26px;
+    font-family: "REGLO";
+    margin-left: 6%;
     padding-top: 60px;
-    border-bottom: 1px solid #000;
-    display: inline-block;
+    margin-bottom: 20px;
+    clear: both;
+}
+#main-content h3 {
+    font-family: "REGLO";
+    margin-top: 20px;
+    margin-left: 10%;
+}
+#main-content h4 {
+    font-family: "REGLO";
+    margin-top: 20px;
+    margin-left: 14%;
+    text-transform: none;
+}
+#main-content h5 {
+    font-family: "REGLO";
+    margin-top: 20px;
+    margin-left: 18%;
 }
 /* FOOTER */
 footer {
@@ -553,6 +600,9 @@ footer.main-menu-footer {
     width: 100%;
     border-right: 0;
 }
+
+
+/* TAXONOMY */
 
 
 /* RESPONSIVE STYLESHEET */
