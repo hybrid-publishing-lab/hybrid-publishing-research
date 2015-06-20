@@ -84,9 +84,6 @@
                 <ul class="collapse" id="toc-toggle">
                     <li><a data-toggle="collapse" href="#toc-sub-toggle">ᙠooʞ ƚo ƚʜɘ ᖷuƚuɿɘ <i>ɒ mɒnifɘƨƚo for book libɘɿɒƚio∩</i> <span class="screen-only" style="vertical-align: -4px;">↳</span></a>
                         <ul class="collapse" id="toc-sub-toggle">
-                            <li><a href="#cover">Cover</a></li>
-                            <li><a href="#title_page">Title Page</a></li>
-                            <li><a href="#copyright_page">Copyright Page</a></li>
                             <li><a href="#abstract">Abstract</a></li>
                             <li><a href="#introduction">1. Introduction</a></li>
                             <li><a href="#broken_workflows">2. Broken Workflows</a></li>
@@ -97,8 +94,9 @@
                             <li><a href="#the_plan">7. The Plan</a></li>
                             <li><a href="#our_research">8. Our Research</a></li>
                             <li><a href="#conclusion">9. Conclusion</a></li>
-                            <li><a href="#references">References</a></li>
+                            <li><a href="#footnotes">References</a></li>
                             <li><a href="#acknowledgements">Acknowledgements</a></li>
+                            <li><a href="#copyright_page">Copyright Page</a></li>
                             <li><a href="#metadata">Metadata</a></li>
                         </ul>
                     </li>
@@ -129,10 +127,10 @@
     <section id="main-content"><!-- here we can precise what kind of document it is: text, presentation (slides), list, collection of images, etc… -->
         <h1>ᙠooʞ ƚo ƚʜɘ ᖷuƚuɿɘ<br />– ɒ mɒnifɘƨƚo for book libɘɿɒƚio∩</h1>
             <section>
-                <h2>Abstract</h2>
+                <h2 id="abstract">Abstract</h2>
                     <p>The Book Liberation Manifesto is an exploration of publishing outside of current corporate constraints and beyond the confines of book piracy. We believe that knowledge should be in free circulation to benefit humankind, which means an equitable and vibrant economy to support publishing, instead of the prevailing capitalist hand-me-down system of Sisyphean economic sustainability. Readers and books have been forced into pirate libraries, while sales channels have been monopolised by the big Internet giants which exact extortionate fees from publishers. We have three proposals. First, publications should be free-at-the-point-of-reading under a variety of open intellectual property regimes. Second, they should become fully digital — in order to facilitate ready reuse, distribution, algorithmic and computational use. Finally, Open Source software for publishing should be treated as public infrastructure, with sustained research and investment. The result of such robust infrastructures will mean lower costs for manufacturing and faster publishing lifecycles, so that publishers and publics will be more readily able to afford to invent new futures.</p>
 <p>For more information on the Hybrid Publishing Consortium see <a href="http://consortium.io">http://consortium.io</a></p>
-<p>Edition 1.0 30 May 2015 SHA: 53ebf37188 (short) 53ebf37188325b0787570d6bf74dc7dc9deec643 (long) Print ISBN 9781906496364 DOI <a href="http://dx.doi.org/10.5281/zenodo.18166">http://dx.doi.org/10.5281/zenodo.18166</a> <a href="assets/pdf/9781906496364-web.pdf">PDF download</a> Buy online <a href="http://www.amazon.com/Book-Future-Liberation-Publishing-Consortium/dp/1906496366/ref=sr_1_1?ie=UTF8&amp;qid=1427057856&amp;sr=8-1&amp;keywords=9781906496364">US</a> <a href="http://www.amazon.co.uk/Book-Future-Liberation-Publishing-Consortium/dp/1906496366/ref=sr_1_1?ie=UTF8&amp;qid=1427057745&amp;sr=8-1&amp;keywords=9781906496364">UK</a> <a href="http://www.amazon.de/Book-Future-Liberation-Publishing-Consortium/dp/1906496366/ref=sr_1_1?ie=UTF8&amp;qid=1427057951&amp;sr=8-1&amp;keywords=9781906496364">EURO</a> <a href="#metadata">Metadata</a></p>
+<p><a href="https://github.com/consortium/hybrid-publishing-research/tree/master/dist/docs/book_liberation_manifesto">Source code</a>. Edition 1.0 30 May 2015, SHA: 53ebf37188 (short) 53ebf37188325b0787570d6bf74dc7dc9deec643 (long). Print ISBN 9781906496364 DOI <a href="http://dx.doi.org/10.5281/zenodo.18166">http://dx.doi.org/10.5281/zenodo.18166</a>. <a href="assets/pdf/9781906496364-web.pdf">PDF download</a>. Buy online <a href="http://www.amazon.com/Book-Future-Liberation-Publishing-Consortium/dp/1906496366/ref=sr_1_1?ie=UTF8&amp;qid=1427057856&amp;sr=8-1&amp;keywords=9781906496364">US</a> <a href="http://www.amazon.co.uk/Book-Future-Liberation-Publishing-Consortium/dp/1906496366/ref=sr_1_1?ie=UTF8&amp;qid=1427057745&amp;sr=8-1&amp;keywords=9781906496364">UK</a> <a href="http://www.amazon.de/Book-Future-Liberation-Publishing-Consortium/dp/1906496366/ref=sr_1_1?ie=UTF8&amp;qid=1427057951&amp;sr=8-1&amp;keywords=9781906496364">EURO</a>. <a href="#metadata">Metadata</a>.</p>
     </section>
     <section>
 <h2><a id="introduction">1. Introduction</a></h2>
@@ -239,10 +237,10 @@
 <p>Our research was initially outlined in a research plan in 2012. This runs until 2015 and will then be reviewed with new priorities in order to run for a further three years. The 2012 research plan can be found here: Dynamic Publishing–New Platforms, New Readers! <a href="http://www.consortium.io/research-plan">http://www.consortium.io/research-plan</a></p>
 <h2>Rapid Prototypes</h2>
 <h3>Infrastructure</h3>
-<p><b>TypeSetr</b> – is an Open Source publishing software component for multi-format document conversion. It produces the following formats with automatic templated design layouts and format conversion: EPUB 3.0, HTML5, PDF and others.</p>
-<p>Code - <a href="https://github.com/consortium/typesetr-converter">https://github.com/consortium/typesetr-converter</a></p>
-<p>Demo - <a href="https://typesetr.consortium.io">https://typesetr.consortium.io</a></p>
-<p><b>A-machine</b> – is a software ecology supplied by different providers to complete the major steps in the publishing workflow and connect our existing document structuring work. This includes: meta description frameworks; layout template designs; distribution and sales; Open Access and OER formatting; validation etc. <a href="http://a-machine.net">http://a-machine.net</a></p>
+<ul><li><b>TypeSetr</b> – is an Open Source publishing software component for multi-format document conversion. It produces the following formats with automatic templated design layouts and format conversion: EPUB 3.0, HTML5, PDF and others.</li>
+<li>Code - <a href="https://github.com/consortium/typesetr-converter">https://github.com/consortium/typesetr-converter</a></li>
+<li>Demo - <a href="https://typesetr.consortium.io">https://typesetr.consortium.io</a></li>
+<li><b>A-machine</b> – is a software ecology supplied by different providers to complete the major steps in the publishing workflow and connect our existing document structuring work. This includes: meta description frameworks; layout template designs; distribution and sales; Open Access and OER formatting; validation etc. <a href="http://a-machine.net">http://a-machine.net</a></li></ul>
 <h3>Publisher Prototypes</h3>
 <ul><li><b>Merve Remix</b> – in which we digitised Merve Verlag’s back catalogue of 150 titles, and are making it available online for remixing. <a href="http://merve.consortium.io/">http://merve.consortium.io/</a> | <a href="http://www.consortium.io/merve-remix">http://www.consortium.io/merve-remix</a></li>
 <li><b>Museums and Post-digital Publishing</b> – with Fotomuseum Winterthur, and the publication <i>Manifeste!</i> In which we examine how the high quality museum catalogue can be digitised and taken into open learning and other contexts. <a href="http://www.consortium.io/fotomuseum">http://www.consortium.io/fotomuseum</a></li>
@@ -270,7 +268,7 @@
 <blockquote>‘The best way to predict the future is to invent it.’<br>Alan Kay (1971), at a meeting of PARC, <i>Palo Alto Research Center</i>.<sup><a href="#fn20" id="r20">20</a></sup></blockquote>
 </section>
             <section id="footnotes" class="no-indent">
-                <h2>Notes:</h2>
+                <h2>References:</h2>
                 <p id="fn1"><a href="#r1">[1]</a> European Commission, Joint Research Centre. Institute for Prospective Technological Studies <a href="http://is.jrc.ec.europa.eu/pages/ISG/documents/BookReportwithcovers.pdf">http://is.jrc.ec.europa.eu/pages/ISG/documents/BookReportwithcovers.pdf</a></p>
 <p id="fn2"><a href="#r2">[2]</a> Open Web Index <a href="http://openwebindex.eu">http://openwebindex.eu</a></p>
 <p id="fn3"><a href="#r3">[3]</a> Tesseract OCR <a href="https://code.google.com/p/tesseract-ocr/">https://code.google.com/p/tesseract-ocr/</a></p>
@@ -285,9 +283,9 @@
 <p id="fn12"><a href="#r12">[12]</a> Open Invention Network (OIN) <a href="http://www.openinventionnetwork.com/">http://www.openinventionnetwork.com/</a></p>
 <p id="fn13"><a href="#r13">[13]</a> “Budapest Open Access Initiative” 2002 <a href="http://www.budapestopenaccessinitiative.org/read">http://www.budapestopenaccessinitiative.org/read</a></p>
 <p id="fn14"><a href="#r14">[14]</a> Accessibility, sustainability, excellence: how to expand access to research publications (aka Finch Report) <a href="http://www.researchinfonet.org/publish/finch/">http://www.researchinfonet.org/publish/finch/</a> 2012 UK OA policy report</p>
-<p id="fn15"><a href="#r15">[15]</a> Aaron's Laws - Law and Justice in a Digital Age. Lawrence Lessig marked his appointment as Roy L. Furman Professor of Law and Leadership at Harvard Law School with a lecture titled "Aaron's Laws: Law and Justice in a Digital Age." The lecture honored the memory and work of Aaron Swartz, the programmer and activist who took his own life on Jan. 11, 2013 at the age of 26. A full transcript can be found here <a href="http://www.correntewire.com/transcript_lawrence_lessig_on_aarons_laws_law_and_justice_in_a_digital_age">http://www.correntewire.com/transcript_lawrence_lessig_on_aarons_laws_law_and_justice_in_a_digital_age</a> | <a href="https://www.youtube.com/watch?v=9HAw1i4gOU4">https://www.youtube.com/watch?v=9HAw1i4gOU4</a></p>
+<p id="fn15"><a href="#r15">[15]</a> Aaron's Laws - Law and Justice in a Digital Age. Lawrence Lessig marked his appointment as Roy L. Furman Professor of Law and Leadership at Harvard Law School with a lecture titled "Aaron's Laws: Law and Justice in a Digital Age." The lecture honored the memory and work of Aaron Swartz, the programmer and activist who took his own life on Jan. 11, 2013 at the age of 26. A full transcript can be found here <a href="http://tinyurl.com/qaxpzlq">http://tinyurl.com/qaxpzlq</a> | <a href="https://www.youtube.com/watch?v=9HAw1i4gOU4">https://www.youtube.com/watch?v=9HAw1i4gOU4</a></p>
 <p id="fn16"><a href="#r16">[16]</a> The “Wild West” of Academic Publishing <a href="http://harvardmagazine.com/2015/01/the-wild-west-of-academic-publishing">http://harvardmagazine.com/2015/01/the-wild-west-of-academic-publishing</a></p>
-<p id="fn17"><a href="#r17">[17]</a> Reed Elsevier (2014). 2013 Annual Report. Retrieved March 18, 2014 from <a href="http://www.reedelsevier.com/investorcentre/reports%202007/Documents/2013/reed_elsevier_ar_2013.pdf">http://www.reedelsevier.com/investorcentre/reports%202007/Documents/2013/reed_elsevier_ar_2013.pdf</a></p>
+<p id="fn17"><a href="#r17">[17]</a> Reed Elsevier (2014). 2013 Annual Report. Retrieved March 18, 2014 from <a href="http://tinyurl.com/p7osnz5">http://tinyurl.com/p7osnz5</a></p>
 <p id="fn18"><a href="#r18">[18]</a> European Commission, Joint Research Centre. Institute for Prospective Technological Studies <a href="http://is.jrc.ec.europa.eu/pages/ISG/documents/BookReportwithcovers.pdf">http://is.jrc.ec.europa.eu/pages/ISG/documents/BookReportwithcovers.pdf</a></p>
 <p><a href="#r19" id="fn19">[19]</a> On the Economy of Machinery and Manufactures. Charles Babbage (1832), Chapter XXIX - On Combinations of Masters Against the Public, pp. 258-270 <a href="https://archive.org/stream/oneconomyofmachi00babbrich#page/n19/mode/2up">https://archive.org/stream/oneconomyofmachi00babbrich#page/n19/mode/2up</a></p><p id="fn20"><a href="#r20">[20]</a> "Don't worry about what anybody else is going to do… The best way to predict the future is to invent it. Really smart people with reasonable funding can do just about anything that doesn't violate too many of Newton's Laws!"
 — Alan Kay in 1971. Inventor of Smalltalk which was the inspiration and technical basis for the MacIntosh and subsequent windowing based systems (NextStep, Microsoft Windows 3.1/95/98/NT, X-Windows, Motif, etc...). <a href="http://www.smalltalk.org/alankay.html">http://www.smalltalk.org/alankay.html</a></p>
@@ -302,59 +300,73 @@
             <p>The Hybrid Publishing Consortium model of software is built on user research and rapid prototyping. The architectural approach is modular, back end orientated, with an emphasis on application frameworks, ISO standards and interoperability between services and providers, as opposed to creating stand-alone web facing applications.</p>
             <p>The Hybrid Publishing Consortium is a research group of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovations-Inkubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony. As an business incubator our research is conducted with industry partners and we are supported to create new startup business ventures. Currently HPC has one startup InfoMesh UG which is specialising in MLA (Museums, Libraries and Archives) publishing.</p>
             <h3>Software Stack</h3>
-            <b>Software</b>
+            <b>Software</b><br>
             A-machine<br>
-            Sublime Text 2
-            Scribus
-            Bootstrap
-            Transpect
-            Calibre
-            Javascripts
-            GoogleDocs2Html script - <a href="http://omaralzabir.com/googledocs2cleanhtml/">http://omaralzabir.com/googledocs2cleanhtml/</a>
-            txtn.us Transformation tools for Unicode text - anti monitoring <a href="http://txtn.us/anti-monitoring">http://txtn.us/anti-monitoring</a>
-            <b>SaaS</b>
-            Google Docs,
-            Github
-            <b>Standards formal and <i>de jure</i> (ISO, W3C, IETF, UTR etc)</b>
-            HTML5,
-            CSS,
-            EPUB 2.1,
-            EPUB 3.0,
-            PDF,
-            Dublin Core,
-            BICS,
-            BISG,
-            ISBN,
-            XML
-            <b>Standards <i>de facto</i></b>
-            ORCHID,
-            Print format - ‘A’ format ‘pocket’ size 178 x 111mm
-            <b>Fonts</b>
-            Charis SIL - SIL (originally known as the Summer Institute of Linguistics, Inc.),
-            Work Sans
-            <b>Distribution &amp; platforms</b>
-            Anagram via Mute Publishing,
-Metamute.org,
-A-machine - Research Viewer,
-Lightningsource US/UK Printing,
-Ingram Advance Catalog,
-Nielsen UK Pub Web,
-Amazon Pro Seller,
-Amazon Kindle,
-Ingram Spark,
-Apple iBooks,
-Google Play,
-Issuu,
-Github,
-Aaaaarg,
-Archive.org,
-OpenLibrary,
-LibraryThing,
-Zenodo,
-OpenAIRE,
-OAPEN,
-DOAB,
+            Sublime Text 2<br>
+            Scribus<br>
+            Bootstrap<br>
+            Transpect<br>
+            Calibre<br>
+            Javascripts<br>
+            GoogleDocs2Html script - <a href="http://omaralzabir.com/googledocs2cleanhtml/">http://omaralzabir.com/googledocs2cleanhtml/</a><br>
+            txtn.us Transformation tools for Unicode text - anti monitoring <a href="http://txtn.us/anti-monitoring">http://txtn.us/anti-monitoring</a><br>
+            <b>SaaS</b><br>
+            Google Docs<br>
+            Github<br>
+            <b>Standards formal and <i>de jure</i> (ISO, W3C, IETF, UTR etc)</b><br>
+            HTML5<br>
+            CSS<br>
+            EPUB 2.1<br>
+            EPUB 3.0<br>
+            PDF<br>
+            Dublin Core<br>
+            BICS<br>
+            BISG<br>
+            ISBN<br>
+            XML<br>
+            <b>Standards <i>de facto</i></b><br>
+            ORCHID<br>
+            Print format - ‘A’ format ‘pocket’ size 178 x 111mm<br>
+            <b>Fonts</b><br>
+            Charis SIL - SIL (originally known as the Summer Institute of Linguistics, Inc.)<br>
+            Work Sans<br>
+            <b>Distribution &amp; platforms</b><br>
+            Anagram via Mute Publishing<br>
+Metamute.org<br>
+A-machine - Research Viewer<br>
+Lightningsource US/UK Printing<br>
+Ingram Advance Catalog<br>
+Nielsen UK Pub Web<br>
+Amazon Pro Seller<br>
+Amazon Kindle<br>
+Ingram Spark<br>
+Apple iBooks<br>
+Google Play<br>
+Issuu<br>
+Github<br>
+Aaaaarg<br>
+Archive.org<br>
+OpenLibrary<br>
+LibraryThing<br>
+Zenodo<br>
+OpenAIRE<br>
+OAPEN<br>
+DOAB<br>
 opendoar
+            </section>
+            <section>
+            <h2><a id="copyright_page">Copyright</a></h2>
+<p>Text (x) Anti-copyright Simon Worthington</p>
+<p>Creative Commons Attribution-ShareAlike 3.0 Germany (CC BY-SA 3.0 DE) <a href="http://creativecommons.org/licenses/by-sa/3.0/de/deed.en">http://creativecommons.org/licenses/by-sa/3.0/de/deed.en</a></p>
+<p>Legend: This deed is used in the absence of an intellectual property framework that represents the authors respective position on copyright.</p>
+<p>All images © Copyright the authors</p>
+<p>Published by Simon Worthington, Hybrid Publishing Consortium <a href="http://consortium.io">http://consortium.io</a></p>
+<p>Print ISBN: 9781906496364 | <a href="#bibtex">BibTeX</a></p>
+<p>eBook ISBN: 9781906496371</p>
+<p>Trial media referencing system in use. The HPC is using the Github implementation of Secure Hash Algorithm (SHA) version number, with the addition of a further media specific identifier. For this book publication it is the first edition print page number. For other media types the identifier could be a media specific identifier, for example a timecode for the case of audio or video publications. The HPC considers this trial citation identifier as an emergent de facto standard. The historical precedent being in the commentaries on Plato following the 1578 Stephanus references convention of citation. See: <a href="http://plato-dialogues.org/faq/faq007.htm">http://plato-dialogues.org/faq/faq007.htm</a> and in visual form <a href="http://plato-dialogues.org/stephanus.htm">http://plato-dialogues.org/stephanus.htm</a></p>
+<p>SHA: 53ebf37188325b0787570d6bf74dc7dc9deec643</p>
+<p>An example reference for this page is 53ebf37188 2</p>
+<p><a href="http://plato-dialogues.org/stephanus.htm">https://github.com/consortium/hybrid-publishing-research/blob/master/dist/docs/book_liberation_manifesto/Book_Liberation_Manifesto</a></p>
             </section>
             <section>
             <h2><a id="metadata">Metadata</a></h2>
@@ -403,24 +415,9 @@ opendoar
     month = may,
     year = {2015}
 }</code></pre>
-            </section>
-
-            <section>
                 <p><a href="http://booktothefuture.org">http://booktothefuture.org</a></p>
             <p>Buy print versions on Amazon <a href="http://www.amazon.com/Book-Future-Liberation-Publishing-Consortium/dp/1906496366/ref=sr_1_1?ie=UTF8&amp;qid=1427057856&amp;sr=8-1&amp;keywords=9781906496364">US 5USD</a> <a href="http://www.amazon.co.uk/Book-Future-Liberation-Publishing-Consortium/dp/1906496366/ref=sr_1_1?ie=UTF8&amp;qid=1427057745&amp;sr=8-1&amp;keywords=9781906496364">UK GBP5</a> <a href="http://www.amazon.de/Book-Future-Liberation-Publishing-Consortium/dp/1906496366/ref=sr_1_1?ie=UTF8&amp;qid=1427057951&amp;sr=8-1&amp;keywords=9781906496364">DE 5EURO</a></p>
-            <h2><a id="copyright_page">Copyright</a></h2>
-<p>Text (x) Anti-copyright Simon Worthington</p>
-<p>Creative Commons Attribution-ShareAlike 3.0 Germany (CC BY-SA 3.0 DE) <a href="http://creativecommons.org/licenses/by-sa/3.0/de/deed.en">http://creativecommons.org/licenses/by-sa/3.0/de/deed.en</a></p>
-<p>Legend: This deed is used in the absence of an intellectual property framework that represents the authors respective position on copyright.</p>
-<p>All images © Copyright the authors</p>
-<p>Published by Simon Worthington, Hybrid Publishing Consortium <a href="http://consortium.io">http://consortium.io</a></p>
-<p>Print ISBN: 9781906496364 | <a href="#bibtex">BibTeX</a></p>
-<p>eBook ISBN: 9781906496371</p>
-<p>Trial media referencing system in use. The HPC is using the Github implementation of Secure Hash Algorithm (SHA) version number, with the addition of a further media specific identifier. For this book publication it is the first edition print page number. For other media types the identifier could be a media specific identifier, for example a timecode for the case of audio or video publications. The HPC considers this trial citation identifier as an emergent de facto standard. The historical precedent being in the commentaries on Plato following the 1578 Stephanus references convention of citation. See: <a href="http://plato-dialogues.org/faq/faq007.htm">http://plato-dialogues.org/faq/faq007.htm</a> and in visual form <a href="http://plato-dialogues.org/stephanus.htm">http://plato-dialogues.org/stephanus.htm</a></p>
-<p>SHA: 53ebf37188325b0787570d6bf74dc7dc9deec643</p>
-<p>An example reference for this page is 53ebf37188 2</p>
-<p><a href="http://plato-dialogues.org/stephanus.htm">https://github.com/consortium/hybrid-publishing-research/blob/master/dist/docs/book_liberation_manifesto/Book_Liberation_Manifesto</a></p>
-            </section>
+                        </section>            
 
     </section>
 
