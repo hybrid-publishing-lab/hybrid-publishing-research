@@ -161,7 +161,8 @@ module.exports = function(grunt) {
                 tasks: 'js'
             },
             html: {
-                files: [ 'dist/index.html.src']
+                files: [ 'dist/index.html.src'],
+                tasks: 'angularHtmlify'
             },
             css: {
                 files: [ 'css/main.css' ],
@@ -210,6 +211,14 @@ module.exports = function(grunt) {
                 src: ['createindex.js']
             }
         },
+        
+        angularHtmlify: {
+            dist: {
+                files: {
+                    'dist/index.html': 'dist/index.html.src'
+                }
+            }
+        },
 
         metaparser: {
             'metadata.json': ['dist/docs/**/*.html', '!dist/docs/_template*/*.html', '!**/assets/**'],
@@ -242,6 +251,7 @@ module.exports = function(grunt) {
 
 
     // Dependencies
+    grunt.loadNpmTasks( 'grunt-angular-htmlify' );
     grunt.loadNpmTasks( 'grunt-autoprefixer' );
     grunt.loadNpmTasks( 'grunt-bowercopy' );
     grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
@@ -258,7 +268,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks( 'grunt-newer' );
 
     // Default task
-    grunt.registerTask( 'default', [ 'build', 'index' ] );
+    grunt.registerTask( 'default', [ 'build', 'index', 'angularHtmlify' ] );
     
     // Building bricks
     grunt.registerTask( 'js', [ 'jshint', 'uglify', 'qunit' ] );
