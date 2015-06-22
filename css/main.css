@@ -138,7 +138,7 @@ b {
     font-family: "REGLO";
 }
 sup {
-    z-index: -1000;
+    z-index: 10;
 }
 .serif-font {
     font-family: "Charter", "Times New Roman", Times, serif;
