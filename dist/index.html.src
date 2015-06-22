@@ -47,7 +47,7 @@
         <link rel="shortcut icon" href="../../favicon.ico" />
     </head>
 
-    <body ng-controller="SpaceCtrl">
+    <body ng-controller="SpaceCtrl" class="ng-cloak">
         <!-- TOP BAR: HEADER LOGO (small) + TITLE (small) -->
         <header>
             <a href="#footer-info">
@@ -70,7 +70,7 @@
         </aside>
     
         <!-- MAIN CONTENT -->
-        <section id="main-menu-page">
+        <section id="main-menu-page" >
             <section class="menu-title">
                 <h2>HYBRID PUBLISHING CONSORTIUM REPORTS</h2>
             </section>
@@ -79,14 +79,14 @@
                 <!-- beginning boxes template -->
                 <div ng-show="indexlist" ng-repeat="item in indexlist" class="cover-report">
                     
-                    <div ng-cloak class="list-group-item">
+                    <div class="list-group-item">
                         <a href="{{ stripdist(item.filename) }}">
                         <div style="height: 94px; background-repeat: no-repeat;" id="randomIcon"></div>
-                            <h3 ng-cloak ng-hide="{{!item.data.title.length}}">{{ firstelement(item.data.title) }}</h3>
+                            <h3  ng-hide="{{!item.data.title.length}}">{{ firstelement(item.data.title) }}</h3>
                             <p>
-                                <span ng-cloak ng-hide="{{!item.data.type.length}}">{{ item.data.type | capitalize}}</span>
+                                <span  ng-hide="{{!item.data.type.length}}">{{ item.data.type | capitalize}}</span>
                                 
-                                <span ng-cloak ng-hide="{{!item.data.contributor.length}}">
+                                <span  ng-hide="{{!item.data.contributor.length}}">
                                     by 
                                     <span ng-repeat="c in item.data.contributor">
                                     {{ c }}{{$last ? '' : ', '}}
@@ -94,27 +94,27 @@
                                 </span>
                             </p>
                             <p>
-                                <span ng-cloak ng-hide="{{!item.data.date.length}}">{{ item.data.date }}</span>
+                                <span  ng-hide="{{!item.data.date.length}}">{{ item.data.date }}</span>
                             </p>
                         </a>
                         
                         <p class="validation-show">Standards validation:</p>
 
-                        <div ng-cloak ng-show="{{!item.htmlerror[0]}}" class="alert alert-success" role="success">
+                        <div ng-show="{{!item.htmlerror[0]}}" class="alert alert-success" role="success">
                             <span class="sr-only">Success:</span>
                             html5 valid
                         </div>
 
-                        <div ng-cloak ng-show="{{item.htmlerror[0]}}" class="alert alert-danger" role="danger">
+                        <div ng-show="{{item.htmlerror[0]}}" class="alert alert-danger" role="danger">
                             <span class="sr-only">Error:</span>
                              Not html5 valid
                         </div>
 
-                        <div ng-cloak ng-show="{{item.dcerrors[0].length}}" class="alert alert-danger" role="alert">
+                        <div ng-show="{{item.dcerrors[0].length}}" class="alert alert-danger" role="alert">
                             <span class="sr-only">Error:</span>
                              Not Dublin Core valid
                         </div>
-                        <div ng-cloak ng-show="{{!item.dcerrors[0].length}}" class="alert alert-success" role="success">
+                        <div ng-show="{{!item.dcerrors[0].length}}" class="alert alert-success" role="success">
                             <span class="sr-only">Success:</span>
                              Dublin Core valid
                         </div>
