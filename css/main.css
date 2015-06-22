@@ -514,7 +514,7 @@ aside.main-page {
 /* MAIN PAGE > DOSSIERS COMING SOON */
 .cover-dossier {
     width: 230px;
-    height: 300px;
+    height: 280px;
     float: left;
     display: inline-block;
     margin: 0 20px 20px 0;
@@ -530,7 +530,7 @@ aside.main-page {
     width: 225px;
     float: left;
     margin: 0 15px 30px 15px;
-    height: 250px;
+    height: 275px;
     overflow: hidden;
     z-index: 0;
     padding-right: 50px;
