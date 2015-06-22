@@ -1,4 +1,4 @@
-# Hybrid Publishing Research [![Build Status](https://travis-ci.org/consortium/hybrid-publishing-research.svg?branch=master)](https://travis-ci.org/consortium/hybrid-publishing-research)
+# Hybrid Publishing Research [![Build Status](https://travis-ci.org/consortium/hybrid-publishing-research.svg?branch=master)](https://travis-ci.org/consortium/hybrid-publishing-research)[![Dependency Status](https://david-dm.org/consortium/hybrid-publishing-research.svg)](https://david-dm.org/consortium/hybrid-publishing-research)
 
 This repository is the document collection of the consortium.io. It’s compiled in a redistributable way.
 We’re hosting this on [https://research.consortium.io](https://research.consortium.io). If you just wish to download the documents, then find the files in the folder [dist/docs](https://github.com/consortium/hybrid-publishing-research/tree/master/dist/docs).
