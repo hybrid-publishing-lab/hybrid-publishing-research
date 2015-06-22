@@ -30,6 +30,13 @@
         <link rel="SCHEMA.DC" href="http://purl.org/dc/elements/1.1/"/>
 
         <!-- CSS -->
+        <style TYPE="text/css">
+            <!--
+            [ng:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+                display: none !important;
+            }
+            -->
+        </style>
         <link rel="stylesheet" type="text/css" href="css/all.min.css"/>
         <link rel="stylesheet" type="text/css" href="fonts.css"/>
 
@@ -57,7 +64,7 @@
                 <p>The repository publications are built using GitHub as the central storage and standards validated &mdash; HTML, CSS, Javascript and Dublin Core metadata. The system is self-testing, self-validating and assigns cryptographic hash function identifiers to publications for accurate referencing.</p> 
                 <p>The result is that publications are automatically synchronised on your website of choice and they can then be picked up from GitHub for reuse in most platforms. Additionally, constant validation against ISO standards provides a reliable benchmark for long term preservation.</p>
                 <p>See the <a href="https://github.com/consortium/hybrid-publishing-research/blob/master/README.md">README</a> on GitHub to clone your own version.</p>
-                <p data-ng-cloak="">VERSION: {{gitinfo.date}} git hash: <a data-ng-href="https://github.com/consortium/hybrid-publishing-research/commits/{{gitinfo.commit}}">{{gitinfo.abbr}}</a>.</p>
+                <p ng-cloak>VERSION: {{gitinfo.date}} git hash: <a data-ng-href="https://github.com/consortium/hybrid-publishing-research/commits/{{gitinfo.commit}}">{{gitinfo.abbr}}</a>.</p>
                 </div>
             </section>
         </aside>
