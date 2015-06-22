@@ -441,6 +441,7 @@ section p + p {
     font-family: "REGLO";
     margin-top: 20px;
     margin-left: 10%;
+    text-align: left;
 }
 #main-content h4 {
     font-family: "REGLO";
