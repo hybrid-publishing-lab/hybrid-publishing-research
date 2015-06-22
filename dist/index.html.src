@@ -78,7 +78,13 @@
                             <h3 ng-cloak ng-hide="{{!item.data.title.length}}">{{ firstelement(item.data.title) }}</h3>
                             <p>
                                 <span ng-cloak ng-hide="{{!item.data.type.length}}">{{ item.data.type | capitalize}}</span>
-                                <span ng-cloak ng-hide="{{!item.data.contributor.length}}">by {{ item.data.contributor }}</span>
+                                
+                                <span ng-cloak ng-hide="{{!item.data.contributor.length}}">
+                                    by 
+                                    <span ng-repeat="c in item.data.contributor">
+                                    {{ c }}{{$last ? '' : ', '}}
+                                    </span>
+                                </span>
                             </p>
                             <p>
                                 <span ng-cloak ng-hide="{{!item.data.date.length}}">{{ item.data.date }}</span>
