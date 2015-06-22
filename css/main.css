@@ -203,6 +203,9 @@ code, kbd, pre, samp {
 p.no-indent, .no-indent p {
     text-indent: 0;
 }
+p.indent, .indent p {
+    text-indent: 6%;
+}
 /* CODE */
 code, pre {
     display: block;
