@@ -77,7 +77,7 @@
                         <div style="height: 94px; background-repeat: no-repeat;" id="randomIcon"></div>
                             <h3 ng-cloak ng-hide="{{!item.data.title.length}}">{{ firstelement(item.data.title) }}</h3>
                             <p>
-                                <!--<span ng-cloak ng-hide="{{!item.data.type.length}}">{{ item.data.type | capitalize}}</span>-->
+                                <span ng-cloak ng-hide="{{!item.data.type.length}}">{{ item.data.type | capitalize}}</span>
                                 <span ng-cloak ng-hide="{{!item.data.contributor.length}}">by {{ item.data.contributor }}</span>
                             </p>
                             <p>
