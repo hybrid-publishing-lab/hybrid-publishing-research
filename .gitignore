@@ -19,4 +19,9 @@ css/bower.css
 css/all-min.css
 dist/css/*
 dist/js/*
-
+cache
+dist/fonts/glyphicons-halflings-regular.eot
+dist/fonts/glyphicons-halflings-regular.svg
+dist/fonts/glyphicons-halflings-regular.ttf
+dist/fonts/glyphicons-halflings-regular.woff
+dist/fonts/glyphicons-halflings-regular.woff2

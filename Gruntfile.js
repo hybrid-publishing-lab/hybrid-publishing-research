@@ -20,34 +20,26 @@ module.exports = function(grunt) {
                 ' */'
         },
 
-        qunit: {
-            files: [ 'test/*.html' ]
-        },
-        
-        uglify: {
+        bowercopy: {
             options: {
-                banner: '<%= meta.banner %>\n',
-                compress: true,
-                sourceMap: true,
-                mangle: false
+                runBower: true,
+                srcPrefix: 'bower_components'
             },
-            myTarget: {
+            lib: {
+                options: {},
                 files: {
-                    'dist/js/all.min.js': ['js/bower.js','js/consortium-viewer.js']
+                  'lib/js/jquery.js': 'jquery/dist/jquery.js',
+                  'lib/js/jquery.color.js':'jquery-color/jquery.color.js',
+                  'lib/js/bootstrap.js': 'bootstrap/dist/js/bootstrap.js',
+                  'lib/js/lodash.js': 'lodash/lodash.js',
+                  'lib/js/angular.js': 'angular/angular.js',
+                  'dist/fonts': 'bootstrap/dist/fonts/',
+                  'lib/css/bootstrap.css': 'bootstrap/dist/css/bootstrap.css',
+                  'tmp/bootstrap.css.map': 'bootstrap/dist/css/bootstrap.css.map'
                 }
             }
         },
-        cssmin: {
-            options: {
-                shorthandCompacting: false,
-                roundingPrecision: -1
-            },
-            target: {
-                files: {
-                    'dist/css/all.min.css': ['css/bower.css', 'css/main.css']
-                }
-            }
-        },
+
         jshint: {
             options: {
                 curly: false,
@@ -73,7 +65,57 @@ module.exports = function(grunt) {
                     _: false
                 }
             },
-            files: [ 'Gruntfile.js', 'js/consortium-viewer.js' ]
+            gruntfile: { 
+                src: 'Gruntfile.js'
+            }, 
+            js_components: {
+                src: ['js/consortium-viewer.js' ]
+            }
+        },
+        
+        concat: {
+            options: {
+                stripBanners: true
+            },
+            js: {
+                src: ['lib/js/angular.js', 'lib/js/jquery.js', 'lib/js/bootstrap.js', 'lib/js/lodash.js', 'lib/jquery.color.js', 'js/analytics.js', 'js/consortium-viewer.js'],
+                dest: 'tmp/main_tmp.js'
+            },
+            css: {
+                src: ['lib/css/**.css', 'css/main.css'],
+                dest: 'tmp/main_tmp.css'
+            }
+        },
+        
+        cssmin: {
+            options: {
+                shorthandCompacting: false,
+                roundingPrecision: -1,
+                sourceMap: true
+            },
+            target: {
+                files: {
+                    'dist/css/main.min.css': ['tmp/main_tmp.css']
+                }
+            }
+        },
+
+        uglify: {
+            options: {
+                banner: '<%= meta.banner %>\n',
+                compress: true,
+                sourceMap: true,
+                mangle: false
+            },
+            js: {
+                files: {
+                    'dist/js/all.min.js': ['tmp/main_tmp.js']
+                }
+            }
+        },
+        
+        qunit: {
+            files: [ 'test/*.html' ]
         },
         
         gitfetch: {
@@ -104,6 +146,12 @@ module.exports = function(grunt) {
             }
         },
         
+        newer: {
+            options: {
+            cache: 'cache/'
+            }
+        },
+        
         watch: {
             options: {
                 livereload: true
@@ -113,8 +161,7 @@ module.exports = function(grunt) {
                 tasks: 'js'
             },
             html: {
-                files: [ 'dist/index.html.src'],
-                tasks: 'angularHtmlify'
+                files: [ 'dist/index.html.src']
             },
             css: {
                 files: [ 'css/main.css' ],
@@ -152,28 +199,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-
-        bower: {
-            dev: {
-                dest: 'lib/',
-                js_dest: 'lib/js/',
-                css_dest: 'lib/css/',
-                fonts_dest: 'lib/font/',  
-                options: {
-                    expand: true
-                }
-            }
-        },
-
-        bower_concat: {
-          all: {
-            dest: 'js/bower.js',
-            cssDest: 'css/bower.css',
-            bowerOptions: {
-              relative: false
-            }
-          }
-        },
         
         execute: {
             options: {
@@ -183,14 +208,6 @@ module.exports = function(grunt) {
             },
             target: {
                 src: ['createindex.js']
-            }
-        },
-        
-        angularHtmlify: {
-            dist: {
-                files: {
-                    'dist/index.html': 'dist/index.html.src'
-                }
             }
         },
 
@@ -217,7 +234,6 @@ module.exports = function(grunt) {
                 ]
             }
         }
-
     });
 
     grunt.event.on('watch', function(action, filepath, target) {
@@ -226,36 +242,33 @@ module.exports = function(grunt) {
 
 
     // Dependencies
+    grunt.loadNpmTasks( 'grunt-autoprefixer' );
+    grunt.loadNpmTasks( 'grunt-bowercopy' );
+    grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
+    grunt.loadNpmTasks( 'grunt-contrib-concat' );
+    grunt.loadNpmTasks( 'grunt-contrib-connect' );
     grunt.loadNpmTasks( 'grunt-contrib-qunit' );
     grunt.loadNpmTasks( 'grunt-contrib-jshint' );
-    grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
     grunt.loadNpmTasks( 'grunt-contrib-uglify' );
     grunt.loadNpmTasks( 'grunt-contrib-watch' );
-    grunt.loadNpmTasks( 'grunt-bower-install-simple' );
-    grunt.loadNpmTasks( 'grunt-angular-htmlify' );
-
-    grunt.loadNpmTasks( 'grunt-contrib-connect' );
-    grunt.loadNpmTasks( 'grunt-autoprefixer' );
-    grunt.loadNpmTasks( 'grunt-bower' );
     grunt.loadNpmTasks( 'grunt-html-validation' );
-    grunt.loadNpmTasks( 'grunt-bower-concat' );
     grunt.loadNpmTasks( 'grunt-execute' );
     grunt.loadNpmTasks( 'grunt-metaparser' );
     grunt.loadNpmTasks( 'grunt-git' );
+    grunt.loadNpmTasks( 'grunt-newer' );
 
     // Default task
-    grunt.registerTask( 'default', [ 'build', 'index', 'angularHtmlify'] );
+    grunt.registerTask( 'default', [ 'build', 'index' ] );
     
     // Building bricks
     grunt.registerTask( 'js', [ 'jshint', 'uglify', 'qunit' ] );
-    grunt.registerTask( 'depbuild', [ 'bower-install-simple', 'bower', 'bower_concat', 'cssmin' ] );
+    grunt.registerTask( 'depbuild', [ 'bowercopy', 'newer:jshint',  'newer:qunit', 'newer:concat', 'newer:cssmin', 'newer:uglify' ] );
 
     // git fetch and rebase
     grunt.registerTask( 'upgrade', [ 'gitfetch', 'gitreset', 'build', 'index' ] );
     
-    
     // Build
-    grunt.registerTask( 'build', [ 'depbuild', 'js' ] );
+    grunt.registerTask( 'build', [ 'depbuild' ] );
 
     // Indexing
     grunt.registerTask( 'index', [ 'validation', 'metaparser', 'execute' ] );
