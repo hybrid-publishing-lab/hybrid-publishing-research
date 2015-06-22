@@ -38,7 +38,7 @@ Right now it does:
 
 
 var fs 			= require('fs')
-var _ 			= require('underscore')
+var _ 			= require('lodash')
 var spawn       = require('child_process').spawn;
 
 var pathlist 	= process.argv.slice(2)
@@ -116,6 +116,7 @@ var checkForVarsAreAList = function (arr) {
     return arr;
 }
 
+
 metadataObj = checkForVarsAreAList(metadataObj)
 
 var reportObj = arrUnique(reportObj);
@@ -123,8 +124,7 @@ var reportObj = arrUnique(reportObj);
 // Merge the different JSON files by key
 var mergeData = merge(metadataObj,reportObj)
 
-
-mergeData = _.compact(_.flatten(mergeData, true));
+mergeData = _.compact(_.values(mergeData));
 
 var printableJson = JSON.stringify(mergeData, null, 2);
 printableJson = printableJson.replace(/"error":/g, '"htmlerror":')
