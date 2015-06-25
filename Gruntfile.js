@@ -95,7 +95,7 @@ module.exports = function(grunt) {
             },
             target: {
                 files: {
-                    'dist/css/main.min.css': ['tmp/main_tmp.css']
+                    'dist/css/all.min.css': ['tmp/main_tmp.css']
                 }
             }
         },
