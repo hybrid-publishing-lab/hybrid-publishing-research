@@ -2,6 +2,8 @@
 module.exports = function(grunt) {
 
     var port = grunt.option('port') || 8080;
+    var rewriteRulesSnippet = require('grunt-connect-rewrite/lib/utils').rewriteRequest;
+
     // Project configuration
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -53,6 +55,7 @@ module.exports = function(grunt) {
                 eqnull: true,
                 browser: true,
                 expr: true,
+
                 globals: {
                     head: false,
                     module: false,
@@ -61,6 +64,7 @@ module.exports = function(grunt) {
                     define: false,
                     exports: false,
                     angular: true,
+                    require: false,
                     $: false,
                     _: false
                 }
@@ -136,12 +140,38 @@ module.exports = function(grunt) {
         },
 
         connect: {
+
+            rules: [
+                //{from: '/sau.html', to: './moo.html'},
+                {from: '/documentation.html', to: '/docs/documentation/documentation.html'}
+            ],
             server: {
                 options: {
                     port: port,
                     base: './dist',
                     livereload: 35005,
-                    open: true
+                    open: true,
+                    middleware: function (connect, options) {
+                        var middlewares = [];
+     
+                        // RewriteRules support 
+                        middlewares.push(rewriteRulesSnippet);
+     
+                        if (!Array.isArray(options.base)) {
+                            options.base = [options.base];
+                        }
+     
+                        var directory = options.directory || options.base[options.base.length - 1];
+                        options.base.forEach(function (base) {
+                            // Serve static files. 
+                            middlewares.push(connect.static(base));
+                        });
+     
+                        // Make directory browse-able. 
+                        //middlewares.push(connect.directory(directory));
+     
+                        return middlewares;
+                    }
                 }
             }
         },
@@ -266,6 +296,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks( 'grunt-metaparser' );
     grunt.loadNpmTasks( 'grunt-git' );
     grunt.loadNpmTasks( 'grunt-newer' );
+    grunt.loadNpmTasks( 'grunt-connect-rewrite' );
 
     // Default task
     grunt.registerTask( 'default', [ 'build', 'index', 'angularHtmlify' ] );
@@ -287,5 +318,5 @@ module.exports = function(grunt) {
     grunt.registerTask( 'test', [ 'jshint', 'qunit', 'validation' ] );
 
     // Serve presentation locally
-    grunt.registerTask( 'serve', [ 'connect', 'watch'] );
+    grunt.registerTask( 'serve', [ 'configureRewriteRules', 'connect:server', 'watch'] );
 };
