@@ -47,7 +47,8 @@
     "node-sass": "~3.2.0",
     "grunt-git": "~0.3.4",
     "grunt-execute": "~0.2.2",
-    "bower": "~1.4.1"
+    "bower": "~1.4.1",
+    "time-grunt": "~1.2.1"
   },
   "licenses": [
     {

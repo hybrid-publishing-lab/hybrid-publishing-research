@@ -2,6 +2,7 @@
 module.exports = function(grunt) {
 
     var port = grunt.option('port') || 8080;
+    require('time-grunt')(grunt);
     // Project configuration
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -61,6 +62,7 @@ module.exports = function(grunt) {
                     define: false,
                     exports: false,
                     angular: true,
+                    require: false,
                     $: false,
                     _: false
                 }
@@ -105,7 +107,8 @@ module.exports = function(grunt) {
                 banner: '<%= meta.banner %>\n',
                 compress: true,
                 sourceMap: true,
-                mangle: false
+                mangle: false,
+                nameCache: 'tmp/uglify.cache'
             },
             js: {
                 files: {
@@ -271,8 +274,7 @@ module.exports = function(grunt) {
     grunt.registerTask( 'default', [ 'build', 'index', 'angularHtmlify' ] );
     
     // Building bricks
-    grunt.registerTask( 'js', [ 'jshint', 'uglify', 'qunit' ] );
-    grunt.registerTask( 'depbuild', [ 'bowercopy', 'newer:jshint',  'newer:qunit', 'newer:concat', 'newer:cssmin', 'newer:uglify' ] );
+    grunt.registerTask( 'depbuild', [ 'bowercopy', 'newer:jshint',  'newer:qunit', 'newer:concat', 'newer:cssmin', 'newer:uglify', 'qunit' ] );
 
     // git fetch and rebase
     grunt.registerTask( 'upgrade', [ 'gitfetch', 'gitreset', 'build', 'index' ] );
@@ -281,7 +283,7 @@ module.exports = function(grunt) {
     grunt.registerTask( 'build', [ 'depbuild' ] );
 
     // Indexing
-    grunt.registerTask( 'index', [ 'validation', 'metaparser', 'execute' ] );
+    grunt.registerTask( 'index', [ 'newer:validation', 'metaparser', 'execute' ] );
 
     // Run tests
     grunt.registerTask( 'test', [ 'jshint', 'qunit', 'validation' ] );
