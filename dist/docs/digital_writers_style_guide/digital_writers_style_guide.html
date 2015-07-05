@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <!-- Metatags -->
+    <meta charset="utf-8" /> <!-- doesn’t need editing -->
+    <meta name="generator" content="a-machine" /> <!-- doesn’t need editing -->
+    <meta name="keywords" content="digital writing, dynamic publishing, style guide"/> <!-- edit: each keyword separated by a comma (10 is a good number) -->
+    <meta name="description" content="A Digital Writers Style Guide for Dynamic Publishing"/> <!-- edit: text, sentences -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/> <!-- doesn’t need editing -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/> <!-- doesn’t need editing -->
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="A Digital Writers Style Guide for Dynamic Publishing"/> <!-- doesn’t need editing -->
+    <meta name="DC.contributor" content="Daniel James"/> <!-- edit - one meta tag per author -->
+    <meta name="DC.creator" content="Simon Worthington" /> <!-- edit -->
+    <meta name="DC.subject" content="digital writing, dynamic publishing, style guide"> <!-- edit: comma separated (can be more than the keywords) -->
+    <meta name="DC.description.abstract" content=""/> <!-- edit: copy of the desciption -->
+    <meta name="DC.date" content="2015-06-25"/> <!-- edit: yyyy-mm-dd -->
+    <meta name="DC.type" content="Guide"/> <!-- edit: choose one -->
+    <meta name="DC.format" content="text/html"/> <!-- doesn’t need editing -->
+    <meta name="DC.language" content="eng"/> <!-- if edit ISO 639-3 standard: http://en.wikipedia.org/wiki/ISO_639:a -->
+    <meta name="DC.identifier.URL" content="http://consortium.io"/> <!-- if edit: put a url -->
+    <meta name="DC.rights" content="http://www.consortium.io/copyright"/> <!-- if edit: put a url -->
+    <meta name="DC.identifier" content=""/> <!-- edit, and if no identifier it will be generated -->
+    <meta name="DC.publisher" content="Hybrid Publishing Consortium"/> <!-- edit: for each publisher a new meta tag -->
+    <meta name="DC.bibliographicCitation" content=""/> <!-- edit, use a Chicago Manual of Style citation -->
+    <link rel="SCHEMA.DC" href="http://purl.org/dc/elements/1.1/"/> <!-- doesn’t need editing -->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../../css/all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../fonts.css"/>
+    <!-- Title -->
+    <title>A Digital Writers Style Guide for Dynamic Publishing</title>
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="../../favicon.ico" />
+</head>
+<body>
+    <!-- FUTURE SCENARIO: THIS WILL BE PART OF THE TEMPLATE: -->
+    <!-- FUTURE SCENARIO: it will automatically get the right infos from the dossiers json file(s) -->
+
+    <!-- TOP BAR: HEADER LOGO (small) + TITLE (small) -->
+    <header>
+        <!-- RETURN arrow to the top of the page -->
+        <a href="/">
+            <div class="nav-return">
+                <img class="small-icon" src="../../static/menu-icon-hpc.png" alt="menu" />
+                <p>BACK</p>
+            </div>
+        </a>
+        <h2>A Digital Writers Style Guide for Dynamic Publishing</h2>
+    </header>
+
+    <!-- SIDE COLUMN -->
+    <aside>
+        <!-- GENERAL INFORMATION ON THE CONTENT-->
+        <div id="info">
+            <a data-toggle="collapse" href="#info-toggle">
+                <h4>INFO</h4>
+            </a>
+            <div class="collapse" id="info-toggle">
+                <!-- date and author info -->
+                <div id="info-date-authors">
+                    <div>
+                        <h5>By:</h5>
+                        <!-- use a <li></li> for each author -->
+                        <ul id="info-authors">
+                            <li>Daniel James</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Editors:</h5>
+                        <!-- use a <li></li> for each editor -->
+                        <ul id="info-editors">
+                            <li>Simon Worthington</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5>Date:</h5>
+                        <p id="info-date">2015-06-25</p>
+                    </div>
+                </div>
+                <!-- abstract (short) -->
+                <div id="short-abstract">
+                    <p>Short abstract</p>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div id="toc">
+                <!-- TOC-->
+                <a data-toggle="collapse" href="#toc-toggle">
+                    <h4>CONTENTS</h4>
+                </a>
+                <ul class="collapse" id="toc-toggle">
+                    <li><a data-toggle="collapse" href="#toc-sub-toggle">A Digital Writers Style Guide for Dynamic Publishing<span class="screen-only" style="vertical-align: -4px;">↳</span></a>
+                        <ul class="collapse" id="toc-sub-toggle">
+                            <li><a href="#1-subheading">Introduction</a></li>
+                            <li><a href="#2-subheading">Metadata</a></li>
+                            <li><a href="#3-subheading">View Source</a></li>
+                            <li><a href="#4-subheading">XML, HTML, whatever</a></li>
+                            <li><a href="#5-subheading">Template-driven authoring</a></li>
+                            <li><a href="#6-subheading">Never mind the form, mind the function</a></li>
+                            <li><a href="#7-subheading">Metadata</a></li>
+                            <li><a href="#8-subheading">Third subheading</a></li>
+                            <li><a href="#9-subheading">Introduction</a></li>
+                            <li><a href="#10-subheading">Metadata</a></li>
+                            <li><a href="#11-subheading">A Design Example</a></li>
+                            <li><a href="#12-subheading">Conclusion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- keywords -->
+            <div class="keywords">
+                <a data-toggle="collapse" href="#keywords-toggle">
+                    <h4>KEYWORDS</h4>
+                </a>
+                <p class="collapse" id="keywords-toggle">digital writing, dynamic publishing, style guide, upskilling, tutorial, author
+                </p>
+            </div>
+            <!-- arrow to the top of the page -->
+            <div class="nav-more">
+                <a href="#">
+                    <p>TOP</p>
+                </a>
+                <a href="javascript:window.print()">
+                    <p>PRINT/PDF</p>
+                </a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <section id="main-content"><!-- here we can precise what kind of document it is: text, presentation (slides), list, collection of images, etc… -->
+        <h1>A Digital Writers Style Guide for Dynamic Publishing</h1>
+            <section>
+                <!-- SUBHEADING -->
+                <h2 id="1-subheading">Introduction</h2>
+
+<p>In conventional electronic publishing, a manuscript passes through the hands of many people and various different computer systems in its journey towards becoming a book. Contemporary demand for a diverse range of output formats means that multiple versions have to be designed, processed, co-ordinated, laid out and proof-read, adding to the workload for everyone involved.</p>
+
+<p>Dynamic publishing is a single-source digital workflow in which these publication processes are automated, including format conversion, layout, distribution, translation, content updates, rights management, payments and reading metrics. Also known as XML-first publishing, the automation in a dynamic publishing system reduces the time it takes to publish in multiple formats, reduces costs, and frees contributors from routine tasks so that they can focus on improving the book. Proprietary XML-first systems are expensive, and have mostly been adopted by corporate publishers.</p>
+
+<p>In recent years, dynamic publishing systems based on in part or wholly on freely available open source software have been deployed, including <a href="http://a-machine.net/">A-machine</a>, <a href="https://www.le-tex.de/en/transpect.html">Transpect</a>, <a href="https://www.gitbook.com/">GitBook</a>, <a href="https://www.overleaf.com/">Overleaf</a>, <a href="https://www.authorea.com/">Authorea</a>, <a href="http://www.booktype.org">Booktype</a> and <a href="http://fiduswriter.org/">Fidus Writer</a>. This open source software is lowering the barrier to entry for dynamic publishing, making it accessible to small-to-medium sized publishers, non-governmental organisations and academic institutions.</p>
+
+<p>In a single-source approach, all outputs are generated from the very latest version of the manuscript. This approach is meant to ensure that the published content is as fresh as possible, and does not become desynchronised between the various output formats. The single source implies that book contributors have access to a shared software instance, typically on a server with appropriate security restrictions, which may or may not be accessible via the public Internet. The dynamic publication is available on request, for re-use and recombination, and can be automatically supplied to libraries, book stores and Web platforms. Dynamic publishing is enabled by machine readable, structured document formats such as XML and other forms of markup.</p>
+
+<p>Dynamic publishing places different expectations on authors. There are new requirements for metadata, which authors did not have to think much about before, and care must be taken to preserve the structure of the document. Re-use and remixing of book content suggests that the chapter, or a part of it, might have to preserve its meaning and usefulness outside of the context of the linear narrative. On the other hand, there should be less manual formatting required, and authors should not have to concern themselves with design and layout issues unless they want to. In a dynamic system, authors can get rapid editorial assistance and proof copies in multiple formats on demand, rather than having to wait for other teams to deliver updates.</p>
+
+<p>This style guide is intended to help those authors, and enable them to enjoy the benefits of dynamic publishing systems.</p>
+
+<h2 id="2-subheading">Metadata</h2>
+
+<p>Metadata is data about data. In a publishing system, the latter data is the book content. The former is a series of fields which typically include:</p>
+
+Author<br>
+Title<br>
+Publisher<br>
+Print ISBN<br>
+Ebook ISBN<br>
+Description<br>
+Genre<br>
+Keywords<br>
+Topics<br>
+Language<br>
+Publication date<br>
+
+<p>Language metadata may be used to set hyphenation rules for a variety of output formats, including ebook readers with resizeable displays which make it impossible to determine hyphenation in advance. Many other kinds of metadata are possible, including Web references and unique identifiers which associate related content.</p>
+
+<p>Automated systems rely on metadata to categorise and organise books, without having to scan the entire content. Metadata can also be used to disambiguate; for example, a search engine might infer that book content which contained many references to a particular person was associated with that person, but it could not infer the author of the content from that information alone.</p>
+
+<p>Keywords and topic categorisations enable faster matches than full text searches, and also enable indexing when the full text is not available to a third-party system, in the same way that the abstract of an academic publication leads a researcher towards a journal which they do not yet subscribe to. Keywords are generally arbitrary, while topics form a hierarchy which may be pre-ordained. For example, a book about building boats might have the keywords:</p>
+
+<p><em>boat, building, wooden</em></p>
+
+<p>and be about the topic:</p>
+
+<p><em>Boats -> Construction -> Wooden Boat Construction</em></p>
+
+<p>This book would match a search for 'wooden building' because two out of three keywords are hits. However, the reader looking for a book about living in a wooden shack would be out of luck. That reader would be better off by following the topic hierarchy, similar to the proprietary Dewey Decimal System used by public libraries.</p>
+
+<p>The short description of a book might be re-purposed in many places, including web sites and online book stores. Metadata is not just for public libraries and distribution platforms, though. Electronic reading systems, such as tablet devices, can make use of metadata to organise the reader's personal library.</p>
+
+<p>Rather than a chore to be delegated, dynamic authors should appreciate the importance of entering metadata for their content as early as possible in the book creation process. Adding this vital information should not be an afterthought, since it has a direct impact on the audience reach of the book. For commercial publications, correct and complete metadata is also a prerequisite for the right people to be paid.</p>
+
+<h2 id="3-subheading">View Source</h2>
+
+<p>In traditional lithographic book printing, all that mattered was the appearance of the typeset page under the plate-maker's camera. This was the origin of the phrase 'camera-ready copy' and the target of the original desktop publishing systems of the 1980's and 1990's. Programs such as Aldus PageMaker, QuarkXpress and Adobe InDesign automated the layout of type to a certain extent, but the ultimate output, whether laser printed on paper or imagesetter film, was not so different from the traditional printed book. File formats were incidental to the process, proprietary, and not designed to be read by other systems.</p>
+
+<p>The PDF file format and computer-to-plate technology enabled the paper and film intermediaries to be removed from the lithographic process, but the content and appearance of the page was still fixed, not least for quality control reasons. In a fully digital system, appearance is malleable, and what really matters is the underlying content data. The dynamic author has to get used to the idea that form and content have had an amicable divorce, and both partners are the better for it.</p>
+
+<p>Single-source dynamic publishing requires a file format which is reliably machine readable and interoperable, in a way that camera-ready copy and desktop publishing files were not. This is because in a dynamic system, it is not possible to predict the possible uses to which the data will be put. While computers will parse a complex file without complaining, even if it does take longer than it should, a good digital publishing format features document source code which is also human-readable. This is because whenever a system is buggy, breaks or becomes obsolete, it is invariably humans that have to fix it.</p>
+
+<p>Web natives have grown up with the idea that HTML pages have a 'View Source' option, which enables examination of raw files. The same arguments made for the pragmatic benefits of open source software also apply in the case of document sources; while there may be millions of lines of code in the program used by an author, there are billions of lines in the sum of human knowledge.</p>
+
+<p>A case in point is the humble word-processing file. Like desktop publishing, the word processor is based on analogue metaphors of type and paper, but pressure from government and institutional users has lead to the adoption of open file formats based around XML. These file formats are based on an interoperable standard of markup tags, which separate content from identifiers for that content. Like in HTML, the angle brackets '&#60;' and '>' are used to mark XML tag boundaries and the slash '/' closes a tag.</p>
+
+<p>Libre Office uses the OpenDocument format, based on XML. Recent versions of Microsoft Word offer a format called Office Open XML, which in theory is machine-readable, human-readable and interoperable, but unpacking a .docx archive and examining the XML content reveals the gulf between theory and practice. Here is how Office Open XML is supposed to represent a paragraph:</p>
+
+<pre>&lt;w:r w:rsidRPr="0088368D"&gt;
+&lt;w:t&gt;The UN released a comprehensive report on the human rights situation 
+in the Democratic People’s Republic of Korea (North Korea), which gave details 
+on the systematic violation of almost the entire range of human rights. 
+Hundreds of thousands of people continued to be detained in prison camps and 
+other detention facilities, many of them without being charged or tried for any 
+recognizably criminal offence.&lt;/w:t&gt;
+&lt;/w:r&gt;</pre>
+
+<p>The w:r tag indicates Word is starting a new paragraph 'run', the w:rsidRPr is a unique identifier for the revision, and the w:t tag begins the actual text. Here's the same paragraph from the Brazilian translation after a few edits:</p>
+
+<pre>&lt;w:r w:rsidRPr="00F205B8"&gt;&lt;w:rPr&gt;&lt;w:sz w:val="28"/&gt;&lt;w:lang
+w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t xml:space="preserve"&gt;A ONU divulgou um
+relatório detalhado sobre a situação dos direitos humanos na República
+Popular Democrática da Coreia (Coreia do Norte), com &lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r
+w:rsidR="00317A4F"&gt;&lt;w:rPr&gt;&lt;w:sz w:val="28"/&gt;&lt;w:lang
+w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t&gt;dados&lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r
+w:rsidRPr="00F205B8"&gt;&lt;w:rPr&gt;&lt;w:sz w:val="28"/&gt;&lt;w:lang
+w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t xml:space="preserve"&gt; sobre a violação
+sistemática de quase tod&lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r
+w:rsidR="00317A4F"&gt;&lt;w:rPr&gt;&lt;w:sz w:val="28"/&gt;&lt;w:lang
+w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t&gt;o&lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r
+w:rsidRPr="00F205B8"&gt;&lt;w:rPr&gt;&lt;w:sz w:val="28"/&gt;&lt;w:lang
+w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t xml:space="preserve"&gt; &lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r
+w:rsidR="00317A4F"&gt;&lt;w:rPr&gt;&lt;w:sz w:val="28"/&gt;&lt;w:lang
+w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t&gt;o&lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r
+w:rsidRPr="00F205B8"&gt;&lt;w:rPr&gt;&lt;w:sz w:val="28"/&gt;&lt;w:lang
+w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t xml:space="preserve"&gt; &lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r
+w:rsidR="00317A4F"&gt;&lt;w:rPr&gt;&lt;w:sz w:val="28"/&gt;&lt;w:lang
+w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t&gt;espectro&lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r
+w:rsidRPr="00F205B8"&gt;&lt;w:rPr&gt;&lt;w:sz w:val="28"/&gt;&lt;w:lang
+w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t xml:space="preserve"&gt; d&lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r
+w:rsidR="00317A4F"&gt;&lt;w:rPr&gt;&lt;w:sz w:val="28"/&gt;&lt;w:lang
+w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t&gt;os&lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r
+w:rsidRPr="00F205B8"&gt;&lt;w:rPr&gt;&lt;w:sz w:val="28"/&gt;&lt;w:lang
+w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t xml:space="preserve"&gt; direitos humanos.
+Centenas de milhares de pessoas continuaram a ser detidas em campos
+&lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r w:rsidR="00CF5A63"&gt;&lt;w:rPr&gt;&lt;w:sz w:val="28"/&gt;&lt;w:lang
+w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t&gt;de prisioneiros&lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r
+w:rsidR="00CF5A63" w:rsidRPr="00F205B8"&gt;&lt;w:rPr&gt;&lt;w:sz
+w:val="28"/&gt;&lt;w:lang w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t xml:space="preserve"&gt;
+&lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r w:rsidRPr="00F205B8"&gt;&lt;w:rPr&gt;&lt;w:sz w:val="28"/&gt;&lt;w:lang
+w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t&gt;e outros centros de detenção,
+muit&lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r w:rsidR="00317A4F"&gt;&lt;w:rPr&gt;&lt;w:sz
+w:val="28"/&gt;&lt;w:lang w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t&gt;a&lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r
+w:rsidRPr="00F205B8"&gt;&lt;w:rPr&gt;&lt;w:sz w:val="28"/&gt;&lt;w:lang
+w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t xml:space="preserve"&gt;s &lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r
+w:rsidR="00317A4F"&gt;&lt;w:rPr&gt;&lt;w:sz w:val="28"/&gt;&lt;w:lang
+w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t xml:space="preserve"&gt;delas
+&lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r w:rsidRPr="00F205B8"&gt;&lt;w:rPr&gt;&lt;w:sz w:val="28"/&gt;&lt;w:lang
+w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t xml:space="preserve"&gt;sem acusação
+&lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r w:rsidR="00317A4F"&gt;&lt;w:rPr&gt;&lt;w:sz w:val="28"/&gt;&lt;w:lang
+w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t&gt;nem&lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r
+w:rsidRPr="00F205B8"&gt;&lt;w:rPr&gt;&lt;w:sz w:val="28"/&gt;&lt;w:lang
+w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t xml:space="preserve"&gt; julgamento por
+qualquer &lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r w:rsidR="00F75BBC"&gt;&lt;w:rPr&gt;&lt;w:sz
+w:val="28"/&gt;&lt;w:lang w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t&gt;crime reconhecido
+internacionalmente&lt;/w:t&gt;&lt;/w:r&gt;&lt;w:r w:rsidRPr="00F205B8"&gt;&lt;w:rPr&gt;&lt;w:sz
+w:val="28"/&gt;&lt;w:lang w:val="pt-BR"/&gt;&lt;/w:rPr&gt;&lt;w:t&gt;. &lt;/w:t&gt;&lt;/w:r&gt;</pre>
+
+<p>This example is from a real Word document. For each character typed by a translator, software had added a further ten characters. The translation software also formatted the chapter from which this example was taken into a single line of 381,390 columns. It's not fun to debug formatting problems in a file like this, which was clearly not meant to be read and enjoyed by a human. Nor is it easy to write interoperable software.</p>
+
+<p>Therefore, the question is not so much 'does the software do XML?' as 'does the system produce clean and interoperable markup without bloat?' Fortunately, bad markup can be worked around to some extent by conversion tools and post-processing filters such as 'tidy' which output a more readable file.</p>
+
+<h2 id="4-subheading">XML, HTML, whatever</h2>
+
+<p>Most contemporary publishing software vendors will talk about an XML-first workflow, while some will describe a HTML5-first workflow. Both forms of markup are basically equivalent and can readily be converted from one to the other, so it is not of critical importance whether XML or any particular version of HTML is used.</p>
+
+<p>For example, the chapter of a title can be represented in XML as:</p>
+
+<pre>&lt;ChapterTitle&gt;Chapter One&lt;/ChapterTitle&gt;</pre>
+
+<p>and in HTML as:</p>
+
+<pre>&lt;h1 class="ChapterTitle"&gt;Chapter One&lt;/h1&gt;</pre>
+
+<p>where 'h1' is a heading and 'class' refers to a group of elements with a common purpose. An introductory paragraph can be represented in XML as:</p>
+
+<pre>&lt;BodyTextFirstPara&gt;This is the first paragraph&lt;/BodyTextFirstPara&gt;</pre>
+
+<p>and in HTML as:</p>
+
+<pre>&lt;p id="BodyTextFirstPara"&gt;This is the first paragraph&lt;/p&gt;</pre>
+
+<p>where 'p' is a generic paragraph tag and 'id' identifies a specific element within the document.</p>
+ 
+<p>Which type of markup to use depends on the intended input and output formats of the dynamic publishing system. XML has the advantage of being supported by a wide range of software used in publishing, including Microsoft Word and Adobe InDesign, even if the dialect of XML used (the Document Type Definition) is rarely similar enough to enable direct compatibility without conversion. By contrast, standard HTML is readily displayed by a wide range of web browsers, and can be manipulated easily by user-friendly editors such as TinyMCE and Aloha.</p>
+
+<p>The bridging format XHTML presents a HTML-like syntax in XML, and forms the basis of the EPUB3 ebook standard. Some authors prefer to write in another markup format, including the ironically named Markdown, which can be converted to XML, HTML or XHTML using automated tools.</p>
+
+<h2>The importance of good tagging</h2>
+
+<p>Whether the dynamic publishing system relies on XML, HTML, or some other format, correct markup is vital. This means that authors should not merely consider how the book looks in their particular software interface, to use the camera-ready metaphor, but how the data is structured.</p>
+
+<p>For an editing system that displays indexed words in italics, the following examples of HTML source might appear equivalent in a WYSIWYG interface:</p>
+
+<pre>This is an example &lt;i&gt;reference&lt;/i&gt;</pre>
+
+<pre>This is an example &lt;span class="index"&gt;reference&lt;/span&gt;</pre>
+
+<p>The first example uses the italic tag, but does not convey the essential information that the word 'reference' is meant to appear in the index of the book. The same principle would caution against using arbitrary bold text without markup to explain why this particular text needed emphasis.  </p>
+
+<p>Lists are another case in point. A HTML paragraph tagged like this:</p>
+
+<pre>&lt;p&gt;
+1. First item
+2. Second item
+3. Third item
+&lt;/p&gt;</pre>
+
+<p>is inflexible, because it can only be styled as a generic paragraph. If the correct HTML 'ordered list' tag were used, it would look like this:</p>
+
+<pre>&lt;ol&gt;
+&lt;li&gt;First item&lt;/li&gt;
+&lt;li&lt;Second item&lt;/li&gt;
+&lt;li&lt;Third item&lt;/li&gt;
+&lt;/ol&gt;</pre>
+
+<p>The numbering is added automatically at the output stage, which means that Arabic numerals can be replaced with Roman numerals, or an alphabetical list of a, b and c. If an additional item is placed in the middle of the list:</p>
+
+<pre>&lt;ol&gt;
+&lt;li&gt;First item&lt;/li&gt;
+&lt;li&gt;Second item&lt;/li&gt;
+&lt;li&gt;Fourth item&lt;/li&gt;
+&lt;li&gt;Third item&lt;/li&gt;
+&lt;/ol&gt;</pre>
+
+<p>the use of the &lt;li&gt; tag means that the list will be renumbered automatically, which is especially useful in long lists.</p>
+ 
+<p>Even when using a WYSIWYG editor, dynamic authors should be prepared to check and correct the markup of their chapters as part of the proof-reading process. This implies that any good editor would be required to have a View Source button. Software developers can assist authors by ensuring a clear separation between functional markup and style elements.</p>
+
+<h2 id="5-subheading">Template-driven authoring</h2>
+
+<p>The structured document requirements of a dynamic publishing system need to be reconciled with the need of authors for an uncluttered interface which enables them to concentrate on book content. It is unreasonable to expect authors, who may not be used to working in markup, to build structured documents from scratch. A template-based system helps ensure that the correct markup is used for each element, and also helps establish consistency between chapters and books within a series.</p>
+
+<p>Templates can be static files, with place-holders for tagged content:</p>
+
+<pre>&lt;ChapterTitle&gt;
+Enter the title here
+&lt;/ChapterTitle&gt;</pre>
+
+<p>or generated by software, based on a set of known markup elements. For example, the author might select the title of the chapter and click an interface button to mark it with the appropriate tag. Or, the software might infer that any H1 element in a HTML file is a chapter title.</p>
+
+<p>Another method is to use a word processor template file, for a program that supports saving documents in an XML-based format. Pre-defined styles in the template such as 'ChapterTitle' can be appropriated for use in a dynamic publishing system, by mapping each style to appropriate HTML or XHTML markup. These style-based tags can also be exported in a different dialect of XML, for example a file which could be imported by Adobe InDesign to fill a templated layout.</p>
+
+<p>While word processor styles may correspond with specific typographical or paragraph styles, such as font families, font size or indents, the XML template abstracts away these details and can be configured to ignore any styling contained within the document. This fact destroys the potential for authorial procrastination associated with choosing a font, since the dynamic publishing system doesn't care.</p>
+
+<p>Part of the editor's role becomes devising appropriate templates, and steering the author towards using the template correctly. There may be new rules for authors which follow web standards or project conventions, such as the hierarchy of HTML heading elements H1, H2, H3 and so on.</p>
+
+<h2 id="6-subheading">Never mind the form, mind the function</h2> 
+
+<p>Content in a dynamic publishing system is inherently <a href="http://craigmod.com/journal/ipad_and_books/">formless</a>. The target is no longer a particular size of paper with a specified font of a certain height. Dynamic publishing contradicts the WYSIWYG model of desktop publishing, in which a single output was laid out and proof-read at a time. While it is possible to anticipate potential output formats, by building previews of certain device sizes and aspect ratios into the authoring software, dynamic publishing anticipates that successful content will be read long into the future, in formats which do not exist yet.</p>
+
+<p>The dynamic author has to trust that if the markup is correct, then the design of the output will be correct. It is the software developer's responsibility to make sure that content is reproduced faithfully in all output formats. If not, a bug should be filed against the software or the design.</p>
+
+<p>The editor might dream of being freed from the need to proof-read multiple formats, but in reality the proof-reader is now looking for bugs in automated document conversion instead of manual layout errors. One upside is that a systematic bug only needs to be fixed once, in order that all of the errors it causes to be fixed.</p>
+
+<p>A related benefit is that the user, having accepted the impossibility of a comprehensive WYSIWYG experience, can demand modifications of the editorial interface to make it more conducive to the writing task, rather than the general reader. In this respect, dynamic publishing follows the WYSIWYM (what you see is what you mean) paradigm established by academic and technical publishing tools descended from the TeX language.</p>
+
+<p>Some authors are used to adding paragraph returns to make white-space in a layout, or to end a chapter. Authors might also use the space bar or tabs to line up text or in-line images. This extraneous formatting risks making the page look wrong once it is reformatted into a different output. The display of these invisible, non-printing characters can be toggled in most word processor and editing tools. (In Libre Office, the keyboard short-cut Ctrl+F10 or View &gt; Non-printing Characters in the menu bar can be used to help authors remove them).</p>
+
+<p>The implication for book contributors is that manual adjustments to layout or style (including page breaks, and changes to fonts or colours) are bad habits from the WYSIWYG era which must be overcome. Authors and editors need to think in a design-independent way, in which their content exists in a pure state, unrelated to output formats. If they fail to break the habit, any extraneous styling is likely to be stripped in document conversion.</p>
+
+<h2 id="7-subheading">Thinking about re-usability</h2>
+
+<p>For authors familiar with traditional book publishing, the idea that excerpts from their book may be re-purposed at different lengths might be challenging. Dynamic publishing makes it extremely easy to combine content from multiple sources in very little time, and so authors might have to get used to it. The re-use of open source code inspired by the Free Software movement showed that standardised, permissive licensing is an enabling factor. See for example the Debian Project's use of <a href="https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/">machine-readable copyright files</a> for the more than 22,000 software packages it maintains.</p>
+
+<p>With re-use in mind, authors could consider their work as a series of translatable chunks, avoiding fragile references such as "see the previous chapter" which will not make sense outside of a linear narrative. The software developer needs to provide a mechanism for permalinking internal book references which can survive content re-use. Topic-based content published at explicit URLs, for example Wikipedia articles, may be intrinsically easier to re-use than traditional book content.</p>
+
+<p>Crowd-sourced translation platforms also enable much greater reuse of book content, with a weaker relationship between the author and translator. In a dynamic publishing system based on machine-readable licensing, a book chapter could be translated on the other side of the world by a complete stranger before the original author is aware of the new interest in their work. Given the shorter time to publication, it may not be practical or desirable for the author and translator to discuss nuances of the translation at length. Therefore authors of non-fiction content should attempt to avoid idioms and other phrases which might necessitate a translator raising a query and delaying publication, or worse, publishing a misunderstanding.</p>
+
+<h2 id="8-subheading">Typographical conventions in different languages</h2>
+
+<p>A further consideration is that while there are international standard character sets, such as UTF-8 and UTF-16, which can represent almost all the characters written in human languages, there can be significant differences in book typography and formatting between these languages. While largely a matter of convention and rarely impinging on the meaning of the content, these differences form part of the reader's expectation of a 'correct' book. Some of these differences can be accommodated in output design, while others affect the text itself and have to be allowed for in the design of the dynamic publishing system.</p>
+
+<p>For example, suppose a book in English is processed via an automated or crowd-sourced translation system for output in French. One sentence reads:</p>
+
+<p><em> This line is in English:</em></p>
+
+<p>Lines which end in a colon are returned to the French version of the content, like: </p>
+
+<p><em> Cette ligne est en français:</em></p>
+
+<p>This would be incorrect, because French typographical convention requires a narrow non-breaking space (Unicode U+202F, HTML entity &#8239;) between the last word and the colon.</p>
+
+<p>While it is possible for the author or translator to insert these special characters manually, the reliance of dynamic publishing on automation suggests that software should be aware of and compensate for these differing conventions.</p>
+
+<h2 id="9-subheading">Version control</h2>
+
+<p>In book publishing there have always been multiple versions of the manuscript, from the first draft, through the editor's copies and the proof copies, to the printed first edition. Word processors and desktop publishing have used multiple versions of files which replicate the analogue equivalents, and more recently, change tracking features. Auto-save features, if enabled, might also create incremental versions of a particular file.</p>
+
+<p>Dynamic publishing systems go a step further than change tracking within a document, by being able to recreate every previous version of a particular chapter, even when new source files have been uploaded to overwrite the original documents. Version control in these publishing systems shows the influence of open source tools used by software developers, such as Git, in which the whole history of changes to the project is recorded independently of, but alongside, the book itself. Some dynamic publishing systems, including A-machine and GitBook, directly use Git as their underlying version control system for book content.</p>
+
+<p>Because dynamic systems are inherently multi-user, who has made a particular change might be just as important as what has changed, or at which time, so revisions are associated with unique login accounts, regardless of word processor user name settings. Just like in a traditional editorial workflow, the person who made a change to content in the dynamic publishing system takes responsibility, or blame, for the state of the chapter when they saved it. This differs from the simultaneous editing model of general-purpose office tools such as Google Docs, in which a user may not notice all of the edits being made to a shared document.</p>
+
+<p>For example, suppose Alice the editor is working her way through a book chapter written by Bob in Google Docs. Alice is just finishing her read-through of page 2 when Bob decides to make a change in page 1 and un-do the correction to a fact that Alice has made. On this occasion, Bob is wrong and Alice is right about the particular fact in question, but Bob is so sure of himself that he does not raise the issue with Alice. Reaching the end of the chapter, Alice signs off the chapter as ready for print because she thinks she has corrected Bob's error.</p>
+
+<p>A dynamic publishing system should prevent this scenario by locking the chapter from further edits by Bob as soon as Alice begins working on it, reflecting the hierarchy of roles in the publishing workflow. Unlike a shared office document containing meeting notes, or the results of a brainstorming session, the book is not so easy to correct once it has been published to the wider world.  </p>
+
+<p>Office tools such as Google Docs also carry out 'revision pruning' on older files, which combines multiple revisions into one, to save disk space. With the relatively long time-scales of the publishing industry, distinctions between older revisions might be a valuable resource when processing queries on content for later editions.</p>
+
+<p>From the author's point of view, treating revisions like source code may require the acquisition of some new habits. Individual changes to content are easier for other book contributors to review if they are small, implying frequent saving, and are associated with a comment which explains the reason for making the change. In software development, this comment is known as a 'commit message' and is a vital part of the workflow. Because the comments are part of the version control system and not the document itself, like document history they can be preserved even when the original source material has been re-uploaded or overwritten.</p>
+
+<h2 id="10-subheading">Rendering real books with CSS</h2>
+
+<p>A dynamic publishing system must be able to produce outputs on demand, typically within a few seconds of the user clicking a button. For output formats including screen PDFs, ebooks and websites, which do not have the same physical space or page number constraints as printed books, reflowable text and elastic boundaries make layout highly flexible.</p>
+
+<p>PDF files destined for the printing press do not have this latitude, yet the dynamic publishing system has to be able to deliver these files just as quickly as any other format. This requirement implies an automated layout based on a pre-determined design, with tight control over fonts and layout. The aim is to produce a valid PDF which looks at least as good as the equivalent PDF produced manually via a desktop publishing system.</p>
+
+<p>The same Cascading Style Sheets (CSS) language used to separate form and content in web pages is used for styling XHTML in the EPUB 3 standard for ebooks. Dynamic publishing can go further by using CSS to lay out PDF book pages as well, with the use of HTML to PDF rendering software. The @page rule, from the CSS paged media specification, can be used to set paper sizes, differing footer orientations for odd and even page numbers, and activate features of the renderer such as paper crop marks:</p>
+
+ <pre>@page {
+ size: 140mm 215mm;
+ marks: crop;
+ odd-footer-name: footer-right;
+ even-footer-name: footer-left;
+ margin-left: 12mm;
+ margin-right: 12mm;
+ margin-top: 13mm;
+ margin-bottom: 15mm;
+ margin-footer: 7mm;
+}</pre>
+
+<p>While any web browser can perform a PDF rendering function using its 'Print' features, dynamic publishing systems need a server-side renderer which can be triggered automatically whenever a PDF is required. Most HTML to PDF renderers are aimed at producing general-purpose documents, with some of the open source tools based on browser engines like WebKit. These generic renderers are perfectly adequate for documents which are not design-critical, but they lack pre-press features such as precise control over fonts, or bleeds and crop marks for edge-to-edge printing.</p>
+
+<p>Proprietary PDF renderers with pre-press features can be expensive and subject to restrictions on usage. For example, users of the academic version of Prince are not allowed to produce commercial publications with the renderer. Among open source HTML to PDF renderers, mPDF offers pre-press features which make it suitable for rendering books for print. Having been written originally to support a book publishing project, mPDF enables the publishing system to specify output variables which might otherwise require the fine control of a desktop publishing tool.</p>
+
+<h2 id="11-subheading">A Design Example</h2>
+
+<p>One of the signs of a expertly produced pre-press PDF is baseline grid alignment between columns of text. Baseline grid is considered important by typographers to maintain the vertical rhythm of the page. Desktop publishing programs offer a feature for manually forcing text to align to the adjacent baseline, but the dynamic system must do this automatically. The CSS approach requires some care in design, but enables baseline alignment without using any post-processing to force the text. It should work equally well in both mPDF and web browsers.</p>
+
+<img src="assets/img/mpdf-baseline-sample.png" width="750" height="390" alt="mPDF baseline sample">
+
+<p>The trick is to use the <em>rem</em> unit introduced in CSS3, which refers to the root element size. In mPDF, 1rem is equivalent to the font size of the HTML body element. All other elements which appear as blocks in the columns, such as headings, subheadings, and info boxes, need to have a vertical size which adds up to an exact multiple of the body text or its line-height. Using rem makes the calculation easier, and also means that changes to body text size will scale other elements proportionally. Text line-heights should be based on multiples of the body text line-height, such as 1.3rem for traditional 130% leading, or 2.6rem for double-spaced leading. However, the individual elements within a block do not need to have integer heights, enabling precise control over white-space. We can use a combination of top and bottom padding, margins or borders in the CSS file to get the layout we want, for example in a introductory paragraph:</p>
+
+<pre>div.intro-text {
+ font-family: TradeGothicCn18;
+ line-height: 1.3rem;
+
+ border-top: 0.125rem solid;
+ margin-top: 0.875rem;
+
+ border-bottom: 0.0625rem solid;
+ margin-bottom: 1.9375rem;
+
+ padding-top: 0.65rem;
+ padding-bottom: 0.65rem;
+}</pre>
+
+<p>Using padding or margins alone to compensate for line height differences is not reliable when a block such as a heading or subheading may contain one or more lines of text. The corresponding HTML in the book page would look like this:</p>
+
+<pre>&lt;div class="intro-text"&gt;This is example introductory text wrapped in a div tag.&lt;/div&gt;</pre>
+
+<p>Note that the HTML does not include any font, border, margin or padding information, due to the separation of form (CSS) and content (HTML). When using a variety of fonts in the same PDF, including variants of the same font family such as condensed versions, the config.php file in mPDF must be set to:</p>
+
+<pre>useFixedNormalLineHeight = true</pre>
+
+<p>otherwise mPDF will set a custom line-height based on individual font metrics. </p>
+
+<h2 id="12-subheading">Conclusion</h2>
+
+<p>Dynamic publishing represents a change to author workflows which is arguably as significant as the desktop publishing revolution of the 1980's and 90's. Training authors to adapt to new systems may be necessary, although the browser-based and desktop interfaces of programs such as A-machine and Booktype are arguably simpler and more focused on book production than the general-purpose word processing and layout tools that went before. The complexities of a dynamic system are largely hidden from the end user, and template-driven workflows also reduce the possibility of user error.</p>
+
+<p>The high personnel cost and time associated with manual book layout in various output formats is likely to push dynamic publishing from corporates towards the small to medium sized publishers and print-on-demand houses, as open source publishing tools lower the barriers to entry. This process is analogous to the transition from static HTML in the early Web to content management systems in Web 2.0, and with it the necessary re-skilling of web designers into web developers. The book designers and InDesign operators of today would be advised to get familiar with XML, HTML5, templates and CSS.</p>
+
+<p class=endnotes>Daniel James is the director of 64 Studio Ltd. and a contributor to the Booktype project.</p>
+            </section>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <a data-toggle="collapse" href="#footer-hidden">
+          <p class="more">INFO</p>
+        </a>
+
+        <div class="collapse" id="footer-hidden">
+            <p style="vertical-align: 4px; margin-top: -24px; margin-left: 52px; margin-bottom: 3px;">↘</p>
+            <div style="float: left; width: 300px;">
+                    <div style="height: 94px; margin-top: 20px; background-repeat: no-repeat;" id="randomLogo"></div>
+                    <div class="footer-logos" style="margin-bottom: 30px;">
+                        <img src="../../static/EFRE-logo.png" alt="Europa">
+                        <img src="../../static/EuropafoerdertNds_farbig.png" alt="Niedersachsen">
+                        <img src="../../static/logo_leuphana-2.png" alt="Leuphana">
+                    </div>
+                </div>
+                <p style="margin-top: 10px;">Contact: mail AT consortium.io</p>
+                <p><a href="http://www.leuphana.de/en/site-notice-leuphana.html" target="_blank">Imprint</a></p>
+                <p>© The authors | <a href="https://creativecommons.org/licenses/by/3.0/de/" target="_blank">CC BY 3.0 DE</a></p>
+                <p>The Hybrid Publishing Consortium is a project of the Hybrid Publishing Lab in collaboration with partners and associates. The Hybrid Publishing Lab is part of the Leuphana University of Lüneburg Innovation Incubator, financed by the European Regional Development Fund and co-funded by the German federal state of Lower Saxony.</p>
+
+        </div>
+    </footer>
+
+    <!-- CALLS THE JS -->
+    <script src="../../js/all.min.js"></script>
+
+</body>
+</html>
