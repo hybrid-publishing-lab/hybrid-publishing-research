@@ -1,0 +1,17 @@
+[Unit]
+Description=Researchviewer Start Script
+After=network.target
+
+[Service]
+User=researchuser
+PIDFile=/run/researchviewer.pid
+Environment=statedir=/home/researchuser/public/research.consortium.io
+WorkingDirectory=/home/researchuser/public/research.consortium.io
+ExecStart=/usr/bin/grunt serve
+TimeoutStopSec=5
+KillMode=mixed
+StandardOutput=syslog
+
+[Install]
+WantedBy=multi-user.target                         
+[/etc/systemd]
